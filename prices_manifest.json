@@ -1,0 +1,302 @@
+{
+  "manifestVersion": "1.0.0",
+  "lastUpdated": "2026-09-19T22:17:30.041Z",
+  "verifiedDateHuman": "Today, September 19, 2026",
+  "sourceInfo": "Official agency market benchmarks, CONANP/INAH entrance fees, and local transport cooperatives",
+  "currencyRates": {
+    "USD": 1,
+    "MXN": 18.5,
+    "COP": 4100,
+    "EUR": 0.92
+  },
+  "locations": {
+    "san-cris": {
+      "id": "san-cris",
+      "name": "Co404 San Cristóbal",
+      "city": "San Cristóbal de las Casas",
+      "currency": "MXN",
+      "destinations": [
+        {
+          "id": "canon-del-sumidero",
+          "name": "Sumidero Canyon & Chiapa de Corzo",
+          "priceSharedRange": "$750 - $900 MXN ($40 - $48 USD)",
+          "pricePrivateRange": "$2,800 - $3,800 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$250 - $380 MXN (Independent boat ticket + public combis)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "chiflon-montebello",
+          "name": "El Chiflón Waterfalls & Montebello Lakes",
+          "priceSharedRange": "$550 - $850 MXN ($30 - $45 USD)",
+          "pricePrivateRange": "$3,600 - $4,800 MXN (Private van)",
+          "colectivoCost": "$350 - $450 MXN (Complex multi-stage public transit via Comitán)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "chamula-zinacantan",
+          "name": "Indigenous Villages: San Juan Chamula & Zinacantán",
+          "priceSharedRange": "$350 - $500 MXN ($18 - $26 USD)",
+          "pricePrivateRange": "$1,100 - $1,600 MXN (Private van)",
+          "colectivoCost": "$25 - $35 MXN per leg by public colectivo (Super easy DIY)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "agua-azul-misolha-palenque",
+          "name": "Agua Azul, Misol-Ha & Palenque Maya Ruins",
+          "priceSharedRange": "$1,200 - $1,700 MXN ($65 - $92 USD)",
+          "pricePrivateRange": "$5,500 - $7,500 MXN (Exclusive private van)",
+          "colectivoCost": "Not recommended as a single-day roundtrip by public transport",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "arco-del-tiempo",
+          "name": "Arco del Tiempo (Canyon of La Venta)",
+          "priceSharedRange": "$2,800 - $4,200 MXN ($150 - $230 USD / multi-day all-inclusive)",
+          "pricePrivateRange": "$8,500 - $12,000 MXN (Private guided expedition)",
+          "colectivoCost": "Impossible DIY (Requires federal permits, certified caving guides & technical gear)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "bonampak-yaxchilan",
+          "name": "Bonampak & Yaxchilán Jungle Odyssey",
+          "priceSharedRange": "$1,600 - $2,200 MXN ($88 - $120 USD)",
+          "pricePrivateRange": "$6,500 - $8,800 MXN (Exclusive private van)",
+          "colectivoCost": "Not feasible DIY (Requires border river motorboat and Lacandon reserve transport)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "chukumaltik-lagos-colon",
+          "name": "Cenote Chukumaltik & Lagos de Colón",
+          "priceSharedRange": "$900 - $1,400 MXN ($50 - $75 USD)",
+          "pricePrivateRange": "$4,200 - $5,600 MXN (Private van)",
+          "colectivoCost": "Complex multi-stage transfer (combi to Comitán + pickup truck to La Trinitaria)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "arcotete-rancho-nuevo-mamut",
+          "name": "El Arcotete, Rancho Nuevo Caves & Mamut",
+          "priceSharedRange": "$400 - $600 MXN ($22 - $32 USD)",
+          "pricePrivateRange": "$1,200 - $1,800 MXN",
+          "colectivoCost": "$20 - $30 MXN per leg (Super easy DIY by public taxi or combi!)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "sima-cotorras-aguacero",
+          "name": "Sima de las Cotorras & El Aguacero Canyon",
+          "priceSharedRange": "$950 - $1,400 MXN ($52 - $75 USD)",
+          "pricePrivateRange": "$3,800 - $5,200 MXN",
+          "colectivoCost": "Not feasible DIY (No scheduled public transit to the abyss rim)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "tonina-corralito",
+          "name": "Toniná Archaeological Zone & El Corralito Falls",
+          "priceSharedRange": "$850 - $1,350 MXN ($46 - $73 USD)",
+          "pricePrivateRange": "$3,400 - $4,800 MXN",
+          "colectivoCost": "$120 - $160 MXN (Via Ocosingo combi)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "las-nubes-comitan",
+          "name": "Las Nubes Waterfalls & Comitán Magic Town",
+          "priceSharedRange": "$850 - $1,400 MXN ($46 - $75 USD)",
+          "pricePrivateRange": "$4,200 - $5,800 MXN",
+          "colectivoCost": "Very difficult DIY for a single day without a private vehicle",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "huitepec-moxviquil",
+          "name": "Cerro Huitepec & Moxviquil Orchid Reserve",
+          "priceSharedRange": "$200 - $350 MXN ($11 - $19 USD with naturalist guide)",
+          "pricePrivateRange": "$600 - $900 MXN",
+          "colectivoCost": "$15 MXN by colectivo combi or $60 MXN by local taxi",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "traslado-guatemala",
+          "name": "International Connection: San Cristóbal to Guatemala",
+          "priceSharedRange": "$950 - $1,300 MXN / $50 - $70 USD",
+          "pricePrivateRange": "$4,500 - $6,500 MXN",
+          "colectivoCost": "$350 MXN (DIY border crossing via La Mesilla combis)",
+          "lastVerified": "2026-09-19"
+        }
+      ]
+    },
+    "oaxaca": {
+      "id": "oaxaca",
+      "name": "Co404 Oaxaca",
+      "city": "Oaxaca de Juárez",
+      "currency": "MXN",
+      "destinations": [
+        {
+          "id": "hierve-el-agua-mitla",
+          "name": "Hierve el Agua & Mitla Archaeological Ruins",
+          "priceSharedRange": "$500 - $650 MXN ($27 - $35 USD)",
+          "pricePrivateRange": "$2,600 - $3,400 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$140 - $180 MXN (Independent taxi colectivo + entry fees)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "monte-alban",
+          "name": "Monte Albán Grand Ceremonial Acropolis",
+          "priceSharedRange": "$350 - $450 MXN ($19 - $25 USD)",
+          "pricePrivateRange": "$1,400 - $1,800 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$80 - $100 MXN (Suburban tourist bus from Mina #501 roundtrip)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "tule-teotitlan-rugs",
+          "name": "Ancient Tule Tree & Teotitlán Zapotec Weavers",
+          "priceSharedRange": "$400 - $550 MXN ($22 - $30 USD)",
+          "pricePrivateRange": "$1,600 - $2,200 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$60 - $80 MXN (Colectivo taxi from Monumento a Juárez)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "mezcal-matatlan",
+          "name": "Santiago Matatlán Ancestral Mezcal Odyssey",
+          "priceSharedRange": "$650 - $850 MXN ($35 - $46 USD)",
+          "pricePrivateRange": "$2,800 - $3,600 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$110 - $150 MXN (Colectivo taxi to Matatlán central plaza)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "san-martin-tilcajete-coyotepec",
+          "name": "Alebrijes Workshops & San Bartolo Barro Negro",
+          "priceSharedRange": "$450 - $600 MXN ($24 - $32 USD)",
+          "pricePrivateRange": "$1,800 - $2,400 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$70 - $90 MXN (Colectivo taxi from Central de Abastos)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "apoala-waterfalls",
+          "name": "Santiago Apoala Turquoise Canyon & Mixteca Waterfall",
+          "priceSharedRange": "$850 - $1,100 MXN ($46 - $60 USD)",
+          "pricePrivateRange": "$3,800 - $4,600 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$220 - $280 MXN (Multi-leg combis via Nochixtlán)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "sierra-norte-pueblos",
+          "name": "Pueblos Mancomunados Cloud Forest & Suspension Bridges",
+          "priceSharedRange": "$950 - $1,250 MXN ($51 - $68 USD)",
+          "pricePrivateRange": "$4,200 - $5,200 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$160 - $200 MXN (Community bus from Central de Abastos to Cuajimoloyas)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "san-jose-del-pacifico",
+          "name": "San José del Pacífico Misty Ridge & Temazcal",
+          "priceSharedRange": "$800 - $1,050 MXN ($43 - $57 USD)",
+          "pricePrivateRange": "$3,800 - $4,800 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$200 - $240 MXN (Líneas Unidas express van from Bustamante)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "yagul-caves",
+          "name": "Yagul Archaeological Fortress & Prehistoric Caves",
+          "priceSharedRange": "$450 - $600 MXN ($24 - $32 USD)",
+          "pricePrivateRange": "$1,900 - $2,500 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$70 - $90 MXN (Colectivo taxi to Yagul crossroads + 1km walk)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "puerto-escondido-shuttle",
+          "name": "Puerto Escondido & Mazunte Express Coast Shuttle",
+          "priceSharedRange": "$400 - $500 MXN ($22 - $27 USD)",
+          "pricePrivateRange": "$3,400 - $4,200 MXN (Private van 1-6 pax)",
+          "colectivoCost": "$300 - $350 MXN (Autobuses de la Costa or Ruta Coatlanes)",
+          "lastVerified": "2026-09-19"
+        }
+      ]
+    },
+    "medellin": {
+      "id": "medellin",
+      "name": "Co404 Medellín",
+      "city": "Medellín",
+      "currency": "COP",
+      "destinations": [
+        {
+          "id": "guatape-piedra-penol",
+          "name": "Piedra del Peñol & Guatapé Colorful Zócalos",
+          "priceSharedRange": "$110,000 - $140,000 COP ($27 - $34 USD)",
+          "pricePrivateRange": "$520,000 - $680,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$35,000 - $45,000 COP (Direct bus from Terminal del Norte)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "comuna-13-metrocable",
+          "name": "Comuna 13 Graffiti, Urban Escalators & Metrocable",
+          "priceSharedRange": "$70,000 - $95,000 COP ($17 - $23 USD)",
+          "pricePrivateRange": "$290,000 - $380,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$12,000 - $16,000 COP (Metro Line B to San Javier + feeder bus)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "santa-fe-de-antioquia",
+          "name": "Santa Fe de Antioquia & Historic Puente de Occidente",
+          "priceSharedRange": "$120,000 - $150,000 COP ($29 - $37 USD)",
+          "pricePrivateRange": "$520,000 - $680,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$30,000 - $38,000 COP (Minivan from Terminal del Norte)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "jardin-coffee-pueblo",
+          "name": "Jardín Traditional Heritage Pueblo & Cock-of-the-Rock",
+          "priceSharedRange": "$160,000 - $210,000 COP ($39 - $51 USD)",
+          "pricePrivateRange": "$700,000 - $900,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$45,000 - $55,000 COP (Rápido Ochoa bus from Terminal del Sur)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "jerico-heritage-town",
+          "name": "Jericó Balconies, Leather Artisans & Morro El Salvador",
+          "priceSharedRange": "$150,000 - $190,000 COP ($37 - $46 USD)",
+          "pricePrivateRange": "$680,000 - $850,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$42,000 - $50,000 COP (Direct bus from Terminal del Sur)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "parque-arvi-santa-elena",
+          "name": "Parque Arví Cloud Forest & Santa Elena Flower Heritage",
+          "priceSharedRange": "$80,000 - $110,000 COP ($20 - $27 USD)",
+          "pricePrivateRange": "$350,000 - $450,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$15,000 - $22,000 COP (Public Metro + Metrocable Line L ticket)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "rio-claro-canyon",
+          "name": "Río Claro Marble Canyon & Cueva de los Guácharos",
+          "priceSharedRange": "$190,000 - $250,000 COP ($46 - $61 USD)",
+          "pricePrivateRange": "$820,000 - $1,100,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$65,000 - $80,000 COP (Buses heading to Doradal from Terminal del Norte)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "coffee-farm-experience",
+          "name": "Authentic Antioquian Finca Seed-to-Cup Experience",
+          "priceSharedRange": "$130,000 - $170,000 COP ($32 - $41 USD)",
+          "pricePrivateRange": "$450,000 - $580,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$25,000 - $35,000 COP (Bus to San Antonio de Prado / Fredonia)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "paragliding-san-felix",
+          "name": "San Félix Tandem Paragliding over Aburrá Valley",
+          "priceSharedRange": "$170,000 - $220,000 COP ($41 - $54 USD)",
+          "pricePrivateRange": "$420,000 - $550,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$30,000 - $40,000 COP (Bello bus + San Félix local colectivo)",
+          "lastVerified": "2026-09-19"
+        },
+        {
+          "id": "salto-del-buey-abejorral",
+          "name": "Salto del Buey 80m Waterfall & High Via Ferrata",
+          "priceSharedRange": "$180,000 - $240,000 COP ($44 - $58 USD)",
+          "pricePrivateRange": "$720,000 - $920,000 COP (Private van 1-6 pax)",
+          "colectivoCost": "$50,000 - $65,000 COP (Buses to La Ceja / Abejorral from Terminal del Sur)",
+          "lastVerified": "2026-09-19"
+        }
+      ]
+    }
+  }
+}

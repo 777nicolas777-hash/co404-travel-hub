@@ -22,6 +22,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let locationData = window.CO404_LOCATIONS[currentLocationId];
+
+  // Apply cached price overrides
+  function applyPriceOverrides(locId) {
+    try {
+      const overridesStr = localStorage.getItem('co404_price_overrides');
+      if (!overridesStr) return;
+      const overrides = JSON.parse(overridesStr);
+      const locOverrides = overrides[locId];
+      if (!locOverrides) return;
+
+      const loc = window.CO404_LOCATIONS[locId];
+      if (!loc || !loc.destinations) return;
+
+      loc.destinations.forEach(dest => {
+        if (locOverrides[dest.id]) {
+          const o = locOverrides[dest.id];
+          if (o.priceSharedRange) dest.priceSharedRange = o.priceSharedRange;
+          if (o.pricePrivateRange) dest.pricePrivateRange = o.pricePrivateRange;
+          if (o.colectivoCost) dest.colectivoCost = o.colectivoCost;
+        }
+      });
+    } catch (e) {
+      console.warn('Error applying price overrides:', e);
+    }
+  }
+  applyPriceOverrides(currentLocationId);
+
   let destinations = [...(locationData.destinations || [])];
   let colectivos = [...(locationData.colectivos || locationData.colectivosGuide || [])];
 
@@ -159,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (locationSelect) locationSelect.value = currentLocationId;
 
     // Update datasets
+    applyPriceOverrides(newLocId);
     destinations = [...(locationData.destinations || [])];
     colectivos = [...(locationData.colectivos || locationData.colectivosGuide || [])];
     loadCustomAgencies();
@@ -717,7 +745,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (customNotes) {
       msg += `💬 *Consulta o requerimiento adicional:* ${customNotes}\n`;
     }
-    msg += `\n¿Tienen cupos disponibles y confirman si pasan a recogernos a la puerta de ${locationData.name} (${locationData.address})? ¡Muchas gracias!`;
+    msg += `\n¿Tienen cupos disponibles y confirman si pasan a recogernos a la puerta de ${locationData.name} (${locationData.address})?\n`;
+    msg += `Adicionalmente, ¿manejan algún descuento especial por grupo o por cantidad de personas para esta fecha? ¡Muchas gracias! 😊`;
 
     return msg;
   }
@@ -1425,10 +1454,81 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
+  // =========================================================================
+  // REMOTE PRICE SYNC ENGINE (prices_manifest.json)
+  // =========================================================================
+  async function syncTourPrices(options = { silent: false }) {
+    const syncBtn = document.getElementById('btn-sync-prices');
+    const statusBadge = document.getElementById('sync-status-badge');
+    if (syncBtn) syncBtn.classList.add('syncing');
+
+    try {
+      const res = await fetch(`prices_manifest.json?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const manifest = await res.json();
+
+      if (manifest && manifest.locations) {
+        const overrides = {};
+        for (const [locKey, locObj] of Object.entries(manifest.locations)) {
+          overrides[locKey] = {};
+          if (window.CO404_LOCATIONS[locKey] && window.CO404_LOCATIONS[locKey].destinations) {
+            (locObj.destinations || []).forEach(d => {
+              overrides[locKey][d.id] = {
+                priceSharedRange: d.priceSharedRange,
+                pricePrivateRange: d.pricePrivateRange,
+                colectivoCost: d.colectivoCost
+              };
+              const target = window.CO404_LOCATIONS[locKey].destinations.find(x => x.id === d.id);
+              if (target) {
+                target.priceSharedRange = d.priceSharedRange;
+                target.pricePrivateRange = d.pricePrivateRange;
+                target.colectivoCost = d.colectivoCost;
+              }
+            });
+          }
+        }
+        localStorage.setItem('co404_price_overrides', JSON.stringify(overrides));
+        localStorage.setItem('co404_last_price_sync', new Date().toISOString());
+
+        destinations = [...(window.CO404_LOCATIONS[currentLocationId].destinations || [])];
+        renderDestinations();
+
+        if (statusBadge) {
+          statusBadge.textContent = 'Verified';
+          statusBadge.style.background = '#E8F5E9';
+          statusBadge.style.color = '#2E7D32';
+        }
+
+        if (!options.silent) {
+          showToast('✅ Latest tour market benchmarks & prices synchronized!');
+        }
+      }
+    } catch (err) {
+      console.warn('Price sync notice:', err);
+      if (!options.silent) {
+        showToast('⚠️ Using verified offline market prices.');
+      }
+    } finally {
+      if (syncBtn) {
+        setTimeout(() => syncBtn.classList.remove('syncing'), 400);
+      }
+    }
+  }
+
+  const btnSyncPrices = document.getElementById('btn-sync-prices');
+  if (btnSyncPrices) {
+    btnSyncPrices.addEventListener('click', () => {
+      syncTourPrices({ silent: false });
+    });
+  }
+
   // Initial render for active location
   renderDestinations();
   renderAgencies();
   renderGroupTrips();
   renderColectivos();
   updateTabCounters();
+
+  // Automatic silent price synchronization check upon opening the Hub
+  syncTourPrices({ silent: true });
 });

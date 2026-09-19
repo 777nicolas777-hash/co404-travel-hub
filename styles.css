@@ -225,6 +225,61 @@ body {
   padding: 8px;
 }
 
+.btn-sync-prices {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--co-sand-alt);
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--co-border);
+  color: var(--co-charcoal);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-sync-prices:hover {
+  background: var(--co-sand);
+  border-color: var(--co-terracotta);
+  color: var(--co-terracotta);
+  box-shadow: var(--shadow-subtle);
+  transform: translateY(-1px);
+}
+
+.btn-sync-prices:active {
+  transform: scale(0.97);
+}
+
+.btn-sync-prices svg {
+  color: var(--co-terracotta);
+  transition: transform 0.3s ease;
+}
+
+.btn-sync-prices.syncing svg {
+  animation: spinSync 0.8s linear infinite;
+}
+
+@keyframes spinSync {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sync-status-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #C8E6C9;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
 .currency-selector {
   background: var(--co-sand-alt);
   color: var(--co-charcoal);
