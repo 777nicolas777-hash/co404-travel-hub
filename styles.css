@@ -67,16 +67,27 @@ body {
   outline-offset: 2px;
 }
 
-/* App Header */
+/* Button & Interactive Tactile Feedback matching Volunteer Hub */
+.btn:active,
+.tab-btn:active,
+.filter-pill:active,
+.stat-pill:active,
+.btn-close-modal:active,
+.btn-header-action:active,
+.btn-whatsapp:active {
+  transform: scale(0.97) !important;
+}
+
+/* App Header - Volunteer Hub White Boutique Aesthetic */
 .top-header {
-  background: linear-gradient(135deg, var(--travel-wine-dark) 0%, var(--travel-wine-header) 100%);
-  color: var(--co-white);
-  padding: 16px 28px;
-  border-bottom: 2px solid rgba(200, 90, 50, 0.3);
+  background-color: var(--co-white);
+  color: var(--co-charcoal);
+  padding: 10px 28px;
+  border-bottom: 1px solid var(--co-border);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-subtle);
 }
 
 .header-container {
@@ -96,36 +107,74 @@ body {
 }
 
 .brand-logo-badge {
-  background-color: var(--co-terracotta);
-  color: var(--co-white);
-  font-weight: 800;
-  font-size: 1.15rem;
-  padding: 6px 14px;
-  border-radius: var(--radius-sm);
-  letter-spacing: -0.5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.brand-titles h1 {
-  font-family: var(--font-serif);
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  margin: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--co-border);
+  box-shadow: 0 3px 10px rgba(101, 22, 43, 0.12);
+  overflow: hidden;
+  padding: 2px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.brand-logo-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 14px rgba(200, 90, 50, 0.25);
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-full);
+}
+
+.brand-titles .brand-row {
+  display: flex;
+  align-items: baseline;
   gap: 8px;
 }
 
-.brand-titles h1 span.highlight {
-  color: #F8B296;
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--co-charcoal);
+  letter-spacing: -0.5px;
+  margin: 0;
 }
 
-.brand-subtitle {
-  font-size: 0.8rem;
-  opacity: 0.85;
-  font-weight: 400;
-  letter-spacing: 0.2px;
+.brand-divider {
+  color: var(--co-terracotta);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.brand-sub {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--co-charcoal-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.brand-motto {
+  font-size: 12px;
+  color: #8C8E92;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.brand-motto span {
+  color: var(--co-wine);
+  font-weight: 600;
 }
 
 .header-actions {
@@ -138,48 +187,62 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(8px);
-  padding: 2px 8px 2px 10px;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--co-sand-alt);
+  padding: 4px 10px 4px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--co-border);
+  color: var(--co-charcoal);
   transition: all 0.2s ease;
 }
 
 .location-switcher-wrap:hover {
-  background: rgba(255, 255, 255, 0.24);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: var(--co-sand);
+  border-color: #C8BDAD;
+  box-shadow: var(--shadow-subtle);
+}
+
+.location-switcher-wrap svg {
+  color: var(--co-terracotta);
+  flex-shrink: 0;
 }
 
 .location-selector {
   background: transparent;
-  color: var(--co-white);
+  color: var(--co-charcoal);
   border: none;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
   outline: none;
-  padding: 4px 6px;
+  padding: 4px 4px;
   font-family: var(--font-sans);
 }
 
 .location-selector option {
-  background-color: var(--co-wine);
-  color: var(--co-white);
+  background-color: var(--co-white);
+  color: var(--co-charcoal);
   font-size: 0.85rem;
-  padding: 6px;
+  padding: 8px;
 }
 
 .currency-selector {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--co-white);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
+  background: var(--co-sand-alt);
+  color: var(--co-charcoal);
+  border: 1px solid var(--co-border);
+  padding: 7px 12px;
+  border-radius: var(--radius-md);
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   outline: none;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.currency-selector:hover {
+  background: var(--co-sand);
+  border-color: #C8BDAD;
+  box-shadow: var(--shadow-subtle);
 }
 
 .currency-selector option {
@@ -187,14 +250,34 @@ body {
   background: var(--co-white);
 }
 
-/* Sub-Header Tabs & Quick Navigation */
+.btn-header-action {
+  background-color: var(--co-terracotta);
+  color: var(--co-white);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(200, 90, 50, 0.25);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-header-action:hover {
+  background-color: var(--co-terracotta-hover);
+  box-shadow: 0 4px 12px rgba(200, 90, 50, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Sub-Header Tabs & Quick Navigation matching Volunteer Hub pill tabs */
 .nav-tabs-bar {
   background-color: var(--co-white);
   border-bottom: 1px solid var(--co-border);
-  padding: 0 28px;
+  padding: 8px 28px;
   position: sticky;
-  top: 73px;
+  top: 67px;
   z-index: 90;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .nav-tabs-container {
@@ -213,39 +296,32 @@ body {
 }
 
 .tab-btn {
-  background: none;
-  border: none;
-  padding: 14px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 13.5px;
   font-weight: 600;
   color: var(--co-charcoal-sub);
   cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .tab-btn:hover {
-  color: var(--co-terracotta);
+  background-color: var(--co-sand);
+  color: var(--co-charcoal);
 }
 
 .tab-btn.active {
-  color: var(--co-wine);
-}
-
-.tab-btn.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--co-terracotta) 0%, var(--co-wine) 100%);
-  border-radius: 3px 3px 0 0;
+  background-color: var(--co-terracotta-light);
+  color: var(--co-terracotta);
+  border-color: rgba(200, 90, 50, 0.25);
+  font-weight: 700;
 }
 
 .tab-counter {
@@ -258,8 +334,8 @@ body {
 }
 
 .tab-btn.active .tab-counter {
-  background-color: var(--co-wine-light);
-  color: var(--co-wine);
+  background-color: var(--co-terracotta);
+  color: var(--co-white);
 }
 
 /* Main Layout */
@@ -1403,4 +1479,170 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 2px 5px rgba(30, 64, 175, 0.15);
 }
+
+/* ==========================================================================
+   Co404 Brand Logo Accents & Volunteer Hub Design Alignment
+   ========================================================================== */
+.hero-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--co-white);
+  border: 1px solid var(--co-border);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--co-terracotta);
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(30, 32, 34, 0.04);
+  letter-spacing: 0.3px;
+}
+
+.hero-logo-mini {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Modal Headers with Co404 Brand Badge */
+.modal-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-logo-wrap {
+  width: 38px;
+  height: 38px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--co-border);
+  box-shadow: 0 2px 8px rgba(101, 22, 43, 0.1);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.modal-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-full);
+  display: block;
+}
+
+.modal-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--co-wine);
+  margin: 0;
+}
+
+.modal-header-sub {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--co-charcoal-sub);
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* Co404 Hospitality & Coliving Footer */
+.app-footer {
+  background-color: var(--co-white);
+  border-top: 1px solid var(--co-border);
+  padding: 28px;
+  margin-top: 56px;
+  box-shadow: 0 -2px 10px rgba(30, 32, 34, 0.02);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-wrap {
+  width: 38px;
+  height: 38px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--co-border);
+  box-shadow: 0 2px 6px rgba(101, 22, 43, 0.08);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-full);
+  display: block;
+}
+
+.footer-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--co-charcoal);
+  letter-spacing: -0.2px;
+}
+
+.footer-brand-divider {
+  color: var(--co-terracotta);
+  font-weight: 600;
+}
+
+.footer-brand-sub {
+  font-size: 12px;
+  color: var(--co-charcoal-sub);
+  font-weight: 500;
+}
+
+.footer-locations {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.loc-chip {
+  background-color: var(--co-sand);
+  border: 1px solid var(--co-border-light);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--co-charcoal);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.footer-legal {
+  font-size: 11.5px;
+  color: #8C8E92;
+  font-weight: 500;
+}
+
 

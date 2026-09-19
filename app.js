@@ -165,14 +165,39 @@ document.addEventListener('DOMContentLoaded', () => {
     loadGroupTrips();
 
     // Update UI headers
+    document.title = `${locationData.name} Tours & Travel Hub | Co404 Hospitality`;
     const sub = document.getElementById('brand-location-subtitle');
     if (sub) {
-      sub.innerHTML = `${locationData.city} &bull; ${locationData.stateCountry} &bull; Tour Logistics & Agency Coordination`;
+      sub.innerHTML = `Coliving &amp; Community Adventures &bull; <span>${locationData.city}</span>`;
     }
 
     const agencySub = document.getElementById('agency-directory-subtitle');
     if (agencySub) {
       agencySub.textContent = `Tour operators, specialized expedition guides, and private drivers in ${locationData.city}. Quote directly via WhatsApp with ${locationData.name} pickup.`;
+    }
+
+    const heroDestTitle = document.getElementById('hero-dest-title');
+    if (heroDestTitle) {
+      if (currentLocationId === 'san-cris') {
+        heroDestTitle.textContent = 'Explore Chiapas from Co404';
+      } else if (currentLocationId === 'oaxaca') {
+        heroDestTitle.textContent = 'Explore Oaxaca from Co404';
+      } else if (currentLocationId === 'medellin') {
+        heroDestTitle.textContent = 'Explore Antioquia from Co404';
+      } else {
+        heroDestTitle.textContent = `Explore ${locationData.city} from ${locationData.name}`;
+      }
+    }
+
+    const heroDestDesc = document.getElementById('hero-dest-desc');
+    if (heroDestDesc) {
+      if (currentLocationId === 'san-cris') {
+        heroDestDesc.textContent = 'Curated guide of authentic distances, microclimates, community tips, and direct WhatsApp quotes with top local agencies on Real de Guadalupe.';
+      } else if (currentLocationId === 'oaxaca') {
+        heroDestDesc.textContent = 'Curated day trips to mezcal palenques, Zapotec ruins, Hierve el Agua, and Sierra Norte mountain hikes with verified Oaxaca operators.';
+      } else if (currentLocationId === 'medellin') {
+        heroDestDesc.textContent = 'Community guide to Guatapé, Comuna 13 street art, coffee haciendas in Jericó & Jardín, and paragliding in San Félix with door pickup in Laureles.';
+      }
     }
 
     const groupSub = document.getElementById('group-trips-subtitle');
@@ -280,8 +305,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const destCount = document.getElementById('tab-destinations-count');
     if (destCount) destCount.textContent = destinations.length;
 
+    const statDest = document.getElementById('stat-dest-count');
+    if (statDest) statDest.textContent = destinations.length;
+
     const agencyCount = document.getElementById('tab-agencies-count');
     if (agencyCount) agencyCount.textContent = agencies.length;
+
+    const statAgencies = document.getElementById('stat-agencies-count');
+    if (statAgencies) statAgencies.textContent = agencies.length;
 
     const tripsCount = document.getElementById('tab-trips-count');
     if (tripsCount) tripsCount.textContent = groupTrips.length;

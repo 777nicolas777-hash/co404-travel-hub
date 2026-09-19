@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Co404 Tours & Travel Hub | San Cristóbal de las Casas</title>
-  <meta name="description" content="Discover, coordinate, and book tours around San Cristóbal de las Casas for the Co404 Coliving community. Authentic local guides, van split coordination, and verified agency WhatsApp links.">
+  <title>Co404 Tours & Travel Hub | Hospitality & Coliving Adventures</title>
+  <meta name="description" content="Discover, coordinate, and book tours around San Cristóbal de las Casas, Oaxaca, and Medellín for the Co404 Coliving community. Authentic local guides, van split coordination, and verified agency WhatsApp links.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="assets/co404_logo.webp">
+  <link rel="apple-touch-icon" href="assets/co404_logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Top Header Bar -->
-  <header class="top-header">
+  <header class="top-header" id="mainHeader">
     <div class="header-container">
       <div class="brand-section">
-        <div class="brand-logo-badge">Co.404</div>
+        <div class="brand-logo-badge" title="Co.404 Coliving & Coworking">
+          <img src="assets/co404_logo.webp" alt="Co404" class="brand-logo-img">
+        </div>
         <div class="brand-titles">
-          <h1>Travel<span class="highlight">404</span> &bull; Tours Hub</h1>
-          <div class="brand-subtitle" id="brand-location-subtitle">San Cristóbal de las Casas &bull; Tour Logistics & Agency Coordination</div>
+          <div class="brand-row">
+            <h1 class="brand-title">Co404</h1>
+            <span class="brand-divider">/</span>
+            <span class="brand-sub">Tours &amp; Travel Hub</span>
+          </div>
+          <p class="brand-motto" id="brand-location-subtitle">Coliving &amp; Community Adventures &bull; <span>San Cristóbal de las Casas</span></p>
         </div>
       </div>
       <div class="header-actions">
@@ -37,7 +45,7 @@
           <option value="USD">🇺🇸 USD ($)</option>
           <option value="EUR">🇪🇺 EUR (€)</option>
         </select>
-        <button id="btn-quick-new-trip" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;">
+        <button id="btn-quick-new-trip" class="btn btn-primary btn-header-action" title="Create a community van trip">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           + Create Group Trip
         </button>
@@ -78,8 +86,12 @@
       <!-- Hero Banner -->
       <div class="hero-banner">
         <div class="hero-text">
-          <h2>Explore Chiapas from Co404</h2>
-          <p>Curated guide of authentic distances, microclimates, community tips, and direct WhatsApp quotes with top local agencies on Real de Guadalupe.</p>
+          <div class="hero-brand-pill">
+            <img src="assets/co404_logo.webp" alt="Co404" class="hero-logo-mini">
+            <span>Co404 Curated Experience Guide</span>
+          </div>
+          <h2 id="hero-dest-title">Explore Chiapas from Co404</h2>
+          <p id="hero-dest-desc">Curated guide of authentic distances, microclimates, community tips, and direct WhatsApp quotes with top local agencies on Real de Guadalupe.</p>
         </div>
         <div class="hero-stats">
           <div class="stat-pill">
@@ -133,6 +145,10 @@
     <section id="view-agencies" class="tab-view" style="display: none;">
       <div class="agency-header-actions">
         <div>
+          <div class="hero-brand-pill" style="margin-bottom: 8px;">
+            <img src="assets/co404_logo.webp" alt="Co404" class="hero-logo-mini">
+            <span>Co404 Verified Directory</span>
+          </div>
           <h2 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--co-wine); margin-bottom: 4px;">Verified Local Tour Agencies & Providers</h2>
           <p id="agency-directory-subtitle" style="font-size: 0.9rem; color: var(--co-charcoal-sub);">Tour operators, specialized expedition guides, and private drivers in San Cristóbal. Quote directly via WhatsApp with Co404 pickup.</p>
         </div>
@@ -151,6 +167,10 @@
       <div class="group-trips-view">
         <div class="group-trips-header">
           <div>
+            <div class="hero-brand-pill" style="margin-bottom: 8px;">
+              <img src="assets/co404_logo.webp" alt="Co404" class="hero-logo-mini">
+              <span>Co404 Community Vans</span>
+            </div>
             <h2 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--co-wine); margin-bottom: 4px;">Co404 Community Group Trips (Van Split)</h2>
             <p id="group-trips-subtitle" style="font-size: 0.9rem; color: var(--co-charcoal-sub);">Looking to split a private van or explore together with fellow colivers? Join an open trip below or launch a new one!</p>
           </div>
@@ -170,6 +190,10 @@
     <section id="view-colectivos" class="tab-view" style="display: none;">
       <div class="hero-banner">
         <div class="hero-text">
+          <div class="hero-brand-pill">
+            <img src="assets/co404_logo.webp" alt="Co404" class="hero-logo-mini">
+            <span>Co404 Public Transit Guide</span>
+          </div>
           <h2 id="colectivos-banner-title">Public Colectivo & DIY Transit Guide</h2>
           <p id="colectivos-banner-subtitle">Travel like a local for $1 - $2 USD ($15 - $40 MXN). Exact departure stations, windshield signs, schedules, and safety tips for nearby destinations.</p>
         </div>
@@ -185,7 +209,15 @@
   <div id="modal-tour-detail" class="modal-overlay">
     <div class="modal-container">
       <div class="modal-header">
-        <h3 id="modal-tour-title">Tour Details</h3>
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3 id="modal-tour-title">Tour Details</h3>
+            <span class="modal-header-sub">Co404 Field Guide &amp; Agency Rates</span>
+          </div>
+        </div>
         <button class="btn-close-modal" data-close="modal-tour-detail">&times;</button>
       </div>
       <div class="modal-body" id="modal-tour-body">
@@ -198,7 +230,15 @@
   <div id="modal-whatsapp-dispatcher" class="modal-overlay">
     <div class="modal-container" style="max-width: 620px;">
       <div class="modal-header">
-        <h3>Request WhatsApp Quote from Agency</h3>
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3>Request WhatsApp Quote from Agency</h3>
+            <span class="modal-header-sub">Direct booking &amp; door pickup for Co404 residents</span>
+          </div>
+        </div>
         <button class="btn-close-modal" data-close="modal-whatsapp-dispatcher">&times;</button>
       </div>
       <div class="modal-body">
@@ -271,7 +311,15 @@
   <div id="modal-add-provider" class="modal-overlay">
     <div class="modal-container" style="max-width: 620px;">
       <div class="modal-header">
-        <h3>Add New Tour Provider / Contact</h3>
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3>Add New Tour Provider / Contact</h3>
+            <span class="modal-header-sub">Co404 Community Travel Directory &bull; Zero Cost Live Search</span>
+          </div>
+        </div>
         <button class="btn-close-modal" data-close="modal-add-provider">&times;</button>
       </div>
       <div class="modal-body">
@@ -370,7 +418,15 @@
   <div id="modal-create-trip" class="modal-overlay">
     <div class="modal-container" style="max-width: 580px;">
       <div class="modal-header">
-        <h3>Create Co404 Group Trip</h3>
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3>Create Co404 Group Trip</h3>
+            <span class="modal-header-sub">Split private vans &amp; coordinate community outings</span>
+          </div>
+        </div>
         <button class="btn-close-modal" data-close="modal-create-trip">&times;</button>
       </div>
       <div class="modal-body">
@@ -432,7 +488,15 @@
   <div id="modal-join-trip" class="modal-overlay">
     <div class="modal-container" style="max-width: 480px;">
       <div class="modal-header">
-        <h3>Join this Group Trip</h3>
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3>Join this Group Trip</h3>
+            <span class="modal-header-sub">Co404 Coliving Van Share</span>
+          </div>
+        </div>
         <button class="btn-close-modal" data-close="modal-join-trip">&times;</button>
       </div>
       <div class="modal-body">
@@ -454,6 +518,29 @@
       </div>
     </div>
   </div>
+
+  <!-- Co404 Hospitality & Coliving Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="assets/co404_logo.webp" alt="Co404" class="footer-logo-img">
+        </div>
+        <div class="footer-titles">
+          <div class="footer-brand-title">Co404 <span class="footer-brand-divider">/</span> Tours &amp; Travel Hub</div>
+          <span class="footer-brand-sub">Coliving &bull; Coworking &bull; Verified Expeditions &amp; Community Group Vans</span>
+        </div>
+      </div>
+      <div class="footer-locations">
+        <span class="loc-chip">📍 San Cristóbal de las Casas</span>
+        <span class="loc-chip">📍 Oaxaca de Juárez</span>
+        <span class="loc-chip">📍 Medellín (Laureles)</span>
+      </div>
+      <div class="footer-legal">
+        <span>Part of the Co404 Hospitality Ecosystem &bull; 100% Free Live Place Search</span>
+      </div>
+    </div>
+  </footer>
 
   <!-- Toast Notification Feedback -->
   <div id="toast-message" style="position: fixed; bottom: 24px; right: 24px; background: var(--co-charcoal); color: var(--co-white); padding: 12px 20px; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; box-shadow: var(--shadow-pop); transform: translateY(100px); opacity: 0; transition: all 0.3s ease; z-index: 2000;"></div>
