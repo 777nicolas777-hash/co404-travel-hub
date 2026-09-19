@@ -45,6 +45,9 @@ function requestHandler(req, res) {
   }
 
   let p = (req.url || '/').split('?')[0];
+  try {
+    p = decodeURIComponent(p);
+  } catch (e) {}
   if (p === '/' || p === '') p = '/index.html';
 
   const foundPath = resolveFile(p);

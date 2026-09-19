@@ -4,7 +4,7 @@
   "trailingSlash": false,
   "functions": {
     "server.js": {
-      "includeFiles": "{styles.css,index.html,prices_manifest.json,js/**,assets/**}"
+      "includeFiles": "**"
     }
   },
   "headers": [
