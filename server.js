@@ -12,12 +12,27 @@ const MIME_TYPES = {
   '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
   '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon'
 };
 
-// Universal Request Handler conforming to Vercel Serverless Function & Node.js HTTP
+function resolveFile(requestedPath) {
+  const clean = requestedPath.startsWith('/') ? requestedPath.slice(1) : requestedPath;
+  const searchLocations = [
+    path.join(__dirname, clean),
+    path.join(process.cwd(), clean),
+    path.resolve(clean)
+  ];
+  for (const loc of searchLocations) {
+    if (fs.existsSync(loc) && fs.statSync(loc).isFile()) {
+      return loc;
+    }
+  }
+  return null;
+}
+
 function requestHandler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -32,35 +47,35 @@ function requestHandler(req, res) {
   let p = (req.url || '/').split('?')[0];
   if (p === '/' || p === '') p = '/index.html';
 
-  const filePath = path.join(__dirname, p);
-  const ext = path.extname(filePath).toLowerCase();
+  const foundPath = resolveFile(p);
 
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      const fallback = path.join(__dirname, 'index.html');
-      fs.readFile(fallback, (err2, fallbackData) => {
-        if (err2) {
-          res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-          res.end('Not found');
-        } else {
-          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-          res.end(fallbackData);
-        }
-      });
-    } else {
-      res.writeHead(200, {
-        'Content-Type': MIME_TYPES[ext] || 'application/octet-stream',
-        'Cache-Control': ext === '.html' ? 'public, max-age=0, must-revalidate' : 'public, max-age=31536000, immutable'
-      });
-      res.end(data);
+  if (foundPath) {
+    const ext = path.extname(foundPath).toLowerCase();
+    res.writeHead(200, {
+      'Content-Type': MIME_TYPES[ext] || 'application/octet-stream',
+      'Cache-Control': ext === '.html' ? 'public, max-age=0, must-revalidate' : 'public, max-age=31536000, immutable'
+    });
+    fs.createReadStream(foundPath).pipe(res);
+    return;
+  }
+
+  // If file not found and has NO extension (e.g. clean SPA URL), fallback to index.html
+  if (!path.extname(p)) {
+    const indexFile = resolveFile('index.html');
+    if (indexFile) {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      fs.createReadStream(indexFile).pipe(res);
+      return;
     }
-  });
+  }
+
+  // Not found
+  res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+  res.end('404 Not Found: ' + p);
 }
 
-// Export handler for Vercel Serverless Function deployment
 module.exports = requestHandler;
 
-// If executed directly (node server.js locally):
 if (require.main === module) {
   const server = http.createServer(requestHandler);
   server.listen(PORT, HOST, () => {
