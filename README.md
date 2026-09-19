@@ -114,7 +114,7 @@ Travel404 is intentionally engineered as a **100% static, zero-cost Edge web app
    ```
 2. Start the local server:
    ```bash
-   node server.js
+   node local_server.js
    ```
 3. Open your browser at:
    ```
