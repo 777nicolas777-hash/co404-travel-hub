@@ -7,6 +7,8 @@
 // Full English UI with Courteous Spanish WhatsApp Agency Communication
 // =============================================================================
 
+// Ensure execution only runs in a browser environment with DOM
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
   // Ensure CO404_LOCATIONS exists
   if (typeof window.CO404_LOCATIONS === 'undefined') {
@@ -1532,3 +1534,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Automatic silent price synchronization check upon opening the Hub
   syncTourPrices({ silent: true });
 });
+}
