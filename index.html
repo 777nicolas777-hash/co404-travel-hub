@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co404 Tours & Travel Hub | San Cristóbal de las Casas</title>
+  <meta name="description" content="Discover, coordinate, and book tours around San Cristóbal de las Casas for the Co404 Coliving community. Authentic local guides, van split coordination, and verified agency WhatsApp links.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Header Bar -->
+  <header class="top-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="brand-logo-badge">Co.404</div>
+        <div class="brand-titles">
+          <h1>Travel<span class="highlight">404</span> &bull; Tours Hub</h1>
+          <div class="brand-subtitle" id="brand-location-subtitle">San Cristóbal de las Casas &bull; Tour Logistics & Agency Coordination</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="location-switcher-wrap">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <select id="location-select" class="location-selector" title="Choose Co404 Location">
+            <option value="san-cris" selected>📍 Co404 San Cristóbal</option>
+            <option value="oaxaca">📍 Co404 Oaxaca</option>
+            <option value="medellin">📍 Co404 Medellín</option>
+          </select>
+        </div>
+        <select id="currency-select" class="currency-selector" title="Select Currency">
+          <option value="MXN" selected>🇲🇽 MXN ($)</option>
+          <option value="COP">🇨🇴 COP ($)</option>
+          <option value="USD">🇺🇸 USD ($)</option>
+          <option value="EUR">🇪🇺 EUR (€)</option>
+        </select>
+        <button id="btn-quick-new-trip" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          + Create Group Trip
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs Bar -->
+  <nav class="nav-tabs-bar">
+    <div class="nav-tabs-container">
+      <button class="tab-btn active" data-tab="destinations">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        Destinations & Tours
+        <span id="tab-destinations-count" class="tab-counter">0</span>
+      </button>
+      <button class="tab-btn" data-tab="agencies">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Local Agencies & Contacts
+        <span id="tab-agencies-count" class="tab-counter">8</span>
+      </button>
+      <button class="tab-btn" data-tab="group-trips">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        Co404 Group Trips (Van Split)
+        <span id="tab-trips-count" class="tab-counter">3</span>
+      </button>
+      <button class="tab-btn" data-tab="colectivos">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="3" y1="10" x2="21" y2="10"></line><line x1="7" y1="15" x2="7.01" y2="15"></line><line x1="17" y1="15" x2="17.01" y2="15"></line></svg>
+        DIY Colectivos Guide ($1 - $2 USD)
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- VIEW 1: DESTINATIONS & TOURS -->
+    <section id="view-destinations" class="tab-view active">
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <div class="hero-text">
+          <h2>Explore Chiapas from Co404</h2>
+          <p>Curated guide of authentic distances, microclimates, community tips, and direct WhatsApp quotes with top local agencies on Real de Guadalupe.</p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-pill">
+            <span id="stat-dest-count" class="stat-number">0</span>
+            <span class="stat-label">Destinations</span>
+          </div>
+          <div class="stat-pill">
+            <span id="stat-agencies-count" class="stat-number">8</span>
+            <span class="stat-label">Providers</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Co404 Door Pickup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Controls Card -->
+      <div class="filter-controls-card">
+        <div class="search-row">
+          <div class="search-input-wrapper">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="destination-search-input" class="search-input" placeholder="Search destinations, ruins, waterfalls, agencies, or tags (e.g. Sumidero, boat, textiles, canyon)...">
+          </div>
+          <select id="sort-destinations-select" class="sort-select">
+            <option value="recommended">Recommended for Co404</option>
+            <option value="distance-asc">Closest first (Lowest km)</option>
+            <option value="distance-desc">Furthest first (Expeditions)</option>
+            <option value="price-asc">Lowest Price</option>
+          </select>
+        </div>
+        <div class="category-pills-row" id="category-pills-container">
+          <button class="filter-pill active" data-category="all">All Destinations</button>
+          <button class="filter-pill" data-category="nature">Nature & Canyons</button>
+          <button class="filter-pill" data-category="waterfalls">Waterfalls & Lakes</button>
+          <button class="filter-pill" data-category="culture">Indigenous Culture</button>
+          <button class="filter-pill" data-category="archaeology">Maya Archaeology</button>
+          <button class="filter-pill" data-category="adventure">Adventure & Caving</button>
+          <button class="filter-pill" data-category="nearby">Nearby (&lt; 20 km)</button>
+          <button class="filter-pill" data-category="international">Guatemala Shuttles</button>
+        </div>
+      </div>
+
+      <!-- Destinations Grid -->
+      <div id="destinations-grid" class="destinations-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: AGENCIES DIRECTORY -->
+    <section id="view-agencies" class="tab-view" style="display: none;">
+      <div class="agency-header-actions">
+        <div>
+          <h2 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--co-wine); margin-bottom: 4px;">Verified Local Tour Agencies & Providers</h2>
+          <p id="agency-directory-subtitle" style="font-size: 0.9rem; color: var(--co-charcoal-sub);">Tour operators, specialized expedition guides, and private drivers in San Cristóbal. Quote directly via WhatsApp with Co404 pickup.</p>
+        </div>
+        <button id="btn-add-provider" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          + Add New Provider
+        </button>
+      </div>
+      <div id="agencies-grid" class="agencies-grid">
+        <!-- Injected via app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: CO404 GROUP TRIPS -->
+    <section id="view-group-trips" class="tab-view" style="display: none;">
+      <div class="group-trips-view">
+        <div class="group-trips-header">
+          <div>
+            <h2 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--co-wine); margin-bottom: 4px;">Co404 Community Group Trips (Van Split)</h2>
+            <p id="group-trips-subtitle" style="font-size: 0.9rem; color: var(--co-charcoal-sub);">Looking to split a private van or explore together with fellow colivers? Join an open trip below or launch a new one!</p>
+          </div>
+          <button id="btn-create-trip-main" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            + Launch New Group Trip
+          </button>
+        </div>
+
+        <div id="trips-grid" class="trips-grid">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: COLECTIVOS DIY GUIDE -->
+    <section id="view-colectivos" class="tab-view" style="display: none;">
+      <div class="hero-banner">
+        <div class="hero-text">
+          <h2 id="colectivos-banner-title">Public Colectivo & DIY Transit Guide</h2>
+          <p id="colectivos-banner-subtitle">Travel like a local for $1 - $2 USD ($15 - $40 MXN). Exact departure stations, windshield signs, schedules, and safety tips for nearby destinations.</p>
+        </div>
+      </div>
+      <div id="colectivos-list">
+        <!-- Injected via app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: TOUR / DESTINATION DETAILS -->
+  <div id="modal-tour-detail" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modal-tour-title">Tour Details</h3>
+        <button class="btn-close-modal" data-close="modal-tour-detail">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-tour-body">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: WHATSAPP QUOTE DISPATCHER -->
+  <div id="modal-whatsapp-dispatcher" class="modal-overlay">
+    <div class="modal-container" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3>Request WhatsApp Quote from Agency</h3>
+        <button class="btn-close-modal" data-close="modal-whatsapp-dispatcher">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label" for="wa-destination-name">Selected Tour / Destination:</label>
+          <input type="text" id="wa-destination-name" class="form-control" readonly>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="wa-agency-select" id="wa-agency-select-label">Select Tour Agency:</label>
+          <select id="wa-agency-select" class="form-control">
+            <!-- Injected dynamically -->
+          </select>
+          <div id="wa-agency-links-preview" class="agency-links-row" style="margin-top: 8px; padding-top: 0; border: none;"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="form-group">
+            <label class="form-label" for="wa-date-input">Target Tour Date:</label>
+            <input type="date" id="wa-date-input" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="wa-pax-input">Number of People (Co404):</label>
+            <input type="number" id="wa-pax-input" class="form-control" min="1" max="25" value="2">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="wa-service-type">Service Option:</label>
+          <select id="wa-service-type" class="form-control">
+            <option value="compartido">Shared Tour (Best Value)</option>
+            <option value="privado">Private Van for Co404 (Exclusive Group)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="wa-custom-notes">Special Inquiries or Requests:</label>
+          <input type="text" id="wa-custom-notes" class="form-control" placeholder="e.g. Do you have available seats? Can you pick us up at Co404 door?">
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <label class="form-label" style="margin-bottom: 0;">Message Preview (Sent in Spanish to Agency):</label>
+            <span style="font-size: 0.74rem; background: #E8F5E9; color: #1B5E20; padding: 2px 8px; border-radius: 999px; font-weight: 600;">
+              🇲🇽 Spanish Output for Local Operators
+            </span>
+          </div>
+          <div class="whatsapp-preview-box">
+            <div class="whatsapp-bubble" id="wa-preview-text">
+              <!-- Dynamically generated message in Spanish -->
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 10px;">
+          <button id="btn-copy-wa-message" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy Text
+          </button>
+          <button id="btn-send-wa-direct" class="btn btn-whatsapp" style="flex: 1.5;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Open WhatsApp with Agency
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD NEW PROVIDER / DRIVER -->
+  <div id="modal-add-provider" class="modal-overlay">
+    <div class="modal-container" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3>Add New Tour Provider / Contact</h3>
+        <button class="btn-close-modal" data-close="modal-add-provider">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-add-provider">
+          <!-- 100% FREE OPEN LIVE PLACE SEARCH -->
+          <div class="form-group place-search-box-wrap">
+            <label class="form-label" for="provider-place-search" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-weight: 700;"><span class="label-icon">📍</span> Live Business & Address Search (Zero Cost):</span>
+              <span class="badge-maps-live">🟢 100% Free Live Search</span>
+            </label>
+            <div class="search-input-wrapper">
+              <input type="text" id="provider-place-search" class="form-control" placeholder="Search business, agency or address (e.g. Toucan Cafe, Coyote Aventuras, Real de Guadalupe...)" autocomplete="off">
+              <div id="place-search-spinner" class="place-spinner hidden"></div>
+            </div>
+            <div id="place-search-dropdown" class="place-autocomplete-dropdown hidden"></div>
+            <div id="place-search-status" class="place-search-status hidden"></div>
+            <small style="color: var(--text-muted); font-size: 0.76rem; display: block; margin-top: 5px;">
+              💡 Select from the live dropdown to auto-fill the provider name, address & free Google Maps link. 100% free with zero API costs.
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="provider-name">Agency or Provider Name *:</label>
+            <input type="text" id="provider-name" class="form-control" placeholder="e.g. Don Pedro Private Vans & Airport Shuttles" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="provider-contact">Contact Person / Driver Name:</label>
+              <input type="text" id="provider-contact" class="form-control" placeholder="e.g. Pedro Morales">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="provider-whatsapp">WhatsApp Number (e.g. 529671234567) *:</label>
+              <input type="text" id="provider-whatsapp" class="form-control" placeholder="WhatsApp with country code..." required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="provider-phone">Phone Number (Calls):</label>
+              <input type="text" id="provider-phone" class="form-control" placeholder="Direct phone number...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="provider-price-tier">Price Benchmark:</label>
+              <select id="provider-price-tier" class="form-control">
+                <option value="Budget">Budget / Backpackers</option>
+                <option value="Standard" selected>Standard Fair Price</option>
+                <option value="Premium">Premium Private</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="provider-location" id="provider-location-label">Office / Base Location:</label>
+            <input type="text" id="provider-location" class="form-control" placeholder="Street address or neighborhood...">
+          </div>
+
+          <!-- MAPS & WEBSITE URL INPUTS -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="provider-maps-url">Google Maps Link / URL:</label>
+              <input type="url" id="provider-maps-url" class="form-control" placeholder="https://maps.google.com/?q=...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="provider-website">Website or Social Page:</label>
+              <input type="url" id="provider-website" class="form-control" placeholder="https://...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="provider-specialties">Specialties / Tours Offered (comma-separated):</label>
+            <input type="text" id="provider-specialties" class="form-control" placeholder="e.g. Private Vans, Airport Shuttles, Custom Day Trips">
+          </div>
+
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;">
+              <input type="checkbox" id="provider-pickup" checked style="width: 18px; height: 18px; accent-color: var(--co-terracotta);">
+              Picks up directly at Co404 door
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="provider-notes">Internal Notes & Community Tips for Co404:</label>
+            <textarea id="provider-notes" class="form-control" rows="2" placeholder="e.g. Very reliable driver with new 10-passenger van. Speaks basic English, recommended for weekend trips."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+            Save Provider to Directory
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CREATE GROUP TRIP -->
+  <div id="modal-create-trip" class="modal-overlay">
+    <div class="modal-container" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3>Create Co404 Group Trip</h3>
+        <button class="btn-close-modal" data-close="modal-create-trip">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-create-group-trip">
+          <div class="form-group">
+            <label class="form-label" for="trip-dest-select">Destination:</label>
+            <select id="trip-dest-select" class="form-control" required>
+              <!-- Injected dynamically -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="trip-title-input">Trip Title:</label>
+            <input type="text" id="trip-title-input" class="form-control" placeholder="e.g. Private van to Sumidero Canyon + lunch in Chiapa" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="trip-date-input">Departure Date:</label>
+              <input type="date" id="trip-date-input" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trip-pax-target">Target Group Size (pax):</label>
+              <input type="number" id="trip-pax-target" class="form-control" min="2" max="15" value="6" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="trip-creator-name">Your Name:</label>
+              <input type="text" id="trip-creator-name" class="form-control" placeholder="e.g. Sarah M." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trip-creator-room">Co404 Room / Role:</label>
+              <input type="text" id="trip-creator-room" class="form-control" placeholder="e.g. Room 12 / Volunteer" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="trip-cost-total">Estimated Total Van Cost (MXN):</label>
+            <input type="number" id="trip-cost-total" class="form-control" value="3000" step="100" required>
+            <span style="font-size: 0.78rem; color: var(--co-charcoal-sub);">The cost per person is automatically recalculated by dividing this total among all members who sign up.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="trip-notes-input">Departure Point & Notes:</label>
+            <input type="text" id="trip-notes-input" class="form-control" value="Departure from Co404 San Cristóbal front courtyard">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+            Post Trip on Co404 Board
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: JOIN GROUP TRIP -->
+  <div id="modal-join-trip" class="modal-overlay">
+    <div class="modal-container" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3>Join this Group Trip</h3>
+        <button class="btn-close-modal" data-close="modal-join-trip">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="join-trip-desc" style="font-size: 0.9rem; color: var(--co-charcoal-sub);"></p>
+        <form id="form-join-trip">
+          <input type="hidden" id="join-trip-id">
+          <div class="form-group">
+            <label class="form-label" for="join-name">Your Name:</label>
+            <input type="text" id="join-name" class="form-control" placeholder="e.g. Sophie M." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="join-room">Your Room / Role at Co404:</label>
+            <input type="text" id="join-room" class="form-control" placeholder="e.g. Room 08 / Resident" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; background-color: var(--co-wine);">
+            Confirm My Spot on the Trip
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast-message" style="position: fixed; bottom: 24px; right: 24px; background: var(--co-charcoal); color: var(--co-white); padding: 12px 20px; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; box-shadow: var(--shadow-pop); transform: translateY(100px); opacity: 0; transition: all 0.3s ease; z-index: 2000;"></div>
+
+  <script src="tours_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

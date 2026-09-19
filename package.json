@@ -1,0 +1,22 @@
+{
+  "name": "co404-travel-hub",
+  "version": "1.0.0",
+  "description": "Co404 Tours & Travel Hub (Travel404) - Multi-location tour booking, community trips, local transit guides & zero-cost POI search for Co404 colivings.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "co404",
+    "coliving",
+    "digital-nomads",
+    "travel-hub",
+    "san-cristobal",
+    "oaxaca",
+    "medellin",
+    "tours"
+  ],
+  "author": "Co404 Team",
+  "license": "MIT"
+}
