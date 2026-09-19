@@ -970,6 +970,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // City Coordinates for Free Open POI & Geocoding Search
+  const CITY_COORDS = {
+    'san-cris': { lat: 16.7370, lon: -92.6376, city: 'San Cristóbal de las Casas', state: 'Chiapas', country: 'México' },
+    'oaxaca': { lat: 17.0605, lon: -96.7256, city: 'Oaxaca de Juárez', state: 'Oaxaca', country: 'México' },
+    'medellin': { lat: 6.2442, lon: -75.5812, city: 'Medellín', state: 'Antioquia', country: 'Colombia' }
+  };
+
+  // 100% Free, Client-Side Open POI Search (Photon / OSM + Direct Google Maps Link)
+  async function performFreePlaceSearch(query, locationKey) {
+    const loc = CITY_COORDS[locationKey] || CITY_COORDS['san-cris'];
+    try {
+      const searchUrl = `https://photon.komoot.io/api/?q=${encodeURIComponent(query + ' ' + loc.city)}&lat=${loc.lat}&lon=${loc.lon}&limit=8`;
+      const res = await fetch(searchUrl);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.features && data.features.length > 0) {
+          return data.features.map(f => {
+            const p = f.properties;
+            const name = p.name || p.street || query;
+            const addrParts = [p.street, p.housenumber, p.district, p.city || loc.city, p.country || loc.country].filter(Boolean);
+            const address = addrParts.join(', ') || `${loc.city}, ${loc.country}`;
+            const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ', ' + address)}`;
+            const osmUrl = `https://www.openstreetmap.org/search?query=${encodeURIComponent(name + ', ' + address)}`;
+            return {
+              name,
+              address,
+              googleMapsUrl,
+              osmUrl,
+              lat: f.geometry?.coordinates?.[1] || loc.lat,
+              lng: f.geometry?.coordinates?.[0] || loc.lon,
+              type: p.osm_value || p.type || 'local_business',
+              source: 'free-open-poi'
+            };
+          });
+        }
+      }
+    } catch (err) {
+      console.warn('Direct Photon open search error, falling back to maps link:', err);
+    }
+
+    // Direct Google Maps web search link fallback
+    const freeMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query + ', ' + loc.city)}`;
+    return [{
+      name: query,
+      address: `${loc.city}, ${loc.country}`,
+      googleMapsUrl: freeMapsUrl,
+      lat: loc.lat,
+      lng: loc.lon,
+      source: 'free-open-direct'
+    }];
+  }
+
   if (placeSearchInput) {
     placeSearchInput.addEventListener('input', (e) => {
       const q = e.target.value.trim();
@@ -985,14 +1037,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       placeSearchDebounce = setTimeout(async () => {
         try {
-          const res = await fetch(`/api/places-search?query=${encodeURIComponent(q)}&location=${currentLocationId}`);
-          const data = await res.json();
+          const results = await performFreePlaceSearch(q, currentLocationId);
           if (placeSearchSpinner) placeSearchSpinner.classList.add('hidden');
 
-          if (data && data.success && data.results && data.results.length > 0) {
-            currentSearchResults = data.results;
+          if (results && results.length > 0) {
+            currentSearchResults = results;
             selectedDropdownIndex = -1;
-            placeSearchDropdown.innerHTML = data.results.map((r, idx) => `
+            placeSearchDropdown.innerHTML = results.map((r, idx) => `
               <div class="place-dropdown-item" data-index="${idx}">
                 <div>
                   <div class="place-title">📍 ${escapeHtml(r.name)}</div>

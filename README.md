@@ -80,18 +80,18 @@
 
 ## 🛠️ Architecture & Zero-Cost Design
 
-Travel404 is intentionally engineered to require **zero paid cloud subscriptions, zero external databases, and zero API costs**:
+Travel404 is intentionally engineered as a **100% static, zero-cost Edge web application** requiring **zero paid cloud subscriptions, zero external databases, zero serverless function dependencies, and zero Google Cloud API costs**:
 
 ```
 [ Frontend: index.html + styles.css + app.js ]
                      │
        ┌─────────────┴─────────────┐
        ▼                           ▼
-[ Client-Side State ]     [ Local Server (server.js) ]
-  • tours_data.js                • Static asset serving
-  • localStorage Persistence     • /api/places-search
-  • Multi-Currency Engine        • Photon/OSM free geocoding
-  • WhatsApp Message Builder     • City coordinates biasing
+[ Client-Side State ]     [ Free Open Geocoding ]
+  • tours_data.js                • Photon / OpenStreetMap (CORS-enabled)
+  • localStorage Persistence     • City coordinates biasing (San Cris, Oaxaca, Medellín)
+  • Multi-Currency Engine        • Canonical Google Maps web search links
+  • WhatsApp Message Builder     • 100% client-side ($0.00 cost)
 ```
 
 - **Open POI Search:** Queries Photon (OpenStreetMap data) with local coordinate centers:
@@ -100,14 +100,11 @@ Travel404 is intentionally engineered to require **zero paid cloud subscriptions
   - Medellín: `6.2442, -75.5812`
 - **Free Web Navigation Links:** Generates canonical search URLs (`https://www.google.com/maps/search/?api=1&query=...`) that open directly in the user's browser at $0.00 cost.
 - **Local Isolation:** Custom drivers and group trips added in one city remain scoped to that specific city in `localStorage`.
+- **Vercel Edge Ready:** Configured via `vercel.json` for lightning-fast Edge CDN delivery with clean URLs and asset caching.
 
 ---
 
-## 🚀 Quickstart & Local Setup
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16+)
-- A modern web browser
+## 🚀 Quickstart & Deployment
 
 ### Running Locally
 1. Clone this repository:
@@ -117,13 +114,18 @@ Travel404 is intentionally engineered to require **zero paid cloud subscriptions
    ```
 2. Start the local server:
    ```bash
-   npm start
-   # or: node server.js
+   node server.js
    ```
 3. Open your browser at:
    ```
    http://127.0.0.1:3002/
    ```
+
+### Deploying to Vercel
+Deploying to Vercel is 100% plug-and-play:
+1. Push your changes to GitHub on `main`.
+2. Connect the repository to Vercel (or import it).
+3. Vercel automatically deploys it as a static Edge application using `vercel.json`. Zero build commands or environment variables needed!
 
 ---
 
