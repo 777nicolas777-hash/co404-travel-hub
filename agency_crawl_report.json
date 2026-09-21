@@ -1,0 +1,608 @@
+[
+  {
+    "site": "otisa",
+    "city": "san-cris",
+    "url": "https://otisatravel.com",
+    "status": 200,
+    "headings": [
+      "World ClassTour Operador & DMC"
+    ],
+    "tourLinks": [
+      "https://otisa.viajes/",
+      "https://otisa.viajes/es/p/inicio"
+    ],
+    "prices": []
+  },
+  {
+    "site": "apasionado",
+    "city": "san-cris",
+    "url": "https://apasionadoxchiapas.com",
+    "status": 200,
+    "headings": [
+      "Explora los destinos más increíbles de Chiapas",
+      "San Cristóbal",
+      "Palenque",
+      "Tuxtla Gutiérrez",
+      "Guías Certificados",
+      "Promociones exclusivas",
+      "Cascadas El Chiflón y Lagos de Montebello",
+      "Cañón del Sumidero con miradores y Chiapa de Corzo",
+      "Recepción Aeropuerto traslado a San Cristóbal Chiapas",
+      "Tours compartidos en Chiapas",
+      "¡Estamos aquí para ayudarte a planear tu viaje!",
+      "Los mejores destinos, con quienes más los conocen",
+      "Ceremonia Maya Lacandones:Encuentro Espiritual",
+      "¿Ya conoces estos lugares?",
+      "Preguntas frecuentes"
+    ],
+    "tourLinks": [
+      "https://apasionadoxchiapas.com/css/libviajes-bootstrap.css",
+      "https://apasionadoxchiapas.com/tours",
+      "https://apasionadoxchiapas.com/tours/Tuxtla Gutierrez",
+      "https://apasionadoxchiapas.com/tours/San Cristobal",
+      "https://apasionadoxchiapas.com/tours/Palenque?recorrido=Compartido",
+      "https://apasionadoxchiapas.com/tours/Palenque?recorrido=Privado",
+      "https://apasionadoxchiapas.com/tours/Ocosingo",
+      "https://apasionadoxchiapas.com/paquetes",
+      "https://apasionadoxchiapas.com/paquetes/Tuxtla Gutierrez",
+      "https://apasionadoxchiapas.com/paquetes/San Cristobal"
+    ],
+    "prices": []
+  },
+  {
+    "site": "voyachiapas",
+    "city": "san-cris",
+    "url": "https://voyachiapas.com",
+    "status": 200,
+    "headings": [
+      "NUESTROS DESTINOS",
+      "What people are saying about us",
+      "Vive la cultura de chiapas como ningún otro"
+    ],
+    "tourLinks": [
+      "https://voyachiapas.com/servicios/paquetes/",
+      "https://voyachiapas.com/servicios/tours-diarios/",
+      "https://voyachiapas.com/servicios/traslados/",
+      "https://voyachiapas.com/servicios/",
+      "https://voyachiapas.com/servicios/pueblos-indigenas/",
+      "https://voyachiapas.com/servicios/chiapas-express-4-dias-3-noches/",
+      "https://voyachiapas.com/servicios/chiapas-marravilloso-6-dias-5-noches/",
+      "https://voyachiapas.com/servicios/chiapas-impresionante-6-dias-5-noches/",
+      "https://voyachiapas.com/servicios/paquetes",
+      "https://voyachiapas.com/servicios/tours-diarios"
+    ],
+    "prices": []
+  },
+  {
+    "site": "selvaazul",
+    "city": "san-cris",
+    "url": "https://selvazultours.com",
+    "status": 200,
+    "headings": [
+      "Buscar por palabra clave",
+      "Nuestros Servicios",
+      "Actividades Turísticos",
+      "Nos recomiendan",
+      "Destinos",
+      "Tours Realizados",
+      "Años de Experiencia",
+      "Actividades más recomendados",
+      "Sobre Nosotros",
+      "Testimonios",
+      "Monica Rodriguez Garcia",
+      "Khriz Laraz",
+      "Enrique Be",
+      "Selva Azul",
+      "Enlaces Rápidos"
+    ],
+    "tourLinks": [
+      "https://selvazultours.com/",
+      "https://selvazultours.com",
+      "https://selvazultours.com/imagenes/pequena/1760985708.webp",
+      "https://selvazultours.com/whater/lib/animate/animate.min.css",
+      "https://selvazultours.com/whater/lib/owlcarousel/assets/owl.carousel.min.css",
+      "https://selvazultours.com/whater/css/bootstrap.min.css",
+      "https://selvazultours.com/whater/css/style.css",
+      "https://selvazultours.com/tours/San Cristobal",
+      "https://selvazultours.com/tours/Palenque",
+      "https://selvazultours.com/paquetes/San Cristobal"
+    ],
+    "prices": [
+      "$580.00 MXN",
+      "$350.00 MXN"
+    ]
+  },
+  {
+    "site": "explorando",
+    "city": "san-cris",
+    "url": "https://www.explorandochiapas.com.mx",
+    "status": 200,
+    "headings": [
+      "Vive una Aventura Extraordinaria",
+      "Clientes Felices",
+      "Será un placer atenderte"
+    ],
+    "tourLinks": [
+      "https://www.explorandochiapas.com.mx/paquetes/",
+      "https://www.explorandochiapas.com.mx/tour-category/cuba/",
+      "https://www.explorandochiapas.com.mx/tour-category/oaxaca/",
+      "https://www.explorandochiapas.com.mx/tour-category/chiapas/",
+      "https://www.explorandochiapas.com.mx/tour-category/merida/",
+      "https://www.explorandochiapas.com.mx/tour-category/tren-maya/",
+      "https://www.explorandochiapas.com.mx/tour-category/veracruz/",
+      "https://www.explorandochiapas.com.mx/tour-category/campeche/",
+      "https://www.explorandochiapas.com.mx/tours/5-dias-4-noches/",
+      "http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.explorandochiapas.com.mx%2Ftours%2F5-dias-4-noches%2F"
+    ],
+    "prices": []
+  },
+  {
+    "site": "nichim",
+    "city": "san-cris",
+    "url": "https://nichimtours.com.mx",
+    "status": 200,
+    "headings": [
+      "Ecotours",
+      "Ruta del café",
+      "Oaxaca",
+      "De un día",
+      "Guatemala",
+      "Destinos Populares",
+      "Arco del Tiempo",
+      "Agua Azul",
+      "Cañón del Sumidero",
+      "Cascada de Chiflón",
+      "San Cristóbal",
+      "Planifique su viaje con nosotros",
+      "Recorrido más popular",
+      "CHIAPAS DE AMBAR Y SELVA",
+      "$ 13,950.00/Persona"
+    ],
+    "tourLinks": [
+      "https://nichimtours.com.mx/",
+      "paquetes/ES/CHS",
+      "paquetes/ES/OAX",
+      "paquetes/ES/DF",
+      "https://viaje.ly/nichim-tours",
+      "paquetes/ES/Paquetes-CHS",
+      "paquetes/ES/UnDia-CHS",
+      "paquetes/ES/Cafe",
+      "paquetes/ES/Ecotours-y-Aventura",
+      "paquetes/ES/Paquetes-OAX"
+    ],
+    "prices": [
+      "$ 13,950.00",
+      "$ 1530.00",
+      "$ 750.00"
+    ]
+  },
+  {
+    "site": "sendatour",
+    "city": "san-cris",
+    "url": "https://sendatour.mx",
+    "status": 403,
+    "headings": [],
+    "tourLinks": [],
+    "prices": []
+  },
+  {
+    "site": "coyote",
+    "city": "oaxaca",
+    "url": "https://coyoteaventuras.com",
+    "status": 200,
+    "headings": [
+      "Oaxaca tours\nHiking + Mountain Biking +\nCultural Adventures",
+      "Oaxaca toursHiking + Mountain Biking +Cultural Adventures",
+      "Can&#8217;t find the adventure you&#8217;re looking for?",
+      "Use our internal search engine",
+      "Calendar",
+      "Community &#038; Connection",
+      "We walk together",
+      "Inspiring the Next Generation",
+      "Play brings us together.",
+      "Caring for Street Dogs",
+      "Solidarity on four legs.",
+      "The Coyote Family",
+      "Let Us Create Your Next Adventure!",
+      "Reviews"
+    ],
+    "tourLinks": [
+      "https://coyoteaventuras.com/adventures/tours/hiking-oaxaca/",
+      "https://coyoteaventuras.com/adventures/tours/mountain-biking-oaxaca/",
+      "https://coyoteaventuras.com/adventures/tours/mtb-enduro-oaxaca/",
+      "https://coyoteaventuras.com/adventures/tours/rock-climbing-oaxaca/",
+      "https://coyoteaventuras.com/adventures/tours/art-culture-oaxaca/",
+      "https://coyoteaventuras.com/adventures/tours/expeditions-mexico/",
+      "https://coyoteaventuras.com/adventures/tours/retreats-oaxaca/",
+      "https://api.whatsapp.com/send?phone=5215555047316&amp;text=%C2%A1Hi!%20I%20am%20interested%20on%20one%20tour.%20Could%20you%20assist%20me?%20&amp;source=&amp;data= "
+    ],
+    "prices": []
+  },
+  {
+    "site": "sierranorte",
+    "city": "oaxaca",
+    "url": "https://sierranorte.org.mx",
+    "status": 200,
+    "headings": [],
+    "tourLinks": [],
+    "prices": []
+  },
+  {
+    "site": "xiadani",
+    "city": "oaxaca",
+    "url": "https://xiadanitours.com",
+    "status": 200,
+    "headings": [
+      "Experiencias auténticas",
+      "Descubre Monte Albán",
+      "Dominios del Mictlán",
+      "Hierve el Agua",
+      "Tradición y Artesanía",
+      "Nuestras Rutas",
+      "Ruta Magia Zapoteca",
+      "Ruta Dominios del Mictlán",
+      "Ruta Legado en las Montañas",
+      "Ruta Entrañas de la Tierra",
+      "Ruta Revelación Ancestral",
+      "Ruta Paraíso Mixteco",
+      "Ruta Tesoro Costeño",
+      "Ruta Benito Juárez - Cuajimoloyas",
+      "Ruta Viernes de Plaza - Ocotlán"
+    ],
+    "tourLinks": [
+      "/img/montealban/xiadani-tours-magia-zapoteca17.jpg",
+      "/img/sansebastiangrutas/grutas-oaxaca-xiadanitours.webp",
+      "/img/benitojuarez/benitojuarez-xiadanitours-sierra-norte.webp",
+      "/img/llanoflores/hikers-xiadanitours.webp",
+      "/img/tlacolula/mercados-oaxaca-xiadanitours.webp",
+      "https://xiadanitours.com/",
+      "/xiadanitours.png",
+      "/rutas/",
+      "https://www.facebook.com/xiadani.tours",
+      "https://www.instagram.com/xiadani.tours/"
+    ],
+    "prices": [
+      "$12"
+    ]
+  },
+  {
+    "site": "oaxacatours",
+    "city": "oaxaca",
+    "url": "https://www.oaxacatours.mx",
+    "status": 200,
+    "headings": [
+      "TOURS GRUPALES",
+      "LO QUE DICEN NUESTROS VIAJEROS",
+      "DESCUBRE OAXACA",
+      "ENCU&Eacute;NTRANOS EN",
+      "EL CORAZ&Oacute;N DE OAXACA"
+    ],
+    "tourLinks": [
+      "https://www.oaxacatours.mx",
+      "https://www.oaxacatours.mx/",
+      "https://www.oaxacatours.mx/en",
+      "https://www.oaxacatours.mx/reservas-online",
+      "https://www.oaxacatours.mx/copia-de-traslados",
+      "https://www.oaxacatours.mx/general-6-1",
+      "https://www.oaxacatours.mx/services-4-2",
+      "https://www.oaxacatours.mx/about-8",
+      "https://www.oaxacatours.mx/services-4-1",
+      "https://www.oaxacatours.mx/tianguis-turístico"
+    ],
+    "prices": []
+  },
+  {
+    "site": "lescas",
+    "city": "oaxaca",
+    "url": "https://toursinoaxaca.com",
+    "status": 200,
+    "headings": [
+      "Tours  Disponibles  2026",
+      "Tours Especiales",
+      "NUESTROS TOURS Y DESTINOS",
+      "Opina sobre Lescas Co Tours Oaxaca"
+    ],
+    "tourLinks": [
+      "https://toursinoaxaca.com/feed/",
+      "https://toursinoaxaca.com/comments/feed/",
+      "https://toursinoaxaca.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftoursinoaxaca.com%2F",
+      "https://toursinoaxaca.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftoursinoaxaca.com%2F&#038;format=xml",
+      "https://toursinoaxaca.com/wp-content/themes/astra/assets/css/minified/frontend.min.css?ver=4.13.12",
+      "https://toursinoaxaca.com/wp-content/astra-local-fonts/astra-local-fonts.css?ver=4.13.12",
+      "https://toursinoaxaca.com/wp-content/themes/astra/assets/css/minified/menu-animation.min.css?ver=4.13.12",
+      "https://toursinoaxaca.com/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=2.8.6",
+      "https://toursinoaxaca.com/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=2.8.6",
+      "https://toursinoaxaca.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.0.1"
+    ],
+    "prices": [
+      "$150 MXN",
+      "$300 MXN",
+      "$400 MXN",
+      "$550.00 MXN",
+      "$1950MXN",
+      "$600 MXN",
+      "$700 MXN",
+      "$500 MXN"
+    ]
+  },
+  {
+    "site": "dainzuu",
+    "city": "oaxaca",
+    "url": "https://www.dainzuutravel.com",
+    "status": 200,
+    "headings": [
+      "Descubre Oaxaca con gu&iacute;as certificados",
+      "Tour Caminos del Mezcal: Hierve el Agua, Mitla y el Tule",
+      "LEGADO\nZapoteco",
+      "SABORES",
+      "DE OAXACA",
+      "DE COCINA",
+      "CEMENTERIOS",
+      "PAQUETE",
+      "GUELAGUETZA",
+      "Nuestros clientes nos recomiendan",
+      "Tenemos un record de excelencia en el servicio",
+      "Vivimos la magia de Oaxaca",
+      "CERTIFICACIONES",
+      "Certificaci&oacute;n de seguridad\ne higiene en el servicio ante\nel Covid-19.",
+      "Galardonado con el sello\npunto limpio"
+    ],
+    "tourLinks": [
+      "https://www.dainzuutravel.com/service-page/tour-a-cementerios",
+      "https://www.dainzuutravel.com/booking-calendar/tour-a-cementerios",
+      "https://www.youtube.com/@toursenoaxacaoperadoraturi5762",
+      "https://www.tiktok.com/@dainzuutours"
+    ],
+    "prices": [
+      "$85",
+      "$75"
+    ]
+  },
+  {
+    "site": "enjoyoaxaca",
+    "city": "oaxaca",
+    "url": "https://enjoyoaxaca.com",
+    "status": 200,
+    "headings": [
+      "Explora Oaxaca con los que mejor la conocen..",
+      "¿Por qué elegirnos?​",
+      "El Tule, Mitla y Hierve el Agua",
+      "Monte Albán, Barro Negro y Alebrijes",
+      "Traslado al Aeropuerto",
+      "Nuestros Servicios",
+      "Tours privados",
+      "Tours Compartidos",
+      "Transportación",
+      "Experiencias",
+      "Lo que dicen nuestros viajeros",
+      "Ubicación",
+      "Encuéntranos"
+    ],
+    "tourLinks": [
+      "https://enjoyoaxaca.com/portfolio/tours-privados-personalizados/",
+      "https://enjoyoaxaca.com/portfolio/tours-compartidos-oaxaca/"
+    ],
+    "prices": []
+  },
+  {
+    "site": "turibus",
+    "city": "medellin",
+    "url": "https://turibuscolombia.com",
+    "status": 200,
+    "headings": [
+      "Nuestros tours más populares",
+      "Sumérgete en la magiade los pueblos antioqueños",
+      "City Plus",
+      "Tour Nocturno",
+      "Tour Graffiti 13",
+      "City Tour Medellín",
+      "Tour silletas y flores",
+      "Tour lechero",
+      "Tour El Carmen de Viboral",
+      "Tour Guatapé",
+      "Explora el mundo con Turibus",
+      "Opiniones reales de nuestros viajeros",
+      "Experiencias sin filtros",
+      "Filtrar por precio",
+      "Tipos de Tours"
+    ],
+    "tourLinks": [
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/css/tourfic-style.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/flatpickr/flatpickr.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/range-slider/al-range-slider.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/fancybox/jquery.fancybox.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/slick/slick.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/font-awesome/fontawesome4/css/font-awesome.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/font-awesome/fontawesome5/css/all.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/font-awesome/fontawesome6/css/all.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/notyf/notyf.min.css?ver=2.23.5",
+      "https://turibuscolombia.com/wp-content/plugins/tourfic/assets/app/libs/remixicon/remixicon.css?ver=2.23.5"
+    ],
+    "prices": []
+  },
+  {
+    "site": "medellindaytrips",
+    "city": "medellin",
+    "url": "https://medellindaytrips.com",
+    "status": 200,
+    "headings": [
+      "+3.500 ⭐⭐⭐⭐⭐ Reviews on TripAdvisor, Viator &#038; Google",
+      "10/10 &#8211; Medellin Horseback Tour",
+      "Great experience!",
+      "Perfect Outing in Medellin",
+      "Chocolate Farm in the Andes",
+      "Laura was amazing",
+      "Tour Commune 13 and coffee tour",
+      "Out of 100",
+      "Private coffee tour and Comuna 13",
+      "A Cup Full of Fun",
+      "Wonderful coffee tour close to the city",
+      "Knowledgeable and accommodating",
+      "Highly recommend!",
+      "Amazing experience",
+      "Everything was amazing and we will book again"
+    ],
+    "tourLinks": [
+      "https://www.medellindaytrips.com/tours/coffee-tour-in-medellin/",
+      "https://www.medellindaytrips.com/tours/guatape-and-coffee-farm-tour/",
+      "https://www.medellindaytrips.com/tours/coffee-chocolate-tour-two-farms-one-incredible-experience/",
+      "https://www.medellindaytrips.com/tours/coffee-tour-and-horseback-riding-all-in-one-great-day/",
+      "https://www.medellindaytrips.com/tours/coffee-farm-food-tour-in-medellin-exotic-fruits-local-food-colombian-coffee/",
+      "https://www.medellindaytrips.com/tours/coffee-plantation-tour-jardin/",
+      "https://www.medellindaytrips.com/tours/graffiti-tour-coffee-farm-experience/",
+      "https://www.medellindaytrips.com/tours/coffee-tour-atvs-a-super-fun-educational-day/",
+      "https://www.medellindaytrips.com/tours/coffee-tour-with-war-victims-learn-all-about-coffee-reconciliation/",
+      "https://www.medellindaytrips.com/tours/guatape-paragliding-private-tour-nature-and-adventure-in-one-great-day/"
+    ],
+    "prices": [
+      "$10"
+    ]
+  },
+  {
+    "site": "premiumtours",
+    "city": "medellin",
+    "url": "https://toursyviajesmedellin.com",
+    "status": 200,
+    "headings": [
+      "Cotiza en línea sin esperas",
+      "Tours compartidos y privados",
+      "Atención directa por WhatsApp",
+      "Solicita una llamada",
+      "Tres experiencias que vale la pena vivir y tours compartidos hoy!",
+      "Pa\\' qué te contamos nosotros, escuchá a los que ya fueron",
+      "Tours privados & servicios",
+      "Memorias de nuestros viajeros",
+      "Blog viajero",
+      "Lo que dicen quienes ya viajaron",
+      "Tu próxima historiaempieza aquí",
+      "Antes de reservar",
+      "Horario",
+      "Síguenos",
+      "Acceso"
+    ],
+    "tourLinks": [
+      "https://toursyviajesmedellin.com/",
+      "/tours/",
+      "/servicios.html",
+      "https://www.instagram.com/premiumtours.plus/?hl=es",
+      "https://www.tiktok.com/@premiumtours.plus"
+    ],
+    "prices": []
+  },
+  {
+    "site": "medellincitytours",
+    "city": "medellin",
+    "url": "https://medellincitytours.com",
+    "status": 200,
+    "headings": [
+      "Explore Medellín with Absolute Confidence & Ease",
+      "Private Transportation",
+      "Bilingual Guides",
+      "Handpicked Experiences",
+      "Stress-Free Planning",
+      "$ Souvenirs",
+      "UTV private tour in Medellin",
+      "View UTV Tour",
+      "How Our Family Travels: Colombia - First Stop, Medellin!",
+      "View Video",
+      "TOP THINGS TO DO IN MEDELLIN",
+      "PIONEERING IN TOURISM",
+      "THE BEST AT WHAT WE DO!",
+      "NEW NATIONAL TOURS",
+      "MOST FEATURED TOUR"
+    ],
+    "tourLinks": [
+      "https://medellincitytours.com/xmlrpc.php",
+      "https://medellincitytours.com/",
+      "https://medellincitytours.com/feed/",
+      "https://medellincitytours.com/comments/feed/",
+      "https://medellincitytours.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmedellincitytours.com%2F",
+      "https://medellincitytours.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmedellincitytours.com%2F&#038;format=xml",
+      "https://medellincitytours.com/wp-includes/css/dashicons.min.css?ver=7.1.1",
+      "https://medellincitytours.com/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/elusive.min.css?ver=2.0",
+      "https://medellincitytours.com/wp-content/plugins/menu-icons/css/fontawesome/css/all.min.css?ver=5.15.4",
+      "https://medellincitytours.com/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/foundation-icons.min.css?ver=3.0"
+    ],
+    "prices": []
+  },
+  {
+    "site": "fantasytours",
+    "city": "medellin",
+    "url": "https://fantasytours.com.co",
+    "status": 200,
+    "headings": [
+      "Bienvenido a",
+      "fantasytours",
+      "Tour a Guatapé",
+      "City Tour Medellín",
+      "Hacienda Nápoles",
+      "Somos Agencia de Viajes de Medellín, Colombia",
+      "¡Únete a la aventura!",
+      "Mejores planes que puedes disfrutar",
+      "en Medellín",
+      "Conociendo El Jardín En 2 Días",
+      "Coffee Tour En Medellín, Tour Del Café, Cata De Café En Finca Cafetera",
+      "City Tour Medellín + Comuna13: Historia, Cultura Y Transformación Viva",
+      "Tour A Guatapé Desde Medellín Con Visita A La Piedra El Peñón De Guatapé",
+      "Testimonios de nuestros clientes"
+    ],
+    "tourLinks": [
+      "https://fantasytours.com.co/",
+      "https://fantasytours.com.co/feed/",
+      "https://fantasytours.com.co/comments/feed/",
+      "https://fantasytours.com.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffantasytours.com.co%2F",
+      "https://fantasytours.com.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffantasytours.com.co%2F&#038;format=xml",
+      "https://fantasytours.com.co/wp-content/plugins/wp-whatsapp/assets/dist/css/style.css?ver=6.9.8",
+      "https://fantasytours.com.co/wp-content/plugins/allow-webp-image/public/css/allow-webp-image-public.css?ver=1.0.1",
+      "https://fantasytours.com.co/wp-content/plugins/cool-tag-cloud/inc/cool-tag-cloud.css?ver=2.25",
+      "https://fantasytours.com.co/wp-content/plugins/custom-product-gallery/assets/css/product-gallery.css?ver=6.9.8",
+      "https://fantasytours.com.co/wp-content/plugins/ht-slider-for-elementor/assets/css/ht-slider-widgets.css?ver=1.5.7"
+    ],
+    "prices": []
+  },
+  {
+    "site": "toursmedallo",
+    "city": "medellin",
+    "url": "https://toursmedallo.com",
+    "status": 200,
+    "headings": [
+      "Explore Medellín by Topic",
+      "The Complete Medellín Travel Guide for 2026",
+      "Top Travel Guides for Medellín",
+      "Is Medellín Safe for Tourists? The Honest 2026 Guide",
+      "25 Best Things To Do in Medellín in 2026",
+      "Where to Stay in Medellín: Best Neighborhoods for Tourists",
+      "3 Days in Medellín: The Perfect Itinerary",
+      "What to Eat in Medellín: The Local Food Guide",
+      "Getting Around Medellín: Metro, Uber & Airport Guide",
+      "Ready to experience Medellín?",
+      "Best Day Trips from Medellín",
+      "Guatapé & La Piedra del Peñol",
+      "Hacienda Nápoles",
+      "Río Claro",
+      "Santa Fe de Antioquia"
+    ],
+    "tourLinks": [
+      "https://toursmedallo.com/",
+      "https://tour-medellin.com/tours-medellin.php",
+      "https://www.instagram.com/toursmedallocol/",
+      "https://www.facebook.com/toursmedallo",
+      "https://www.tiktok.com/@tours_medallo",
+      "https://tour-medellin.com/tour-graffitour",
+      "https://tour-medellin.com/tour-guatape",
+      "https://tour-medellin.com/tour-pablo-escobar",
+      "https://tour-medellin.com/tour-hacienda-napoles",
+      "https://tour-medellin.com/tour-parapente"
+    ],
+    "prices": []
+  },
+  {
+    "site": "toucan",
+    "city": "medellin",
+    "url": "https://www.toucanspanish.com",
+    "status": 403,
+    "headings": [],
+    "tourLinks": [],
+    "prices": []
+  }
+]

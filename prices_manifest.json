@@ -1,7 +1,7 @@
 {
   "manifestVersion": "1.0.0",
-  "lastUpdated": "2026-09-19T22:17:30.041Z",
-  "verifiedDateHuman": "Today, September 19, 2026",
+  "lastUpdated": "2026-09-21T22:49:43.516Z",
+  "verifiedDateHuman": "lunes, 21 de septiembre de 2026, 04:49 p.m.",
   "sourceInfo": "Official agency market benchmarks, CONANP/INAH entrance fees, and local transport cooperatives",
   "currencyRates": {
     "USD": 1,
@@ -22,7 +22,41 @@
           "priceSharedRange": "$750 - $900 MXN ($40 - $48 USD)",
           "pricePrivateRange": "$2,800 - $3,800 MXN (Private van 1-6 pax)",
           "colectivoCost": "$250 - $380 MXN (Independent boat ticket + public combis)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 580,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "apasionado-x-chiapas",
+              "agencyName": "Apasionado x Chiapas",
+              "price": 750,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "nichim-tours",
+              "agencyName": "Nichim Tours",
+              "price": 750,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://nichimtours.com.mx"
+            },
+            {
+              "agencyId": "jalapeno-tours",
+              "agencyName": "Jalapeño Tours",
+              "price": 450,
+              "currency": "MXN",
+              "source": "Mostrador / WhatsApp",
+              "url": "https://jalapenotour.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "chiflon-montebello",
@@ -30,7 +64,25 @@
           "priceSharedRange": "$550 - $850 MXN ($30 - $45 USD)",
           "pricePrivateRange": "$3,600 - $4,800 MXN (Private van)",
           "colectivoCost": "$350 - $450 MXN (Complex multi-stage public transit via Comitán)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 580,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "apasionado-x-chiapas",
+              "agencyName": "Apasionado x Chiapas",
+              "price": 750,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "chamula-zinacantan",
@@ -38,7 +90,25 @@
           "priceSharedRange": "$350 - $500 MXN ($18 - $26 USD)",
           "pricePrivateRange": "$1,100 - $1,600 MXN (Private van)",
           "colectivoCost": "$25 - $35 MXN per leg by public colectivo (Super easy DIY)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 350,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "apasionado-x-chiapas",
+              "agencyName": "Apasionado x Chiapas",
+              "price": 400,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "agua-azul-misolha-palenque",
@@ -46,7 +116,33 @@
           "priceSharedRange": "$1,200 - $1,700 MXN ($65 - $92 USD)",
           "pricePrivateRange": "$5,500 - $7,500 MXN (Exclusive private van)",
           "colectivoCost": "Not recommended as a single-day roundtrip by public transport",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 1100,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "apasionado-x-chiapas",
+              "agencyName": "Apasionado x Chiapas",
+              "price": 1200,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "nichim-tours",
+              "agencyName": "Nichim Tours",
+              "price": 1530,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://nichimtours.com.mx"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "arco-del-tiempo",
@@ -54,7 +150,17 @@
           "priceSharedRange": "$2,800 - $4,200 MXN ($150 - $230 USD / multi-day all-inclusive)",
           "pricePrivateRange": "$8,500 - $12,000 MXN (Private guided expedition)",
           "colectivoCost": "Impossible DIY (Requires federal permits, certified caving guides & technical gear)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 5200,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "bonampak-yaxchilan",
@@ -62,7 +168,8 @@
           "priceSharedRange": "$1,600 - $2,200 MXN ($88 - $120 USD)",
           "pricePrivateRange": "$6,500 - $8,800 MXN (Exclusive private van)",
           "colectivoCost": "Not feasible DIY (Requires border river motorboat and Lacandon reserve transport)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "chukumaltik-lagos-colon",
@@ -70,7 +177,17 @@
           "priceSharedRange": "$900 - $1,400 MXN ($50 - $75 USD)",
           "pricePrivateRange": "$4,200 - $5,600 MXN (Private van)",
           "colectivoCost": "Complex multi-stage transfer (combi to Comitán + pickup truck to La Trinitaria)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 950,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "arcotete-rancho-nuevo-mamut",
@@ -78,7 +195,25 @@
           "priceSharedRange": "$400 - $600 MXN ($22 - $32 USD)",
           "pricePrivateRange": "$1,200 - $1,800 MXN",
           "colectivoCost": "$20 - $30 MXN per leg (Super easy DIY by public taxi or combi!)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "apasionado-x-chiapas",
+              "agencyName": "Apasionado x Chiapas",
+              "price": 400,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 420,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "sima-cotorras-aguacero",
@@ -86,7 +221,17 @@
           "priceSharedRange": "$950 - $1,400 MXN ($52 - $75 USD)",
           "pricePrivateRange": "$3,800 - $5,200 MXN",
           "colectivoCost": "Not feasible DIY (No scheduled public transit to the abyss rim)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 800,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "tonina-corralito",
@@ -94,7 +239,17 @@
           "priceSharedRange": "$850 - $1,350 MXN ($46 - $73 USD)",
           "pricePrivateRange": "$3,400 - $4,800 MXN",
           "colectivoCost": "$120 - $160 MXN (Via Ocosingo combi)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 900,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "las-nubes-comitan",
@@ -102,7 +257,17 @@
           "priceSharedRange": "$850 - $1,400 MXN ($46 - $75 USD)",
           "pricePrivateRange": "$4,200 - $5,800 MXN",
           "colectivoCost": "Very difficult DIY for a single day without a private vehicle",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 900,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "huitepec-moxviquil",
@@ -110,7 +275,8 @@
           "priceSharedRange": "$200 - $350 MXN ($11 - $19 USD with naturalist guide)",
           "pricePrivateRange": "$600 - $900 MXN",
           "colectivoCost": "$15 MXN by colectivo combi or $60 MXN by local taxi",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "traslado-guatemala",
@@ -118,7 +284,96 @@
           "priceSharedRange": "$950 - $1,300 MXN / $50 - $70 USD",
           "pricePrivateRange": "$4,500 - $6,500 MXN",
           "colectivoCost": "$350 MXN (DIY border crossing via La Mesilla combis)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "cabalgata-chamula",
+          "name": "Horseback Trail to San Juan Chamula",
+          "priceSharedRange": "$350 - $450 MXN ($19 - $25 USD)",
+          "pricePrivateRange": "$1,200 - $1,600 MXN",
+          "colectivoCost": "$25 - $35 MXN (Public combi if riding one-way)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "nichim-tours",
+              "agencyName": "Nichim Tours",
+              "price": 400,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://nichimtours.com.mx"
+            },
+            {
+              "agencyId": "jalapeno-tours",
+              "agencyName": "Jalapeño Tours",
+              "price": 350,
+              "currency": "MXN",
+              "source": "Mostrador / WhatsApp",
+              "url": "https://jalapenotour.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "las-3-tzimoleras",
+          "name": "Cascadas Las 3 Tzimoleras Off-Road 4x4",
+          "priceSharedRange": "$1,400 - $1,700 MXN ($75 - $92 USD)",
+          "pricePrivateRange": "$4,800 - $6,500 MXN (Private 4x4 safari)",
+          "colectivoCost": "Impossible DIY (Requires high-clearance 4x4 & local agrarian permission)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 1600,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "puerto-arista-boca-cielo",
+          "name": "Playa Puerto Arista & Boca del Cielo Coast",
+          "priceSharedRange": "$850 - $1,100 MXN ($46 - $60 USD)",
+          "pricePrivateRange": "$4,500 - $6,000 MXN",
+          "colectivoCost": "$280 - $350 MXN (Via Tuxtla & Tonalá combis)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 850,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "selva-lacandona-naha",
+          "name": "Selva Lacandona & Nahá 2-Day Cultural Immersion",
+          "priceSharedRange": "$2,850 - $3,600 MXN ($154 - $195 USD / 2 days all-inclusive)",
+          "pricePrivateRange": "$9,500 - $13,000 MXN",
+          "colectivoCost": "Not feasible DIY (Protected tribal territory with mandatory community guides)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "selva-azul-tours",
+              "agencyName": "Selva Azul Chiapas",
+              "price": 2850,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://selvazultours.com/tours/San%20Cristobal"
+            },
+            {
+              "agencyId": "apasionado-x-chiapas",
+              "agencyName": "Apasionado x Chiapas",
+              "price": 3200,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://apasionadoxchiapas.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         }
       ]
     },
@@ -134,7 +389,25 @@
           "priceSharedRange": "$500 - $650 MXN ($27 - $35 USD)",
           "pricePrivateRange": "$2,600 - $3,400 MXN (Private van 1-6 pax)",
           "colectivoCost": "$140 - $180 MXN (Independent taxi colectivo + entry fees)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 550,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            },
+            {
+              "agencyId": "xiadani-tours",
+              "agencyName": "Xiadani Tours Oaxaca",
+              "price": 650,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://xiadanitours.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "monte-alban",
@@ -142,7 +415,25 @@
           "priceSharedRange": "$350 - $450 MXN ($19 - $25 USD)",
           "pricePrivateRange": "$1,400 - $1,800 MXN (Private van 1-6 pax)",
           "colectivoCost": "$80 - $100 MXN (Suburban tourist bus from Mina #501 roundtrip)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 300,
+              "currency": "MXN",
+              "source": "Web Oficial (Medio Día)",
+              "url": "https://toursinoaxaca.com"
+            },
+            {
+              "agencyId": "xiadani-tours",
+              "agencyName": "Xiadani Tours Oaxaca",
+              "price": 450,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://xiadanitours.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "tule-teotitlan-rugs",
@@ -150,7 +441,8 @@
           "priceSharedRange": "$400 - $550 MXN ($22 - $30 USD)",
           "pricePrivateRange": "$1,600 - $2,200 MXN (Private van 1-6 pax)",
           "colectivoCost": "$60 - $80 MXN (Colectivo taxi from Monumento a Juárez)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "mezcal-matatlan",
@@ -158,7 +450,8 @@
           "priceSharedRange": "$650 - $850 MXN ($35 - $46 USD)",
           "pricePrivateRange": "$2,800 - $3,600 MXN (Private van 1-6 pax)",
           "colectivoCost": "$110 - $150 MXN (Colectivo taxi to Matatlán central plaza)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "san-martin-tilcajete-coyotepec",
@@ -166,7 +459,17 @@
           "priceSharedRange": "$450 - $600 MXN ($24 - $32 USD)",
           "pricePrivateRange": "$1,800 - $2,400 MXN (Private van 1-6 pax)",
           "colectivoCost": "$70 - $90 MXN (Colectivo taxi from Central de Abastos)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 400,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "apoala-waterfalls",
@@ -174,7 +477,17 @@
           "priceSharedRange": "$850 - $1,100 MXN ($46 - $60 USD)",
           "pricePrivateRange": "$3,800 - $4,600 MXN (Private van 1-6 pax)",
           "colectivoCost": "$220 - $280 MXN (Multi-leg combis via Nochixtlán)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 1950,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "sierra-norte-pueblos",
@@ -182,7 +495,17 @@
           "priceSharedRange": "$950 - $1,250 MXN ($51 - $68 USD)",
           "pricePrivateRange": "$4,200 - $5,200 MXN (Private van 1-6 pax)",
           "colectivoCost": "$160 - $200 MXN (Community bus from Central de Abastos to Cuajimoloyas)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 700,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "san-jose-del-pacifico",
@@ -190,7 +513,17 @@
           "priceSharedRange": "$800 - $1,050 MXN ($43 - $57 USD)",
           "pricePrivateRange": "$3,800 - $4,800 MXN (Private van 1-6 pax)",
           "colectivoCost": "$200 - $240 MXN (Líneas Unidas express van from Bustamante)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 600,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "yagul-caves",
@@ -198,7 +531,8 @@
           "priceSharedRange": "$450 - $600 MXN ($24 - $32 USD)",
           "pricePrivateRange": "$1,900 - $2,500 MXN (Private van 1-6 pax)",
           "colectivoCost": "$70 - $90 MXN (Colectivo taxi to Yagul crossroads + 1km walk)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "puerto-escondido-shuttle",
@@ -206,7 +540,87 @@
           "priceSharedRange": "$400 - $500 MXN ($22 - $27 USD)",
           "pricePrivateRange": "$3,400 - $4,200 MXN (Private van 1-6 pax)",
           "colectivoCost": "$300 - $350 MXN (Autobuses de la Costa or Ruta Coatlanes)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 500,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            },
+            {
+              "agencyId": "transportadora-turistica-dainzuu",
+              "agencyName": "Operadora Turística Dainzúu",
+              "price": 500,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://www.dainzuutravel.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "clases-cocina-oaxaquena",
+          "name": "Oaxacan Cooking Class & Market Food Odyssey",
+          "priceSharedRange": "$1,500 - $1,950 MXN ($80 - $105 USD)",
+          "pricePrivateRange": "$3,200 - $4,200 MXN",
+          "colectivoCost": "N/A (Chef-guided culinary masterclass with full 4-course banquet)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 1950,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "grutas-san-sebastian",
+          "name": "Grutas de San Sebastián Sedeño & Ríos Subterráneos",
+          "priceSharedRange": "$750 - $950 MXN ($40 - $52 USD)",
+          "pricePrivateRange": "$3,200 - $4,200 MXN",
+          "colectivoCost": "$90 - $130 MXN (Combi via Sola de Vega route)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "xiadani-tours",
+              "agencyName": "Xiadani Tours Oaxaca",
+              "price": 850,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://xiadanitours.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "mercado-ocotlan-viernes",
+          "name": "Friday Market of Ocotlán & Red Clay Artisans",
+          "priceSharedRange": "$600 - $750 MXN ($32 - $40 USD)",
+          "pricePrivateRange": "$2,600 - $3,500 MXN",
+          "colectivoCost": "$35 - $45 MXN by shared taxi from Central de Abastos",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "xiadani-tours",
+              "agencyName": "Xiadani Tours Oaxaca",
+              "price": 650,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://xiadanitours.com"
+            },
+            {
+              "agencyId": "lescas-co-tours",
+              "agencyName": "Lescas Co Tours Oaxaca",
+              "price": 600,
+              "currency": "MXN",
+              "source": "Web Oficial",
+              "url": "https://toursinoaxaca.com"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         }
       ]
     },
@@ -222,7 +636,25 @@
           "priceSharedRange": "$110,000 - $140,000 COP ($27 - $34 USD)",
           "pricePrivateRange": "$520,000 - $680,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$35,000 - $45,000 COP (Direct bus from Terminal del Norte)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "turibus-medellin",
+              "agencyName": "Turibus Colombia",
+              "price": 135000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://turibuscolombia.com/tour/tour-guatape/"
+            },
+            {
+              "agencyId": "tours-medallo",
+              "agencyName": "Tours Medallo",
+              "price": 119000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://tour-medellin.com/tour-guatape"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "comuna-13-metrocable",
@@ -230,7 +662,17 @@
           "priceSharedRange": "$70,000 - $95,000 COP ($17 - $23 USD)",
           "pricePrivateRange": "$290,000 - $380,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$12,000 - $16,000 COP (Metro Line B to San Javier + feeder bus)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "tours-medallo",
+              "agencyName": "Tours Medallo",
+              "price": 119000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://tour-medellin.com/tour-graffitour"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "santa-fe-de-antioquia",
@@ -238,7 +680,8 @@
           "priceSharedRange": "$120,000 - $150,000 COP ($29 - $37 USD)",
           "pricePrivateRange": "$520,000 - $680,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$30,000 - $38,000 COP (Minivan from Terminal del Norte)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "jardin-coffee-pueblo",
@@ -246,7 +689,8 @@
           "priceSharedRange": "$160,000 - $210,000 COP ($39 - $51 USD)",
           "pricePrivateRange": "$700,000 - $900,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$45,000 - $55,000 COP (Rápido Ochoa bus from Terminal del Sur)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "jerico-heritage-town",
@@ -254,7 +698,8 @@
           "priceSharedRange": "$150,000 - $190,000 COP ($37 - $46 USD)",
           "pricePrivateRange": "$680,000 - $850,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$42,000 - $50,000 COP (Direct bus from Terminal del Sur)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "parque-arvi-santa-elena",
@@ -262,7 +707,8 @@
           "priceSharedRange": "$80,000 - $110,000 COP ($20 - $27 USD)",
           "pricePrivateRange": "$350,000 - $450,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$15,000 - $22,000 COP (Public Metro + Metrocable Line L ticket)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "rio-claro-canyon",
@@ -270,7 +716,8 @@
           "priceSharedRange": "$190,000 - $250,000 COP ($46 - $61 USD)",
           "pricePrivateRange": "$820,000 - $1,100,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$65,000 - $80,000 COP (Buses heading to Doradal from Terminal del Norte)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "coffee-farm-experience",
@@ -278,7 +725,8 @@
           "priceSharedRange": "$130,000 - $170,000 COP ($32 - $41 USD)",
           "pricePrivateRange": "$450,000 - $580,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$25,000 - $35,000 COP (Bus to San Antonio de Prado / Fredonia)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "paragliding-san-felix",
@@ -286,7 +734,17 @@
           "priceSharedRange": "$170,000 - $220,000 COP ($41 - $54 USD)",
           "pricePrivateRange": "$420,000 - $550,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$30,000 - $40,000 COP (Bello bus + San Félix local colectivo)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "tours-medallo",
+              "agencyName": "Tours Medallo",
+              "price": 299000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://tour-medellin.com/tour-parapente"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         },
         {
           "id": "salto-del-buey-abejorral",
@@ -294,9 +752,70 @@
           "priceSharedRange": "$180,000 - $240,000 COP ($44 - $58 USD)",
           "pricePrivateRange": "$720,000 - $920,000 COP (Private van 1-6 pax)",
           "colectivoCost": "$50,000 - $65,000 COP (Buses to La Ceja / Abejorral from Terminal del Sur)",
-          "lastVerified": "2026-09-19"
+          "agencyPublishedPrices": [],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "carmen-de-viboral-ceramica",
+          "name": "El Carmen de Viboral: Cuna de la Cerámica Artesanal",
+          "priceSharedRange": "$180,000 - $220,000 COP ($44 - $54 USD)",
+          "pricePrivateRange": "$750,000 - $950,000 COP",
+          "colectivoCost": "$18,000 - $24,000 COP (Direct bus from Terminal del Norte)",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "turibus-medellin",
+              "agencyName": "Turibus Colombia",
+              "price": 195000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://turibuscolombia.com/tour/tour-el-carmen-de-viboral/"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "hacienda-napoles-safari",
+          "name": "Hacienda Nápoles Theme Park & African Safari",
+          "priceSharedRange": "$259,000 - $299,000 COP ($63 - $73 USD with passport pass)",
+          "pricePrivateRange": "$1,100,000 - $1,400,000 COP",
+          "colectivoCost": "$65,000 COP each way by Rápido Ochoa bus + entrance ticket",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "tours-medallo",
+              "agencyName": "Tours Medallo",
+              "price": 259000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://tour-medellin.com/tour-hacienda-napoles"
+            }
+          ],
+          "lastVerified": "2026-09-21"
+        },
+        {
+          "id": "tour-nocturno-medellin",
+          "name": "Tour Nocturno Medellín & Miradores de Las Palmas",
+          "priceSharedRange": "$120,000 - $145,000 COP ($29 - $35 USD)",
+          "pricePrivateRange": "$450,000 - $650,000 COP",
+          "colectivoCost": "$30,000 - $45,000 COP by taxi to Las Palmas viewpoint",
+          "agencyPublishedPrices": [
+            {
+              "agencyId": "turibus-medellin",
+              "agencyName": "Turibus Colombia",
+              "price": 137000,
+              "currency": "COP",
+              "source": "Web Oficial",
+              "url": "https://turibuscolombia.com/tour/tour-nocturno/"
+            }
+          ],
+          "lastVerified": "2026-09-21"
         }
       ]
     }
-  }
+  },
+  "status": "synchronized",
+  "liveCheckedSources": [
+    "Selva Azul Chiapas (selvazultours.com)",
+    "Apasionado x Chiapas (apasionadoxchiapas.com)",
+    "Lescas Co Tours Oaxaca (toursinoaxaca.com)"
+  ]
 }

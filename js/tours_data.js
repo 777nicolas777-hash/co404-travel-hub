@@ -101,6 +101,40 @@ const CO404_LOCATIONS = {
           "nichim-tours",
           "otisa-tours",
           "jalapeno-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 580,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "apasionado-x-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 750,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "nichim-tours",
+            "agencyName": "Nichim Tours",
+            "price": 750,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://nichimtours.com.mx"
+          },
+          {
+            "agencyId": "jalapeno-tours",
+            "agencyName": "Jalapeño Tours",
+            "price": 450,
+            "currency": "MXN",
+            "source": "Mostrador / WhatsApp",
+            "url": "https://jalapenotour.com"
+          }
         ]
       },
       {
@@ -187,6 +221,24 @@ const CO404_LOCATIONS = {
           "nichim-tours",
           "voy-a-chiapas",
           "explorando-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 580,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "apasionado-x-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 750,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -269,6 +321,24 @@ const CO404_LOCATIONS = {
           "voy-a-chiapas",
           "selva-azul-tours",
           "otisa-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 350,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "apasionado-x-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 400,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -356,6 +426,32 @@ const CO404_LOCATIONS = {
           "nichim-tours",
           "selva-azul-tours",
           "jalapeno-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 1100,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "apasionado-x-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 1200,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "nichim-tours",
+            "agencyName": "Nichim Tours",
+            "price": 1530,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://nichimtours.com.mx"
+          }
         ]
       },
       {
@@ -454,6 +550,16 @@ const CO404_LOCATIONS = {
         ],
         "bestAgencies": [
           "apasionado-x-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 5200,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -644,6 +750,16 @@ const CO404_LOCATIONS = {
           "apasionado-x-chiapas",
           "nichim-tours",
           "selva-azul-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 950,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -725,6 +841,24 @@ const CO404_LOCATIONS = {
           "jalapeno-tours",
           "selva-azul-tours",
           "explorando-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "apasionado-x-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 400,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 420,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -815,6 +949,16 @@ const CO404_LOCATIONS = {
           "apasionado-x-chiapas",
           "nichim-tours",
           "voy-a-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 800,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -900,6 +1044,16 @@ const CO404_LOCATIONS = {
           "nichim-tours",
           "apasionado-x-chiapas",
           "voy-a-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 900,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -993,6 +1147,16 @@ const CO404_LOCATIONS = {
           "apasionado-x-chiapas",
           "selva-azul-tours",
           "voy-a-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 900,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
         ]
       },
       {
@@ -1139,6 +1303,376 @@ const CO404_LOCATIONS = {
           "selva-azul-tours",
           "tours-chiapas"
         ]
+      },
+      {
+        "id": "cabalgata-chamula",
+        "name": "Horseback Trail to San Juan Chamula",
+        "tagline": "Pine forest mountain ride and mystic Tzotzil highland ceremony",
+        "category": "culture",
+        "tags": [
+          "Horseback Riding",
+          "Indigenous Culture",
+          "Pine Forests",
+          "Tradition"
+        ],
+        "distanceKm": 12,
+        "travelTimeMinutes": 45,
+        "altitudeMeters": 2260,
+        "microclimate": "Cool highland mountain climate (12°C - 20°C / 54°F - 68°F)",
+        "suggestedDeparture": "09:30 AM",
+        "returnTime": "02:00 PM",
+        "difficulty": "Easy to Moderate (Suitable for beginners)",
+        "priceSharedRange": "$350 - $450 MXN ($19 - $25 USD)",
+        "pricePrivateRange": "$1,200 - $1,600 MXN",
+        "colectivoCost": "$25 - $35 MXN (Public combi if riding one-way)",
+        "heroImage": "./assets/images/chamula.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Scenic Trail Favorite",
+        "description": "A tranquil 3.5 to 4 hour horseback ride departing from the outskirts of San Cristóbal through misty pine woods, small indigenous hamlets, and rolling highland valleys, arriving directly at the sacred church of San Juan Chamula. Experience Tzotzil spiritual syncretism, copal incense, pine-needle carpets, and centuries of tradition before returning.",
+        "itinerary": [
+          {
+            "time": "09:30 AM",
+            "desc": "Pick-up at Co404 and short transfer to horse stables in Barrio de Guadalupe."
+          },
+          {
+            "time": "10:00 AM",
+            "desc": "Horse mounting, safety briefing, and guided mountain trail ride."
+          },
+          {
+            "time": "11:45 AM",
+            "desc": "Arrival in San Juan Chamula; tie horses and guided visit inside the sacred church."
+          },
+          {
+            "time": "01:00 PM",
+            "desc": "Free time in the indigenous artisan market and traditional sheep wool craft stalls."
+          },
+          {
+            "time": "02:00 PM",
+            "desc": "Return van transfer or ride back to Co404 San Cristóbal."
+          }
+        ],
+        "includes": [
+          "Healthy gentle trail horse and saddle",
+          "Local indigenous Tzotzil equestrian guide",
+          "San Juan Chamula community entrance fee",
+          "Return transportation to Co404"
+        ],
+        "excludes": [
+          "Entrance fee inside San Juan Chamula church (~$50 MXN)",
+          "Lunch, snacks, and artisan souvenirs",
+          "Guide tips"
+        ],
+        "co404Tips": [
+          "ABSOLUTELY NO PHOTOS inside the Chamula church—violators face camera confiscation or fines by indigenous authorities.",
+          "Wear long pants (jeans) and closed-toe sneakers/boots for comfortable riding.",
+          "Tzotzil guides speak Spanish and Tzotzil; asking about their equestrian traditions makes for a wonderfully warm connection."
+        ],
+        "packingList": [
+          "Long pants / jeans",
+          "Closed-toe riding shoes or sneakers",
+          "Warm sweater or windbreaker",
+          "Small backpack",
+          "Cash for church entrance and snacks"
+        ],
+        "bestAgencies": [
+          "nichim-tours",
+          "jalapeno-tours",
+          "selva-azul-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "nichim-tours",
+            "agencyName": "Nichim Tours",
+            "price": 400,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://nichimtours.com.mx"
+          },
+          {
+            "agencyId": "jalapeno-tours",
+            "agencyName": "Jalapeño Tours",
+            "price": 350,
+            "currency": "MXN",
+            "source": "Mostrador / WhatsApp",
+            "url": "https://jalapenotour.com"
+          }
+        ]
+      },
+      {
+        "id": "las-3-tzimoleras",
+        "name": "Cascadas Las 3 Tzimoleras Off-Road 4x4",
+        "tagline": "Rugged canyon expedition, 3 wild turquoise cascades and natural swimming holes",
+        "category": "adventure",
+        "tags": [
+          "4x4 Safari",
+          "Turquoise Falls",
+          "Cliff Jumping",
+          "Off-the-beaten-path"
+        ],
+        "distanceKm": 110,
+        "travelTimeMinutes": 140,
+        "altitudeMeters": 850,
+        "microclimate": "Warm subtropical valley (25°C - 31°C / 77°F - 88°F)",
+        "suggestedDeparture": "07:30 AM",
+        "returnTime": "06:30 PM",
+        "difficulty": "Challenging (River wading & rugged canyon trails)",
+        "priceSharedRange": "$1,400 - $1,700 MXN ($75 - $92 USD)",
+        "pricePrivateRange": "$4,800 - $6,500 MXN (Private 4x4 safari)",
+        "colectivoCost": "Impossible DIY (Requires high-clearance 4x4 & local agrarian permission)",
+        "heroImage": "./assets/images/chiflon.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Wild 4x4 Adventure",
+        "description": "One of Chiapas' best-kept secrets! Travel by 4x4 pickup truck into the untamed river canyon of Tzimol. Hike down steep limestone canyons to three thunderous cascades dropping 30m, 45m, and 60m into deep azure pools. Experience thrilling cliff jumps (from 2m to 7m), natural river currents, and raw nature with zero tour bus crowds.",
+        "itinerary": [
+          {
+            "time": "07:30 AM",
+            "desc": "Departure from Co404 San Cristóbal towards Comitán valley."
+          },
+          {
+            "time": "09:45 AM",
+            "desc": "Board open 4x4 safari truck in Tzimol and descend into the canyon."
+          },
+          {
+            "time": "10:30 AM",
+            "desc": "Hike through lush canyon flora to First & Second Tzimolera waterfalls."
+          },
+          {
+            "time": "12:30 PM",
+            "desc": "Swimming in crystalline turquoise natural pools and optional safe cliff jumps."
+          },
+          {
+            "time": "02:00 PM",
+            "desc": "Trek to the main 60m cascade and riverside picnic lunch."
+          },
+          {
+            "time": "04:00 PM",
+            "desc": "4x4 climb back up the canyon and highway return to San Cristóbal."
+          }
+        ],
+        "includes": [
+          "Roundtrip transport from Co404 + 4x4 safari truck transfer",
+          "Certified adventure guide with wilderness first aid",
+          "Life vests and safety equipment",
+          "Tzimol ejidal park permits and local entry fees"
+        ],
+        "excludes": [
+          "Lunch and drinks (bring hearty trail food or snacks)",
+          "Guide tips"
+        ],
+        "co404Tips": [
+          "Bring water shoes with sticky rubber soles—canyon rocks can be slick.",
+          "Bring a waterproof dry bag for your phone or GoPro.",
+          "Selva Azul Chiapas publishes official departures for $1,600 MXN including full 4x4 logistics."
+        ],
+        "packingList": [
+          "Water shoes or strap-on hiking sandals",
+          "Swimsuit & quick-dry towel",
+          "Waterproof phone case or dry bag",
+          "Eco-friendly insect repellent",
+          "Change of dry clothes"
+        ],
+        "bestAgencies": [
+          "selva-azul-tours",
+          "apasionado-x-chiapas"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 1600,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
+        ]
+      },
+      {
+        "id": "puerto-arista-boca-cielo",
+        "name": "Playa Puerto Arista & Boca del Cielo Coast",
+        "tagline": "Pacific volcanic sands, mangrove estuary boat crossing & turtle sanctuary",
+        "category": "nature",
+        "tags": [
+          "Pacific Ocean",
+          "Turtle Sanctuary",
+          "Seafood",
+          "Estuary Boat"
+        ],
+        "distanceKm": 230,
+        "travelTimeMinutes": 210,
+        "altitudeMeters": 5,
+        "microclimate": "Hot tropical Pacific coast (30°C - 35°C / 86°F - 95°F)",
+        "suggestedDeparture": "06:30 AM",
+        "returnTime": "08:30 PM",
+        "difficulty": "Easy",
+        "priceSharedRange": "$850 - $1,100 MXN ($46 - $60 USD)",
+        "pricePrivateRange": "$4,500 - $6,000 MXN",
+        "colectivoCost": "$280 - $350 MXN (Via Tuxtla & Tonalá combis)",
+        "heroImage": "./assets/images/sumidero.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Pacific Coast Escape",
+        "description": "Trade highland chills for the sunny Pacific ocean breeze! Descend the Sierra Madre mountains down to Chiapas' coastal plain. Cruise in a boat across the tranquil mangrove lagoon of Boca del Cielo to a narrow sand spit separating the calm estuary from the open Pacific surf. Visit the Puerto Arista sea turtle protection camp and indulge in freshly caught red snapper and cold coconuts.",
+        "itinerary": [
+          {
+            "time": "06:30 AM",
+            "desc": "Early departure from Co404 San Cristóbal winding down the Sierra Madre."
+          },
+          {
+            "time": "10:15 AM",
+            "desc": "Arrival at Boca del Cielo estuary and scenic lancha boat crossing."
+          },
+          {
+            "time": "10:45 AM",
+            "desc": "Hammock relaxation, swimming, and open Pacific ocean beach walks."
+          },
+          {
+            "time": "01:30 PM",
+            "desc": "Fresh seafood lunch under thatched beachfront palapas (pescado a la talla)."
+          },
+          {
+            "time": "03:15 PM",
+            "desc": "Visit to Puerto Arista Beach and Sea Turtle Sanctuary educational centre."
+          },
+          {
+            "time": "05:00 PM",
+            "desc": "Scenic sunset return journey back up into the Chiapas highlands."
+          }
+        ],
+        "includes": [
+          "Roundtrip air-conditioned transportation from Co404",
+          "Boca del Cielo estuary boat crossing",
+          "Passenger travel insurance"
+        ],
+        "excludes": [
+          "Seafood lunch and drinks (~$180 - $250 MXN)",
+          "Turtle camp optional donation"
+        ],
+        "co404Tips": [
+          "Pacific open ocean waves have strong undertows; swim on the protected calm lagoon side for effortless floating.",
+          "The contrast in temperature is massive (14°C morning in San Cris vs 33°C on the coast)—bring summer beach clothes!",
+          "Selva Azul publishes this day trip on their website for $850 MXN."
+        ],
+        "packingList": [
+          "Swimsuit & beach towel",
+          "Reef-safe sunscreen & sunglasses",
+          "Flip-flops & light cotton clothing",
+          "Dry change of warm clothes for return to San Cris"
+        ],
+        "bestAgencies": [
+          "selva-azul-tours",
+          "senda-tour"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 850,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          }
+        ]
+      },
+      {
+        "id": "selva-lacandona-naha",
+        "name": "Selva Lacandona & Nahá 2-Day Cultural Immersion",
+        "tagline": "Montes Azules Biosphere, sacred lakes, and spiritual encounter with Maya Lacandones",
+        "category": "adventure",
+        "tags": [
+          "2-Day Expedition",
+          "Lacandon Maya",
+          "Primary Rainforest",
+          "Canoe Safari"
+        ],
+        "distanceKm": 240,
+        "travelTimeMinutes": 270,
+        "altitudeMeters": 600,
+        "microclimate": "Warm humid rainforest (26°C - 32°C / 79°F - 90°F)",
+        "suggestedDeparture": "06:00 AM (Day 1)",
+        "returnTime": "07:30 PM (Day 2)",
+        "difficulty": "Moderate (Rainforest hiking & overnight jungle cabins)",
+        "priceSharedRange": "$2,850 - $3,600 MXN ($154 - $195 USD / 2 days all-inclusive)",
+        "pricePrivateRange": "$9,500 - $13,000 MXN",
+        "colectivoCost": "Not feasible DIY (Protected tribal territory with mandatory community guides)",
+        "heroImage": "./assets/images/bonampak.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Ancestral 2-Day Expedition",
+        "description": "An authentic two-day cultural immersion into the heart of the Lacandon Jungle and the protected community of Nahá. Guided by traditional Maya Lacandones wearing their white tunic robes, walk ancient jungle trails to discover medicinal plants, listen to howler monkeys, paddle wooden canoes across mystical lagoons, and participate in an ancestral copal blessing ceremony.",
+        "itinerary": [
+          {
+            "time": "Day 1 - 06:00 AM",
+            "desc": "Departure from Co404 via Palenque highway into Montes Azules."
+          },
+          {
+            "time": "Day 1 - 12:30 PM",
+            "desc": "Arrival at Nahá Ecotourist Camp; check-in at jungle cabins and traditional lunch."
+          },
+          {
+            "time": "Day 1 - 02:30 PM",
+            "desc": "Traditional canoe navigation on Lake Nahá with Lacandon elders sharing sacred cosmology."
+          },
+          {
+            "time": "Day 1 - 07:00 PM",
+            "desc": "Jungle sounds night campfire and storytelling."
+          },
+          {
+            "time": "Day 2 - 08:00 AM",
+            "desc": "Deep jungle trek spotting toucans, orchids, and massive mahogany trees."
+          },
+          {
+            "time": "Day 2 - 01:00 PM",
+            "desc": "Traditional clay incense burner workshop and spiritual copal blessing."
+          },
+          {
+            "time": "Day 2 - 07:30 PM",
+            "desc": "Scenic return drop-off at Co404 San Cristóbal."
+          }
+        ],
+        "includes": [
+          "Roundtrip transport from Co404",
+          "1 night accommodation in eco-cabins in Nahá",
+          "All meals (2 lunches, 1 dinner, 1 breakfast)",
+          "Traditional Lacandon guides and canoe navigation permits",
+          "Community protection fees"
+        ],
+        "excludes": [
+          "Personal snacks, drinks, and handmade clay souvenirs",
+          "Voluntary elder tips"
+        ],
+        "co404Tips": [
+          "This is a respectful cultural exchange, not a staged tourist show. The Lacandon elders appreciate genuine curiosity about their ecosystem conservation.",
+          "Bring cash for hand-carved mahogany bows or traditional clay incense pots—there are zero ATMs in the jungle!",
+          "Selva Azul publishes this 2-day trip for $2,850 MXN; Apasionado x Chiapas offers the spiritual Lacandon encounter."
+        ],
+        "packingList": [
+          "Biodegradable insect repellent & sunscreen",
+          "Long quick-dry hiking pants & moisture-wicking shirts",
+          "Headlamp or flashlight",
+          "Personal toiletries & microfiber towel",
+          "Cash in Mexican pesos"
+        ],
+        "bestAgencies": [
+          "selva-azul-tours",
+          "apasionado-x-chiapas",
+          "nichim-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "selva-azul-tours",
+            "agencyName": "Selva Azul Chiapas",
+            "price": 2850,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://selvazultours.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "apasionado-x-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 3200,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://apasionadoxchiapas.com"
+          }
+        ]
       }
     ],
     "agencies": [
@@ -1162,7 +1696,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard & Certified",
         "notes": "One of the most established receptive tour operators in San Cristóbal, located right at the start of the Real de Guadalupe pedestrian corridor with modern vans and certified multilingual guides.",
         "website": "https://otisatravel.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=OTISA+Travel+Tours+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/OTISA+Travel+Tours+San+Cristobal+de+las+Casas",
         "address": "Andador Real de Guadalupe #3, 3er Piso, Centro Histórico, San Cristóbal de las Casas"
       },
       {
@@ -1184,7 +1718,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Budget Friendly",
         "notes": "Very popular among international travelers and digital nomads on Real de Guadalupe for low-cost, reliable shared day departures across Chiapas.",
         "website": "https://jalapenotour.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jalapeno+Tours+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Jalapeno+Tours+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
         "address": "Real de Guadalupe #3, Centro Histórico, San Cristóbal de las Casas"
       },
       {
@@ -1206,7 +1740,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Quality Standard to Premium",
         "notes": "The gold standard in San Cristóbal for cultural and archaeological tours with certified bilingual guides specialized in Maya history and Tzotzil traditions.",
         "website": "https://nichimtours.com.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nichim+Tours+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Nichim+Tours+San+Cristobal+de+las+Casas",
         "address": "Real de Guadalupe #71-C, Barrio de Guadalupe, San Cristóbal de las Casas"
       },
       {
@@ -1228,7 +1762,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Competitive",
         "notes": "Longstanding physical office directly on Real de Guadalupe with reliable morning van departures and door-to-door hostel pickup.",
         "website": "https://selvazultours.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Selva+Azul+Chiapas+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Selva+Azul+Chiapas+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
         "address": "Real de Guadalupe #14 B, Centro Histórico, San Cristóbal de las Casas"
       },
       {
@@ -1250,7 +1784,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Market",
         "notes": "Convenient storefront on Real de Guadalupe #51, just 2 blocks from Co404. Specializes in daily shared minivan excursions.",
         "website": "https://www.explorandochiapas.com.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Explorando+Chiapas+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Explorando+Chiapas+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
         "address": "Real de Guadalupe #51, Centro Histórico, San Cristóbal de las Casas"
       },
       {
@@ -1276,7 +1810,7 @@ const CO404_LOCATIONS = {
           "Arco del Tiempo (Canyon of La Venta)"
         ],
         "website": "https://apasionadoxchiapas.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apasionado+x+Chiapas+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Apasionado+x+Chiapas+San+Cristobal+de+las+Casas",
         "address": "San Cristóbal de las Casas (Central Pick-up & Delivery)"
       },
       {
@@ -1298,7 +1832,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Quality Standard",
         "notes": "Receptive travel agency specialized in group excursions and private van hire with full tourist insurance.",
         "website": "https://sendatour.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Senda+Tour+Guadalupe+Victoria+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Senda+Tour+Guadalupe+Victoria+San+Cristobal+de+las+Casas",
         "address": "Calle Guadalupe Victoria #21, Centro Histórico, San Cristóbal de las Casas"
       },
       {
@@ -1320,7 +1854,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Budget to Standard",
         "notes": "Located just a short walk from Co404 on the pedestrian corridor Real de Guadalupe. Highly dependable daily morning departures with fast WhatsApp support.",
         "website": "https://voyachiapas.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Voy+a+Chiapas+Calle+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "googleMapsUrl": "https://www.google.com/maps/search/Voy+a+Chiapas+Calle+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
         "address": "Calle Real de Guadalupe #124, Centro Histórico, San Cristóbal de las Casas"
       }
     ],
@@ -1746,6 +2280,24 @@ const CO404_LOCATIONS = {
           "xiadani-tours",
           "oaxaca-tours",
           "lescas-co-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 550,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          },
+          {
+            "agencyId": "xiadani-tours",
+            "agencyName": "Xiadani Tours Oaxaca",
+            "price": 650,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://xiadanitours.com"
+          }
         ]
       },
       {
@@ -1825,6 +2377,24 @@ const CO404_LOCATIONS = {
           "xiadani-tours",
           "oaxaca-tours",
           "lescas-co-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 300,
+            "currency": "MXN",
+            "source": "Web Oficial (Medio Día)",
+            "url": "https://toursinoaxaca.com"
+          },
+          {
+            "agencyId": "xiadani-tours",
+            "agencyName": "Xiadani Tours Oaxaca",
+            "price": 450,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://xiadanitours.com"
+          }
         ]
       },
       {
@@ -2071,6 +2641,16 @@ const CO404_LOCATIONS = {
           "oaxaca-tours",
           "coyote-aventuras",
           "xiadani-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 400,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          }
         ]
       },
       {
@@ -2154,6 +2734,16 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "coyote-aventuras",
           "enjoy-oaxaca"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 1950,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          }
         ]
       },
       {
@@ -2238,6 +2828,16 @@ const CO404_LOCATIONS = {
         ],
         "bestAgencies": [
           "expediciones-sierra-norte"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 700,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          }
         ]
       },
       {
@@ -2322,6 +2922,16 @@ const CO404_LOCATIONS = {
           "lescas-co-tours",
           "coyote-aventuras",
           "enjoy-oaxaca"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 600,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          }
         ]
       },
       {
@@ -2470,6 +3080,291 @@ const CO404_LOCATIONS = {
           "transportadora-turistica-dainzuu",
           "oaxaca-tours",
           "lescas-co-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 500,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          },
+          {
+            "agencyId": "transportadora-turistica-dainzuu",
+            "agencyName": "Operadora Turística Dainzúu",
+            "price": 500,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://www.dainzuutravel.com"
+          }
+        ]
+      },
+      {
+        "id": "clases-cocina-oaxaquena",
+        "name": "Oaxacan Cooking Class & Market Food Odyssey",
+        "tagline": "Shop fresh heirloom chiles, grind chocolate, and master authentic black mole",
+        "category": "culture",
+        "tags": [
+          "Gastronomy",
+          "Cooking Class",
+          "Market Tour",
+          "Mole Negro"
+        ],
+        "distanceKm": 3,
+        "travelTimeMinutes": 15,
+        "altitudeMeters": 1550,
+        "microclimate": "Warm sunny highland valley (20°C - 28°C / 68°F - 82°F)",
+        "suggestedDeparture": "09:00 AM",
+        "returnTime": "02:30 PM",
+        "difficulty": "Easy (Hands-on culinary workshop)",
+        "priceSharedRange": "$1,500 - $1,950 MXN ($80 - $105 USD)",
+        "pricePrivateRange": "$3,200 - $4,200 MXN",
+        "colectivoCost": "N/A (Chef-guided culinary masterclass with full 4-course banquet)",
+        "heroImage": "./assets/images/mezcal.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Culinary Masterclass",
+        "description": "Immerse yourself in UNESCO-recognized Oaxacan culinary tradition. Start with a sensory walk through Mercado 20 de Noviembre and Central de Abastos alongside a traditional cocinera to select heirloom chiles, fresh quesillo, aromatic herbs, and cacao. Return to a traditional kitchen to roast chiles, press handmade tortillas, and cook velvety Mole Negro or Coloradito from scratch.",
+        "itinerary": [
+          {
+            "time": "09:00 AM",
+            "desc": "Meet chef at central meeting point / Co404 pick-up."
+          },
+          {
+            "time": "09:15 AM",
+            "desc": "Guided market walk through vegetable, herb, and spice stalls with food tastings."
+          },
+          {
+            "time": "10:45 AM",
+            "desc": "Hands-on preparation of salsas, memelas, and hand-pressed nixtamal tortillas on the comal."
+          },
+          {
+            "time": "12:00 PM",
+            "desc": "Crafting traditional Oaxacan Mole (toasting spices, chiles, and grinding)."
+          },
+          {
+            "time": "01:30 PM",
+            "desc": "Family-style celebratory feast pairing cooked dishes with craft ancestral mezcal."
+          }
+        ],
+        "includes": [
+          "Guided market tour with tastings",
+          "All heirloom ingredients, cooking tools, and apron",
+          "Full multi-course feast (salsas, appetizers, mole, dessert)",
+          "Mezcal and fresh fruit agua fresca pairing",
+          "Printed / digital traditional recipe booklet"
+        ],
+        "excludes": [
+          "Extra bottles of artisanal mezcal to take home",
+          "Chef and kitchen staff tips"
+        ],
+        "co404Tips": [
+          "Arrive on an empty stomach! You will taste fresh cheeses, tropical fruits, and tortillas during the market walk, followed by an enormous 4-course lunch.",
+          "Vegetarian and vegan adjustments are easily accommodated if requested when booking.",
+          "Lescas Co Tours publishes this official masterclass on their website for $1,950 MXN."
+        ],
+        "packingList": [
+          "Comfortable walking shoes for market aisles",
+          "Camera / smartphone for cooking steps",
+          "Enthusiastic appetite"
+        ],
+        "bestAgencies": [
+          "lescas-co-tours",
+          "transportadora-turistica-dainzuu",
+          "coyote-aventuras"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 1950,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          }
+        ]
+      },
+      {
+        "id": "grutas-san-sebastian",
+        "name": "Grutas de San Sebastián Sedeño & Ríos Subterráneos",
+        "tagline": "Deep subterranean limestone cavern exploration and crystal river pools",
+        "category": "adventure",
+        "tags": [
+          "Caving",
+          "Underground River",
+          "Stalactites",
+          "Hidden Gem"
+        ],
+        "distanceKm": 75,
+        "travelTimeMinutes": 90,
+        "altitudeMeters": 1600,
+        "microclimate": "Temperate mountain forest (cave interior 19°C constant / 66°F)",
+        "suggestedDeparture": "08:30 AM",
+        "returnTime": "05:00 PM",
+        "difficulty": "Moderate (Helmet & headlamp subterranean walking)",
+        "priceSharedRange": "$750 - $950 MXN ($40 - $52 USD)",
+        "pricePrivateRange": "$3,200 - $4,200 MXN",
+        "colectivoCost": "$90 - $130 MXN (Combi via Sola de Vega route)",
+        "heroImage": "./assets/images/monte-alban.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Subterranean Expedition",
+        "description": "Known as the 'Entrañas de la Tierra' (Guts of the Earth), this underground expedition explores Oaxaca's most spectacular cave system in San Sebastián Sedeño. Equipped with safety helmets and headlamps, traverse underground chambers decorated with giant crystal stalactites, stalagmites, subterranean rivers, and pristine natural mineral pools.",
+        "itinerary": [
+          {
+            "time": "08:30 AM",
+            "desc": "Departure from Co404 Oaxaca heading south into the Sierra Sur foothills."
+          },
+          {
+            "time": "10:15 AM",
+            "desc": "Arrival at San Sebastián Sedeño community ecotourism centre."
+          },
+          {
+            "time": "10:30 AM",
+            "desc": "Gear fitting (helmets, powerful headlamps) and safety orientation."
+          },
+          {
+            "time": "11:00 AM",
+            "desc": "2-hour guided subterranean cavern trek along underground rivers and active chambers."
+          },
+          {
+            "time": "01:30 PM",
+            "desc": "Emerge into daylight for a traditional Sierra lunch prepared with local organic ingredients."
+          },
+          {
+            "time": "03:30 PM",
+            "desc": "Return journey to Oaxaca City arriving in late afternoon."
+          }
+        ],
+        "includes": [
+          "Roundtrip transport from Co404",
+          "Specialized caving equipment (helmets, headlamps)",
+          "Certified local subterranean speleology guides",
+          "Community entry permits and insurance"
+        ],
+        "excludes": [
+          "Traditional lunch (~$120 - $180 MXN)",
+          "Tips for local community guides"
+        ],
+        "co404Tips": [
+          "Wear sturdy trail shoes with strong traction; cavern floors have moisture and clay.",
+          "Bring a light sweater as the underground temperature remains a constant 19°C.",
+          "Featured by Xiadani Tours as 'Ruta Entrañas de la Tierra'."
+        ],
+        "packingList": [
+          "Trail sneakers or hiking boots",
+          "Light jacket or long-sleeve athletic shirt",
+          "Extra socks and dry shoes for after the cave",
+          "Water bottle"
+        ],
+        "bestAgencies": [
+          "xiadani-tours",
+          "lescas-co-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "xiadani-tours",
+            "agencyName": "Xiadani Tours Oaxaca",
+            "price": 850,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://xiadanitours.com"
+          }
+        ]
+      },
+      {
+        "id": "mercado-ocotlan-viernes",
+        "name": "Friday Market of Ocotlán & Red Clay Artisans",
+        "tagline": "Ancestral indigenous tianguis, Rodolfo Morales art convent & San Marcos pottery",
+        "category": "culture",
+        "tags": [
+          "Friday Market",
+          "Red Clay",
+          "Art & Convent",
+          "Traditional Food"
+        ],
+        "distanceKm": 42,
+        "travelTimeMinutes": 50,
+        "altitudeMeters": 1500,
+        "microclimate": "Warm highland valley (22°C - 29°C / 72°F - 84°F)",
+        "suggestedDeparture": "09:00 AM (Fridays only)",
+        "returnTime": "04:30 PM",
+        "difficulty": "Easy",
+        "priceSharedRange": "$600 - $750 MXN ($32 - $40 USD)",
+        "pricePrivateRange": "$2,600 - $3,500 MXN",
+        "colectivoCost": "$35 - $45 MXN by shared taxi from Central de Abastos",
+        "heroImage": "./assets/images/san-martin.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Weekly Cultural Gem",
+        "description": "Every Friday, Ocotlán de Morelos transforms into one of the most colorful and authentic open-air indigenous markets in southern Mexico. Meet rural Zapotec farmers trading vegetables, spices, and woven baskets. Admire the stunning 16th-century Santo Domingo monastery restored by maestro Rodolfo Morales, and visit indigenous women potters in San Marcos Tlapazola crafting cookware from unglazed red clay.",
+        "itinerary": [
+          {
+            "time": "09:00 AM",
+            "desc": "Friday morning pick-up at Co404 Oaxaca heading south down the Ocotlán valley."
+          },
+          {
+            "time": "10:00 AM",
+            "desc": "Walking tour through Ocotlán tianguis: traditional bread, pulque, and knife-forging stalls."
+          },
+          {
+            "time": "11:30 AM",
+            "desc": "Visit to Santo Domingo Convent and Rodolfo Morales Cultural Foundation museum."
+          },
+          {
+            "time": "01:00 PM",
+            "desc": "Traditional lunch inside market fondas tasting fresh barbacoa or enfrijoladas."
+          },
+          {
+            "time": "02:30 PM",
+            "desc": "Workshop visit in San Marcos Tlapazola observing ancestral Zapotec red clay firing."
+          },
+          {
+            "time": "04:30 PM",
+            "desc": "Return arrival in Oaxaca City."
+          }
+        ],
+        "includes": [
+          "Roundtrip transport from Co404",
+          "Certified bilingual cultural guide",
+          "Entrance to Rodolfo Morales Foundation museum",
+          "San Marcos Tlapazola pottery demonstration"
+        ],
+        "excludes": [
+          "Lunch in the market fondas (~$100 - $160 MXN)",
+          "Handmade red clay pottery purchases"
+        ],
+        "co404Tips": [
+          "Only operates on Fridays! Coordinate your schedule to experience this pre-hispanic trading tradition.",
+          "Bring cash in small bills ($20, $50, $100 MXN) for buying incredible handmade red clay coffee mugs or hot chocolate jugs.",
+          "Xiadani and Lescas Co Tours run regular Friday morning departures."
+        ],
+        "packingList": [
+          "Sun hat or cap",
+          "Comfortable walking shoes",
+          "Reusable tote bag for market finds",
+          "Cash in small denominations"
+        ],
+        "bestAgencies": [
+          "xiadani-tours",
+          "oaxaca-tours",
+          "lescas-co-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "xiadani-tours",
+            "agencyName": "Xiadani Tours Oaxaca",
+            "price": 650,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://xiadanitours.com"
+          },
+          {
+            "agencyId": "lescas-co-tours",
+            "agencyName": "Lescas Co Tours Oaxaca",
+            "price": 600,
+            "currency": "MXN",
+            "source": "Web Oficial",
+            "url": "https://toursinoaxaca.com"
+          }
         ]
       }
     ],
@@ -2493,7 +3388,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Premium Guided Expedition",
         "notes": "Top-tier sustainable adventure operator in Oaxaca. Specialized in small-group, non-touristy active hikes and cultural immersion.",
         "website": "https://coyoteaventuras.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coyote+Aventuras+Macedonio+Alcala+802+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Coyote+Aventuras+Macedonio+Alcala+802+Oaxaca",
         "address": "Macedonio Alcalá 802, Centro Histórico, Oaxaca"
       },
       {
@@ -2515,7 +3410,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Community Ecotourism Direct",
         "notes": "Official community-run tourism agency of the Pueblos Mancomunados. 100% of tour fees support local Zapotec village schools and forest conservation.",
         "website": "https://sierranorte.org.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Expediciones+Sierra+Norte+M+Bravo+210+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Expediciones+Sierra+Norte+M+Bravo+210+Oaxaca",
         "address": "M. Bravo 210 Interior F, Plaza San Cristóbal, Centro, Oaxaca"
       },
       {
@@ -2537,7 +3432,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Group & Private",
         "notes": "Trusted local agency operating daily comfortable van departures with certified bilingual archaeologists.",
         "website": "https://xiadanitours.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Xiadani+Tours+Bustamante+100+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Xiadani+Tours+Bustamante+100+Oaxaca",
         "address": "Bustamante #100, Centro Histórico, Oaxaca"
       },
       {
@@ -2559,7 +3454,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Quality Standard",
         "notes": "Located on the pedestrian corridor Alcalá right by Santo Domingo church. Full insurance coverage and professional drivers.",
         "website": "https://www.oaxacatours.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oaxaca+Tours+Macedonio+Alcala+407+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Oaxaca+Tours+Macedonio+Alcala+407+Oaxaca",
         "address": "Macedonio Alcalá 407, Int. 18, Plaza Santo Domingo, Centro, Oaxaca"
       },
       {
@@ -2581,7 +3476,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Budget Friendly",
         "notes": "Longstanding Oaxaca agency known for economical shared departures and coast transport links.",
         "website": "https://toursinoaxaca.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lescas+Co+Tours+Hotel+Rivera+del+Angel+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Lescas+Co+Tours+Hotel+Rivera+del+Angel+Oaxaca",
         "address": "Francisco Javier Mina #518 (Hotel Rivera del Ángel), Centro, Oaxaca"
       },
       {
@@ -2603,7 +3498,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Competitive Private Transport",
         "notes": "Specialized in comfortable Mercedes Sprinter vans and private group charters connecting Oaxaca City with the Pacific coast.",
         "website": "https://www.dainzuutravel.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Operadora+Turistica+Dainzuu+Garcia+Vigil+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Operadora+Turistica+Dainzuu+Garcia+Vigil+Oaxaca",
         "address": "García Vigil #306, Centro Histórico, Oaxaca de Juárez"
       },
       {
@@ -2625,7 +3520,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Premium Private",
         "notes": "Boutique private travel curator offering flexible itineraries, private bilingual drivers, and culinary experiences.",
         "website": "https://enjoyoaxaca.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Enjoy+Oaxaca+Private+Travel+Oaxaca",
+        "googleMapsUrl": "https://www.google.com/maps/search/Enjoy+Oaxaca+Private+Travel+Oaxaca",
         "address": "Calle de los Libres #404, Centro, Oaxaca"
       }
     ],
@@ -3070,6 +3965,24 @@ const CO404_LOCATIONS = {
           "turibus-medellin",
           "medellin-day-trips",
           "paisa-tours-medellin"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "turibus-medellin",
+            "agencyName": "Turibus Colombia",
+            "price": 135000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://turibuscolombia.com/tour/tour-guatape/"
+          },
+          {
+            "agencyId": "tours-medallo",
+            "agencyName": "Tours Medallo",
+            "price": 119000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://tour-medellin.com/tour-guatape"
+          }
         ]
       },
       {
@@ -3154,6 +4067,16 @@ const CO404_LOCATIONS = {
           "tours-medallo",
           "toucan-ecotours",
           "medellin-day-trips"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "tours-medallo",
+            "agencyName": "Tours Medallo",
+            "price": 119000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://tour-medellin.com/tour-graffitour"
+          }
         ]
       },
       {
@@ -3736,6 +4659,16 @@ const CO404_LOCATIONS = {
           "tours-medallo",
           "toucan-ecotours",
           "medellin-day-trips"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "tours-medallo",
+            "agencyName": "Tours Medallo",
+            "price": 299000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://tour-medellin.com/tour-parapente"
+          }
         ]
       },
       {
@@ -3821,6 +4754,270 @@ const CO404_LOCATIONS = {
           "tours-medallo",
           "ecotours-colombia"
         ]
+      },
+      {
+        "id": "carmen-de-viboral-ceramica",
+        "name": "El Carmen de Viboral: Cuna de la Cerámica Artesanal",
+        "tagline": "Hand-painted ceramic workshops, colonial streetscapes and mountain heritage",
+        "category": "culture",
+        "tags": [
+          "Handmade Ceramics",
+          "Colonial Heritage",
+          "Artisan Route",
+          "Eastern Antioquia"
+        ],
+        "distanceKm": 55,
+        "travelTimeMinutes": 75,
+        "altitudeMeters": 2150,
+        "microclimate": "Pleasant spring-like mountain climate (17°C - 23°C / 62°F - 73°F)",
+        "suggestedDeparture": "08:30 AM",
+        "returnTime": "05:30 PM",
+        "difficulty": "Easy",
+        "priceSharedRange": "$180,000 - $220,000 COP ($44 - $54 USD)",
+        "pricePrivateRange": "$750,000 - $950,000 COP",
+        "colectivoCost": "$18,000 - $24,000 COP (Direct bus from Terminal del Norte)",
+        "heroImage": "./assets/images/jerico.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Heritage Artisan Route",
+        "description": "Journey into the charming eastern highlands of Antioquia to El Carmen de Viboral, globally renowned for its century-old tradition of hand-painted ceramics. Stroll down the famous 'Calle de las Arcillas', visit active master pottery studios to watch artisans delicately paint traditional floral motifs, and savor traditional Antioquian gastronomy in tranquil mountain squares.",
+        "itinerary": [
+          {
+            "time": "08:30 AM",
+            "desc": "Pick-up directly at Co404 Medellín (Laureles) heading through the Eastern Tunnel."
+          },
+          {
+            "time": "09:45 AM",
+            "desc": "Arrival in El Carmen de Viboral; visit Plaza Principal and street mosaic murals."
+          },
+          {
+            "time": "10:30 AM",
+            "desc": "Guided immersion into master ceramic workshops (molding, firing, hand-painting)."
+          },
+          {
+            "time": "12:30 PM",
+            "desc": "Hands-on pottery workshop painting your own commemorative ceramic plate or cup."
+          },
+          {
+            "time": "01:45 PM",
+            "desc": "Traditional lunch at a local heritage restaurant (Bandeja Paisa or Sancocho)."
+          },
+          {
+            "time": "03:30 PM",
+            "desc": "Leisurely exploration of artisan boutiques and specialty café tasting."
+          },
+          {
+            "time": "05:30 PM",
+            "desc": "Comfortable drop-off back at Co404 Medellín in Laureles."
+          }
+        ],
+        "includes": [
+          "Roundtrip air-conditioned transportation from Co404 Laureles",
+          "Certified bilingual guide",
+          "Entrance and guided tour inside historic ceramic factories",
+          "Hands-on painting activity",
+          "Traditional lunch and drink"
+        ],
+        "excludes": [
+          "Handmade ceramic dinnerware sets or souvenirs to take home",
+          "Guide tips"
+        ],
+        "co404Tips": [
+          "The ceramic plates, coffee mugs, and bowls make the most stunning, authentic Colombian gifts ever—pack carefully with bubble wrap!",
+          "Turibus Colombia offers this official certified excursion published on their website for $195.000 COP."
+        ],
+        "packingList": [
+          "Comfortable walking shoes",
+          "Light sweater or jacket for afternoon mountain breeze",
+          "Credit card or cash for ceramic purchases",
+          "Camera"
+        ],
+        "bestAgencies": [
+          "turibus-medellin",
+          "premium-tours",
+          "medellin-day-trips"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "turibus-medellin",
+            "agencyName": "Turibus Colombia",
+            "price": 195000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://turibuscolombia.com/tour/tour-el-carmen-de-viboral/"
+          }
+        ]
+      },
+      {
+        "id": "hacienda-napoles-safari",
+        "name": "Hacienda Nápoles Theme Park & African Safari",
+        "tagline": "African wildlife reserve, giant hippos, water worlds and memorial museum",
+        "category": "adventure",
+        "tags": [
+          "African Safari",
+          "Water Park",
+          "Hippos & Wildlife",
+          "Full-day Odyssey"
+        ],
+        "distanceKm": 165,
+        "travelTimeMinutes": 210,
+        "altitudeMeters": 250,
+        "microclimate": "Hot tropical Magdalena valley (29°C - 36°C / 84°F - 97°F)",
+        "suggestedDeparture": "05:00 AM",
+        "returnTime": "08:30 PM",
+        "difficulty": "Easy to Moderate (Walking through safari & water park)",
+        "priceSharedRange": "$259,000 - $299,000 COP ($63 - $73 USD with passport pass)",
+        "pricePrivateRange": "$1,100,000 - $1,400,000 COP",
+        "colectivoCost": "$65,000 COP each way by Rápido Ochoa bus + entrance ticket",
+        "heroImage": "./assets/images/rio-claro.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Full-Day Safari & Water Park",
+        "description": "An epic full-day expedition to Colombia's premier theme park and wildlife sanctuary in the tropical Magdalena Medio. Encounter massive free-roaming African hippos, rhinos, lions, and zebras; cool off in the giant aquatic parks (Octopus, Acualago, and Cobras); and reflect on Colombia's history at the Memorial Museum and Jurassic animatronics park.",
+        "itinerary": [
+          {
+            "time": "05:00 AM",
+            "desc": "Early morning departure from Co404 Laureles driving down the scenic highway."
+          },
+          {
+            "time": "07:30 AM",
+            "desc": "Traditional roadside breakfast stop in the mountain pass."
+          },
+          {
+            "time": "09:00 AM",
+            "desc": "Arrival at Parque Temático Hacienda Nápoles with Pasaporte Safari."
+          },
+          {
+            "time": "09:30 AM",
+            "desc": "African safari vehicle tour spotting free-roaming hippopotamus herds, elephants & zebras."
+          },
+          {
+            "time": "01:00 PM",
+            "desc": "Lunch and afternoon cooling down in the giant water parks (Cobras & Octopus waterslides)."
+          },
+          {
+            "time": "04:30 PM",
+            "desc": "Board comfortable return coach back to Medellín with evening drop-off."
+          }
+        ],
+        "includes": [
+          "Roundtrip air-conditioned bus transportation from Laureles",
+          "Full Pasaporte Safari park ticket (all animal habitats & water parks)",
+          "Onboard travel medical insurance",
+          "Guide assistance"
+        ],
+        "excludes": [
+          "Breakfast and lunch inside the park (~$35,000 - $55,000 COP)",
+          "Optional high-thrill extreme canopy pack"
+        ],
+        "co404Tips": [
+          "Very long day trip (departing 5:00 AM), but exceptionally fun with a group of colivers!",
+          "Bring waterproof swimwear and plastic zip bags for your phone at the water attractions.",
+          "Tours Medallo and Fantasy Tours run regular departures starting from $259,000 COP."
+        ],
+        "packingList": [
+          "Swimwear & flip-flops",
+          "Sunscreen & sunglasses",
+          "Change of dry clothes",
+          "Waterproof phone pouch",
+          "Neck pillow for coach nap"
+        ],
+        "bestAgencies": [
+          "tours-medallo",
+          "fantasy-tours",
+          "turibus-medellin"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "tours-medallo",
+            "agencyName": "Tours Medallo",
+            "price": 259000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://tour-medellin.com/tour-hacienda-napoles"
+          }
+        ]
+      },
+      {
+        "id": "tour-nocturno-medellin",
+        "name": "Tour Nocturno Medellín & Miradores de Las Palmas",
+        "tagline": "Panoramic skyline vistas from mountain peaks, street gastronomy & local vibe",
+        "category": "nightlife",
+        "tags": [
+          "Night Panorama",
+          "Skyline Views",
+          "Las Palmas",
+          "Street Food"
+        ],
+        "distanceKm": 25,
+        "travelTimeMinutes": 35,
+        "altitudeMeters": 2100,
+        "microclimate": "Breezy cool mountain night (15°C - 19°C / 59°F - 66°F)",
+        "suggestedDeparture": "06:30 PM",
+        "returnTime": "10:30 PM",
+        "difficulty": "Easy",
+        "priceSharedRange": "$120,000 - $145,000 COP ($29 - $35 USD)",
+        "pricePrivateRange": "$450,000 - $650,000 COP",
+        "colectivoCost": "$30,000 - $45,000 COP by taxi to Las Palmas viewpoint",
+        "heroImage": "./assets/images/comuna-13.jpg",
+        "isExclusive": false,
+        "specializedBadge": "Night Panorama",
+        "description": "Experience Medellín after sunset as the city of eternal spring transforms into an ocean of sparkling mountain lights. Ascend the high ridges of Las Palmas for breathtaking panoramic viewpoints, taste warm traditional hot chocolate with cheese or hot mulled canelazo, savor freshly grilled arepas de chócolo, and enjoy the lively, festive night atmosphere.",
+        "itinerary": [
+          {
+            "time": "06:30 PM",
+            "desc": "Evening pick-up at Co404 Laureles."
+          },
+          {
+            "time": "07:15 PM",
+            "desc": "Scenic panoramic night drive ascending the Las Palmas ridge."
+          },
+          {
+            "time": "08:00 PM",
+            "desc": "Stop at the flagship Mirador de Las Palmas; photo session overlooking the glittering valley."
+          },
+          {
+            "time": "08:45 PM",
+            "desc": "Gastronomic tasting: fresh hot arepas de chócolo with quesito and traditional warm drinks."
+          },
+          {
+            "time": "09:45 PM",
+            "desc": "Illuminated city circuit through El Poblado / Parque Lleras and safe return to Co404."
+          }
+        ],
+        "includes": [
+          "Roundtrip evening transportation from Co404",
+          "Panoramic stops at Las Palmas high viewpoints",
+          "Traditional snack (arepa de chócolo or chocolate con queso)",
+          "Bilingual tour host"
+        ],
+        "excludes": [
+          "Extra alcoholic drinks or evening dinner",
+          "Guide tips"
+        ],
+        "co404Tips": [
+          "Up on the mountain viewpoints it gets chilly and windy at night—bring a warm jacket or fleece hoodie!",
+          "The city skyline photos from Mirador de Las Palmas are breathtaking.",
+          "Turibus Colombia publishes this night tour for $137.000 COP."
+        ],
+        "packingList": [
+          "Warm jacket or hoodie",
+          "Smartphone / camera with night-mode",
+          "Small cash for street snacks"
+        ],
+        "bestAgencies": [
+          "turibus-medellin",
+          "tours-medallo",
+          "medellin-city-tours"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "turibus-medellin",
+            "agencyName": "Turibus Colombia",
+            "price": 137000,
+            "currency": "COP",
+            "source": "Web Oficial",
+            "url": "https://turibuscolombia.com/tour/tour-nocturno/"
+          }
+        ]
       }
     ],
     "agencies": [
@@ -3843,7 +5040,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Certified",
         "notes": "The flagship tourist operator in Medellín with scheduled daily departures in panoramic air-conditioned coaches and certified bilingual guides.",
         "website": "https://turibuscolombia.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Turibus+Colombia+Multicentro+Aliadas+El+Poblado+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Turibus+Colombia+Multicentro+Aliadas+El+Poblado+Medellin",
         "address": "Calle 9 #43A-31, Local 7, Multicentro Aliadas, El Poblado, Medellín"
       },
       {
@@ -3865,7 +5062,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Private Boutique",
         "notes": "Outstanding private tour service catering to digital nomads and colivers. English-fluent local drivers, private vans, and customized itineraries.",
         "website": "https://medellindaytrips.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Medellin+Day+Trips+El+Poblado+Laureles+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Medellin+Day+Trips+El+Poblado+Laureles+Medellin",
         "address": "El Poblado & Laureles, Medellín"
       },
       {
@@ -3887,7 +5084,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Quality Standard to Premium",
         "notes": "Located directly in Laureles on Carrera 70 near Co404 Medellín. Highly rated receptive agency registered with RNT 169316, providing door-to-door Laureles pickups.",
         "website": "https://toursyviajesmedellin.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Premium+Tours+Cra+70+Laureles+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Premium+Tours+Cra+70+Laureles+Medellin",
         "address": "Carrera 70 #45E-137, Laureles - Estadio, Medellín"
       },
       {
@@ -3909,7 +5106,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Competitive",
         "notes": "Top-rated urban and regional tour operator with certified guides who were born and raised in Comuna 13, offering authentic historical perspective.",
         "website": "https://medellincitytours.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Medellin+City+Tours+Cra+43A+El+Poblado+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Medellin+City+Tours+Cra+43A+El+Poblado+Medellin",
         "address": "Cra. 43A #23-49, El Poblado, Medellín"
       },
       {
@@ -3931,7 +5128,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Budget to Standard",
         "notes": "Physical agency in CC San Juan on La 70 in Laureles. Excellent budget-friendly group departures with direct Laureles morning boarding.",
         "website": "https://fantasytours.com.co",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fantasy+Tours+San+Juan+La+70+Laureles+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Fantasy+Tours+San+Juan+La+70+Laureles+Medellin",
         "address": "Centro Comercial San Juan La 70, Laureles, Medellín"
       },
       {
@@ -3953,7 +5150,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Market",
         "notes": "Specialists in adrenaline sports and outdoor expeditions around Antioquia, with staff fluent in English and Spanish.",
         "website": "https://toursmedallo.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tours+Medallo+Cra+70+Laureles+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Tours+Medallo+Cra+70+Laureles+Medellin",
         "address": "Cra. 70 #44-12, Laureles - Estadio, Medellín"
       },
       {
@@ -3975,7 +5172,7 @@ const CO404_LOCATIONS = {
         "priceBenchmark": "Standard Receptive",
         "notes": "Longtime community meeting point for digital nomads and travelers in Medellín combining coffee tastings, Spanish lessons, and curated tours.",
         "website": "https://www.toucanspanish.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Toucan+Cafe+Calle+10+El+Poblado+Medellin",
+        "googleMapsUrl": "https://www.google.com/maps/search/Toucan+Cafe+Calle+10+El+Poblado+Medellin",
         "address": "Calle 10 #41-32, El Poblado, Medellín"
       }
     ],

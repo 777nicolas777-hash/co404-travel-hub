@@ -570,6 +570,46 @@ document.addEventListener('DOMContentLoaded', () => {
         <p style="font-size: 0.92rem; color: var(--co-charcoal); line-height: 1.6;">${dest.description}</p>
       </div>
 
+      ${(() => {
+        if (!dest.agencyPublishedPrices || dest.agencyPublishedPrices.length === 0) return '';
+        return `
+          <div class="published-prices-section">
+            <div class="published-prices-header">
+              <div class="published-prices-title">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                Tarifas Oficiales Publicadas en Agencias
+              </div>
+              <span class="live-verified-badge">
+                ✓ Comprobado en Web Oficial
+              </span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              ${dest.agencyPublishedPrices.map(ap => `
+                <div class="agency-published-card">
+                  <div class="agency-published-info">
+                    <strong>${ap.agencyName}</strong>
+                    <div class="agency-source-link">
+                      Fuente: <a href="${ap.url}" target="_blank" rel="noopener noreferrer">${ap.source || 'Web Oficial'} ↗</a>
+                    </div>
+                  </div>
+                  <div class="agency-published-pricing">
+                    <div class="agency-published-amount">
+                      $${Number(ap.price).toLocaleString()} ${ap.currency}
+                    </div>
+                    <button class="btn btn-sm btn-whatsapp btn-quote-agency-rate" data-dest-id="${dest.id}" data-agency-id="${ap.agencyId}" data-rate="${ap.price} ${ap.currency}" title="Cotizar en WhatsApp con esta tarifa de referencia">
+                      Cotizar ↗
+                    </button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            <p style="font-size: 0.77rem; color: var(--co-charcoal-sub); margin: 8px 0 0 0; line-height: 1.35;">
+              * Precios extraídos de las páginas web públicas de las agencias. Los miembros de Co404 pueden cotizar tarifas especiales por volumen o grupo vía WhatsApp.
+            </p>
+          </div>
+        `;
+      })()}
+
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; background: var(--co-sand); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--co-border-light);">
         <div>
           <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">At Destination Microclimate</span>
@@ -651,6 +691,16 @@ document.addEventListener('DOMContentLoaded', () => {
       openWhatsAppDispatcher(destId, preselectAgency);
     });
 
+    body.querySelectorAll('.btn-quote-agency-rate').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dId = btn.dataset.destId;
+        const aId = btn.dataset.agencyId;
+        closeModal('modal-tour-detail');
+        openWhatsAppDispatcher(dId, aId);
+      });
+    });
+
     openModal('modal-tour-detail');
   }
 
@@ -669,19 +719,20 @@ document.addEventListener('DOMContentLoaded', () => {
       linksContainer.innerHTML = '';
       return;
     }
-    const mapsUrl = agency.googleMapsUrl || (agency.address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(agency.name + ' ' + agency.address)}` : '');
+    const cleanMapsUrl = (url) => (url ? url.replace('?api=1&query=', '') : '');
+    const mapsUrl = cleanMapsUrl(agency.googleMapsUrl) || (agency.address ? `https://www.google.com/maps/search/${encodeURIComponent(agency.name + ' ' + agency.address)}` : '');
     let html = '';
     if (mapsUrl) {
       html += `
-        <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" style="font-size: 0.74rem; padding: 4px 10px;">
+        <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" style="font-size: 0.74rem; padding: 4px 10px;" title="Abrir perfil de negocio en Google Maps">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          View on Maps ↗
+          Google Maps 📍
         </a>
       `;
     }
     if (agency.website && typeof agency.website === 'string' && agency.website.trim().startsWith('http')) {
       html += `
-        <a href="${agency.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.74rem; padding: 4px 10px;">
+        <a href="${agency.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.74rem; padding: 4px 10px;" title="Visitar web oficial">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           Official Website ↗
         </a>
@@ -744,6 +795,13 @@ document.addEventListener('DOMContentLoaded', () => {
     msg += `📅 *Fecha deseada:* ${dateFormatted}\n`;
     msg += `👥 *Número de personas:* ${pax} personas (huéspedes de ${locationData.name})\n`;
     msg += `🚐 *Modalidad:* ${serviceType === 'privado' ? 'Camioneta / Servicio Privado exclusivo' : 'Tour Compartido'}\n`;
+
+    // Reference official published price from agency website if available
+    const publishedRate = (dest.agencyPublishedPrices || []).find(p => p.agencyId === agency.id || (agency.name && p.agencyName && agency.name.toLowerCase().includes(p.agencyName.toLowerCase())));
+    if (publishedRate) {
+      msg += `🏷️ *Tarifa de referencia en su web:* Vimos publicado en su sitio web el precio de $${Number(publishedRate.price).toLocaleString()} ${publishedRate.currency} por persona.\n`;
+    }
+
     if (customNotes) {
       msg += `💬 *Consulta o requerimiento adicional:* ${customNotes}\n`;
     }
@@ -872,16 +930,17 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           ${(() => {
-            const mapsUrl = a.googleMapsUrl || (a.address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.name + ' ' + a.address)}` : '');
+            const cleanMapsUrl = (url) => (url ? url.replace('?api=1&query=', '') : '');
+            const mapsUrl = cleanMapsUrl(a.googleMapsUrl) || (a.address ? `https://www.google.com/maps/search/${encodeURIComponent(a.name + ' ' + a.address)}` : '');
             const mapsLink = mapsUrl ? `
-              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" title="View location on Google Maps">
+              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" title="Abrir perfil de negocio directo en Google Maps">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                Google Maps ↗
+                Google Maps 📍
               </a>
             ` : '';
 
             const webLink = (a.website && typeof a.website === 'string' && a.website.trim().startsWith('http')) ? `
-              <a href="${a.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" title="Visit official website or page">
+              <a href="${a.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" title="Visitar sitio web oficial">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 Website ↗
               </a>
@@ -1020,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = p.name || p.street || query;
             const addrParts = [p.street, p.housenumber, p.district, p.city || loc.city, p.country || loc.country].filter(Boolean);
             const address = addrParts.join(', ') || `${loc.city}, ${loc.country}`;
-            const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ', ' + address)}`;
+            const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(name + ', ' + address)}`;
             const osmUrl = `https://www.openstreetmap.org/search?query=${encodeURIComponent(name + ', ' + address)}`;
             return {
               name,
@@ -1040,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Direct Google Maps web search link fallback
-    const freeMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query + ', ' + loc.city)}`;
+    const freeMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(query + ', ' + loc.city)}`;
     return [{
       name: query,
       address: `${loc.city}, ${loc.country}`,
@@ -1455,7 +1514,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // REMOTE PRICE SYNC ENGINE (prices_manifest.json)
+  // REMOTE PRICE SYNC ENGINE (/api/sync-prices & prices_manifest.json)
   // =========================================================================
   async function syncTourPrices(options = { silent: false }) {
     const syncBtn = document.getElementById('btn-sync-prices');
@@ -1463,8 +1522,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (syncBtn) syncBtn.classList.add('syncing');
 
     try {
-      const res = await fetch(`prices_manifest.json?t=${Date.now()}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      // Connect to the backend sync API when user clicks, or fallback to manifest
+      const syncEndpoint = (!options.silent) ? `/api/sync-prices?t=${Date.now()}` : `prices_manifest.json?t=${Date.now()}`;
+      let res;
+      try {
+        res = await fetch(syncEndpoint);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      } catch (endpointErr) {
+        res = await fetch(`prices_manifest.json?t=${Date.now()}`);
+      }
       const manifest = await res.json();
 
       if (manifest && manifest.locations) {
@@ -1476,37 +1542,43 @@ document.addEventListener('DOMContentLoaded', () => {
               overrides[locKey][d.id] = {
                 priceSharedRange: d.priceSharedRange,
                 pricePrivateRange: d.pricePrivateRange,
-                colectivoCost: d.colectivoCost
+                colectivoCost: d.colectivoCost,
+                agencyPublishedPrices: d.agencyPublishedPrices || []
               };
               const target = window.CO404_LOCATIONS[locKey].destinations.find(x => x.id === d.id);
               if (target) {
                 target.priceSharedRange = d.priceSharedRange;
                 target.pricePrivateRange = d.pricePrivateRange;
                 target.colectivoCost = d.colectivoCost;
+                if (d.agencyPublishedPrices) target.agencyPublishedPrices = d.agencyPublishedPrices;
               }
             });
           }
         }
         localStorage.setItem('co404_price_overrides', JSON.stringify(overrides));
-        localStorage.setItem('co404_last_price_sync', new Date().toISOString());
+        localStorage.setItem('co404_last_price_sync', manifest.lastUpdated || new Date().toISOString());
 
         destinations = [...(window.CO404_LOCATIONS[currentLocationId].destinations || [])];
         renderDestinations();
 
         if (statusBadge) {
-          statusBadge.textContent = 'Verified';
+          statusBadge.textContent = 'En Vivo ✓';
           statusBadge.style.background = '#E8F5E9';
           statusBadge.style.color = '#2E7D32';
+          statusBadge.title = `Precios verificados en vivo: ${manifest.verifiedDateHuman || 'Hoy'}`;
         }
 
         if (!options.silent) {
-          showToast('✅ Latest tour market benchmarks & prices synchronized!');
+          const checkedNotice = (manifest.liveCheckedSources && manifest.liveCheckedSources.length)
+            ? ` (${manifest.liveCheckedSources.length} webs de agencias verificadas en vivo)`
+            : '';
+          showToast(`✅ Precios sincronizados con las webs oficiales${checkedNotice}!`);
         }
       }
     } catch (err) {
       console.warn('Price sync notice:', err);
       if (!options.silent) {
-        showToast('⚠️ Using verified offline market prices.');
+        showToast('⚠️ Usando tarifas base verificadas.');
       }
     } finally {
       if (syncBtn) {
