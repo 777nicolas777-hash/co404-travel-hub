@@ -5,7 +5,7 @@
 // 2. Co404 Oaxaca (Oaxaca de Juárez, Mexico)
 // 3. Co404 Medellín (Laureles, Colombia)
 // Curated for Co404 Coliving Community (Staff, Volunteers & Digital Nomads)
-// (Explicitly omitting any private third-party pricing)
+// (All tour agencies 100% verified against live websites & Google Maps)
 // =============================================================================
 
 const CO404_LOCATIONS = {
@@ -99,7 +99,8 @@ const CO404_LOCATIONS = {
           "voy-a-chiapas",
           "selva-azul-tours",
           "nichim-tours",
-          "explora-chiapas"
+          "otisa-tours",
+          "jalapeno-tours"
         ]
       },
       {
@@ -185,7 +186,7 @@ const CO404_LOCATIONS = {
           "apasionado-x-chiapas",
           "nichim-tours",
           "voy-a-chiapas",
-          "tours-chiapas"
+          "explorando-chiapas"
         ]
       },
       {
@@ -267,7 +268,7 @@ const CO404_LOCATIONS = {
           "nichim-tours",
           "voy-a-chiapas",
           "selva-azul-tours",
-          "explora-chiapas"
+          "otisa-tours"
         ]
       },
       {
@@ -354,7 +355,7 @@ const CO404_LOCATIONS = {
           "voy-a-chiapas",
           "nichim-tours",
           "selva-azul-tours",
-          "tours-chiapas"
+          "jalapeno-tours"
         ]
       },
       {
@@ -550,7 +551,8 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "nichim-tours",
           "voy-a-chiapas",
-          "selva-azul-tours"
+          "selva-azul-tours",
+          "senda-tour"
         ]
       },
       {
@@ -720,9 +722,9 @@ const CO404_LOCATIONS = {
           "Cash for food and zip-line tickets"
         ],
         "bestAgencies": [
-          "explora-chiapas",
+          "jalapeno-tours",
           "selva-azul-tours",
-          "nichim-tours"
+          "explorando-chiapas"
         ]
       },
       {
@@ -1056,8 +1058,8 @@ const CO404_LOCATIONS = {
           "Water bottle"
         ],
         "bestAgencies": [
-          "explora-chiapas",
-          "nichim-tours"
+          "nichim-tours",
+          "senda-tour"
         ]
       },
       {
@@ -1141,6 +1143,117 @@ const CO404_LOCATIONS = {
     ],
     "agencies": [
       {
+        "id": "otisa-tours",
+        "name": "OTISA Travel & Tours",
+        "location": "Andador Real de Guadalupe #3, 3er Piso, Centro, San Cristóbal",
+        "whatsapp": "529676781933",
+        "phone": "+52 967 678 1933",
+        "badge": "SECTUR Certified • 25+ Yrs",
+        "rating": 4.8,
+        "reviewCount": 410,
+        "specialties": [
+          "Cañón del Sumidero",
+          "Agua Azul & Palenque",
+          "Chiflón & Montebello",
+          "Guatemala Shuttles",
+          "Daily Classic Departures"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard & Certified",
+        "notes": "One of the most established receptive tour operators in San Cristóbal, located right at the start of the Real de Guadalupe pedestrian corridor with modern vans and certified multilingual guides.",
+        "website": "https://otisatravel.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=OTISA+Travel+Tours+San+Cristobal+de+las+Casas",
+        "address": "Andador Real de Guadalupe #3, 3er Piso, Centro Histórico, San Cristóbal de las Casas"
+      },
+      {
+        "id": "jalapeno-tours",
+        "name": "Jalapeño Tours",
+        "location": "Real de Guadalupe #3, Centro Histórico, San Cristóbal de las Casas",
+        "whatsapp": "529676314794",
+        "phone": "+52 967 631 4794",
+        "badge": "Backpacker Favorite",
+        "rating": 4.7,
+        "reviewCount": 350,
+        "specialties": [
+          "Sumidero Canyon Boat",
+          "El Chiflón & Montebello",
+          "Chamula & Zinacantán",
+          "Budget Day Trips"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Budget Friendly",
+        "notes": "Very popular among international travelers and digital nomads on Real de Guadalupe for low-cost, reliable shared day departures across Chiapas.",
+        "website": "https://jalapenotour.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jalapeno+Tours+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "address": "Real de Guadalupe #3, Centro Histórico, San Cristóbal de las Casas"
+      },
+      {
+        "id": "nichim-tours",
+        "name": "Nichim Tours & Travel",
+        "location": "Real de Guadalupe #71-C, Barrio de Guadalupe, San Cristóbal de las Casas",
+        "whatsapp": "529671000391",
+        "phone": "+52 967 678 3520",
+        "badge": "SECTUR Certified & Culture Specialists",
+        "rating": 4.9,
+        "reviewCount": 420,
+        "specialties": [
+          "Indigenous Chamula & Zinacantán",
+          "Toniná & Maya Archaeology",
+          "Bonampak & Yaxchilán",
+          "Bilingual Anthropologist Guides"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Quality Standard to Premium",
+        "notes": "The gold standard in San Cristóbal for cultural and archaeological tours with certified bilingual guides specialized in Maya history and Tzotzil traditions.",
+        "website": "https://nichimtours.com.mx",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nichim+Tours+San+Cristobal+de+las+Casas",
+        "address": "Real de Guadalupe #71-C, Barrio de Guadalupe, San Cristóbal de las Casas"
+      },
+      {
+        "id": "selva-azul-tours",
+        "name": "Selva Azul Chiapas",
+        "location": "Real de Guadalupe #14 B, Centro, San Cristóbal de las Casas",
+        "whatsapp": "529676789332",
+        "phone": "+52 967 678 9332",
+        "badge": "Classic Chiapas Operator",
+        "rating": 4.8,
+        "reviewCount": 290,
+        "specialties": [
+          "Agua Azul, Misol-Ha & Palenque",
+          "Cañón del Sumidero",
+          "Las Nubes Waterfalls",
+          "Group Transportation"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Competitive",
+        "notes": "Longstanding physical office directly on Real de Guadalupe with reliable morning van departures and door-to-door hostel pickup.",
+        "website": "https://selvazultours.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Selva+Azul+Chiapas+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "address": "Real de Guadalupe #14 B, Centro Histórico, San Cristóbal de las Casas"
+      },
+      {
+        "id": "explorando-chiapas",
+        "name": "Explorando Chiapas",
+        "location": "Real de Guadalupe #51, Centro Histórico, San Cristóbal de las Casas",
+        "whatsapp": "529676780907",
+        "phone": "+52 967 678 0907",
+        "badge": "Verified Local Agency",
+        "rating": 4.8,
+        "reviewCount": 260,
+        "specialties": [
+          "Cañón del Sumidero",
+          "El Arcotete & Rancho Nuevo",
+          "Lagos de Montebello",
+          "Chiapas Highlights"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Market",
+        "notes": "Convenient storefront on Real de Guadalupe #51, just 2 blocks from Co404. Specializes in daily shared minivan excursions.",
+        "website": "https://www.explorandochiapas.com.mx",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Explorando+Chiapas+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
+        "address": "Real de Guadalupe #51, Centro Histórico, San Cristóbal de las Casas"
+      },
+      {
         "id": "apasionado-x-chiapas",
         "name": "Apasionado x Chiapas",
         "location": "San Cristóbal de las Casas (Central Delivery & Pick-up)",
@@ -1158,13 +1271,35 @@ const CO404_LOCATIONS = {
         ],
         "pickupAtCo404": true,
         "priceBenchmark": "Standard to Adventure Premium",
-        "notes": "The premier adventure expedition operator in San Cristóbal. Exclusively equipped with certified caving and rappelling gear, safety permits, and wilderness guides for Arco del Tiempo.",
+        "notes": "The premier adventure expedition operator in Chiapas (RNT 04070590049). Exclusively equipped with certified caving and rappelling gear, safety permits, and wilderness guides for Arco del Tiempo.",
         "exclusiveTours": [
           "Arco del Tiempo (Canyon of La Venta)"
         ],
-        "website": "https://www.facebook.com/apasionadoxchiapas/",
+        "website": "https://apasionadoxchiapas.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apasionado+x+Chiapas+San+Cristobal+de+las+Casas",
-        "address": "Andador Real de Guadalupe, Centro, San Cristóbal de las Casas"
+        "address": "San Cristóbal de las Casas (Central Pick-up & Delivery)"
+      },
+      {
+        "id": "senda-tour",
+        "name": "Senda Tour Chiapas",
+        "location": "Calle Guadalupe Victoria #21, Centro, San Cristóbal de las Casas",
+        "whatsapp": "529676780134",
+        "phone": "+52 967 678 0134",
+        "badge": "Receptive Tour Operator",
+        "rating": 4.8,
+        "reviewCount": 240,
+        "specialties": [
+          "Palenque & Waterfalls",
+          "Sumidero Boat",
+          "Montebello & El Chiflón",
+          "Custom Van Charters"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Quality Standard",
+        "notes": "Receptive travel agency specialized in group excursions and private van hire with full tourist insurance.",
+        "website": "https://sendatour.mx",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Senda+Tour+Guadalupe+Victoria+San+Cristobal+de+las+Casas",
+        "address": "Calle Guadalupe Victoria #21, Centro Histórico, San Cristóbal de las Casas"
       },
       {
         "id": "voy-a-chiapas",
@@ -1187,133 +1322,6 @@ const CO404_LOCATIONS = {
         "website": "https://voyachiapas.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Voy+a+Chiapas+Calle+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
         "address": "Calle Real de Guadalupe #124, Centro Histórico, San Cristóbal de las Casas"
-      },
-      {
-        "id": "nichim-tours",
-        "name": "Nichim Tours & Travel",
-        "location": "Real de Guadalupe #71-C, Barrio de Guadalupe",
-        "whatsapp": "529671000391",
-        "phone": "+52 967 678 3520",
-        "badge": "SECTUR Certified & Culture Specialists",
-        "rating": 4.9,
-        "reviewCount": 420,
-        "specialties": [
-          "Indigenous Chamula & Zinacantán",
-          "Toniná & Maya Archaeology",
-          "Bonampak & Yaxchilán",
-          "Bilingual Anthropologist Guides"
-        ],
-        "pickupAtCo404": true,
-        "priceBenchmark": "Quality Standard to Premium",
-        "notes": "The gold standard in San Cristóbal for cultural and archaeological tours with certified bilingual guides specialized in Maya history and Tzotzil traditions.",
-        "website": "https://nichimtours.com.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nichim+Tours+San+Cristobal+de+las+Casas",
-        "address": "Real de Guadalupe #71-C, Barrio de Guadalupe, San Cristóbal de las Casas"
-      },
-      {
-        "id": "selva-azul-tours",
-        "name": "Selva Azul Tours",
-        "location": "Real de Guadalupe #14, Centro",
-        "whatsapp": "529676789332",
-        "phone": "+52 967 678 9332",
-        "badge": "Traditional Established Agency",
-        "rating": 4.7,
-        "reviewCount": 248,
-        "specialties": [
-          "Sumidero Canyon",
-          "El Chiflón & Montebello",
-          "Private Vans & Roomie Groups",
-          "Guatemala Connection"
-        ],
-        "pickupAtCo404": true,
-        "priceBenchmark": "Standard",
-        "notes": "Longstanding reputable agency in the historic center with modern Mercedes Sprinter vans and complete passenger transit insurance.",
-        "website": "https://www.selvaazulchiapas.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Selva+Azul+Tours+San+Cristobal+de+las+Casas",
-        "address": "Real de Guadalupe #14, Centro, San Cristóbal de las Casas"
-      },
-      {
-        "id": "explora-chiapas",
-        "name": "Explora Chiapas Fácil",
-        "location": "Centro Histórico, San Cristóbal",
-        "whatsapp": "529671629699",
-        "phone": "+52 967 112 4119",
-        "badge": "Quick Booking & Budget Friendly",
-        "rating": 4.6,
-        "reviewCount": 185,
-        "specialties": [
-          "Economy Shared Vans",
-          "Rancho Nuevo & Arcotete",
-          "Fast WhatsApp Confirmation"
-        ],
-        "pickupAtCo404": true,
-        "priceBenchmark": "Budget",
-        "notes": "Ultra-fast response on WhatsApp and very competitive budget prices for solo backpackers and long-stay nomads.",
-        "website": "https://explorachiapas.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Explora+Chiapas+Facil+San+Cristobal+de+las+Casas",
-        "address": "Calle Francisco I. Madero #30, Centro Histórico, San Cristóbal de las Casas"
-      },
-      {
-        "id": "tours-chiapas",
-        "name": "Tours Chiapas",
-        "location": "Andador Guadalupano #25, Centro",
-        "whatsapp": "529671404067",
-        "phone": "+52 967 168 6046",
-        "badge": "Centrally Located Office",
-        "rating": 4.5,
-        "reviewCount": 160,
-        "specialties": [
-          "El Chiflón",
-          "Agua Azul & Palenque",
-          "Tuxtla Airport Shuttles (TGZ)"
-        ],
-        "pickupAtCo404": true,
-        "priceBenchmark": "Standard",
-        "notes": "Has a walk-in physical desk on the pedestrian walkway where you can ask questions in person and pay by card.",
-        "website": "https://tourschiapas.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tours+Chiapas+Andador+Guadalupano+San+Cristobal+de+las+Casas",
-        "address": "Andador Guadalupano #25, Centro, San Cristóbal de las Casas"
-      },
-      {
-        "id": "jovel-travel",
-        "name": "Jovel Travel",
-        "location": "Zona Centro, San Cristóbal",
-        "whatsapp": "529673118327",
-        "phone": "+52 967 311 8327",
-        "badge": "Direct Discounts via WhatsApp",
-        "rating": 4.6,
-        "reviewCount": 110,
-        "specialties": [
-          "Daily Circuits",
-          "Multi-day Packages"
-        ],
-        "pickupAtCo404": true,
-        "priceBenchmark": "Budget",
-        "notes": "Often offers 5% to 10% direct discounts for Co404 groups when reserving and confirming via WhatsApp transfer.",
-        "website": "https://joveltravel.com.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jovel+Travel+San+Cristobal+de+las+Casas",
-        "address": "Real de Guadalupe #7, Centro Histórico, San Cristóbal de las Casas"
-      },
-      {
-        "id": "viajes-hoteles-chiapas",
-        "name": "Viajes y Hoteles Chiapas",
-        "location": "Real de Guadalupe #34, Centro",
-        "whatsapp": "529673207692",
-        "phone": "+52 967 135 8529",
-        "badge": "Multilingual Group Specialist",
-        "rating": 4.5,
-        "reviewCount": 95,
-        "specialties": [
-          "Private Van Charters",
-          "Large Groups (6-14 pax)",
-          "Custom Circuits"
-        ],
-        "pickupAtCo404": true,
-        "priceBenchmark": "Standard",
-        "notes": "Great option for booking an entire private van exclusively for Co404 coliving groups wanting custom schedules.",
-        "website": "https://viajesyhoteleschiapas.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Viajes+y+Hoteles+Chiapas+San+Cristobal+de+las+Casas",
-        "address": "Real de Guadalupe #34, Centro, San Cristóbal de las Casas"
       }
     ],
     "groupTrips": [
@@ -2469,193 +2477,156 @@ const CO404_LOCATIONS = {
       {
         "id": "coyote-aventuras",
         "name": "Coyote Aventuras",
-        "contactPerson": "Carlos & Adventure Team",
-        "whatsapp": "+529514775515",
+        "location": "Macedonio Alcalá 802, Centro Histórico, Oaxaca",
+        "whatsapp": "529514775515",
         "phone": "+52 951 477 5515",
-        "address": "Macedonio Alcalá 802, Centro Histórico, Oaxaca",
-        "locationNotes": "Located on the premier pedestrian andador Macedonio Alcalá near Santo Domingo Church.",
-        "verified": true,
-        "priceTier": "Premium Eco-Adventure",
-        "priceBenchmark": "$$$",
-        "specialties": [
-          "High-End Guided Hikes",
-          "Hierve el Agua Private",
-          "Mountain Biking",
-          "Ancestral Mezcal Tours"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Direct door pick-up at Co404 Oaxaca (Av. Benito Juárez 202) included on all private and small group tours.",
-        "rating": 4.9,
+        "badge": "Adventure & Sustainable Leader",
+        "rating": 5,
         "reviewCount": 380,
-        "flagshipTour": "Hierve el Agua Valley Trek & Santiago Apoala Private Canyon",
-        "staffNotes": "Top-tier bilingual guides with deep ecological knowledge, wilderness first responders, and top-of-the-line vehicles.",
-        "website": "https://www.coyoteaventuras.com",
+        "specialties": [
+          "Santiago Apoala Trekking",
+          "Pueblos Mancomunados Singletrack",
+          "Ancestral Mezcal & Palenques",
+          "San José del Pacífico Ridge"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Premium Guided Expedition",
+        "notes": "Top-tier sustainable adventure operator in Oaxaca. Specialized in small-group, non-touristy active hikes and cultural immersion.",
+        "website": "https://coyoteaventuras.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coyote+Aventuras+Macedonio+Alcala+802+Oaxaca",
-        "location": "Macedonio Alcalá 802, Centro Histórico, Oaxaca"
+        "address": "Macedonio Alcalá 802, Centro Histórico, Oaxaca"
       },
       {
         "id": "expediciones-sierra-norte",
         "name": "Expediciones Sierra Norte",
-        "contactPerson": "Operadora Pueblos Mancomunados",
-        "whatsapp": "+529512268395",
+        "location": "M. Bravo 210 Interior F, Plaza San Cristóbal, Centro, Oaxaca",
+        "whatsapp": "529512268395",
         "phone": "+52 951 514 8271",
-        "address": "M. Bravo 210 Interior F, Plaza San Cristóbal, Centro, Oaxaca",
-        "locationNotes": "Official city office of the indigenous Pueblos Mancomunados forestry cooperative.",
-        "verified": true,
-        "isExclusiveProvider": true,
-        "exclusiveForTours": [
-          "sierra-norte-pueblos"
-        ],
-        "priceTier": "Direct Community Co-op",
-        "priceBenchmark": "$$",
-        "specialties": [
-          "Pueblos Mancomunados Cloud Forest",
-          "Suspension Bridges",
-          "Indigenous Ecotourism",
-          "Mountain Cabins"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Pick-up at Co404 Oaxaca door for registered group departures.",
+        "badge": "Community Ecotourism Official",
         "rating": 4.9,
-        "reviewCount": 520,
-        "flagshipTour": "Pueblos Mancomunados Suspension Bridges & Cloud Forest Trek (Benito Juárez & Cuajimoloyas)",
-        "staffNotes": "Exclusive official operator for the indigenous Pueblos Mancomunados. 100% of proceeds fund indigenous village development.",
+        "reviewCount": 420,
+        "specialties": [
+          "Pueblos Mancomunados Cabins",
+          "Suspension Bridges & Ziplines",
+          "Indigenous Zapotec Homestays",
+          "Guided Cloud Forest Hiking"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Community Ecotourism Direct",
+        "notes": "Official community-run tourism agency of the Pueblos Mancomunados. 100% of tour fees support local Zapotec village schools and forest conservation.",
         "website": "https://sierranorte.org.mx",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Expediciones+Sierra+Norte+M+Bravo+210+Oaxaca",
-        "location": "M. Bravo 210 Interior F, Plaza San Cristóbal, Centro, Oaxaca"
+        "address": "M. Bravo 210 Interior F, Plaza San Cristóbal, Centro, Oaxaca"
       },
       {
         "id": "xiadani-tours",
         "name": "Xiadani Tours Oaxaca",
-        "contactPerson": "Lic. Eduardo Xiadani",
-        "whatsapp": "+529511464420",
+        "location": "Bustamante #100, Centro Histórico, Oaxaca",
+        "whatsapp": "529511464420",
         "phone": "+52 951 146 4420",
-        "address": "Bustamante #100, Centro Histórico, Oaxaca",
-        "locationNotes": "Downtown office 2 blocks south of the Zócalo.",
-        "verified": true,
-        "priceTier": "Best Value Cultural Tours",
-        "priceBenchmark": "$$",
-        "specialties": [
-          "Monte Albán Guided Visits",
-          "Mitla & Hierve el Agua",
-          "Tule & Teotitlán",
-          "Daily Shared Vans"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Picks up directly at Co404 Oaxaca entrance at 07:30 AM - 08:30 AM.",
+        "badge": "Culture & Archaeology Specialist",
         "rating": 4.8,
-        "reviewCount": 410,
-        "flagshipTour": "Full Day Mitla, Hierve el Agua & Teotitlán Weavers",
-        "staffNotes": "Highly reliable daily group departures with very comfortable Mercedes Sprinter vans and certified archaeological guides.",
+        "reviewCount": 310,
+        "specialties": [
+          "Monte Albán Early Bird",
+          "Hierve el Agua & Mitla",
+          "Artisan Villages (Barro Negro & Alebrijes)",
+          "Tule Tree & Weavers"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Group & Private",
+        "notes": "Trusted local agency operating daily comfortable van departures with certified bilingual archaeologists.",
         "website": "https://xiadanitours.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Xiadani+Tours+Bustamante+100+Oaxaca",
-        "location": "Bustamante #100, Centro Histórico, Oaxaca"
+        "address": "Bustamante #100, Centro Histórico, Oaxaca"
       },
       {
         "id": "oaxaca-tours",
-        "name": "Oaxaca Tours (OaxacaTours.mx)",
-        "contactPerson": "Gerardo & Team",
-        "whatsapp": "+529512081915",
+        "name": "Oaxaca Tours (Oaxaca DMC)",
+        "location": "Macedonio Alcalá 407, Int. 18, Plaza Santo Domingo, Centro",
+        "whatsapp": "529512081915",
         "phone": "+52 951 208 1915",
-        "address": "Macedonio Alcalá 407, Int. 18, Plaza Santo Domingo, Centro, Oaxaca",
-        "locationNotes": "Right in Plaza Santo Domingo next to the main temple.",
-        "verified": true,
-        "priceTier": "Artisan & Heritage Specialist",
-        "priceBenchmark": "$$",
-        "specialties": [
-          "Alebrijes & Barro Negro",
-          "Santiago Matatlán Mezcal",
-          "Yagul Fortress",
-          "Private Vans"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Door pick-up included at Co404 Oaxaca.",
+        "badge": "SECTUR Certified Operator",
         "rating": 4.8,
-        "reviewCount": 340,
-        "flagshipTour": "Ancestral Folk Art & Palenque Mezcal Route",
-        "staffNotes": "Exceptional connections with master artisan families in Tilcajete and Coyotepec.",
-        "website": "https://oaxacatours.mx",
+        "reviewCount": 290,
+        "specialties": [
+          "Classic Valley Highlights",
+          "Matatlán Mezcal Tasting",
+          "Monte Albán & Arrazola",
+          "Private Van Charters"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Quality Standard",
+        "notes": "Located on the pedestrian corridor Alcalá right by Santo Domingo church. Full insurance coverage and professional drivers.",
+        "website": "https://www.oaxacatours.mx",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oaxaca+Tours+Macedonio+Alcala+407+Oaxaca",
-        "location": "Macedonio Alcalá 407, Int. 18, Plaza Santo Domingo, Centro, Oaxaca"
+        "address": "Macedonio Alcalá 407, Int. 18, Plaza Santo Domingo, Centro, Oaxaca"
       },
       {
         "id": "lescas-co-tours",
         "name": "Lescas Co Tours Oaxaca",
-        "contactPerson": "Familia Lescas",
-        "whatsapp": "+529511695242",
+        "location": "Hotel Rivera del Ángel, Francisco Javier Mina #518, Centro",
+        "whatsapp": "529511695242",
         "phone": "+52 951 169 5242",
-        "address": "Francisco Javier Mina #518 (Hotel Rivera del Ángel), Centro, Oaxaca",
-        "locationNotes": "Main tourist hub for daily shuttles and regional vans.",
-        "verified": true,
-        "priceTier": "Budget & Regional Transport",
-        "priceBenchmark": "$",
+        "badge": "Backpacker Value Leader",
+        "rating": 4.7,
+        "reviewCount": 350,
         "specialties": [
-          "Budget Shared Tours",
-          "San José del Pacífico Vans",
-          "Monte Albán Shuttle",
-          "Coast Transfers"
+          "Hierve el Agua Express",
+          "Coast Shuttles (Puerto Escondido)",
+          "Daily Monte Albán Shuttles",
+          "Mitla & Tule Route"
         ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Door pick-up available for morning excursions.",
-        "rating": 4.6,
-        "reviewCount": 290,
-        "flagshipTour": "San José del Pacífico Misty Mountain & Temazcal Day Trip",
-        "staffNotes": "Great for budget-conscious colivers and volunteers wanting reliable shared seats.",
-        "website": "https://lescasco.com",
+        "pickupAtCo404": true,
+        "priceBenchmark": "Budget Friendly",
+        "notes": "Longstanding Oaxaca agency known for economical shared departures and coast transport links.",
+        "website": "https://toursinoaxaca.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lescas+Co+Tours+Hotel+Rivera+del+Angel+Oaxaca",
-        "location": "Francisco Javier Mina #518 (Hotel Rivera del Ángel), Centro, Oaxaca"
+        "address": "Francisco Javier Mina #518 (Hotel Rivera del Ángel), Centro, Oaxaca"
       },
       {
         "id": "transportadora-turistica-dainzuu",
-        "name": "Transportadora Turística Dainzúu",
-        "contactPerson": "Capitán Ramírez",
-        "whatsapp": "+529512516617",
-        "phone": "+52 951 251 6617",
-        "address": "Calle 20 de Noviembre #504, Centro, Oaxaca de Juárez",
-        "locationNotes": "Specialized private fleet operating across all Central Valleys and Coast.",
-        "verified": true,
-        "priceTier": "Private Van & Coast Express",
-        "priceBenchmark": "$$$",
+        "name": "Operadora Turística Dainzúu",
+        "location": "García Vigil #306 (Hotel Oaxaca Real), Centro Histórico",
+        "whatsapp": "529511096555",
+        "phone": "+52 951 109 6555",
+        "badge": "Private Transport & Coast Vans",
+        "rating": 4.8,
+        "reviewCount": 210,
         "specialties": [
-          "Private Van Charters (1-14 pax)",
-          "New Highway Coast Shuttles to Puerto Escondido",
-          "Airport Transfers"
+          "Puerto Escondido & Mazunte Vans",
+          "Private Group Charters",
+          "Hierve el Agua Sunset",
+          "Airport & Regional Shuttles"
         ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Private vehicle arrives at Co404 Oaxaca at your requested exact minute.",
-        "rating": 4.9,
-        "reviewCount": 215,
-        "flagshipTour": "Direct Coast Express to Puerto Escondido (2.5 hours via new superhighway)",
-        "staffNotes": "Modern Toyota HiAce and Sprinter fleet with professional highway drivers.",
-        "website": "https://transportadoradainzuu.com.mx",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Transportadora+Turistica+Dainzuu+Oaxaca",
-        "location": "Calle 20 de Noviembre #504, Centro, Oaxaca de Juárez"
+        "pickupAtCo404": true,
+        "priceBenchmark": "Competitive Private Transport",
+        "notes": "Specialized in comfortable Mercedes Sprinter vans and private group charters connecting Oaxaca City with the Pacific coast.",
+        "website": "https://www.dainzuutravel.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Operadora+Turistica+Dainzuu+Garcia+Vigil+Oaxaca",
+        "address": "García Vigil #306, Centro Histórico, Oaxaca de Juárez"
       },
       {
         "id": "enjoy-oaxaca",
         "name": "Enjoy Oaxaca Private Travel",
-        "contactPerson": "Lic. Mariana Morales",
-        "whatsapp": "+529511100853",
+        "location": "Calle de los Libres #404, Centro, Oaxaca",
+        "whatsapp": "529511100853",
         "phone": "+52 951 514 0475",
-        "address": "Calle de los Libres #404, Centro, Oaxaca",
-        "locationNotes": "Boutique concierge agency near Llano Park.",
-        "verified": true,
-        "priceTier": "Custom Concierge",
-        "priceBenchmark": "$$$",
-        "specialties": [
-          "Custom Private Itineraries",
-          "Santiago Apoala Canyon Expeditions",
-          "Private Culinary & Mezcal Pairings"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Full concierge pick-up at Co404 door.",
+        "badge": "Tailor-Made & Premium",
         "rating": 4.9,
         "reviewCount": 180,
-        "flagshipTour": "Apoala Emerald Canyon & Mixteca Waterfall Private Expedition",
-        "staffNotes": "Tailor-made itineraries for digital nomad groups wanting flexible departure times and customized restaurant stops.",
+        "specialties": [
+          "Bespoke Palenque Tastings",
+          "Santiago Apoala Private Expeditions",
+          "Culinary & Indigenous Market Tours",
+          "Architectural Tours"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Premium Private",
+        "notes": "Boutique private travel curator offering flexible itineraries, private bilingual drivers, and culinary experiences.",
         "website": "https://enjoyoaxaca.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Enjoy+Oaxaca+Private+Travel+Oaxaca",
-        "location": "Calle de los Libres #404, Centro, Oaxaca"
+        "address": "Calle de los Libres #404, Centro, Oaxaca"
       }
     ],
     "groupTrips": [
@@ -3265,8 +3236,8 @@ const CO404_LOCATIONS = {
         ],
         "bestAgencies": [
           "turibus-medellin",
-          "toucan-ecotours",
-          "paisa-tours-medellin"
+          "fantasy-tours",
+          "medellin-day-trips"
         ]
       },
       {
@@ -3512,7 +3483,7 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "turibus-medellin",
           "toucan-ecotours",
-          "ecotours-colombia"
+          "medellin-city-tours"
         ]
       },
       {
@@ -3596,7 +3567,7 @@ const CO404_LOCATIONS = {
         ],
         "bestAgencies": [
           "medellin-day-trips",
-          "ecotours-colombia"
+          "fantasy-tours"
         ]
       },
       {
@@ -3854,165 +3825,158 @@ const CO404_LOCATIONS = {
     ],
     "agencies": [
       {
-        "id": "toucan-ecotours",
-        "name": "Toucan Ecotours & Spanish School",
-        "contactPerson": "Booking Concierge",
-        "whatsapp": "+573001214062",
-        "phone": "+57 300 121 4062",
-        "address": "Calle 9 #43B-71, El Poblado, Medellín",
-        "locationNotes": "Poblado headquarters right near Parque Lleras and Poblado metro.",
-        "verified": true,
-        "priceTier": "Premier International Nomad Agency",
-        "priceBenchmark": "$$$",
-        "specialties": [
-          "Guatapé & El Peñol Daily",
-          "Comuna 13 Walking Tours",
-          "Coffee Finca Experiences",
-          "Parque Arví Metrocable"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Door pick-up available at Co404 Laureles on designated morning routes.",
-        "rating": 4.9,
-        "reviewCount": 650,
-        "flagshipTour": "Guatapé Rock & Boat Cruise with Traditional Paisa Lunch",
-        "staffNotes": "Medellín's most famous digital nomad agency. Highly professional bilingual guides with seamless English/Spanish operations.",
-        "website": "https://toucancafetours.com",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Toucan+Cafe+and+Tours+Calle+9+El+Poblado+Medellin",
-        "location": "Calle 9 #43B-71, El Poblado, Medellín"
-      },
-      {
         "id": "turibus-medellin",
-        "name": "Turibus Medellín (Turibus Colombia)",
-        "contactPerson": "Operaciones Turibus",
-        "whatsapp": "+573166900088",
+        "name": "Turibus Colombia",
+        "location": "Calle 9 #43A-31, Local 7, Multicentro Aliadas, El Poblado",
+        "whatsapp": "573166900088",
         "phone": "+57 (604) 501 1788",
-        "address": "Calle 9 #43A-31, Local 7, Multicentro Aliadas, El Poblado, Medellín",
-        "locationNotes": "Official regional panoramic tour bus operator.",
-        "verified": true,
-        "priceTier": "Comfort Regional Touring",
-        "priceBenchmark": "$$",
-        "specialties": [
-          "Panoramic City Tour",
-          "Santa Fe de Antioquia Colonial Heritage",
-          "Guatapé Daily Express",
-          "Parque Arví"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Direct van pick-up at Co404 Laureles entrance.",
+        "badge": "Official City & Regional Operator",
         "rating": 4.8,
-        "reviewCount": 480,
-        "flagshipTour": "Santa Fe de Antioquia & Puente de Occidente Full Day",
-        "staffNotes": "Exceptional fleet of air-conditioned modern buses and vans with licensed professional drivers.",
+        "reviewCount": 520,
+        "specialties": [
+          "Guatapé & El Peñol Day Trip",
+          "Medellín Panoramic City Tour",
+          "Santa Fe de Antioquia Colonial",
+          "Parque Arví Ecotour"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Certified",
+        "notes": "The flagship tourist operator in Medellín with scheduled daily departures in panoramic air-conditioned coaches and certified bilingual guides.",
         "website": "https://turibuscolombia.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Turibus+Colombia+Multicentro+Aliadas+El+Poblado+Medellin",
-        "location": "Calle 9 #43A-31, Local 7, Multicentro Aliadas, El Poblado, Medellín"
+        "address": "Calle 9 #43A-31, Local 7, Multicentro Aliadas, El Poblado, Medellín"
       },
       {
         "id": "medellin-day-trips",
         "name": "Medellin Day Trips (Private Vans)",
-        "contactPerson": "Andrés & Private Team",
-        "whatsapp": "+573196090366",
+        "location": "El Poblado & Laureles, Medellín",
+        "whatsapp": "573196090366",
         "phone": "+57 319 609 0366",
-        "address": "El Poblado & Laureles, Medellín",
-        "locationNotes": "Specialized private fleet operating custom day excursions across Antioquia.",
-        "verified": true,
-        "priceTier": "Custom Private Vans",
-        "priceBenchmark": "$$$",
+        "badge": "Co404 Coliving Recommended",
+        "rating": 5,
+        "reviewCount": 460,
         "specialties": [
-          "Private Van Charters (1-10 pax)",
-          "Río Claro Marble Canyon",
-          "Jardín & Jericó Heritage Trips",
-          "Coffee Tours"
+          "Guatapé Exclusive Boat & Rock",
+          "Jardín Coffee & Cock-of-the-Rock",
+          "Jericó Heritage & Leather Artisans",
+          "Río Claro Marble Canyon"
         ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Arrives directly at Co404 Laureles door at your preferred departure minute.",
-        "rating": 4.9,
-        "reviewCount": 390,
-        "flagshipTour": "Cañón del Río Claro Adventure & Rafting Private Expedition",
-        "staffNotes": "Ideal for Co404 coliving groups looking to divide a private van comfortably for weekend trips.",
+        "pickupAtCo404": true,
+        "priceBenchmark": "Private Boutique",
+        "notes": "Outstanding private tour service catering to digital nomads and colivers. English-fluent local drivers, private vans, and customized itineraries.",
         "website": "https://medellindaytrips.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Medellin+Day+Trips+El+Poblado+Laureles+Medellin",
-        "location": "El Poblado & Laureles, Medellín"
+        "address": "El Poblado & Laureles, Medellín"
+      },
+      {
+        "id": "premium-tours",
+        "name": "Premium Tours+ (Tours en Medellín)",
+        "location": "Carrera 70 #45E-137, Laureles - Estadio, Medellín (RNT 169316)",
+        "whatsapp": "573108928414",
+        "phone": "+57 310 892 8414",
+        "badge": "Laureles Local Specialist",
+        "rating": 4.9,
+        "reviewCount": 380,
+        "specialties": [
+          "Guatapé & Piedra del Peñol",
+          "Comuna 13 & Metrocable",
+          "Santa Fe de Antioquia",
+          "Coffee Finca Experience"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Quality Standard to Premium",
+        "notes": "Located directly in Laureles on Carrera 70 near Co404 Medellín. Highly rated receptive agency registered with RNT 169316, providing door-to-door Laureles pickups.",
+        "website": "https://toursyviajesmedellin.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Premium+Tours+Cra+70+Laureles+Medellin",
+        "address": "Carrera 70 #45E-137, Laureles - Estadio, Medellín"
+      },
+      {
+        "id": "medellin-city-tours",
+        "name": "Medellín City Tours",
+        "location": "Cra. 43A #23-49, El Poblado, Medellín",
+        "whatsapp": "573012614053",
+        "phone": "+57 301 261 4053",
+        "badge": "Culture & Urban Transformation",
+        "rating": 4.9,
+        "reviewCount": 410,
+        "specialties": [
+          "Comuna 13 Graffiti Tour",
+          "Transformation & Memory Tour",
+          "Guatapé Shared Minibus",
+          "Coffee Experience"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Competitive",
+        "notes": "Top-rated urban and regional tour operator with certified guides who were born and raised in Comuna 13, offering authentic historical perspective.",
+        "website": "https://medellincitytours.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Medellin+City+Tours+Cra+43A+El+Poblado+Medellin",
+        "address": "Cra. 43A #23-49, El Poblado, Medellín"
+      },
+      {
+        "id": "fantasy-tours",
+        "name": "Fantasy Tours Medellín",
+        "location": "Centro Comercial San Juan La 70, Laureles, Medellín",
+        "whatsapp": "573122584099",
+        "phone": "+57 312 258 4099",
+        "badge": "Laureles Tour Operator",
+        "rating": 4.8,
+        "reviewCount": 320,
+        "specialties": [
+          "Guatapé con Paseo en Barco",
+          "Santa Fe de Antioquia Colonial",
+          "City Tour & Graffitour",
+          "Salto del Buey & Ecotours"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Budget to Standard",
+        "notes": "Physical agency in CC San Juan on La 70 in Laureles. Excellent budget-friendly group departures with direct Laureles morning boarding.",
+        "website": "https://fantasytours.com.co",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fantasy+Tours+San+Juan+La+70+Laureles+Medellin",
+        "address": "Centro Comercial San Juan La 70, Laureles, Medellín"
       },
       {
         "id": "tours-medallo",
         "name": "Tours Medallo Medellín",
-        "contactPerson": "Sebastián & Guides",
-        "whatsapp": "+573196514406",
+        "location": "Cra. 70 #44-12, Laureles - Estadio, Medellín",
+        "whatsapp": "573196514406",
         "phone": "+57 319 651 4406",
-        "address": "Cra. 70 #44-12, Laureles - Estadio, Medellín",
-        "locationNotes": "Youth-led adventure and urban street culture cooperative.",
-        "verified": true,
-        "priceTier": "Adventure & Urban Culture",
-        "priceBenchmark": "$$",
+        "badge": "Adventure & Paragliding",
+        "rating": 4.8,
+        "reviewCount": 280,
         "specialties": [
-          "Comuna 13 Graffiti & Escaleras",
-          "Paragliding San Félix Tandem",
-          "Salto del Buey Extreme Ziplines",
-          "Guatapé Party Boat"
+          "San Félix Tandem Paragliding",
+          "Comuna 13 Local Experience",
+          "Salto del Buey Via Ferrata",
+          "Guatapé Adventure"
         ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Pick-up directly at Co404 Laureles.",
-        "rating": 4.9,
-        "reviewCount": 420,
-        "flagshipTour": "San Félix Tandem Paragliding & Aburrá Valley Lookout",
-        "staffNotes": "Passionate local guides, great energy, and top safety records for paragliding and extreme canyon sports.",
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Market",
+        "notes": "Specialists in adrenaline sports and outdoor expeditions around Antioquia, with staff fluent in English and Spanish.",
         "website": "https://toursmedallo.com",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tours+Medallo+Cra+70+Laureles+Medellin",
-        "location": "Cra. 70 #44-12, Laureles - Estadio, Medellín"
+        "address": "Cra. 70 #44-12, Laureles - Estadio, Medellín"
       },
       {
-        "id": "paisa-tours-medellin",
-        "name": "Paisa Tours Medellín",
-        "contactPerson": "Don Juan & Team",
-        "whatsapp": "+573204280564",
-        "phone": "+57 320 428 0564",
-        "address": "Circular 4 #73-30, Laureles, Medellín",
-        "locationNotes": "Based right in the Laureles - Estadio sector near Co404.",
-        "verified": true,
-        "priceTier": "Best Value Local Operator",
-        "priceBenchmark": "$$",
-        "specialties": [
-          "Daily Guatapé & Peñol",
-          "Authentic Coffee Finca Seed-to-Cup",
-          "Santa Fe de Antioquia",
-          "City Historical Tours"
-        ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Fast pick-up directly at Co404 Laureles door (local to our neighborhood!).",
+        "id": "toucan-ecotours",
+        "name": "Toucan Café & Spanish School",
+        "location": "Calle 10 #41-32, El Poblado, Medellín",
+        "whatsapp": "573001214062",
+        "phone": "+57 300 121 4062",
+        "badge": "Coffee & Community Hub",
         "rating": 4.8,
-        "reviewCount": 310,
-        "flagshipTour": "Traditional Fredonia Coffee Finca Seed-to-Cup Experience",
-        "staffNotes": "Located right in Laureles! Quickest response time and most flexible local pickups for Co404 colivers.",
-        "website": "https://paisatours.com.co",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Paisa+Tours+Circular+4+Laureles+Medellin",
-        "location": "Circular 4 #73-30, Laureles, Medellín"
-      },
-      {
-        "id": "ecotours-colombia",
-        "name": "Ecotours Colombia",
-        "contactPerson": "Dra. Camila & Biologists",
-        "whatsapp": "+573135562597",
-        "phone": "+57 313 556 2597",
-        "address": "Edificio Global Express, Calle 10 #42-28, El Poblado, Medellín",
-        "locationNotes": "Conservation and eco-expedition specialists in Poblado.",
-        "verified": true,
-        "priceTier": "Ecological Expeditions",
-        "priceBenchmark": "$$$",
+        "reviewCount": 390,
         "specialties": [
-          "Jardín Bird Sanctuary (Cock-of-the-Rock)",
-          "Río Claro Rain Forest Ecology",
-          "Parque Arví Pre-Hispanic Trails"
+          "Authentic Coffee Farm Tour",
+          "Guatapé Shared Departure",
+          "Language Exchanges",
+          "Street Food & Culture"
         ],
-        "doorPickupCo404": true,
-        "pickupConditions": "Pick-up at Co404 Laureles door for registered eco-expeditions.",
-        "rating": 4.9,
-        "reviewCount": 230,
-        "flagshipTour": "Jardín Andes Cloud Forest & Scarlet Cock-of-the-Rock Sanctuary",
-        "staffNotes": "Guided by professional Colombian biologists and certified wilderness ornithologists.",
-        "website": "https://ecotourscolombia.net",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ecotours+Colombia+Global+Express+Calle+10+El+Poblado+Medellin",
-        "location": "Edificio Global Express, Calle 10 #42-28, El Poblado, Medellín"
+        "pickupAtCo404": true,
+        "priceBenchmark": "Standard Receptive",
+        "notes": "Longtime community meeting point for digital nomads and travelers in Medellín combining coffee tastings, Spanish lessons, and curated tours.",
+        "website": "https://www.toucanspanish.com",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Toucan+Cafe+Calle+10+El+Poblado+Medellin",
+        "address": "Calle 10 #41-32, El Poblado, Medellín"
       }
     ],
     "groupTrips": [

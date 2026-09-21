@@ -679,9 +679,9 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>
       `;
     }
-    if (agency.website) {
+    if (agency.website && typeof agency.website === 'string' && agency.website.trim().startsWith('http')) {
       html += `
-        <a href="${agency.website}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.74rem; padding: 4px 10px;">
+        <a href="${agency.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.74rem; padding: 4px 10px;">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           Official Website ↗
         </a>
@@ -839,10 +839,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3 class="agency-name">${a.name}</h3>
                 ${customBadge}
               </div>
-              <div class="agency-contact">Contact: ${a.contactPerson}</div>
-              <div style="font-size: 0.8rem; color: var(--co-charcoal-sub); margin-top: 2px;">
-                📍 ${a.address}
-              </div>
+              ${a.contactPerson ? `<div class="agency-contact">Contact: ${a.contactPerson}</div>` : ''}
+              ${(a.address || a.location) ? `<div style="font-size: 0.8rem; color: var(--co-charcoal-sub); margin-top: 2px;">📍 ${a.address || a.location}</div>` : ''}
             </div>
             <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
               <span class="agency-badge">${a.priceTier || a.badge || 'Verified'}</span>
@@ -882,8 +880,8 @@ document.addEventListener('DOMContentLoaded', () => {
               </a>
             ` : '';
 
-            const webLink = a.website ? `
-              <a href="${a.website}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" title="Visit official website or page">
+            const webLink = (a.website && typeof a.website === 'string' && a.website.trim().startsWith('http')) ? `
+              <a href="${a.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" title="Visit official website or page">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 Website ↗
               </a>

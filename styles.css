@@ -1281,6 +1281,102 @@ body {
   border: 1px solid #A5D6A7;
 }
 
+.agencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+}
+
+.agency-card {
+  background: var(--co-white);
+  border: 1px solid var(--co-border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(43, 45, 66, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agency-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(43, 45, 66, 0.08);
+}
+
+.agency-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.agency-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--co-wine);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.agency-contact {
+  font-size: 0.82rem;
+  color: var(--co-charcoal-sub);
+  margin-top: 4px;
+}
+
+.agency-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--co-sand);
+  color: var(--co-terracotta);
+  border: 1px solid rgba(193, 89, 41, 0.25);
+  white-space: nowrap;
+}
+
+.agency-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: var(--co-sand);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+.agency-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.agency-tag {
+  background: #F4EBE1;
+  color: var(--co-charcoal);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: var(--radius-xs);
+  display: inline-block;
+}
+
+.agency-notes {
+  font-size: 0.84rem;
+  color: var(--co-charcoal-sub);
+  line-height: 1.5;
+  background: #FAF7F2;
+  border-left: 3px solid var(--co-terracotta);
+  padding: 10px 14px;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  margin-bottom: 14px;
+}
+
 .agency-header-actions {
   display: flex;
   align-items: center;
