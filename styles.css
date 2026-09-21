@@ -533,12 +533,16 @@ body {
   background-color: var(--co-sand);
   border: 1px solid var(--co-border);
   color: var(--co-charcoal-sub);
-  padding: 6px 14px;
+  padding: 8px 16px;
+  min-height: 38px;
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-pill:hover {
@@ -1126,13 +1130,23 @@ body {
 }
 
 .btn-close-modal {
-  background: none;
+  background: transparent;
   border: none;
   font-size: 1.5rem;
   color: var(--co-charcoal-sub);
   cursor: pointer;
-  line-height: 1;
-  padding: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-close-modal:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--co-charcoal);
 }
 
 .modal-body {
@@ -1896,10 +1910,14 @@ body {
 }
 
 .btn-quote-agency-rate {
-  padding: 6px 14px !important;
-  font-size: 0.8rem !important;
+  padding: 8px 16px !important;
+  min-height: 36px !important;
+  font-size: 0.82rem !important;
   border-radius: var(--radius-full) !important;
   font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 

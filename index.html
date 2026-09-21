@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Co404 Tours & Travel Hub | Hospitality & Coliving Adventures</title>
   <meta name="description" content="Discover, coordinate, and book tours around San Cristóbal de las Casas, Oaxaca, and Medellín for the Co404 Coliving community. Authentic local guides, van split coordination, and verified agency WhatsApp links.">
+  
+  <!-- OpenGraph & Social Media Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Co404 Tours & Travel Hub | Coliving Adventures">
+  <meta property="og:description" content="Authentic tours, van splits, and verified WhatsApp quotes for the Co404 community in Chiapas, Oaxaca, and Medellín.">
+  <meta property="og:image" content="assets/co404_logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Co404 Tours & Travel Hub">
+  <meta name="twitter:description" content="Community excursions and verified agency quotes for Co404 residents.">
+  <meta name="twitter:image" content="assets/co404_logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/webp" href="assets/co404_logo.webp">
   <link rel="apple-touch-icon" href="assets/co404_logo.png">
-  <link rel="stylesheet" href="styles.css?v=20260921_v2">
+  <link rel="stylesheet" href="styles.css?v=20260921_v3">
 </head>
 <body>
 
@@ -38,13 +49,13 @@
         </button>
         <div class="location-switcher-wrap">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <select id="location-select" class="location-selector" title="Choose Co404 Location">
+          <select id="location-select" class="location-selector" title="Choose Co404 Location" aria-label="Select Coliving Location">
             <option value="san-cris" selected>📍 Co404 San Cristóbal</option>
             <option value="oaxaca">📍 Co404 Oaxaca</option>
             <option value="medellin">📍 Co404 Medellín</option>
           </select>
         </div>
-        <select id="currency-select" class="currency-selector" title="Select Currency">
+        <select id="currency-select" class="currency-selector" title="Select Currency" aria-label="Select Display Currency">
           <option value="MXN" selected>MXN ($)</option>
           <option value="COP">COP ($)</option>
           <option value="USD">USD ($)</option>
@@ -119,9 +130,9 @@
         <div class="search-row">
           <div class="search-input-wrapper">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="destination-search-input" class="search-input" placeholder="Search destinations, ruins, waterfalls, agencies, or tags (e.g. Sumidero, boat, textiles, canyon)...">
+            <input type="text" id="destination-search-input" class="search-input" placeholder="Search destinations, ruins, waterfalls, agencies, or tags (e.g. Sumidero, boat, textiles, canyon)..." aria-label="Search destinations, ruins, waterfalls, agencies">
           </div>
-          <select id="sort-destinations-select" class="sort-select">
+          <select id="sort-destinations-select" class="sort-select" aria-label="Sort destinations catalog">
             <option value="recommended">Recommended for Co404</option>
             <option value="distance-asc">Closest first (Lowest km)</option>
             <option value="distance-desc">Furthest first (Expeditions)</option>
@@ -400,7 +411,7 @@
           </div>
 
           <div class="form-group">
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;">
+            <label for="provider-pickup" style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;">
               <input type="checkbox" id="provider-pickup" checked style="width: 18px; height: 18px; accent-color: var(--co-terracotta);">
               Picks up directly at Co404 door
             </label>
@@ -435,7 +446,7 @@
         <button class="btn-close-modal" data-close="modal-create-trip">&times;</button>
       </div>
       <div class="modal-body">
-        <form id="form-create-group-trip">
+        <form id="form-create-trip">
           <div class="form-group">
             <label class="form-label" for="trip-dest-select">Destination:</label>
             <select id="trip-dest-select" class="form-control" required>
@@ -550,7 +561,7 @@
   <!-- Toast Notification Feedback -->
   <div id="toast-message" style="position: fixed; bottom: 24px; right: 24px; background: var(--co-charcoal); color: var(--co-white); padding: 12px 20px; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; box-shadow: var(--shadow-pop); transform: translateY(100px); opacity: 0; transition: all 0.3s ease; z-index: 2000;"></div>
 
-  <script src="js/tours_data.js?v=20260921_v2"></script>
-  <script src="js/app.js?v=20260921_v2"></script>
+  <script src="js/tours_data.js?v=20260921_v3"></script>
+  <script src="js/app.js?v=20260921_v3"></script>
 </body>
 </html>

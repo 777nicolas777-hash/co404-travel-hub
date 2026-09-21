@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <article class="destination-card" data-id="${d.id}">
           <div class="card-image-wrap">
-            <img class="card-image" src="${d.heroImage}" alt="${d.name}" loading="lazy">
+            <img class="card-image" src="${d.heroImage}" alt="${d.name}" loading="lazy" onerror="this.onerror=null;this.src='./assets/images/sumidero.jpg';">
             <div class="card-overlay-badges">
               <span class="badge-tag">${primaryTag}</span>
               ${badgeHtml}
@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     body.innerHTML = `
       <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; height: 240px; margin-bottom: 14px;">
-        <img src="${dest.heroImage}" alt="${dest.name}" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="${dest.heroImage}" alt="${dest.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='./assets/images/sumidero.jpg';">
         <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%); color: white;">
           <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 4px;">${dest.name}</h4>
           <p style="font-size: 0.85rem; opacity: 0.9;">${dest.distanceKm} km from ${locationData.name} &bull; ${dest.travelTimeMinutes} min travel &bull; Altitude: ${dest.altitudeMeters}m</p>
@@ -764,10 +764,12 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
 
-    // Default date to tomorrow
+    // Default date to tomorrow and set min to today
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     const dateInput = document.getElementById('wa-date-input');
+    const todayStr = new Date().toISOString().split('T')[0];
+    dateInput.min = todayStr;
     dateInput.value = tomorrow.toISOString().split('T')[0];
 
     updateAgencyLinksPreview();
@@ -1409,7 +1411,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 2);
-    document.getElementById('trip-date-input').value = tomorrow.toISOString().split('T')[0];
+    const tripDateInput = document.getElementById('trip-date-input');
+    tripDateInput.min = new Date().toISOString().split('T')[0];
+    tripDateInput.value = tomorrow.toISOString().split('T')[0];
 
     // Default cost according to city
     const costInput = document.getElementById('trip-cost-total');
