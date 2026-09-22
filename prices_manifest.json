@@ -774,5 +774,17 @@
     "Selva Azul Chiapas (selvazultours.com)",
     "Apasionado x Chiapas (apasionadoxchiapas.com)",
     "Lescas Co Tours Oaxaca (toursinoaxaca.com)"
-  ]
+  ],
+  "san-cris": {
+    "senderismo-micologico-bosque-niebla": {
+      "priceSharedRange": "$450 - $650 MXN",
+      "pricePrivateRange": "$1,400 - $1,900 MXN",
+      "colectivoCost": "$20 MXN combi hacia la periferia boscosa o $70 - $90 MXN en taxi local"
+    },
+    "expedicion-laguna-miramar": {
+      "priceSharedRange": "$3,600 - $4,800 MXN",
+      "pricePrivateRange": "$8,500 - $11,500 MXN",
+      "colectivoCost": "Solo accesible en transporte 4x4 organizado o van de expedición"
+    }
+  }
 }

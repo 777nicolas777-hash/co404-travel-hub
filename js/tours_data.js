@@ -1,14 +1,5 @@
-// =============================================================================
-// Co404 Tours & Travel Hub - Multi-Location Database
-// Supports:
-// 1. Co404 San Cristóbal de las Casas (Chiapas, Mexico)
-// 2. Co404 Oaxaca (Oaxaca de Juárez, Mexico)
-// 3. Co404 Medellín (Laureles, Colombia)
-// Curated for Co404 Coliving Community (Staff, Volunteers & Digital Nomads)
-// (All tour agencies 100% verified against live websites & Google Maps)
-// =============================================================================
-
-const CO404_LOCATIONS = {
+// Co404 Tours Data Multi-Location Manifest
+window.CO404_LOCATIONS = {
   "san-cris": {
     "id": "san-cris",
     "name": "Co404 San Cristóbal",
@@ -904,7 +895,8 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "jalapeno-tours",
           "selva-azul-tours",
-          "explorando-chiapas"
+          "explorando-chiapas",
+          "popup-san-cris"
         ],
         "agencyPublishedPrices": [
           {
@@ -922,6 +914,14 @@ const CO404_LOCATIONS = {
             "currency": "MXN",
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
+          },
+          {
+            "agencyId": "popup-san-cris",
+            "agencyName": "Pop Up San Cris",
+            "price": 380,
+            "currency": "MXN",
+            "source": "Consulta WhatsApp / Petit Futé",
+            "url": "https://www.facebook.com/popupsancris"
           }
         ],
         "popularityScore": 90
@@ -1291,9 +1291,20 @@ const CO404_LOCATIONS = {
         ],
         "bestAgencies": [
           "nichim-tours",
-          "senda-tour"
+          "senda-tour",
+          "popup-san-cris"
         ],
-        "popularityScore": 84
+        "popularityScore": 84,
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "popup-san-cris",
+            "agencyName": "Pop Up San Cris",
+            "price": 320,
+            "currency": "MXN",
+            "source": "Consulta WhatsApp / Petit Futé",
+            "url": "https://www.facebook.com/popupsancris"
+          }
+        ]
       },
       {
         "id": "traslado-guatemala",
@@ -1726,7 +1737,8 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "selva-azul-tours",
           "apasionado-x-chiapas",
-          "nichim-tours"
+          "nichim-tours",
+          "popup-san-cris"
         ],
         "agencyPublishedPrices": [
           {
@@ -1744,9 +1756,239 @@ const CO404_LOCATIONS = {
             "currency": "MXN",
             "source": "Web Oficial",
             "url": "https://apasionadoxchiapas.com"
+          },
+          {
+            "agencyId": "popup-san-cris",
+            "agencyName": "Pop Up San Cris",
+            "price": 2800,
+            "currency": "MXN",
+            "source": "Expedición Grupos Reducidos / WhatsApp",
+            "url": "https://www.facebook.com/popupsancris"
           }
         ],
         "popularityScore": 91
+      },
+      {
+        "id": "senderismo-micologico-bosque-niebla",
+        "name": "Senderismo Micológico & Baño de Bosque Consciente",
+        "tagline": "Highland Cloud Forest Fungi Foraging & Shinrin-Yoku with Pop Up San Cris",
+        "category": "nature",
+        "tags": [
+          "nature",
+          "hiking",
+          "fungi",
+          "ecotourism",
+          "wellness",
+          "small-group"
+        ],
+        "distanceKm": 8,
+        "travelTimeMinutes": 20,
+        "altitudeMeters": 2450,
+        "microclimate": "Highland mist & pine-oak forest (14°C - 20°C / 57°F - 68°F)",
+        "suggestedDeparture": "09:00 AM",
+        "returnTime": "01:30 PM",
+        "difficulty": "Easy to Moderate",
+        "priceSharedRange": "$450 - $650 MXN",
+        "pricePrivateRange": "$1,400 - $1,900 MXN",
+        "colectivoCost": "$20 MXN combi hacia la periferia boscosa o $70 - $90 MXN en taxi local",
+        "heroImage": "assets/images/moxviquil.jpg",
+        "isExclusive": true,
+        "exclusiveAgencyId": "popup-san-cris",
+        "exclusiveAgencyName": "Pop Up San Cris",
+        "exclusiveBadge": "Curated by Pop Up San Cris (Petit Futé)",
+        "specializedBadge": "🍄 Micología & Bosque",
+        "description": "Una experiencia insignia de ecoturismo consciente curada por Pop Up San Cris. Recorrido a pie por bosques de niebla y pino-encino de los Altos de Chiapas guiado por especialistas para la identificación, recolección ética y aprendizaje de hongos silvestres comestibles y medicinales, complementado con baño de bosque (Shinrin-yoku) y degustación campestre.",
+        "itinerary": [
+          {
+            "time": "09:00 AM",
+            "desc": "Encuentro y recogida en la puerta de Co404 San Cristóbal."
+          },
+          {
+            "time": "09:25 AM",
+            "desc": "Llegada al sendero de montaña e introducción micológica por biólogo local."
+          },
+          {
+            "time": "10:00 AM",
+            "desc": "Caminata de exploración botánica, identificación de hongos comestibles vs tóxicos y recolección ética."
+          },
+          {
+            "time": "11:30 AM",
+            "desc": "Sesión de Shinrin-Yoku (Baño de Bosque) y ejercicios de respiración consciente entre pinos milenarios."
+          },
+          {
+            "time": "12:30 PM",
+            "desc": "Picnic campestre con té de hierbas silvestres, pan artesanal y quesos locales."
+          },
+          {
+            "time": "01:30 PM",
+            "desc": "Regreso cómodo a Co404 San Cristóbal a tiempo para el almuerzo."
+          }
+        ],
+        "includes": [
+          "Transporte redondo desde Co404 San Cristóbal",
+          "Biólogo o guía micológico especializado de Pop Up San Cris",
+          "Canasta tradicional de recolección ética y material didáctico",
+          "Té de hierbas silvestres y snack campestre orgánico",
+          "Aportación a la conservación del bosque comunitario"
+        ],
+        "excludes": [
+          "Compras personales",
+          "Propinas voluntarias para el guía"
+        ],
+        "co404Tips": [
+          "Lleva botas de senderismo o tenis con buena suela; el bosque de niebla suele estar húmedo y con musgo resbaloso.",
+          "Viste en capas con chamarra rompevientos o impermeable ligero; la temperatura desciende con la bruma.",
+          "Lleva libreta de notas o cámara; la variedad de setas y líquenes es fascinante."
+        ],
+        "packingList": [
+          "Botas de senderismo o zapatillas con buen agarre",
+          "Chaqueta rompevientos o impermeable",
+          "Pantalón largo de trekking",
+          "Botella de agua reutilizable",
+          "Cámara fotográfica o celular con batería completa"
+        ],
+        "bestAgencies": [
+          "popup-san-cris"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "popup-san-cris",
+            "agencyName": "Pop Up San Cris",
+            "price": 550,
+            "currency": "MXN",
+            "source": "Tarifa Oficial Pop Up / WhatsApp",
+            "url": "https://www.facebook.com/popupsancris"
+          }
+        ],
+        "popularityScore": 90,
+        "variants": [
+          {
+            "name": "Taller Micológico & Recolección Ética de Hongos",
+            "priceDiff": "Tarifa estándar ($450 – $650 MXN)",
+            "description": "Caminata botánica enfocada en la búsqueda, recolección ética y clasificación de hongos silvestres comestibles con biólogo especialista.",
+            "recommendedFor": "Amantes de la micología, botánica y naturaleza curiosa."
+          },
+          {
+            "name": "Inmersión Holística: Baño de Bosque & Meditación Guiada",
+            "priceDiff": "+$150 MXN adicionales",
+            "description": "Caminata silenciosa de conexión sensorial profunda (Shinrin-Yoku), respiración consciente entre árboles milenarios y picnic silvestre.",
+            "recommendedFor": "Nómadas digitales que buscan bienestar, relajación y desconexión del estrés urbano."
+          }
+        ]
+      },
+      {
+        "id": "expedicion-laguna-miramar",
+        "name": "Expedición Laguna de Miramar (Selva Lacandona Virgen & Kayak)",
+        "tagline": "Pristine Turquoise Lake, Montes Azules Biosphere Camp & Ancient Maya Islets",
+        "category": "adventure",
+        "tags": [
+          "adventure",
+          "jungle",
+          "kayak",
+          "camping",
+          "wildlife",
+          "maya"
+        ],
+        "distanceKm": 280,
+        "travelTimeMinutes": 380,
+        "altitudeMeters": 220,
+        "microclimate": "Dense tropical rainforest (24°C - 34°C / 75°F - 93°F)",
+        "suggestedDeparture": "05:00 AM (Día 1)",
+        "returnTime": "07:00 PM (Día 3)",
+        "difficulty": "Moderate to Challenging",
+        "priceSharedRange": "$3,600 - $4,800 MXN",
+        "pricePrivateRange": "$8,500 - $11,500 MXN",
+        "colectivoCost": "Solo accesible en expedición 4x4 organizada y canoas tradicionales",
+        "heroImage": "assets/images/selva_lacandona_naha.jpg",
+        "isExclusive": true,
+        "exclusiveAgencyId": "popup-san-cris",
+        "exclusiveAgencyName": "Pop Up San Cris",
+        "exclusiveBadge": "Expedición Especializada Pop Up San Cris",
+        "specializedBadge": "🛶 Kayak & Selva Virgen",
+        "description": "La expedición de naturaleza virgen más profunda de Chiapas, organizada en grupos reducidos por Pop Up San Cris. Aventura de 3 días / 2 noches en la Reserva de la Biosfera Montes Azules, navegando en kayak y canoa por la laguna virgen más grande y hermosa de México, rodeada de selva impenetrable, monos aulladores, tapires y vestigios mayas en islotes sagrados.",
+        "itinerary": [
+          {
+            "time": "Día 1 - 05:00 AM",
+            "desc": "Salida en camioneta todoterreno 4x4 desde Co404 San Cristóbal hacia Las Margaritas y la Selva Lacandona."
+          },
+          {
+            "time": "Día 1 - 01:30 PM",
+            "desc": "Llegada al campamento base comunitario tzeltal, almuerzo tradicional y traslado en cayucos a Laguna de Miramar."
+          },
+          {
+            "time": "Día 1 - 04:30 PM",
+            "desc": "Instalación del campamento frente al agua turquesa, nado libre y fogata bajo cielo estrellado."
+          },
+          {
+            "time": "Día 2 - 07:00 AM",
+            "desc": "Travesía matutina en kayak por la laguna, navegación a islotes con pinturas rupestres y vestigios mayas."
+          },
+          {
+            "time": "Día 2 - 02:00 PM",
+            "desc": "Senderismo en selva primaria con guías lacandones para avistamiento de monos y aves endémicas."
+          },
+          {
+            "time": "Día 3 - 08:00 AM",
+            "desc": "Último nado en la laguna, desayuno campestre y desmontaje de campamento."
+          },
+          {
+            "time": "Día 3 - 07:00 PM",
+            "desc": "Retorno a San Cristóbal de las Casas y llegada a la puerta de Co404."
+          }
+        ],
+        "includes": [
+          "Transporte terrestre ida y vuelta 4x4 desde Co404",
+          "Equipo completo de campamento (tienda de campaña, colchoneta) y kayaks con chalecos salvavidas",
+          "Todas las comidas en la selva (desayunos, comidas y cenas campestres)",
+          "Guía líder de Pop Up San Cris y guías indígenas locales de la comunidad",
+          "Permisos de la Reserva de la Biosfera Montes Azules y ejido comunitario"
+        ],
+        "excludes": [
+          "Bolsa de dormir personal (sleeping bag)",
+          "Bebidas alcohólicas y gastos personales",
+          "Propinas voluntarias para cocineros y lancheros"
+        ],
+        "co404Tips": [
+          "No hay señal celular ni energía eléctrica en la laguna; lleva power banks cargados y aprovecha la desconexión total.",
+          "Usa bolsa seca (dry bag) impermeable para proteger cámaras y pasaportes durante los traslados acuáticos.",
+          "El agua de la laguna es cristalina y virgen; utiliza únicamente protector solar y repelente 100% biodegradables."
+        ],
+        "packingList": [
+          "Bolsa de dormir ligera (sleeping bag)",
+          "Bolsa seca impermeable (Dry bag)",
+          "Linterna frontal con baterías de repuesto",
+          "Sandalias de agua o escarpines y tenis de senderismo",
+          "Ropa fresca de manga larga y secado rápido",
+          "Repelente ecológico y batería portátil (Power bank)"
+        ],
+        "bestAgencies": [
+          "popup-san-cris"
+        ],
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "popup-san-cris",
+            "agencyName": "Pop Up San Cris",
+            "price": 4200,
+            "currency": "MXN",
+            "source": "Tarifa Oficial Pop Up / WhatsApp",
+            "url": "https://www.facebook.com/popupsancris"
+          }
+        ],
+        "popularityScore": 93,
+        "variants": [
+          {
+            "name": "Expedición Kayak & Campamento Ecológico en la Laguna (3 Días)",
+            "priceDiff": "Tarifa estándar ($3,600 – $4,800 MXN)",
+            "description": "Tres días de navegación en kayak, nado en aguas color esmeralda, campamento ecológico a la orilla del lago y fogata nocturna en la selva.",
+            "recommendedFor": "Aventureros que aman el campamento, el agua y la naturaleza pura sin comodidades de hotel."
+          },
+          {
+            "name": "Inmersión Selva Profunda con Guardianes Indígenas & Pinturas Rupestres",
+            "priceDiff": "+$600 MXN adicionales",
+            "description": "Incluye la travesía en kayak más caminata guiada hacia islotes sagrados con pinturas rupestres prehispánicas y convivencia comunitaria.",
+            "recommendedFor": "Viajeros culturales que buscan arqueología maya virgen y contacto humano auténtico."
+          }
+        ]
       }
     ],
     "agencies": [
@@ -1930,6 +2172,30 @@ const CO404_LOCATIONS = {
         "website": "https://voyachiapas.com",
         "googleMapsUrl": "https://www.google.com/maps/search/Voy+a+Chiapas+Calle+Real+de+Guadalupe+San+Cristobal+de+las+Casas",
         "address": "Calle Real de Guadalupe #124, Centro Histórico, San Cristóbal de las Casas"
+      },
+      {
+        "id": "popup-san-cris",
+        "name": "Pop Up San Cris",
+        "location": "Centro Histórico, San Cristóbal de las Casas",
+        "whatsapp": "525534348480",
+        "phone": "+52 55 3434 8480",
+        "badge": "Petit Futé • Turismo Regenerativo",
+        "rating": 4.9,
+        "reviewCount": 68,
+        "specialties": [
+          "Senderismo Micológico (Hongos)",
+          "Baños de Bosque & Conexión",
+          "Expedición Laguna de Miramar",
+          "Aventura Consciente en El Arcotete",
+          "Selva Lacandona & Campamentos",
+          "Grupos Reducidos & Retiros"
+        ],
+        "pickupAtCo404": true,
+        "priceBenchmark": "Boutique Ecoturismo Consciente",
+        "notes": "Colectivo y operadora boutique de turismo regenerativo y expediciones conscientes fundada por Marcela Gándara y Adrián Barquet. Recomendada por la guía internacional Petit Futé. Especialistas en senderismo micológico en bosques de niebla, campamentos en la Selva Lacandona (Laguna de Miramar) y conexión con la naturaleza para grupos reducidos.",
+        "website": "https://www.facebook.com/popupsancris",
+        "googleMapsUrl": "https://www.google.com/maps/search/Pop+Up+San+Cris+San+Cristobal+de+las+Casas",
+        "address": "Centro Histórico, San Cristóbal de las Casas, Chiapas"
       }
     ],
     "groupTrips": [
@@ -5951,14 +6217,3 @@ const CO404_LOCATIONS = {
     ]
   }
 };
-
-// Backward compatibility default
-const TOURS_DATA = CO404_LOCATIONS['san-cris'];
-
-if (typeof window !== 'undefined') {
-  window.CO404_LOCATIONS = CO404_LOCATIONS;
-  window.TOURS_DATA = TOURS_DATA;
-}
-if (typeof module !== 'undefined') {
-  module.exports = { CO404_LOCATIONS, TOURS_DATA };
-}
