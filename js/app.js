@@ -105,6 +105,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const sortSelect = document.getElementById('sort-destinations-select');
   if (sortSelect) sortSelect.value = currentSort;
 
+  // Agency Sort & Search controls sync
+  let currentAgencySort = 'price-asc';
+  let agencySearchQuery = '';
+
+  const sortAgenciesSelect = document.getElementById('sort-agencies-select');
+  if (sortAgenciesSelect) {
+    sortAgenciesSelect.value = currentAgencySort;
+    sortAgenciesSelect.addEventListener('change', (e) => {
+      currentAgencySort = e.target.value;
+      renderAgencies();
+    });
+  }
+
+  const agencySearchInput = document.getElementById('agency-search-input');
+  if (agencySearchInput) {
+    agencySearchInput.addEventListener('input', (e) => {
+      agencySearchQuery = e.target.value.toLowerCase().trim();
+      renderAgencies();
+    });
+  }
+
   // =========================================================================
   // MULTI-CURRENCY CONVERSION ENGINE (MXN, COP, USD, EUR)
   // =========================================================================
@@ -581,6 +602,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentCurrency = e.target.value;
       renderDestinations();
       renderGroupTrips();
+      renderAgencies();
     });
   }
 
@@ -1168,20 +1190,148 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   // VIEW 2: RENDER AGENCIES DIRECTORY & CUSTOM PROVIDER LOGIC
   // =========================================================================
+  function getAgencyTypicalPrice(a) {
+    if (typeof a.typicalTourPrice === 'number' && a.typicalTourPrice > 0) {
+      return a.typicalTourPrice;
+    }
+    const locCur = locationData ? locationData.currency : 'MXN';
+    const isCop = locCur === 'COP';
+    // Fallback: check destinations for published prices
+    const foundPrices = [];
+    (locationData.destinations || []).forEach(d => {
+      if (d.agencyPublishedPrices) {
+        d.agencyPublishedPrices.forEach(p => {
+          if (p.agencyId === a.id && typeof p.price === 'number') foundPrices.push(p.price);
+        });
+      }
+      if (d.variants) {
+        d.variants.forEach(v => {
+          if (v.operatorAgencyId === a.id) {
+            const m = (v.priceShared || '').match(/\$([0-9,]+)/);
+            if (m) foundPrices.push(parseInt(m[1].replace(/,/g, ''), 10));
+          }
+        });
+      }
+    });
+    if (foundPrices.length > 0) {
+      return Math.min(...foundPrices);
+    }
+    const bm = (a.priceBenchmark || a.priceTier || '').toLowerCase();
+    if (bm.includes('budget') || bm.includes('económ')) return isCop ? 95000 : 350;
+    if (bm.includes('premium') || bm.includes('boutique') || bm.includes('expedition') || bm.includes('luxury')) return isCop ? 200000 : 650;
+    return isCop ? 130000 : 450;
+  }
+
+  function getAgencyPricingMeta(a) {
+    const rawPrice = getAgencyTypicalPrice(a);
+    const locCur = locationData ? locationData.currency : 'MXN';
+    const isCop = locCur === 'COP';
+
+    let tierClass = 'tier-standard';
+    let symbol = '$$';
+    let tierLabel = a.priceBenchmark || 'Standard Market';
+
+    if (isCop) {
+      if (rawPrice <= 110000) {
+        tierClass = 'tier-budget';
+        symbol = '$';
+      } else if (rawPrice <= 140000) {
+        tierClass = 'tier-standard';
+        symbol = '$$';
+      } else if (rawPrice <= 200000) {
+        tierClass = 'tier-premium';
+        symbol = '$$$';
+      } else {
+        tierClass = 'tier-luxury';
+        symbol = '$$$$';
+      }
+    } else {
+      // MXN
+      if (rawPrice <= 390) {
+        tierClass = 'tier-budget';
+        symbol = '$';
+      } else if (rawPrice <= 520) {
+        tierClass = 'tier-standard';
+        symbol = '$$';
+      } else if (rawPrice <= 800) {
+        tierClass = 'tier-premium';
+        symbol = '$$$';
+      } else {
+        tierClass = 'tier-luxury';
+        symbol = '$$$$';
+      }
+    }
+
+    const priceString = isCop ? `$${rawPrice.toLocaleString('es-CO')} COP` : `$${rawPrice} MXN`;
+    const formattedPrice = formatPriceString(priceString, locCur);
+
+    return {
+      price: rawPrice,
+      tierClass,
+      symbol,
+      tierLabel,
+      formattedPrice: `~${formattedPrice}`
+    };
+  }
+
   function renderAgencies() {
     const container = document.getElementById('agencies-grid');
     if (!container) return;
 
+    let filtered = [...agencies];
+
+    // Filter by search query
+    if (agencySearchQuery) {
+      filtered = filtered.filter(a => {
+        const text = [
+          a.name,
+          a.address,
+          a.location,
+          a.priceBenchmark,
+          a.badge,
+          a.notes,
+          a.staffNotes,
+          ...(a.specialties || [])
+        ].filter(Boolean).join(' ').toLowerCase();
+        return text.includes(agencySearchQuery);
+      });
+    }
+
+    // Sort according to currentAgencySort
+    if (currentAgencySort === 'price-asc') {
+      filtered.sort((a, b) => getAgencyTypicalPrice(a) - getAgencyTypicalPrice(b));
+    } else if (currentAgencySort === 'price-desc') {
+      filtered.sort((a, b) => getAgencyTypicalPrice(b) - getAgencyTypicalPrice(a));
+    } else if (currentAgencySort === 'rating-desc') {
+      filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0) || (b.reviewCount || 0) - (a.reviewCount || 0));
+    } else if (currentAgencySort === 'name-asc') {
+      filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    // 'recommended' preserves original array order
+
     const countEl = document.getElementById('tab-agencies-count');
     if (countEl) countEl.textContent = agencies.length;
 
-    container.innerHTML = agencies.map(a => {
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; background: var(--co-white); border-radius: var(--radius-md); border: 1px dashed var(--co-border);">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🔍</div>
+          <h3 style="font-family: var(--font-serif); color: var(--co-wine); margin-bottom: 6px;">No agencies match "${escapeHtml(agencySearchQuery)}"</h3>
+          <p style="color: var(--co-charcoal-sub); font-size: 0.9rem;">Try searching for another keyword or clear the search input.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = filtered.map(a => {
       const customBadge = a.isCustom ? `<span class="badge-custom-provider">Custom Contact</span>` : '';
       const deleteBtn = a.isCustom ? `
         <button class="btn-delete-custom" data-delete-id="${a.id}" title="Remove custom provider">
           Delete
         </button>
       ` : '';
+
+      const priceMeta = getAgencyPricingMeta(a);
 
       // Exclusive tours box if offered
       let exclusiveBox = '';
@@ -1207,6 +1357,17 @@ document.addEventListener('DOMContentLoaded', () => {
             <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
               <span class="agency-badge">${a.priceTier || a.badge || 'Verified'}</span>
               ${deleteBtn}
+            </div>
+          </div>
+
+          <div class="agency-price-row">
+            <div class="agency-price-badge ${priceMeta.tierClass}">
+              <span class="agency-price-symbol">${priceMeta.symbol}</span>
+              <span>${priceMeta.tierLabel}</span>
+            </div>
+            <div class="agency-starting-price" title="Tarifa promedio de referencia para tours compartidos típicos">
+              <span>Tours from:</span>
+              <span class="starting-amount">${priceMeta.formattedPrice}</span>
             </div>
           </div>
 
