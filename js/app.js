@@ -148,6 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function formatVariantPrice(val, baseCurrency = (locationData ? locationData.currency : 'MXN')) {
+    if (val === null || val === undefined || val === '') return 'Consultar tarifa';
+    if (typeof val === 'number') {
+      return formatPriceString(`$${val.toLocaleString()}`, baseCurrency);
+    }
+    const str = String(val).trim();
+    return formatPriceString(str, baseCurrency);
+  }
+
   function formatCurrencyValue(amount, baseCurrency = (locationData ? locationData.currency : 'MXN')) {
     if (!amount && amount !== 0) return "$0";
     const converted = convertAmount(amount, baseCurrency, currentCurrency);
@@ -476,10 +485,31 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
 
+            ${d.isExclusive ? `
+              <div class="card-exclusive-banner">
+                <span>⭐</span>
+                <span>Tour Único operado exclusivamente por <strong>${escapeHtml(d.exclusiveAgencyName)}</strong></span>
+              </div>
+            ` : ''}
+
+            ${d.variants && d.variants.length > 0 ? `
+              <div class="card-variants-bar">
+                <span class="card-variants-label">Modalidades disponibles (${d.variants.length}):</span>
+                <div class="card-variants-chips">
+                  ${d.variants.map((v, vIdx) => `
+                    <button class="variant-chip-btn" data-dest-id="${d.id}" data-variant-index="${vIdx}" title="${escapeHtml(v.name)} - Operado por ${escapeHtml(v.operatorShortName || v.operatorAgencyName)}">
+                      <span class="chip-variant-name">${escapeHtml(v.name)}</span>
+                      <span class="chip-operator-tag">🏢 ${escapeHtml(v.operatorShortName || v.operatorAgencyName)}</span>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
             <div class="card-actions">
               <button class="btn btn-secondary btn-view-tour" data-id="${d.id}">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                Guide & Tips
+                Guide &amp; Tips
               </button>
               <button class="btn btn-whatsapp btn-quote-whatsapp" data-id="${d.id}">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
@@ -496,6 +526,15 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', (e) => {
         const id = e.currentTarget.dataset.id;
         openTourDetail(id);
+      });
+    });
+
+    container.querySelectorAll('.variant-chip-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.destId;
+        const vIdx = parseInt(btn.dataset.variantIndex, 10);
+        openTourDetail(id, vIdx);
       });
     });
 
@@ -548,28 +587,59 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   // MODAL: TOUR DETAIL
   // =========================================================================
-  function openTourDetail(destId) {
+  function openTourDetail(destId, initialVariantIndex = 0) {
     const dest = destinations.find(d => d.id === destId);
     if (!dest) return;
 
     document.getElementById('modal-tour-title').textContent = dest.name;
     const body = document.getElementById('modal-tour-body');
+    const hasVariants = dest.variants && dest.variants.length > 0;
+    let activeVariantIndex = (hasVariants && initialVariantIndex >= 0 && initialVariantIndex < dest.variants.length) ? initialVariantIndex : 0;
 
     // Exclusivity alert banner
     let exclusiveBannerHtml = '';
     if (dest.isExclusive) {
       exclusiveBannerHtml = `
-        <div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1px solid #F59E0B; padding: 14px 18px; border-radius: var(--radius-md); margin-bottom: 16px; color: #92400E;">
+        <div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1.5px solid #F59E0B; padding: 14px 18px; border-radius: var(--radius-md); margin-bottom: 16px; color: #92400E; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);">
           <div style="font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
-            ⭐ ${dest.exclusiveBadge || 'Exclusive Tour with ' + dest.exclusiveAgencyName}
+            ⭐ ${dest.exclusiveBadge || ('Tour Único con ' + dest.exclusiveAgencyName)}
           </div>
-          <p style="font-size: 0.86rem; margin: 0; line-height: 1.4;">
-            This specialized expedition requires specialized equipment, safety permits, or community authorization, operated exclusively by <strong>${dest.exclusiveAgencyName}</strong> in ${locationData.city}.
+          <p style="font-size: 0.86rem; margin: 0; line-height: 1.45;">
+            Esta expedición única cuenta con logística especializada y es operada de forma exclusiva por <strong>${escapeHtml(dest.exclusiveAgencyName)}</strong> en ${locationData.city}.
           </p>
         </div>
       `;
     }
 
+    // Top Variant Selector HTML (if destination has variants)
+    let variantsSelectorHtml = '';
+    if (hasVariants) {
+      variantsSelectorHtml = `
+        <div class="modal-variant-selector-wrap">
+          <div class="modal-variant-header-row">
+            <span class="variant-selector-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              Modalidades y Variantes hacia este Destino:
+            </span>
+            <span class="variant-count-pill">${dest.variants.length} opciones disponibles</span>
+          </div>
+          <div class="modal-variant-tabs" id="modal-variant-tabs">
+            ${dest.variants.map((v, i) => `
+              <button type="button" class="modal-variant-tab ${i === activeVariantIndex ? 'active' : ''}" data-variant-index="${i}">
+                <div class="tab-top-row">
+                  <span class="tab-badge">${escapeHtml(v.badge || ('Opción ' + (i + 1)))}</span>
+                  <span class="tab-price">${formatVariantPrice(v.priceShared, v.currency || locationData.currency)}</span>
+                </div>
+                <div class="tab-name">${escapeHtml(v.name)}</div>
+                <div class="tab-operator">🏢 ${escapeHtml(v.operatorAgencyName)}</div>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // Main Modal Shell
     body.innerHTML = `
       <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; height: 240px; margin-bottom: 14px;">
         <img src="${dest.heroImage}" alt="${dest.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='./assets/images/sumidero.jpg';">
@@ -581,14 +651,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ${exclusiveBannerHtml}
 
-      <div>
-        <h4 class="modal-section-title">Overview</h4>
-        <p style="font-size: 0.92rem; color: var(--co-charcoal); line-height: 1.6;">${dest.description}</p>
-      </div>
+      ${variantsSelectorHtml}
 
-      ${(() => {
-        if (!dest.agencyPublishedPrices || dest.agencyPublishedPrices.length === 0) return '';
-        return `
+      <div id="modal-variant-dynamic-container">
+        <!-- Rendered dynamically by renderVariantContent -->
+      </div>
+    `;
+
+    // Dynamic renderer for the active variant (or fallback if no variants)
+    function renderVariantContent(vIdx) {
+      const container = document.getElementById('modal-variant-dynamic-container');
+      if (!container) return;
+
+      const currVariant = hasVariants ? dest.variants[vIdx] : null;
+
+      // Operator banner
+      let operatorBannerHtml = '';
+      if (currVariant) {
+        operatorBannerHtml = `
+          <div class="variant-operator-banner">
+            <div class="operator-banner-left">
+              <div class="operator-banner-badge">🏢 Operador de esta modalidad</div>
+              <h4 class="operator-banner-name">
+                ${escapeHtml(currVariant.operatorAgencyName)}
+                <span style="font-size: 0.72rem; background: #DCFCE7; color: #166534; padding: 2px 8px; border-radius: 999px; font-weight: 700;">✓ Verificada</span>
+              </h4>
+              ${currVariant.recommendedFor ? `<p class="operator-banner-sub">💡 <strong>Recomendado para:</strong> ${escapeHtml(currVariant.recommendedFor)}</p>` : ''}
+            </div>
+            <div class="operator-banner-right">
+              <div class="variant-price-highlight">
+                <span class="price-val">${formatVariantPrice(currVariant.priceShared, currVariant.currency || locationData.currency)}</span>
+                <span class="price-label">por persona en compartido</span>
+                ${currVariant.pricePrivate ? `<span class="price-private-tag">🚐 Privado: ${formatVariantPrice(currVariant.pricePrivate, currVariant.currency || locationData.currency)}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      const activeDesc = currVariant ? currVariant.description : dest.description;
+      const activeDeparture = (currVariant && currVariant.suggestedDeparture) || dest.suggestedDeparture;
+      const activeItinerary = (currVariant && currVariant.itinerary && currVariant.itinerary.length > 0) ? currVariant.itinerary : (dest.itinerary || []);
+      const activeIncludes = (currVariant && currVariant.includes && currVariant.includes.length > 0) ? currVariant.includes : (dest.includes || []);
+      const activeExcludes = (currVariant && currVariant.excludes && currVariant.excludes.length > 0) ? currVariant.excludes : (dest.excludes || []);
+      const sharedPriceText = currVariant ? formatVariantPrice(currVariant.priceShared, currVariant.currency || locationData.currency) : formatPriceString(dest.priceSharedRange, locationData.currency);
+      const privatePriceText = currVariant && currVariant.pricePrivate ? formatVariantPrice(currVariant.pricePrivate, currVariant.currency || locationData.currency) : formatPriceString(dest.pricePrivateRange, locationData.currency);
+      const targetAgencyId = currVariant ? currVariant.operatorAgencyId : (dest.exclusiveAgencyId || null);
+      const targetAgencyName = currVariant ? currVariant.operatorAgencyName : (dest.exclusiveAgencyName || 'Agencia Verificada');
+
+      // Published official agency rates section
+      let publishedRatesHtml = '';
+      if (dest.agencyPublishedPrices && dest.agencyPublishedPrices.length > 0) {
+        publishedRatesHtml = `
           <div class="published-prices-section">
             <div class="published-prices-header">
               <div class="published-prices-title">
@@ -624,144 +738,149 @@ document.addEventListener('DOMContentLoaded', () => {
             </p>
           </div>
         `;
-      })()}
+      }
 
-      ${(() => {
-        if (!dest.variants || dest.variants.length === 0) return '';
-        return `
-          <div class="tour-variants-section">
-            <div class="tour-variants-header">
-              <div class="tour-variants-title">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                Modalidades y Variantes hacia este Destino
-              </div>
-              <span class="variants-count-badge">${dest.variants.length} modalidades</span>
-            </div>
-            <div class="tour-variants-grid">
-              ${dest.variants.map((v, i) => `
-                <div class="tour-variant-card">
-                  <div class="tour-variant-top">
-                    <div class="tour-variant-name">
-                      <span class="variant-pill">Opción ${i + 1}</span>
-                      <strong>${v.name}</strong>
-                    </div>
-                    <span class="variant-cost-badge">${v.priceDiff}</span>
-                  </div>
-                  <p class="tour-variant-desc">${v.description}</p>
-                  <div class="tour-variant-fit">
-                    <span class="fit-label">Ideal para:</span> ${v.recommendedFor}
-                  </div>
-                </div>
-              `).join('')}
-            </div>
+      container.innerHTML = `
+        ${operatorBannerHtml}
+
+        <div>
+          <h4 class="modal-section-title">${currVariant ? `Descripción de Modalidad: ${escapeHtml(currVariant.name)}` : 'Overview'}</h4>
+          <p style="font-size: 0.92rem; color: var(--co-charcoal); line-height: 1.6;">${activeDesc}</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; background: var(--co-sand); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--co-border-light); margin: 16px 0;">
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">At Destination Microclimate</span>
+            <div style="font-size: 0.88rem; font-weight: 600; color: var(--co-terracotta);">${dest.microclimate}</div>
           </div>
-        `;
-      })()}
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">Suggested Timing</span>
+            <div style="font-size: 0.88rem; font-weight: 600;">Depart: ${activeDeparture}</div>
+          </div>
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">Shared Tour Price</span>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--co-wine);">${sharedPriceText}</div>
+          </div>
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">Private Van (Group)</span>
+            <div style="font-size: 0.88rem; font-weight: 600;">${privatePriceText}</div>
+          </div>
+        </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; background: var(--co-sand); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--co-border-light);">
-        <div>
-          <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">At Destination Microclimate</span>
-          <div style="font-size: 0.88rem; font-weight: 600; color: var(--co-terracotta);">${dest.microclimate}</div>
-        </div>
-        <div>
-          <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">Suggested Timing</span>
-          <div style="font-size: 0.88rem; font-weight: 600;">Depart: ${dest.suggestedDeparture}</div>
-        </div>
-        <div>
-          <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">Shared Tour Price</span>
-          <div style="font-size: 0.88rem; font-weight: 700; color: var(--co-wine);">${formatPriceString(dest.priceSharedRange, locationData.currency)}</div>
-        </div>
-        <div>
-          <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--co-charcoal-sub);">Private Van (Group)</span>
-          <div style="font-size: 0.88rem; font-weight: 600;">${formatPriceString(dest.pricePrivateRange, locationData.currency)}</div>
-        </div>
-      </div>
+        ${publishedRatesHtml}
 
-      <div>
-        <h4 class="modal-section-title">Suggested Itinerary</h4>
-        <div class="itinerary-timeline">
-          ${dest.itinerary.map(it => `
-            <div class="timeline-step">
-              <div class="step-time">${it.time}</div>
-              <div class="step-desc">${it.desc}</div>
-            </div>
-          `).join('')}
+        <div>
+          <h4 class="modal-section-title">Suggested Itinerary ${currVariant ? `(${escapeHtml(currVariant.name)})` : ''}</h4>
+          <div class="itinerary-timeline">
+            ${activeItinerary.map(it => `
+              <div class="timeline-step">
+                <div class="step-time">${it.time}</div>
+                <div class="step-desc">${it.desc}</div>
+              </div>
+            `).join('')}
+          </div>
         </div>
-      </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-        <div style="background: #F4FAF4; border: 1px solid #D6EAD6; padding: 14px; border-radius: var(--radius-md);">
-          <div style="font-weight: 700; font-size: 0.85rem; color: #2E7D32; margin-bottom: 8px;">&check; What's Typically Included</div>
-          <ul style="font-size: 0.82rem; color: var(--co-charcoal); padding-left: 18px; line-height: 1.5;">
-            ${(dest.includes || []).map(inc => `<li>${inc}</li>`).join('')}
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0;">
+          <div style="background: #F4FAF4; border: 1px solid #D6EAD6; padding: 14px; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; font-size: 0.85rem; color: #2E7D32; margin-bottom: 8px;">&check; What's Typically Included</div>
+            <ul style="font-size: 0.82rem; color: var(--co-charcoal); padding-left: 18px; line-height: 1.5;">
+              ${activeIncludes.map(inc => `<li>${inc}</li>`).join('')}
+            </ul>
+          </div>
+          <div style="background: #FDF6F6; border: 1px solid #F5D5D5; padding: 14px; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; font-size: 0.85rem; color: #C62828; margin-bottom: 8px;">&cross; Not Included (Extra Costs)</div>
+            <ul style="font-size: 0.82rem; color: var(--co-charcoal); padding-left: 18px; line-height: 1.5;">
+              ${activeExcludes.map(exc => `<li>${exc}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <div style="background: var(--co-terracotta-light); border: 1px solid #F0D1C4; padding: 16px; border-radius: var(--radius-md); margin-bottom: 16px;">
+          <h4 style="font-size: 0.9rem; font-weight: 800; color: var(--co-terracotta); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            ${locationData.name} Community Tips & Advice
+          </h4>
+          <ul style="font-size: 0.85rem; color: var(--co-charcoal); padding-left: 20px; line-height: 1.5;">
+            ${(dest.co404Tips || []).map(tip => `<li>${tip}</li>`).join('')}
           </ul>
         </div>
-        <div style="background: #FDF6F6; border: 1px solid #F5D5D5; padding: 14px; border-radius: var(--radius-md);">
-          <div style="font-weight: 700; font-size: 0.85rem; color: #C62828; margin-bottom: 8px;">&cross; Not Included (Extra Costs)</div>
-          <ul style="font-size: 0.82rem; color: var(--co-charcoal); padding-left: 18px; line-height: 1.5;">
-            ${(dest.excludes || []).map(exc => `<li>${exc}</li>`).join('')}
-          </ul>
+
+        <div>
+          <h4 class="modal-section-title">What to Pack in Your Backpack</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+            ${(dest.packingList || []).map(item => `
+              <span style="background: var(--co-sand-alt); border: 1px solid var(--co-border); padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500;">
+                &bull; ${item}
+              </span>
+            `).join('')}
+          </div>
         </div>
-      </div>
 
-      <div style="background: var(--co-terracotta-light); border: 1px solid #F0D1C4; padding: 16px; border-radius: var(--radius-md);">
-        <h4 style="font-size: 0.9rem; font-weight: 800; color: var(--co-terracotta); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-          ${locationData.name} Community Tips & Advice
-        </h4>
-        <ul style="font-size: 0.85rem; color: var(--co-charcoal); padding-left: 20px; line-height: 1.5;">
-          ${(dest.co404Tips || []).map(tip => `<li>${tip}</li>`).join('')}
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="modal-section-title">What to Pack in Your Backpack</h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          ${(dest.packingList || []).map(item => `
-            <span style="background: var(--co-sand-alt); border: 1px solid var(--co-border); padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500;">
-              &bull; ${item}
-            </span>
-          `).join('')}
+        <div style="margin-top: 10px; display: flex; gap: 12px;">
+          <button class="btn btn-whatsapp" id="btn-modal-quote-now" style="width: 100%; padding: 14px; font-size: 0.95rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            ${currVariant ? `Cotizar modalidad "${escapeHtml(currVariant.name)}" con ${escapeHtml(targetAgencyName)} via WhatsApp` : `Cotizar tour con ${escapeHtml(targetAgencyName)} via WhatsApp`}
+          </button>
         </div>
-      </div>
+      `;
 
-      <div style="margin-top: 10px; display: flex; gap: 12px;">
-        <button class="btn btn-whatsapp" id="btn-modal-quote-now" style="width: 100%; padding: 14px; font-size: 0.95rem;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          Quote & Coordinate with Agency via WhatsApp
-        </button>
-      </div>
-    `;
+      // Attach quote button listener
+      const quoteBtn = document.getElementById('btn-modal-quote-now');
+      if (quoteBtn) {
+        quoteBtn.onclick = () => {
+          closeModal('modal-tour-detail');
+          openWhatsAppDispatcher(destId, targetAgencyId);
+        };
+      }
 
-    document.getElementById('btn-modal-quote-now').addEventListener('click', () => {
-      closeModal('modal-tour-detail');
-      const preselectAgency = dest.exclusiveAgencyId || null;
-      openWhatsAppDispatcher(destId, preselectAgency);
-    });
-
-    body.querySelectorAll('.btn-quote-agency-rate').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const dId = btn.dataset.destId;
-        const aId = btn.dataset.agencyId;
-        closeModal('modal-tour-detail');
-        openWhatsAppDispatcher(dId, aId);
+      // Attach published rates quote listeners
+      container.querySelectorAll('.btn-quote-agency-rate').forEach(btn => {
+        btn.onclick = (e) => {
+          e.stopPropagation();
+          const dId = btn.dataset.destId;
+          const aId = btn.dataset.agencyId;
+          closeModal('modal-tour-detail');
+          openWhatsAppDispatcher(dId, aId);
+        };
       });
-    });
+    }
 
+    // Attach variant tab switching listeners
+    if (hasVariants) {
+      body.querySelectorAll('.modal-variant-tab').forEach(tab => {
+        tab.onclick = (e) => {
+          const tabBtn = e.currentTarget;
+          const newIdx = parseInt(tabBtn.dataset.variantIndex, 10);
+          body.querySelectorAll('.modal-variant-tab').forEach(t => t.classList.remove('active'));
+          tabBtn.classList.add('active');
+          renderVariantContent(newIdx);
+        };
+      });
+    }
+
+    // Initial render of active variant
+    renderVariantContent(activeVariantIndex);
     openModal('modal-tour-detail');
   }
 
   // =========================================================================
   // MODAL: WHATSAPP DISPATCHER (English UI + Polite Spanish Output)
   // =========================================================================
+  // MODAL: WHATSAPP DISPATCHER (Dual-Mode: Destination-Mode & Agency-Locked Mode)
+  // =========================================================================
   let currentDispatcherDestId = null;
+  let currentDispatcherAgencyId = null;
+  let currentDispatcherMode = 'dest-mode'; // 'dest-mode' | 'agency-mode'
 
   function updateAgencyLinksPreview() {
-    const agencySelect = document.getElementById('wa-agency-select');
     const linksContainer = document.getElementById('wa-agency-links-preview');
-    if (!agencySelect || !linksContainer) return;
-    const agencyId = agencySelect.value;
+    if (!linksContainer) return;
+
+    const agencyId = currentDispatcherMode === 'agency-mode' 
+      ? currentDispatcherAgencyId 
+      : (document.getElementById('wa-agency-select') ? document.getElementById('wa-agency-select').value : null);
+
     const agency = agencies.find(a => a.id === agencyId);
     if (!agency) {
       linksContainer.innerHTML = '';
@@ -789,67 +908,155 @@ document.addEventListener('DOMContentLoaded', () => {
     linksContainer.innerHTML = html;
   }
 
-  function openWhatsAppDispatcher(destId, preselectedAgencyId = null) {
+  function openWhatsAppDispatcher(destId, targetAgencyId = null, mode = 'dest-mode') {
+    currentDispatcherMode = mode;
     currentDispatcherDestId = destId;
-    const dest = destinations.find(d => d.id === destId);
-    if (!dest) return;
+    currentDispatcherAgencyId = targetAgencyId;
 
-    document.getElementById('wa-destination-name').value = dest.name;
-
-    // Filter agencies: ONLY show agencies that actually operate this tour!
-    const validAgencyIds = new Set([
-      ...(dest.bestAgencies || []),
-      ...((dest.agencyPublishedPrices || []).map(p => p.agencyId)),
-      ...(dest.exclusiveAgencyId ? [dest.exclusiveAgencyId] : [])
-    ]);
-
-    let availableAgencies = agencies.filter(a => validAgencyIds.has(a.id) || a.isCustom);
-
-    // If preselected agency was specified, make sure it's present
-    if (preselectedAgencyId && !availableAgencies.some(a => a.id === preselectedAgencyId)) {
-      const preAgency = agencies.find(a => a.id === preselectedAgencyId);
-      if (preAgency) availableAgencies.unshift(preAgency);
-    }
-
-    // Safety fallback: if somehow no agencies match directly, match by specialties
-    if (availableAgencies.length === 0) {
-      availableAgencies = agencies.filter(a => {
-        return (a.specialties || []).some(s => 
-          dest.name.toLowerCase().includes(s.toLowerCase()) || 
-          s.toLowerCase().includes(dest.name.toLowerCase()) ||
-          (dest.category && s.toLowerCase().includes(dest.category.toLowerCase()))
-        );
-      });
-      if (availableAgencies.length === 0) {
-        availableAgencies = agencies;
-      }
-    }
-
+    const tourLabel = document.getElementById('wa-tour-field-label');
+    const destInput = document.getElementById('wa-destination-name');
+    const tourSelect = document.getElementById('wa-tour-select');
     const agencyLabel = document.getElementById('wa-agency-select-label');
-    if (agencyLabel) {
-      agencyLabel.textContent = `Select Agency offering this tour (${availableAgencies.length} verified):`;
-    }
-
-    // Populate agency dropdown
     const agencySelect = document.getElementById('wa-agency-select');
-    agencySelect.innerHTML = availableAgencies.map(a => {
-      const isPreselected = preselectedAgencyId ? (a.id === preselectedAgencyId) : false;
-      const customPrefix = a.isCustom ? '⭐ [Custom] ' : '';
-      const locTag = a.address ? a.address.split(',')[0] : locationData.city;
-      return `
-        <option value="${a.id}" ${isPreselected ? 'selected' : ''}>
-          ${customPrefix}${a.name} (${locTag}) &bull; ${a.priceBenchmark || 'Verified'}
-        </option>
-      `;
-    }).join('');
+    const agencyLockedCard = document.getElementById('wa-agency-locked-info');
+
+    if (mode === 'agency-mode') {
+      // ---------------------------------------------------------------
+      // AGENCY MODE: Agency is fixed/locked, user selects tour from list
+      // ---------------------------------------------------------------
+      const agency = agencies.find(a => a.id === targetAgencyId);
+      if (!agency) return;
+
+      // Lock agency field
+      if (agencyLabel) agencyLabel.textContent = 'Agencia Seleccionada (Contacto Directo Bloqueado):';
+      if (agencySelect) agencySelect.style.display = 'none';
+      if (agencyLockedCard) {
+        agencyLockedCard.style.display = 'flex';
+        agencyLockedCard.innerHTML = `
+          <div class="wa-agency-locked-header">
+            <span class="wa-agency-locked-name">🏢 ${escapeHtml(agency.name)}</span>
+            <span class="wa-agency-locked-badge">✓ Contacto Directo</span>
+          </div>
+          <div class="wa-agency-locked-address">
+            📍 ${escapeHtml(agency.address || locationData.city)} &bull; ${escapeHtml(agency.priceBenchmark || 'Tarifa Verificada')}
+          </div>
+          <div class="wa-agency-locked-note">
+            🔒 El contacto está bloqueado a esta agencia. Selecciona abajo el tour que deseas cotizar con ellos.
+          </div>
+        `;
+      }
+
+      // Configure tour selection dropdown
+      if (tourLabel) tourLabel.textContent = `Selecciona el Tour / Expedición de ${agency.name}:`;
+      if (destInput) destInput.style.display = 'none';
+      if (tourSelect) {
+        tourSelect.style.display = 'block';
+
+        // Filter destinations operated or offered by this agency
+        let offeredTours = destinations.filter(d => 
+          (d.bestAgencies && d.bestAgencies.includes(agency.id)) ||
+          (d.agencyPublishedPrices && d.agencyPublishedPrices.some(p => p.agencyId === agency.id)) ||
+          (d.exclusiveAgencyId === agency.id) ||
+          (d.variants && d.variants.some(v => v.operatorAgencyId === agency.id))
+        );
+
+        // Fallback if no direct match: match by specialties or show all in location
+        if (offeredTours.length === 0) {
+          offeredTours = destinations.filter(d => 
+            (agency.specialties || []).some(s => 
+              d.name.toLowerCase().includes(s.toLowerCase()) || 
+              s.toLowerCase().includes(d.name.toLowerCase()) ||
+              (d.category && s.toLowerCase().includes(d.category.toLowerCase()))
+            )
+          );
+          if (offeredTours.length === 0) offeredTours = destinations;
+        }
+
+        tourSelect.innerHTML = offeredTours.map((t, idx) => {
+          const isExclusive = t.exclusiveAgencyId === agency.id;
+          const exclTag = isExclusive ? ' ⭐ [Exclusivo]' : '';
+          const variantForAgency = (t.variants || []).find(v => v.operatorAgencyId === agency.id);
+          let priceStr = variantForAgency ? formatVariantPrice(variantForAgency.priceShared, variantForAgency.currency || locationData.currency) : formatPriceString(t.priceSharedRange, locationData.currency);
+          return `<option value="${t.id}" ${idx === 0 ? 'selected' : ''}>${escapeHtml(t.name)}${exclTag} &bull; (${priceStr})</option>`;
+        }).join('');
+
+        currentDispatcherDestId = offeredTours[0].id;
+        tourSelect.onchange = (e) => {
+          currentDispatcherDestId = e.target.value;
+          updateWhatsAppPreview();
+        };
+      }
+
+    } else {
+      // ---------------------------------------------------------------
+      // DESTINATION MODE: Destination is fixed, user selects operating agency
+      // ---------------------------------------------------------------
+      const dest = destinations.find(d => d.id === destId);
+      if (!dest) return;
+
+      // Show destination readonly field, hide tour select
+      if (tourLabel) tourLabel.textContent = 'Selected Tour / Destination:';
+      if (destInput) {
+        destInput.style.display = 'block';
+        destInput.value = dest.name;
+      }
+      if (tourSelect) tourSelect.style.display = 'none';
+
+      // Show agency select, hide locked info
+      if (agencyLockedCard) agencyLockedCard.style.display = 'none';
+      if (agencySelect) agencySelect.style.display = 'block';
+
+      // Filter agencies that actually operate this tour
+      const validAgencyIds = new Set([
+        ...(dest.bestAgencies || []),
+        ...((dest.agencyPublishedPrices || []).map(p => p.agencyId)),
+        ...(dest.exclusiveAgencyId ? [dest.exclusiveAgencyId] : []),
+        ...((dest.variants || []).map(v => v.operatorAgencyId).filter(Boolean))
+      ]);
+
+      let availableAgencies = agencies.filter(a => validAgencyIds.has(a.id) || a.isCustom);
+
+      if (targetAgencyId && !availableAgencies.some(a => a.id === targetAgencyId)) {
+        const preAgency = agencies.find(a => a.id === targetAgencyId);
+        if (preAgency) availableAgencies.unshift(preAgency);
+      }
+
+      if (availableAgencies.length === 0) {
+        availableAgencies = agencies.filter(a => {
+          return (a.specialties || []).some(s => 
+            dest.name.toLowerCase().includes(s.toLowerCase()) || 
+            s.toLowerCase().includes(dest.name.toLowerCase()) ||
+            (dest.category && s.toLowerCase().includes(dest.category.toLowerCase()))
+          );
+        });
+        if (availableAgencies.length === 0) availableAgencies = agencies;
+      }
+
+      if (agencyLabel) {
+        agencyLabel.textContent = `Select Agency offering this tour (${availableAgencies.length} verified):`;
+      }
+
+      agencySelect.innerHTML = availableAgencies.map(a => {
+        const isPreselected = targetAgencyId ? (a.id === targetAgencyId) : false;
+        const customPrefix = a.isCustom ? '⭐ [Custom] ' : '';
+        const locTag = a.address ? a.address.split(',')[0] : locationData.city;
+        return `
+          <option value="${a.id}" ${isPreselected ? 'selected' : ''}>
+            ${customPrefix}${a.name} (${locTag}) &bull; ${a.priceBenchmark || 'Verified'}
+          </option>
+        `;
+      }).join('');
+    }
 
     // Default date to tomorrow and set min to today
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     const dateInput = document.getElementById('wa-date-input');
-    const todayStr = new Date().toISOString().split('T')[0];
-    dateInput.min = todayStr;
-    dateInput.value = tomorrow.toISOString().split('T')[0];
+    if (dateInput) {
+      const todayStr = new Date().toISOString().split('T')[0];
+      dateInput.min = todayStr;
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+    }
 
     updateAgencyLinksPreview();
     updateWhatsAppPreview();
@@ -859,28 +1066,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // OUTBOUND DISPATCH: 100% Polite Spanish output tailored to the active city!
   function generateWhatsAppMessage() {
     const dest = destinations.find(d => d.id === currentDispatcherDestId);
-    const agencyId = document.getElementById('wa-agency-select').value;
+    const agencyId = currentDispatcherMode === 'agency-mode'
+      ? currentDispatcherAgencyId
+      : (document.getElementById('wa-agency-select') ? document.getElementById('wa-agency-select').value : null);
     const agency = agencies.find(a => a.id === agencyId);
-    const date = document.getElementById('wa-date-input').value;
-    const pax = document.getElementById('wa-pax-input').value;
-    const serviceType = document.getElementById('wa-service-type').value;
-    const customNotes = document.getElementById('wa-custom-notes').value.trim();
+    const date = document.getElementById('wa-date-input') ? document.getElementById('wa-date-input').value : '';
+    const pax = document.getElementById('wa-pax-input') ? document.getElementById('wa-pax-input').value : '2';
+    const serviceType = document.getElementById('wa-service-type') ? document.getElementById('wa-service-type').value : 'compartido';
+    const customNotes = document.getElementById('wa-custom-notes') ? document.getElementById('wa-custom-notes').value.trim() : '';
 
     if (!dest || !agency) return "";
 
     const locale = locationData.currency === 'COP' ? 'es-CO' : 'es-MX';
     const dateFormatted = date ? new Date(date + 'T12:00:00').toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : 'próximamente';
 
+    // Check if this destination has a specific variant operated by this agency
+    const variantForAgency = (dest.variants || []).find(v => v.operatorAgencyId === agency.id);
+
     let msg = `¡Hola ${agency.name}! 👋\n\n`;
-    msg += `Les escribo desde ${locationData.name} (${locationData.city}). Quisiéramos consultar disponibilidad y cotización para el tour a *${dest.name}*.\n\n`;
+    if (variantForAgency) {
+      msg += `Les escribo desde ${locationData.name} (${locationData.city}). Quisiéramos consultar disponibilidad y cotización para el tour a *${dest.name}* en la modalidad *"${variantForAgency.name}"*.\n\n`;
+    } else {
+      msg += `Les escribo desde ${locationData.name} (${locationData.city}). Quisiéramos consultar disponibilidad y cotización para el tour a *${dest.name}*.\n\n`;
+    }
+
     msg += `📅 *Fecha deseada:* ${dateFormatted}\n`;
     msg += `👥 *Número de personas:* ${pax} personas (huéspedes de ${locationData.name})\n`;
     msg += `🚐 *Modalidad:* ${serviceType === 'privado' ? 'Camioneta / Servicio Privado exclusivo' : 'Tour Compartido'}\n`;
 
-    // Reference official published price from agency website if available
-    const publishedRate = (dest.agencyPublishedPrices || []).find(p => p.agencyId === agency.id || (agency.name && p.agencyName && agency.name.toLowerCase().includes(p.agencyName.toLowerCase())));
-    if (publishedRate) {
-      msg += `🏷️ *Tarifa de referencia en su web:* Vimos publicado en su sitio web el precio de $${Number(publishedRate.price).toLocaleString()} ${publishedRate.currency} por persona.\n`;
+    // Reference official published price or variant price
+    if (variantForAgency && variantForAgency.priceShared) {
+      msg += `🏷️ *Tarifa de referencia:* Vimos en su catálogo la tarifa de ${formatVariantPrice(variantForAgency.priceShared, variantForAgency.currency || locationData.currency)} por persona.\n`;
+    } else {
+      const publishedRate = (dest.agencyPublishedPrices || []).find(p => p.agencyId === agency.id || (agency.name && p.agencyName && agency.name.toLowerCase().includes(p.agencyName.toLowerCase())));
+      if (publishedRate) {
+        msg += `🏷️ *Tarifa de referencia en su web:* Vimos publicado en su sitio web el precio de $${Number(publishedRate.price).toLocaleString()} ${publishedRate.currency} por persona.\n`;
+      }
     }
 
     if (customNotes) {
@@ -929,7 +1150,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSendWA = document.getElementById('btn-send-wa-direct');
   if (btnSendWA) {
     btnSendWA.addEventListener('click', () => {
-      const agencyId = document.getElementById('wa-agency-select').value;
+      const agencyId = currentDispatcherMode === 'agency-mode'
+        ? currentDispatcherAgencyId
+        : (document.getElementById('wa-agency-select') ? document.getElementById('wa-agency-select').value : null);
       const agency = agencies.find(a => a.id === agencyId);
       if (!agency) return;
 
@@ -1055,8 +1278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.querySelectorAll('.btn-direct-agency-wa').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const agencyId = e.currentTarget.dataset.agencyId;
-        const defaultDest = destinations[0] ? destinations[0].id : null;
-        if (defaultDest) openWhatsAppDispatcher(defaultDest, agencyId);
+        openWhatsAppDispatcher(null, agencyId, 'agency-mode');
       });
     });
 

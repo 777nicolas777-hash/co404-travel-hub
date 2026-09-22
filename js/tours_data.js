@@ -130,16 +130,106 @@ window.CO404_LOCATIONS = {
         "popularityScore": 99,
         "variants": [
           {
+            "id": "sumidero-lancha-chiapa",
             "name": "Lancha en Río Grijalva + Chiapa de Corzo",
-            "priceDiff": "Tarifa estándar ($580 - $750 MXN)",
-            "description": "2 horas de navegación en lancha con motor dentro del cañón entre paredes de 1,000m hasta la presa Chicoasén, avistamiento de cocodrilos y árbol de navidad, más 1 hora libre en Chiapa de Corzo.",
-            "recommendedFor": "Primerizos que quieren ver la fauna silvestre y el cañón desde el agua."
+            "operatorAgencyId": "otisa-tours",
+            "operatorAgencyName": "OTISA Travel & Tours",
+            "operatorShortName": "OTISA",
+            "badge": "Clásico en Lancha",
+            "priceShared": "$580 - $680 MXN",
+            "priceUsd": "($32 - $38 USD)",
+            "pricePrivate": "$1,800 - $2,400 MXN",
+            "description": "La experiencia clásica imprescindible: navegación de 2 horas en lancha rápida con motor por el fondo del Cañón del Sumidero entre acantilados de hasta 1,000 metros hasta la Presa Chicoasén, observación de cocodrilos, monos araña y la cascada Árbol de Navidad, seguido de 1 hora libre en el pueblo mágico de Chiapa de Corzo.",
+            "includes": [
+              "Transporte redondo en van con A/C desde Co404 San Cristóbal",
+              "Paseo en lancha de 2 horas en el río Grijalva con chaleco salvavidas",
+              "Brazalete y pago de derechos del Parque Nacional CONANP",
+              "Tiempo libre para recorrer Chiapa de Corzo y la fuente colonial",
+              "Seguro de viajero a bordo del transporte y la embarcación"
+            ],
+            "excludes": [
+              "Almuerzo y bebidas en Chiapa de Corzo (~$150 - $220 MXN)",
+              "Propinas voluntarias para el capitán y conductor",
+              "Acceso a miradores en la cumbre (disponible en Opción 2)"
+            ],
+            "itinerary": [
+              {
+                "time": "09:00 AM",
+                "desc": "Pick-up en la puerta de Co404 San Cristóbal en van turística."
+              },
+              {
+                "time": "10:15 AM",
+                "desc": "Llegada al embarcadero Cahuare / Chiapa de Corzo y abordaje de lancha rápida."
+              },
+              {
+                "time": "10:30 AM",
+                "desc": "Navegación de 35 km por el cañón: Cueva de Colores, Árbol de Navidad y avistamiento de fauna."
+              },
+              {
+                "time": "12:30 PM",
+                "desc": "Desembarque y traslado al centro histórico de Chiapa de Corzo."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Tiempo libre para probar pozol de cacao, empanadas y admirar La Pila mudéjar."
+              },
+              {
+                "time": "02:30 PM",
+                "desc": "Retorno hacia San Cristóbal de las Casas (llegada ~03:30 PM)."
+              }
+            ],
+            "recommendedFor": "Primerizos que quieren la icónica perspectiva acuática del cañón y tiempo en Chiapa de Corzo."
           },
           {
-            "name": "Lancha en Cañón + 5 Miradores Panorámicos (Tuxtla)",
-            "priceDiff": "+$200 - $250 MXN adicionales",
-            "description": "Incluye la navegación en lancha por el río y asciende a la cumbre para recorrer los 5 miradores oficiales del Parque Nacional (La Ceiba, Los Chiapa, El Tepehuaje, El Roblar y Los Amorosos).",
-            "recommendedFor": "Amantes de la fotografía panorámica y vistas aéreas de acantilados."
+            "id": "sumidero-lancha-miradores",
+            "name": "Lancha en Cañón + 5 Miradores Panorámicos en Cumbre",
+            "operatorAgencyId": "apasionado-x-chiapas",
+            "operatorAgencyName": "Apasionado x Chiapas",
+            "operatorShortName": "Apasionado",
+            "badge": "Lancha + Miradores en Cumbre",
+            "priceShared": "$850 - $950 MXN",
+            "priceUsd": "($47 - $52 USD)",
+            "pricePrivate": "$2,600 - $3,200 MXN",
+            "description": "El circuito más completo de Chiapas: combina la navegación en lancha rápida por el río con el ascenso vehicular a la cresta del Parque Nacional para recorrer los 5 miradores oficiales (La Ceiba, La Coyota, El Roblar, El Tepehuaje y Los Chiapa), admirando el abismo desde 1,000 metros de altura.",
+            "includes": [
+              "Transporte redondo completo desde Co404 con ascenso a miradores de Tuxtla",
+              "Paseo en lancha de 2 horas en el río Grijalva con capitán certificado",
+              "Brazalete federal CONANP y entradas a miradores oficiales",
+              "Recorrido guiado por los 5 miradores panorámicos en la cumbre",
+              "Visita a Chiapa de Corzo y seguro de viajero"
+            ],
+            "excludes": [
+              "Comida en restaurante de miradores o Chiapa de Corzo",
+              "Propinas para guías y operadores",
+              "Recuerdos y artesanías locales"
+            ],
+            "itinerary": [
+              {
+                "time": "08:30 AM",
+                "desc": "Salida desde Co404 San Cristóbal hacia Tuxtla Gutiérrez."
+              },
+              {
+                "time": "09:45 AM",
+                "desc": "Ascenso a la parte alta del cañón y recorrido por los 5 miradores panorámicos con vistas aéreas."
+              },
+              {
+                "time": "11:45 AM",
+                "desc": "Descenso al embarcadero fluvial y colocación de chalecos salvavidas."
+              },
+              {
+                "time": "12:15 PM",
+                "desc": "Travesía en lancha de 2 horas navegando entre paredes verticales milenarias."
+              },
+              {
+                "time": "02:30 PM",
+                "desc": "Parada en Chiapa de Corzo para degustación gastronómica."
+              },
+              {
+                "time": "04:30 PM",
+                "desc": "Retorno a Co404 San Cristóbal (llegada ~05:30 PM)."
+              }
+            ],
+            "recommendedFor": "Fotógrafos y viajeros que quieren la perspectiva doble (desde el agua y desde el borde superior de los acantilados)."
           }
         ]
       },
@@ -249,16 +339,106 @@ window.CO404_LOCATIONS = {
         "popularityScore": 96,
         "variants": [
           {
-            "name": "Circuito Clásico Día Completo",
-            "priceDiff": "Tarifa estándar ($600 - $780 MXN)",
-            "description": "Sendero escalonado hasta la cascada Velo de Novia (120m) en El Chiflón, seguido de visita a 4-5 lagunas principales de Montebello (Pojoj, Tziscao, Montebello).",
-            "recommendedFor": "Viajeros que quieren disfrutar tanto del senderismo como de la frontera con Guatemala."
+            "id": "chiflon-clasico-dia",
+            "name": "Circuito Clásico: Cascadas El Chiflón + 4 Lagos de Montebello",
+            "operatorAgencyId": "nichim-tours",
+            "operatorAgencyName": "Nichim Tours & Voy a Chiapas",
+            "operatorShortName": "Nichim / Voy a Chiapas",
+            "badge": "Circuito Clásico Día Completo",
+            "priceShared": "$600 - $780 MXN",
+            "priceUsd": "($33 - $43 USD)",
+            "pricePrivate": "$3,200 - $3,800 MXN",
+            "description": "El recorrido tradicional más equilibrado: caminata guiada de 1.5 horas bordeando el río San Vicente hasta la majestuosa cascada Velo de Novia (120m de caída), seguido de la visita a los lagos más coloridos del Parque Nacional Lagunas de Montebello (Pojoj, Tziscao, 5 Lagos e Internacional con frontera de Guatemala).",
+            "includes": [
+              "Transporte redondo en van con A/C desde Co404 San Cristóbal",
+              "Entrada al Centro Ecoturístico Cascadas El Chiflón",
+              "Entrada al Parque Nacional Lagunas de Montebello",
+              "Visita a los lagos Tziscao, Pojoj, Ensueño y Paso Internacional",
+              "Seguro de viajero a bordo"
+            ],
+            "excludes": [
+              "Almuerzo en restaurantes típicos a orillas de Tziscao (~$160 MXN)",
+              "Tirolesa gigante en El Chiflón (opcional)",
+              "Paseo en balsa de troncos en Lago Pojoj (opcional)"
+            ],
+            "itinerary": [
+              {
+                "time": "08:00 AM",
+                "desc": "Salida desde Co404 San Cristóbal hacia Comitán y Tzimol."
+              },
+              {
+                "time": "10:30 AM",
+                "desc": "Llegada a El Chiflón: sendero escalonado pasando por cascadas El Suspiro y Velo de Novia."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Traslado al Parque Nacional Lagunas de Montebello."
+              },
+              {
+                "time": "02:00 PM",
+                "desc": "Almuerzo campestre con quesadillas comitecas frente al lago Tziscao."
+              },
+              {
+                "time": "03:30 PM",
+                "desc": "Visita a Lago Pojoj y límite fronterizo con Guatemala."
+              },
+              {
+                "time": "05:00 PM",
+                "desc": "Retorno panorámico a San Cristóbal de las Casas (llegada ~08:00 PM)."
+              }
+            ],
+            "recommendedFor": "Viajeros que buscan contemplar paisajes de agua turquesa y caminar a su propio ritmo."
           },
           {
-            "name": "Circuito con Tirolesa Gigante & Balsa de Troncos",
-            "priceDiff": "+$250 - $350 MXN en actividades opcionales",
-            "description": "Lánzate por la tirolesa de 400m que cruza el cañón del río San Vicente frente a la cascada y navega en balsa artesanal de troncos en la laguna Pojoj.",
-            "recommendedFor": "Adrenalina y amantes de los deportes de aventura."
+            "id": "chiflon-aventura-tirolesa",
+            "name": "Aventura Extrema: Tirolesa Gigante 400m & Balsa de Troncos en Pojoj",
+            "operatorAgencyId": "apasionado-x-chiapas",
+            "operatorAgencyName": "Apasionado x Chiapas",
+            "operatorShortName": "Apasionado",
+            "badge": "Aventura & Tirolesa Gigante",
+            "priceShared": "$950 - $1,250 MXN",
+            "priceUsd": "($52 - $68 USD)",
+            "pricePrivate": "$3,800 - $4,600 MXN",
+            "description": "Diseñado para los más aventureros: además de la caminata al Velo de Novia, incluye el vuelo en la tirolesa más alta de Chiapas cruzando el cañón de la cascada a 100m del suelo, más renta de balsa rústica de troncos con remos para navegar hasta la Isla de las Orquídeas en el Lago Pojoj.",
+            "includes": [
+              "Transporte redondo con chofer certificado desde Co404",
+              "Entradas a Chiflón y Parque Nacional Montebello",
+              "Pase en la tirolesa gigante de 400m sobre el río San Vicente con equipo certificado",
+              "Renta de balsa tradicional de troncos maya con chaleco en Lago Pojoj",
+              "Coordinador de aventura y seguro de amplia cobertura"
+            ],
+            "excludes": [
+              "Alimentos y bebidas",
+              "Propinas para guías comunitarios y balseros",
+              "Tirolesas secundarias adicionales"
+            ],
+            "itinerary": [
+              {
+                "time": "07:30 AM",
+                "desc": "Salida temprana desde Co404 para llegar antes que los tours masivos."
+              },
+              {
+                "time": "10:00 AM",
+                "desc": "Ascenso directo al mirador Velo de Novia y preparación de equipo de tirolesa."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Vuelo en tirolesa gigante de 400m cruzando el abismo de la cascada."
+              },
+              {
+                "time": "01:30 PM",
+                "desc": "Llegada al Lago Pojoj: navegación en balsa de troncos hacia islotes de orquídeas."
+              },
+              {
+                "time": "03:30 PM",
+                "desc": "Comida en mirador de Tziscao y tiempo de nado en lagunas autorizadas."
+              },
+              {
+                "time": "05:00 PM",
+                "desc": "Retorno ágil hacia San Cristóbal (llegada ~07:30 PM)."
+              }
+            ],
+            "recommendedFor": "Amantes de la adrenalina que quieren volar sobre cascadas y remar en balsas rústicas de madera."
           }
         ]
       },
@@ -364,16 +544,102 @@ window.CO404_LOCATIONS = {
         "popularityScore": 96,
         "variants": [
           {
-            "name": "Tour Cultural Clásico en Van Guiado",
-            "priceDiff": "Tarifa estándar ($350 - $480 MXN)",
-            "description": "Transporte en van con guía antropológico que explica los rituales chamánicos, curanderos, rezos en tzotzil y visita a cooperativa de tejedoras en Zinacantán con degustación de pox.",
-            "recommendedFor": "Comodidad y comprensión histórica profunda de las costumbres indígenas."
+            "id": "chamula-cultural-van",
+            "name": "Tour Cultural en Miniván Guiado & Talleres Textiles",
+            "operatorAgencyId": "nichim-tours",
+            "operatorAgencyName": "Nichim Tours & Travel",
+            "operatorShortName": "Nichim",
+            "badge": "Cultural en Miniván",
+            "priceShared": "$350 - $480 MXN",
+            "priceUsd": "($19 - $26 USD)",
+            "pricePrivate": "$1,200 - $1,600 MXN",
+            "description": "Recorrido etnográfico respetuoso por los dos pueblos mayas tzotziles más emblemáticos. Incluye visita a la iglesia de San Juan Chamula con piso de agujas de pino y curanderos tradicionales, más visita a una casa tradicional en Zinacantán para observar tejedoras en telar de cintura y degustar pox ceremonial con tortillas hechas a mano.",
+            "includes": [
+              "Transporte redondo desde Co404 San Cristóbal",
+              "Guía bilingüe acreditado con conocimiento de usos y costumbres tzotziles",
+              "Boleto oficial de entrada a la iglesia de San Juan Chamula",
+              "Visita a familia tejedora en Zinacantán con demostración de telar",
+              "Degustación de bebida ceremonial pox y tortillas de maíz recién salidas del comal"
+            ],
+            "excludes": [
+              "Prohibición estricta de fotos dentro de la iglesia (multas de la comunidad)",
+              "Compras de artesanías textiles de lana y flores",
+              "Propinas para el guía y conductor"
+            ],
+            "itinerary": [
+              {
+                "time": "09:30 AM",
+                "desc": "Encuentro en Co404 y traslado a San Juan Chamula (20 min)."
+              },
+              {
+                "time": "10:00 AM",
+                "desc": "Visita guiada a la plaza, panteón de cruces mayas y templo de San Juan Bautista."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Traslado a Zinacantán, pueblo de floricultores y tejedores."
+              },
+              {
+                "time": "12:00 PM",
+                "desc": "Convivencia en casa tradicional con tejedoras, prueba de trajes típicos y degustación de pox."
+              },
+              {
+                "time": "01:30 PM",
+                "desc": "Regreso a Co404 San Cristóbal (llegada ~02:00 PM)."
+              }
+            ],
+            "recommendedFor": "Viajeros culturales interesados en antropología, misticismo y artesanía textil tradicional."
           },
           {
+            "id": "chamula-cabalgata-montana",
             "name": "Cabalgata a Caballo por Bosques de Niebla a Chamula",
-            "priceDiff": "$550 - $700 MXN",
-            "description": "Paseo a caballo de 2.5 horas cruzando senderos boscosos y veredas de montaña desde San Cristóbal hasta la entrada de San Juan Chamula con tiempo libre en el pueblo.",
-            "recommendedFor": "Aventureros que buscan una experiencia activa al aire libre."
+            "operatorAgencyId": "jalapeno-tours",
+            "operatorAgencyName": "Jalapeño Tours & Guías Locales",
+            "operatorShortName": "Jalapeño",
+            "badge": "Aventura a Caballo",
+            "priceShared": "$500 - $650 MXN",
+            "priceUsd": "($28 - $36 USD)",
+            "pricePrivate": "$1,500 - $1,900 MXN",
+            "description": "Llega a San Juan Chamula como lo hacían antiguamente: a caballo por veredas de montaña, campos de maíz y bosques de pino-encino. Guiado por arrieros locales, incluye caballo dócil, tiempo libre en el pueblo para visitar la iglesia sincrética y retorno a caballo o en colectivo.",
+            "includes": [
+              "Caballo equipado con montura tradicional y guía arriero local",
+              "Ruta de 2 horas a caballo por veredas panorámicas de montaña",
+              "Boleto de entrada a la iglesia sincrética de San Juan Chamula",
+              "Tiempo libre de 1 hora en la plaza central de Chamula",
+              "Regreso a caballo por ruta alternativa hacia San Cristóbal"
+            ],
+            "excludes": [
+              "Alimentos y bebidas",
+              "Prohibido tomar fotografías dentro del templo",
+              "Propinas para los arrieros y guías"
+            ],
+            "itinerary": [
+              {
+                "time": "09:00 AM",
+                "desc": "Encuentro y asignación de caballos en la periferia de San Cristóbal."
+              },
+              {
+                "time": "09:30 AM",
+                "desc": "Inicio de cabalgata ascendiendo por veredas de niebla y maizales tzotziles."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Llegada a San Juan Chamula y amarre de caballos en corral comunitario."
+              },
+              {
+                "time": "11:45 AM",
+                "desc": "Visita al templo sincrético y recorrido por el tianguis indígena."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Cabalgata de retorno por cañadas y senderos hacia San Cris."
+              },
+              {
+                "time": "02:30 PM",
+                "desc": "Llegada al punto base y traslado a Co404."
+              }
+            ],
+            "recommendedFor": "Amantes de la naturaleza y actividades al aire libre que prefieren evitar camionetas y montar a caballo."
           }
         ]
       },
@@ -492,16 +758,109 @@ window.CO404_LOCATIONS = {
         "popularityScore": 95,
         "variants": [
           {
-            "name": "Expedición Día Completo San Cris -> Palenque -> San Cris",
-            "priceDiff": "Tarifa estándar ($950 - $1,250 MXN)",
-            "description": "Salida 04:30 AM, desayuno en ruta, paradas en Agua Azul, cascada Misol-Ha (35m) y 2.5 hrs de recorrido guiado en la majestuosa ciudad maya de Palenque. Regreso ~22:00.",
-            "recommendedFor": "Quienes tienen base fija en Co404 y quieren ver la joya maya en un solo día intenso."
+            "id": "palenque-retorno-sancris",
+            "name": "Expedición Día Completo Retorno a San Cristóbal",
+            "operatorAgencyId": "selva-azul-tours",
+            "operatorAgencyName": "Selva Azul Chiapas & OTISA",
+            "operatorShortName": "Selva Azul",
+            "badge": "Día Completo Ida y Vuelta",
+            "priceShared": "$950 - $1,250 MXN",
+            "priceUsd": "($52 - $68 USD)",
+            "pricePrivate": "$5,200 - $6,400 MXN",
+            "description": "Jornada completa de expedición saliendo a las 04:30 AM para desayunar en Ocosingo, refrescarse en las pozas turquesas de Cascadas de Agua Azul, admirar la caída de 30m de Misol-Ha en la selva y recorrer la grandiosa zona arqueológica de Palenque (Templo de las Inscripciones), regresando a dormir a San Cristóbal.",
+            "includes": [
+              "Transporte redondo completo en van turística con A/C",
+              "Entrada oficial a Parque Nacional Cascadas de Agua Azul",
+              "Entrada a Cascada de Misol-Ha y cueva del manantial",
+              "Boleto oficial INAH para la Zona Arqueológica de Palenque",
+              "Seguro federal de transporte de pasajeros"
+            ],
+            "excludes": [
+              "Desayuno buffet en Ocosingo (~$140 MXN) y comida en Palenque (~$180 MXN)",
+              "Guía arqueológico local certificado dentro del sitio de Palenque (opcional)",
+              "Propinas voluntarias para el conductor"
+            ],
+            "itinerary": [
+              {
+                "time": "04:30 AM",
+                "desc": "Salida desde Co404 San Cristóbal por carretera escénica de montaña."
+              },
+              {
+                "time": "07:30 AM",
+                "desc": "Parada de desayuno buffet regional en restaurante campestre de Ocosingo."
+              },
+              {
+                "time": "09:30 AM",
+                "desc": "Llegada a Cascadas de Agua Azul: tiempo para caminar y nadar en albercas naturales."
+              },
+              {
+                "time": "12:00 PM",
+                "desc": "Visita a Cascada Misol-Ha: sendero detrás de la cortina de agua selvática."
+              },
+              {
+                "time": "02:00 PM",
+                "desc": "Exploración de la Zona Arqueológica de Palenque entre la selva tropical."
+              },
+              {
+                "time": "05:00 PM",
+                "desc": "Inicio de viaje de regreso a los Altos de Chiapas."
+              },
+              {
+                "time": "10:30 PM",
+                "desc": "Llegada nocturna a Co404 San Cristóbal."
+              }
+            ],
+            "recommendedFor": "Viajeros con base en Co404 San Cristóbal que quieren tachar Palenque en un día sin cambiar de hospedaje."
           },
           {
-            "name": "Drop-off en Palenque (One-Way hacia Península/Yucatán)",
-            "priceDiff": "$850 - $1,050 MXN (mismo tour sin regreso)",
-            "description": "Mismo recorrido completo con tu equipaje en la van; el tour te deja en Palenque pueblo a las 17:00 para tomar el Tren Maya o autobús ADO hacia Calakmul, Mérida o Cancún.",
-            "recommendedFor": "Nómadas en ruta que continúan viaje hacia Quintana Roo o Yucatán."
+            "id": "palenque-one-way-dropoff",
+            "name": "Drop-off en Palenque (One-Way hacia Península / ADO)",
+            "operatorAgencyId": "voy-a-chiapas",
+            "operatorAgencyName": "Voy a Chiapas",
+            "operatorShortName": "Voy a Chiapas",
+            "badge": "One-Way Drop-off (Con Equipaje)",
+            "priceShared": "$850 - $1,050 MXN",
+            "priceUsd": "($46 - $58 USD)",
+            "pricePrivate": "$4,500 - $5,400 MXN",
+            "description": "La forma más inteligente de continuar tu viaje hacia Campeche, Mérida, Cancún o la Selva Maya: viajas con tu equipaje en la van turística, visitas Agua Azul, Misol-Ha y las ruinas de Palenque, y al terminar el tour te dejan en tu hotel en Palenque o en la terminal ADO sin tener que pagar autobús adicional.",
+            "includes": [
+              "Transporte One-Way San Cristóbal -> Palenque con espacio seguro para equipaje",
+              "Entradas incluidas a Agua Azul, Misol-Ha y ruinas de Palenque",
+              "Drop-off directo en tu hotel en Palenque pueblo, La Cañada o terminal ADO",
+              "Ahorro de un boleto completo de autobús comercial"
+            ],
+            "excludes": [
+              "Alimentos y bebidas durante la ruta",
+              "Regreso a San Cristóbal (este tour concluye en Palenque)",
+              "Propinas para el operador"
+            ],
+            "itinerary": [
+              {
+                "time": "04:30 AM",
+                "desc": "Check-out temprano en Co404 y carga de mochilas/maletas en la van."
+              },
+              {
+                "time": "07:30 AM",
+                "desc": "Desayuno en Ocosingo."
+              },
+              {
+                "time": "09:30 AM",
+                "desc": "Tiempo libre y nado en Cascadas de Agua Azul."
+              },
+              {
+                "time": "12:00 PM",
+                "desc": "Visita a Misol-Ha en el corazón de la selva chiapaneca."
+              },
+              {
+                "time": "02:00 PM",
+                "desc": "Recorrido por las ruinas mayas de Palenque."
+              },
+              {
+                "time": "05:00 PM",
+                "desc": "Drop-off en hotel de Palenque o terminal ADO para conexiones nocturnas."
+              }
+            ],
+            "recommendedFor": "Nómadas y viajeros que van hacia la Península de Yucatán y quieren aprovechar el traslado para turistear."
           }
         ]
       },
@@ -531,7 +890,7 @@ window.CO404_LOCATIONS = {
         "isExclusive": true,
         "exclusiveAgencyId": "apasionado-x-chiapas",
         "exclusiveAgencyName": "Apasionado x Chiapas",
-        "exclusiveBadge": "Exclusive Expedition with Apasionado x Chiapas",
+        "exclusiveBadge": "Expedición Exclusiva de Apasionado x Chiapas (Cañón La Venta)",
         "description": "One of the most extraordinary geological wonders on Earth. Standing 180 meters tall and over 80 million years old, El Arco del Tiempo is recognized as the highest natural arch in the world, carved by the pristine Río La Venta through prehistoric limestone. Operated as an elite multi-day adventure with Apasionado x Chiapas: trek through ancient pine-oak and tropical rainforest, descend into the colossal canyon, sleep under the Milky Way on river pebble beaches, and marvel at the prehistoric scale of the canyon walls.",
         "itinerary": [
           {
@@ -1502,7 +1861,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$4,800 - $6,500 MXN (Private 4x4 safari)",
         "colectivoCost": "Impossible DIY (Requires high-clearance 4x4 & local agrarian permission)",
         "heroImage": "./assets/images/las_tres_tzimoleras.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Off-Road 4x4",
         "description": "One of Chiapas' best-kept secrets! Travel by 4x4 pickup truck into the untamed river canyon of Tzimol. Hike down steep limestone canyons to three thunderous cascades dropping 30m, 45m, and 60m into deep azure pools. Experience thrilling cliff jumps (from 2m to 7m), natural river currents, and raw nature with zero tour bus crowds.",
         "itinerary": [
@@ -1567,7 +1926,10 @@ window.CO404_LOCATIONS = {
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
         ],
-        "popularityScore": 87
+        "popularityScore": 87,
+        "exclusiveAgencyId": "apasionado-x-chiapas",
+        "exclusiveAgencyName": "Apasionado x Chiapas / Selva Azul",
+        "exclusiveBadge": "Expedición 4x4 Exclusiva"
       },
       {
         "id": "puerto-arista-boca-cielo",
@@ -1795,7 +2157,7 @@ window.CO404_LOCATIONS = {
         "isExclusive": true,
         "exclusiveAgencyId": "popup-san-cris",
         "exclusiveAgencyName": "Pop Up San Cris",
-        "exclusiveBadge": "Curated by Pop Up San Cris (Petit Futé)",
+        "exclusiveBadge": "Tour Único Exclusivo de Pop Up San Cris (Petit Futé)",
         "specializedBadge": "🍄 Micología & Bosque",
         "description": "Una experiencia insignia de ecoturismo consciente curada por Pop Up San Cris. Recorrido a pie por bosques de niebla y pino-encino de los Altos de Chiapas guiado por especialistas para la identificación, recolección ética y aprendizaje de hongos silvestres comestibles y medicinales, complementado con baño de bosque (Shinrin-yoku) y degustación campestre.",
         "itinerary": [
@@ -1863,16 +2225,104 @@ window.CO404_LOCATIONS = {
         "popularityScore": 90,
         "variants": [
           {
+            "id": "mico-taller-recoleccion",
             "name": "Taller Micológico & Recolección Ética de Hongos",
-            "priceDiff": "Tarifa estándar ($450 – $650 MXN)",
-            "description": "Caminata botánica enfocada en la búsqueda, recolección ética y clasificación de hongos silvestres comestibles con biólogo especialista.",
-            "recommendedFor": "Amantes de la micología, botánica y naturaleza curiosa."
+            "operatorAgencyId": "popup-san-cris",
+            "operatorAgencyName": "Pop Up San Cris",
+            "operatorShortName": "Pop Up San Cris",
+            "badge": "Taller Micológico & Recolección",
+            "priceShared": "$550 MXN",
+            "priceUsd": "($30 USD)",
+            "pricePrivate": "$1,600 MXN",
+            "description": "Caminata botánica guiada por biólogos especialistas en hongos silvestres de los bosques de niebla de los Altos de Chiapas. Aprenderás a reconocer setas comestibles, medicinales y tóxicas, técnicas de corte sin dañar el micelio y saberes tradicionales indígenas sobre el reino fungi.",
+            "includes": [
+              "Transporte redondo privado desde Co404 San Cristóbal",
+              "Biólogo o especialista micológico de Pop Up San Cris",
+              "Canasta tradicional de mimbre y navaja de recolección ética",
+              "Té silvestre de montaña y snack orgánico local",
+              "Donativo a la comunidad comunal protectora del bosque"
+            ],
+            "excludes": [
+              "Alimentos pesados fuera del snack silvestre",
+              "Propinas voluntarias para el guía"
+            ],
+            "itinerary": [
+              {
+                "time": "09:00 AM",
+                "desc": "Salida desde Co404 hacia la reserva boscosa de montaña (20 min)."
+              },
+              {
+                "time": "09:30 AM",
+                "desc": "Introducción botánica al reino fungi y entrega de canastas de mimbre."
+              },
+              {
+                "time": "10:00 AM",
+                "desc": "Caminata de búsqueda e identificación entre niebla, musgo y pinos milenarios."
+              },
+              {
+                "time": "11:45 AM",
+                "desc": "Clasificación de especies encontradas y aprendizaje sobre usos culinarios y medicinales."
+              },
+              {
+                "time": "12:30 PM",
+                "desc": "Infusión de hierbas silvestres y snack campestre."
+              },
+              {
+                "time": "01:30 PM",
+                "desc": "Regreso a Co404 San Cristóbal."
+              }
+            ],
+            "recommendedFor": "Curiosos de la naturaleza, biólogos, fotógrafos y amantes de la gastronomía silvestre."
           },
           {
-            "name": "Inmersión Holística: Baño de Bosque & Meditación Guiada",
-            "priceDiff": "+$150 MXN adicionales",
-            "description": "Caminata silenciosa de conexión sensorial profunda (Shinrin-Yoku), respiración consciente entre árboles milenarios y picnic silvestre.",
-            "recommendedFor": "Nómadas digitales que buscan bienestar, relajación y desconexión del estrés urbano."
+            "id": "mico-bano-bosque-mindfulness",
+            "name": "Inmersión Holística: Baño de Bosque (Shinrin-Yoku) & Meditación",
+            "operatorAgencyId": "popup-san-cris",
+            "operatorAgencyName": "Pop Up San Cris",
+            "operatorShortName": "Pop Up San Cris",
+            "badge": "Shinrin-Yoku & Conexión",
+            "priceShared": "$700 MXN",
+            "priceUsd": "($38 USD)",
+            "pricePrivate": "$1,900 MXN",
+            "description": "Una experiencia de desaceleración y reconexión profunda: caminata sensorial en silencio guiada bajo la filosofía japonesa del Shinrin-Yoku (Baño de Bosque), ejercicios de respiración consciente entre coníferas centenarias y un picnic campestre gourmet con quesos de rancho y pan artesanal.",
+            "includes": [
+              "Transporte redondo exclusivo desde Co404",
+              "Guía certificado en facilitación de naturaleza y mindfulness",
+              "Sesión guiada de respiración, contemplación y reconexión sensorial",
+              "Picnic campestre orgánico con quesos artesanales, frutos secos y tisanas",
+              "Manta y cojín térmico para la sesión de bosque"
+            ],
+            "excludes": [
+              "Gastos personales",
+              "Propinas"
+            ],
+            "itinerary": [
+              {
+                "time": "09:00 AM",
+                "desc": "Salida desde Co404 con desconexión de teléfonos móviles."
+              },
+              {
+                "time": "09:30 AM",
+                "desc": "Apertura del círculo de respiración al entrar al bosque de niebla."
+              },
+              {
+                "time": "10:15 AM",
+                "desc": "Paseo sensorial descalzo sobre musgo y dinámicas de contemplación."
+              },
+              {
+                "time": "11:45 AM",
+                "desc": "Meditación guiada junto al arroyo de montaña."
+              },
+              {
+                "time": "12:30 PM",
+                "desc": "Picnic consciente con productos orgánicos de productores locales."
+              },
+              {
+                "time": "01:30 PM",
+                "desc": "Retorno renovado a Co404 San Cristóbal."
+              }
+            ],
+            "recommendedFor": "Nómadas digitales que buscan desintoxicación de pantallas, paz mental y reconexión con la tierra."
           }
         ]
       },
@@ -1903,7 +2353,7 @@ window.CO404_LOCATIONS = {
         "isExclusive": true,
         "exclusiveAgencyId": "popup-san-cris",
         "exclusiveAgencyName": "Pop Up San Cris",
-        "exclusiveBadge": "Expedición Especializada Pop Up San Cris",
+        "exclusiveBadge": "Expedición Exclusiva Pop Up San Cris (Montes Azules)",
         "specializedBadge": "🛶 Kayak & Selva Virgen",
         "description": "La expedición de naturaleza virgen más profunda de Chiapas, organizada en grupos reducidos por Pop Up San Cris. Aventura de 3 días / 2 noches en la Reserva de la Biosfera Montes Azules, navegando en kayak y canoa por la laguna virgen más grande y hermosa de México, rodeada de selva impenetrable, monos aulladores, tapires y vestigios mayas en islotes sagrados.",
         "itinerary": [
@@ -1977,16 +2427,109 @@ window.CO404_LOCATIONS = {
         "popularityScore": 93,
         "variants": [
           {
+            "id": "miramar-kayak-camp",
             "name": "Expedición Kayak & Campamento Ecológico en la Laguna (3 Días)",
-            "priceDiff": "Tarifa estándar ($3,600 – $4,800 MXN)",
-            "description": "Tres días de navegación en kayak, nado en aguas color esmeralda, campamento ecológico a la orilla del lago y fogata nocturna en la selva.",
-            "recommendedFor": "Aventureros que aman el campamento, el agua y la naturaleza pura sin comodidades de hotel."
+            "operatorAgencyId": "popup-san-cris",
+            "operatorAgencyName": "Pop Up San Cris",
+            "operatorShortName": "Pop Up San Cris",
+            "badge": "Kayak & Campamento 3 Días",
+            "priceShared": "$4,200 MXN",
+            "priceUsd": "($230 USD)",
+            "pricePrivate": "$9,500 MXN",
+            "description": "Aventura virgen de 3 días navegando en kayak por la laguna más grande y cristalina de la Selva Lacandona. Campamento ecológico frente al espejo turquesa, fogata bajo cielo estrellado y observación de fauna salvaje sin ruido de motores ni civilización.",
+            "includes": [
+              "Transportación 4x4 completa ida y vuelta desde Co404",
+              "Kayaks profesionales con remos y chalecos salvavidas certificados",
+              "Tienda de campaña de montaña y colchoneta de expedición",
+              "Todas las comidas en la selva preparadas con cocineras locales",
+              "Permisos comunitarios y de la Reserva de la Biosfera Montes Azules"
+            ],
+            "excludes": [
+              "Bolsa de dormir personal (sleeping bag)",
+              "Baterías portátiles y linterna frontal personal",
+              "Propinas para cocineras y guardianes comunitarios"
+            ],
+            "itinerary": [
+              {
+                "time": "Día 1 - 05:00 AM",
+                "desc": "Salida desde Co404 en 4x4 hacia Las Margaritas y entrada a la selva."
+              },
+              {
+                "time": "Día 1 - 01:30 PM",
+                "desc": "Comida en comunidad tzeltal y cruce en canoa tradicional a Laguna de Miramar."
+              },
+              {
+                "time": "Día 1 - 04:30 PM",
+                "desc": "Montaje de campamento frente a la laguna, nado libre y fogata nocturna."
+              },
+              {
+                "time": "Día 2 - 07:00 AM",
+                "desc": "Travesía en kayak explorando caletas esmeralda y acantilados selváticos."
+              },
+              {
+                "time": "Día 2 - 02:00 PM",
+                "desc": "Senderismo para avistamiento de monos aulladores y tapires en Montes Azules."
+              },
+              {
+                "time": "Día 3 - 08:00 AM",
+                "desc": "Desayuno en la selva, último nado y desmontaje de campamento."
+              },
+              {
+                "time": "Día 3 - 07:30 PM",
+                "desc": "Llegada de retorno a Co404 San Cristóbal."
+              }
+            ],
+            "recommendedFor": "Aventureros natos que aman acampar y navegar en aguas cristalinas en plena selva virgen."
           },
           {
+            "id": "miramar-arqueologia-comunidad",
             "name": "Inmersión Selva Profunda con Guardianes Indígenas & Pinturas Rupestres",
-            "priceDiff": "+$600 MXN adicionales",
-            "description": "Incluye la travesía en kayak más caminata guiada hacia islotes sagrados con pinturas rupestres prehispánicas y convivencia comunitaria.",
-            "recommendedFor": "Viajeros culturales que buscan arqueología maya virgen y contacto humano auténtico."
+            "operatorAgencyId": "popup-san-cris",
+            "operatorAgencyName": "Pop Up San Cris",
+            "operatorShortName": "Pop Up San Cris",
+            "badge": "Inmersión Indígena & Arqueología",
+            "priceShared": "$4,800 MXN",
+            "priceUsd": "($260 USD)",
+            "pricePrivate": "$10,800 MXN",
+            "description": "Combina la navegación en kayak con expediciones a pie hacia islotes sagrados mayas no cartografiados con pinturas rupestres y vestigios milenarios, acompañado de sabios comunitarios indígenas guardianes de la selva que comparten su cosmogonía.",
+            "includes": [
+              "Todo lo incluido en la expedición de kayak y campamento de 3 días",
+              "Guía arqueológico y sabios comunitarios locales tzeltales",
+              "Permiso especial para visitar islotes con pinturas rupestres protegidas",
+              "Taller de fogata sobre mitología maya y protección de la selva",
+              "Caminata nocturna de observación de anfibios y fauna tropical"
+            ],
+            "excludes": [
+              "Sleeping bag personal",
+              "Propinas para guías comunitarios indígenas"
+            ],
+            "itinerary": [
+              {
+                "time": "Día 1 - 05:00 AM",
+                "desc": "Salida en 4x4 y bienvenida con líderes comunitarios en la selva."
+              },
+              {
+                "time": "Día 1 - 04:00 PM",
+                "desc": "Campamento a orilla del agua y relatos de cosmogonía junto al fuego."
+              },
+              {
+                "time": "Día 2 - 08:00 AM",
+                "desc": "Expedición en kayak a islotes con petroglifos y pinturas rupestres sagradas."
+              },
+              {
+                "time": "Día 2 - 03:00 PM",
+                "desc": "Recorrido por vestigios mayas cubiertos por raíces de ceibas milenarias."
+              },
+              {
+                "time": "Día 2 - 08:30 PM",
+                "desc": "Senderismo nocturno de observación de fauna de la biosfera."
+              },
+              {
+                "time": "Día 3 - 08:30 AM",
+                "desc": "Ceremonia de agradecimiento a la selva y retorno a San Cristóbal (~07:30 PM)."
+              }
+            ],
+            "recommendedFor": "Viajeros culturales apasionados por la arqueología maya, antropología y mitología indígena viva."
           }
         ]
       }
@@ -2749,16 +3292,116 @@ window.CO404_LOCATIONS = {
         "popularityScore": 98,
         "variants": [
           {
-            "name": "Ruta Clásica Valles Centrales (Hierve + Mitla + Tule + Mezcal)",
-            "priceDiff": "Tarifa estándar ($450 - $650 MXN)",
-            "description": "Recorrido integral saliendo 09:30 AM: árbol milenario de Santa María del Tule, cooperativa textil de lana en Teotitlán del Valle, zona arqueológica de grecas en Mitla, pozas de Hierve el Agua y destilería de mezcal tradicional.",
-            "recommendedFor": "Conocer lo más emblemático del valle en un día completo muy completo."
+            "id": "hierve-clasico-valles",
+            "name": "Ruta Clásica Valles Centrales (Hierve el Agua + Mitla + Tule + Mezcal)",
+            "operatorAgencyId": "oaxaca-viajes-tours",
+            "operatorAgencyName": "Oaxaca Viajes & Tours",
+            "operatorShortName": "Oaxaca Viajes",
+            "badge": "Ruta Clásica Valles Centrales",
+            "priceShared": "$450 - $600 MXN",
+            "priceUsd": "($25 - $33 USD)",
+            "pricePrivate": "$2,200 - $2,900 MXN",
+            "description": "El tour más solicitado de Oaxaca: admira el Árbol del Tule (el ser vivo con el tronco más grueso del planeta), las pozas minerales y cascadas petrificadas de Hierve el Agua con tiempo para nadar, los mosaicos geométricos de Mitla y una cata de mezcal artesanal en un palenque tradicional de Matatlán.",
+            "includes": [
+              "Transporte redondo con chofer certificado desde Co404 Oaxaca",
+              "Parada en el legendario Árbol del Tule",
+              "Tiempo de 2 horas en Hierve el Agua para nado y senderismo de mirador",
+              "Visita a la zona arqueológica de Mitla",
+              "Degustación guiada de mezcales silvestres en palenque tradicional",
+              "Seguro de viajero a bordo"
+            ],
+            "excludes": [
+              "Cuotas comunitarias de peaje y entrada a Hierve el Agua (~$50 MXN) y Tule ($20 MXN)",
+              "Entrada INAH a Mitla ($95 MXN)",
+              "Comida buffet en restaurante campestre (~$180 MXN)",
+              "Propinas"
+            ],
+            "itinerary": [
+              {
+                "time": "08:00 AM",
+                "desc": "Recogida en Co404 Oaxaca en dirección a Santa María del Tule."
+              },
+              {
+                "time": "08:45 AM",
+                "desc": "Visita al árbol de 2,000 años de antigüedad."
+              },
+              {
+                "time": "10:30 AM",
+                "desc": "Llegada a Hierve el Agua: caminata a cascada petrificada y nado en pozas minerales."
+              },
+              {
+                "time": "01:30 PM",
+                "desc": "Comida campestre con especialidades oaxaqueñas."
+              },
+              {
+                "time": "03:00 PM",
+                "desc": "Visita a las grecas geométricas de la 'Ciudad de los Muertos' en Mitla."
+              },
+              {
+                "time": "04:30 PM",
+                "desc": "Cata de mezcales espadín y silvestres (Tobalá, Tepeztate) en palenque."
+              },
+              {
+                "time": "06:30 PM",
+                "desc": "Retorno a Co404 Oaxaca."
+              }
+            ],
+            "recommendedFor": "Viajeros que quieren ver lo máximo en un solo día con excelente balance de naturaleza, arqueología y mezcal."
           },
           {
-            "name": "Hierve el Agua Sunrise / Express Sin Multitudes",
-            "priceDiff": "$650 - $850 MXN (grupo reducido)",
-            "description": "Salida 06:30 AM directo a las cascadas petrificadas para llegar a las 08:30 AM, cuando no hay camiones de turismo y la luz matutina es perfecta para nadar y hacer fotos limpias.",
-            "recommendedFor": "Fotógrafos, nadadores y colivers que buscan tranquilidad absoluta."
+            "id": "hierve-sunrise-hiking",
+            "name": "Hierve el Agua Sunrise & Senderismo al Manantial Inferior",
+            "operatorAgencyId": "operadora-turistica-dainzuu",
+            "operatorAgencyName": "Operadora Turística Dainzúu",
+            "operatorShortName": "Dainzúu",
+            "badge": "Sunrise & Senderismo Profundo",
+            "priceShared": "$650 - $800 MXN",
+            "priceUsd": "($36 - $44 USD)",
+            "pricePrivate": "$2,600 - $3,400 MXN",
+            "description": "Salida anticipada (06:30 AM) para llegar a Hierve el Agua antes de la llegada de los autobuses masivos. Incluye descenso a pie por el sendero ecológico hasta la base de las cascadas petrificadas de 30m de altura, nado en las pozas con luz dorada matutina y desayuno oaxaqueño tradicional en comunidad de la sierra.",
+            "includes": [
+              "Transporte ágil madrugador con salida preferente desde Co404",
+              "Guía senderista certificado para el descenso a la base de la cascada",
+              "Tiempo exclusivo en las pozas minerales sin aglomeraciones",
+              "Desayuno tradicional con chocolate de agua, pan de yema y memelas",
+              "Parada en taller de telares de pedal en Teotitlán del Valle"
+            ],
+            "excludes": [
+              "Entrada comunitaria a Hierve el Agua ($50 MXN)",
+              "Compras de textiles o mezcales personales",
+              "Propinas"
+            ],
+            "itinerary": [
+              {
+                "time": "06:30 AM",
+                "desc": "Salida puntual desde Co404 Oaxaca."
+              },
+              {
+                "time": "08:15 AM",
+                "desc": "Llegada solitaria a Hierve el Agua con los primeros rayos del sol."
+              },
+              {
+                "time": "08:30 AM",
+                "desc": "Senderismo técnico de descenso a la base de la cascada de carbonato de calcio."
+              },
+              {
+                "time": "10:30 AM",
+                "desc": "Tiempo para nadar en las pozas superiores con vistas panorámicas vírgenes."
+              },
+              {
+                "time": "12:00 PM",
+                "desc": "Desayuno-almuerzo tradicional en comedor comunitario."
+              },
+              {
+                "time": "02:00 PM",
+                "desc": "Visita a maestro tejedor en Teotitlán del Valle."
+              },
+              {
+                "time": "04:00 PM",
+                "desc": "Retorno a Co404 Oaxaca con la tarde libre."
+              }
+            ],
+            "recommendedFor": "Senderistas y fotógrafos que odian las multitudes y quieren disfrutar del agua en soledad y silencio."
           }
         ]
       },
@@ -2861,16 +3504,101 @@ window.CO404_LOCATIONS = {
         "popularityScore": 97,
         "variants": [
           {
+            "id": "monte-alban-arqueologico",
             "name": "Tour Arqueológico Matutino con Guía Especialista",
-            "priceDiff": "$350 - $450 MXN (09:30 - 13:30)",
-            "description": "Transporte ida y vuelta desde el centro y 2.5 hrs de recorrido guiado por la Plaza Principal, la tumba 7 y el museo de sitio. Regreso a tiempo para almorzar en la ciudad.",
-            "recommendedFor": "Nómadas digitales que necesitan trabajar por la tarde."
+            "operatorAgencyId": "oaxaca-viajes-tours",
+            "operatorAgencyName": "Oaxaca Viajes & Tours",
+            "operatorShortName": "Oaxaca Viajes",
+            "badge": "Arqueología Matutina",
+            "priceShared": "$350 - $480 MXN",
+            "priceUsd": "($19 - $26 USD)",
+            "pricePrivate": "$1,300 - $1,700 MXN",
+            "description": "Visita concentrada de medio día a la impresionante capital ceremonial zapoteca en lo alto de la montaña. Incluye transporte redondo y recorrido guiado con arqueólogo certificado por la Gran Plaza, el Juego de Pelota, el Observatorio astronómico y las tumbas sagradas.",
+            "includes": [
+              "Transporte redondo con A/C desde Co404 Oaxaca",
+              "Guía arqueológico bilingüe certificado SECTUR",
+              "Acceso preferente sin filas en taquilla",
+              "Tiempo libre para fotografía panorámica del Valle de Oaxaca"
+            ],
+            "excludes": [
+              "Boleto oficial INAH ($95 MXN, gratuito para maestros/estudiantes nacionales)",
+              "Propinas para el guía",
+              "Almuerzo"
+            ],
+            "itinerary": [
+              {
+                "time": "09:00 AM",
+                "desc": "Recogida en Co404 Oaxaca y traslado ascendente de 25 min."
+              },
+              {
+                "time": "09:30 AM",
+                "desc": "Entrada a Monte Albán y recorrido guiado por la Gran Plaza y los Danzantes."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Tiempo libre para subir a la Plataforma Sur y visitar el museo de sitio."
+              },
+              {
+                "time": "12:45 PM",
+                "desc": "Retorno hacia Oaxaca centro (llegada ~01:30 PM a Co404)."
+              }
+            ],
+            "recommendedFor": "Viajeros que quieren conocer la historia zapoteca sin agobios y regresar a trabajar o comer en Oaxaca."
           },
           {
-            "name": "Circuito Valles del Sur (Monte Albán + Alebrijes + Cuilápam + Barro Negro)",
-            "priceDiff": "$500 - $650 MXN (día completo)",
-            "description": "Combina la mañana en Monte Albán con visita a los talleres de alebrijes en San Martín Tilcajete, el ex-convento dominico de Cuilápam de Guerrero y artesanos de barro negro en Coyotepec.",
-            "recommendedFor": "Amantes de las artesanías populares y la historia colonial."
+            "id": "monte-alban-artesanal-valles",
+            "name": "Circuito Valles del Sur: Monte Albán + Alebrijes Arrazola + Barro Negro",
+            "operatorAgencyId": "operadora-turistica-dainzuu",
+            "operatorAgencyName": "Operadora Turística Dainzúu",
+            "operatorShortName": "Dainzúu",
+            "badge": "Arqueología & Talleres Artesanales",
+            "priceShared": "$550 - $700 MXN",
+            "priceUsd": "($30 - $38 USD)",
+            "pricePrivate": "$1,900 - $2,500 MXN",
+            "description": "Un día entero combinando la grandeza zapoteca con las dos tradiciones artesanales más famosas de Oaxaca: tras recorrer Monte Albán, visitamos el taller maestro de alebrijes de copal en San Antonio Arrazola, el imponente exconvento sin techo de Cuilápam de Guerrero y los talleres de barro negro bruñido en San Bartolo Coyotepec.",
+            "includes": [
+              "Transporte de día completo con chofer profesional",
+              "Guía especializado en historia y artesanías oaxaqueñas",
+              "Visita y demostración en taller de alebrijes en Arrazola",
+              "Entrada al Exconvento Dominico de Cuilápam de Guerrero",
+              "Demostración de torno y bruñido de cuarzo en San Bartolo Coyotepec"
+            ],
+            "excludes": [
+              "Entrada INAH a Monte Albán ($95 MXN)",
+              "Comida en restaurante campestre tradicional",
+              "Compras de artesanías en los talleres"
+            ],
+            "itinerary": [
+              {
+                "time": "08:30 AM",
+                "desc": "Salida desde Co404 Oaxaca hacia la cima de Monte Albán."
+              },
+              {
+                "time": "09:00 AM",
+                "desc": "Visita arqueológica guiada por las pirámides y estelas zapotecas."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Traslado a Arrazola: demostración de talla en madera de copal y pintura de alebrijes."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Visita histórica a la basílica al aire libre de Cuilápam de Guerrero."
+              },
+              {
+                "time": "02:15 PM",
+                "desc": "Comida típica oaxaqueña en Zaachila o San Bartolo."
+              },
+              {
+                "time": "03:45 PM",
+                "desc": "Taller de barro negro en San Bartolo Coyotepec."
+              },
+              {
+                "time": "05:30 PM",
+                "desc": "Retorno a Co404 Oaxaca."
+              }
+            ],
+            "recommendedFor": "Viajeros que buscan una inmersión completa en el arte popular oaxaqueño y monumentos coloniales."
           }
         ]
       },
@@ -3255,7 +3983,7 @@ window.CO404_LOCATIONS = {
         "isExclusive": true,
         "exclusiveAgencyId": "expediciones-sierra-norte",
         "exclusiveAgencyName": "Expediciones Sierra Norte",
-        "exclusiveBadge": "Exclusive Community Ecotourism: Pueblos Mancomunados",
+        "exclusiveBadge": "Tour Comunitario Exclusivo de Pueblos Mancomunados",
         "description": "Operated exclusively by the indigenous Zapotec community cooperative \"Pueblos Mancomunados\", this expedition takes you high into the pristine pine and oak cloud forests of the Sierra Norte at 3,000 meters altitude. Hike through ancient moss-draped trails, cross the thrilling 85-meter-high suspension bridge spanning deep canyons in Benito Juárez, and fly on one of Mexico's longest mountain ziplines in Cuajimoloyas. 100% community-owned and self-governed.",
         "itinerary": [
           {
@@ -3608,7 +4336,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$3,200 - $4,200 MXN",
         "colectivoCost": "N/A (Chef-guided culinary masterclass with full 4-course banquet)",
         "heroImage": "./assets/images/oaxacan_cooking_class.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Taller Moles & Mercado",
         "description": "Immerse yourself in UNESCO-recognized Oaxacan culinary tradition. Start with a sensory walk through Mercado 20 de Noviembre and Central de Abastos alongside a traditional cocinera to select heirloom chiles, fresh quesillo, aromatic herbs, and cacao. Return to a traditional kitchen to roast chiles, press handmade tortillas, and cook velvety Mole Negro or Coloradito from scratch.",
         "itinerary": [
@@ -3669,7 +4397,10 @@ window.CO404_LOCATIONS = {
             "url": "https://toursinoaxaca.com"
           }
         ],
-        "popularityScore": 94
+        "popularityScore": 94,
+        "exclusiveAgencyId": "oaxacan-cooking-studio",
+        "exclusiveAgencyName": "Taller Doña Reyna & Cocina Tradicional",
+        "exclusiveBadge": "Taller Gastronómico Tradicional Exclusivo"
       },
       {
         "id": "grutas-san-sebastian",
@@ -3693,7 +4424,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$3,200 - $4,200 MXN",
         "colectivoCost": "$90 - $130 MXN (Combi via Sola de Vega route)",
         "heroImage": "./assets/images/grutas_san_sebastian.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Espeleología & Ríos",
         "description": "Known as the 'Entrañas de la Tierra' (Guts of the Earth), this underground expedition explores Oaxaca's most spectacular cave system in San Sebastián Sedeño. Equipped with safety helmets and headlamps, traverse underground chambers decorated with giant crystal stalactites, stalagmites, subterranean rivers, and pristine natural mineral pools.",
         "itinerary": [
@@ -3757,7 +4488,10 @@ window.CO404_LOCATIONS = {
             "url": "https://xiadanitours.com"
           }
         ],
-        "popularityScore": 86
+        "popularityScore": 86,
+        "exclusiveAgencyId": "oaxaca-viajes-tours",
+        "exclusiveAgencyName": "Guías Comunitarios de Sedeño",
+        "exclusiveBadge": "Espeleología Comunitaria Exclusiva"
       },
       {
         "id": "mercado-ocotlan-viernes",
@@ -4569,16 +5303,114 @@ window.CO404_LOCATIONS = {
         "popularityScore": 99,
         "variants": [
           {
+            "id": "guatape-clasico-crucero",
             "name": "Pasadía Tradicional en Bus + Crucero + Pueblo de Zócalos",
-            "priceDiff": "Tarifa estándar ($110.000 - $140.000 COP)",
-            "description": "Incluye traslado ida y vuelta en autobús turístico con aire acondicionado, desayuno, almuerzo típico paisa, ascenso a la Piedra del Peñol (escaleras 740 escalones $30.000 COP opcional), crucero en barco con música por la represa y recorrido guiado por el colorido pueblo de los zócalos.",
-            "recommendedFor": "Mejor relación calidad-precio y experiencia completa para colivers."
+            "operatorAgencyId": "protours-medellin",
+            "operatorAgencyName": "ProTours Medellín",
+            "operatorShortName": "ProTours",
+            "badge": "Pasadía Completo en Bus",
+            "priceShared": "$110.000 - $140.000 COP",
+            "priceUsd": "($28 - $35 USD)",
+            "pricePrivate": "$580.000 - $680.000 COP",
+            "description": "El tour más vendido de Antioquia: salida en cómodo autobús turístico con aire acondicionado desde Medellín, desayuno tradicional en ruta, ascenso opcional a la Piedra del Peñol (740 escalones con vista panorámica 360°), crucero en barco con música por la represa y recorrido guiado por el colorido pueblo de los zócalos y la Plazoleta de los Zócalos.",
+            "includes": [
+              "Transporte ida y vuelta en autobús de turismo desde Co404 Laureles",
+              "Desayuno típico antioqueño y almuerzo regional paisa completo",
+              "Paseo en barco crucero por la represa con música y animación",
+              "Visita al pueblo de Guatapé, Calle del Recuerdo y Plazoleta de los Zócalos",
+              "Guía profesional de turismo y tarjeta de asistencia médica"
+            ],
+            "excludes": [
+              "Boleto para subir a la cima de la Piedra del Peñol ($30.000 COP opcional)",
+              "Bebidas alcohólicas y gastos personales",
+              "Propinas voluntarias"
+            ],
+            "itinerary": [
+              {
+                "time": "07:30 AM",
+                "desc": "Recogida en Co404 Laureles hacia el oriente antioqueño."
+              },
+              {
+                "time": "09:00 AM",
+                "desc": "Parada de desayuno típico con arepa de chócolo y quesito en Guarne/Marinilla."
+              },
+              {
+                "time": "10:30 AM",
+                "desc": "Llegada a la Piedra del Peñol: tiempo para ascender los 740 escalones a la cima."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Almuerzo paisa a orillas del embalse."
+              },
+              {
+                "time": "02:15 PM",
+                "desc": "Paseo en barco crucero por las aguas de la represa con vistas a las islas."
+              },
+              {
+                "time": "03:30 PM",
+                "desc": "Recorrido a pie por Guatapé, casas de zócalos artesanales y café de origen."
+              },
+              {
+                "time": "05:30 PM",
+                "desc": "Retorno hacia Medellín (llegada ~07:30 PM a Co404)."
+              }
+            ],
+            "recommendedFor": "Viajeros que quieren la experiencia icónica completa con comida típica y crucero al mejor precio."
           },
           {
+            "id": "guatape-premium-lancha",
             "name": "Guatapé Premium en Lancha Rápida & Deportes Náuticos",
-            "priceDiff": "$220.000 - $350.000 COP",
-            "description": "Transporte en van privada para grupos reducidos, lancha deportiva privada por la represa hacia la Finca La Manuela, kayak o paddle board y tiempo sin afanes.",
-            "recommendedFor": "Grupos de amigos que buscan exclusividad y aventura en el agua."
+            "operatorAgencyId": "aeroturex-medellin",
+            "operatorAgencyName": "Aeroturex / Medellín Adventure",
+            "operatorShortName": "Aeroturex",
+            "badge": "Lancha Privada & Deportes Náuticos",
+            "priceShared": "$200.000 - $260.000 COP",
+            "priceUsd": "($50 - $65 USD)",
+            "pricePrivate": "$850.000 - $1.100.000 COP",
+            "description": "Experiencia premium para grupos reducidos: traslado en van privada, lancha deportiva privada de alta velocidad por los rincones secretos de la represa, visita acuática a las ruinas de Finca La Manuela, tiempo para kayak o paddleboard y almuerzo a la carta sin afanes de grupos grandes.",
+            "includes": [
+              "Transporte en van ejecutiva privada para grupo Co404",
+              "Lancha deportiva rápida privada con piloto y chalecos",
+              "Equipo de kayak o tabla de stand-up paddleboard en la represa",
+              "Almuerzo gourmet en restaurante con vista panorámica al agua",
+              "Visita guiada boutique al pueblo de Guatapé y seguro premium"
+            ],
+            "excludes": [
+              "Ticket de ascenso a la Piedra del Peñol ($30.000 COP)",
+              "Bebidas alcohólicas premium",
+              "Propinas para piloto y chofer"
+            ],
+            "itinerary": [
+              {
+                "time": "08:30 AM",
+                "desc": "Salida sin prisas en van privada desde Co404 Laureles."
+              },
+              {
+                "time": "10:15 AM",
+                "desc": "Ascenso a la Piedra del Peñol antes de la hora pico del mediodía."
+              },
+              {
+                "time": "12:15 PM",
+                "desc": "Abordaje de lancha rápida deportiva privada en muelle exclusivo."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Sesión de kayak/paddleboard y parada en las ruinas históricas de La Manuela."
+              },
+              {
+                "time": "02:30 PM",
+                "desc": "Almuerzo a la carta con trucha arcoíris fresca o corte de carne."
+              },
+              {
+                "time": "04:00 PM",
+                "desc": "Paseo tranquilo por los zócalos de Guatapé."
+              },
+              {
+                "time": "05:30 PM",
+                "desc": "Regreso cómodo en van privada a Co404 (llegada ~07:15 PM)."
+              }
+            ],
+            "recommendedFor": "Grupos de amigos y colivers que prefieren privacidad, deportes acuáticos y cero turismo masivo de bus."
           }
         ]
       },
@@ -4678,16 +5510,100 @@ window.CO404_LOCATIONS = {
         "popularityScore": 98,
         "variants": [
           {
+            "id": "comuna13-graffiti-local",
             "name": "Graffiti Tour Comunitario con Guía Local del Barrio",
-            "priceDiff": "Tarifa voluntaria o guiada ($40.000 - $60.000 COP)",
-            "description": "Caminata guiada por líderes comunitarios nacidos en la Comuna 13. Explicación del conflicto, 'Operación Orión', arte callejero, escaleras eléctricas al aire libre y degustación de paleta de mango biche con limón y sal.",
-            "recommendedFor": "Apoyo directo a la comunidad y relato histórico auténtico de primera mano."
+            "operatorAgencyId": "comuna-13-tours",
+            "operatorAgencyName": "Comuna 13 Tours & Raíces",
+            "operatorShortName": "C13 Raíces",
+            "badge": "Graffiti Tour Comunitario",
+            "priceShared": "$40.000 - $65.000 COP",
+            "priceUsd": "($10 - $16 USD)",
+            "pricePrivate": "$150.000 - $220.000 COP",
+            "description": "La auténtica historia de resiliencia y transformación contada por un residente nacido y criado en la Comuna 13. Caminata guiada por las icónicas escaleras eléctricas al aire libre, descifrado del significado social de los murales de graffiti, espectáculo de hip-hop y degustación de paleta de mango biche tradicional.",
+            "includes": [
+              "Guía nativo de la Comuna 13 acreditado por la comunidad",
+              "Recorrido completo por los 6 tramos de escaleras eléctricas públicas",
+              "Interpretación social e histórica de más de 20 murales de arte urbano",
+              "Paleta tradicional artesanal de mango biche con sal y limón",
+              "Show de baile urbano y freestyle rap en vivo con artistas locales"
+            ],
+            "excludes": [
+              "Transporte hasta la estación San Javier (fácil en Metro Línea B desde Estadio/Laureles $3.500 COP o taxi $15.000 COP)",
+              "Propinas para los jóvenes bailarines de hip-hop",
+              "Compras de souvenirs y ropa de diseñadores locales"
+            ],
+            "itinerary": [
+              {
+                "time": "09:30 AM",
+                "desc": "Punto de encuentro en Estación Metro San Javier o puerta de Co404."
+              },
+              {
+                "time": "10:00 AM",
+                "desc": "Caminata al barrio Las Independencias y ascenso por las escaleras eléctricas."
+              },
+              {
+                "time": "10:45 AM",
+                "desc": "Recorrido por la galería a cielo abierto de murales y miradores sobre Medellín."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Espectáculo de breakdance de la juventud local y pausa para paleta de mango biche."
+              },
+              {
+                "time": "12:15 PM",
+                "desc": "Visita a galerías de arte local y relatos de la Operación Orión y la paz."
+              },
+              {
+                "time": "01:00 PM",
+                "desc": "Cierre del tour con vista al Valle de Aburrá."
+              }
+            ],
+            "recommendedFor": "Viajeros que buscan cultura urbana, impacto social positivo y apoyo directo a artistas locales."
           },
           {
+            "id": "comuna13-breakdance-cafe",
             "name": "Graffiti Tour + Taller de Breakdance & Café de Origen",
-            "priceDiff": "$80.000 - $120.000 COP",
-            "description": "Incluye la caminata histórica completa más una sesión de baile hip hop / breakdance con artistas locales y café de origen en una terraza panorámica con vista a toda la montaña.",
-            "recommendedFor": "Apasionados del arte urbano y vivencias culturales inmersivas."
+            "operatorAgencyId": "comuna-13-tours",
+            "operatorAgencyName": "Comuna 13 Tours & Raíces",
+            "operatorShortName": "C13 Raíces",
+            "badge": "Breakdance & Café de Origen",
+            "priceShared": "$75.000 - $95.000 COP",
+            "priceUsd": "($18 - $24 USD)",
+            "pricePrivate": "$280.000 - $350.000 COP",
+            "description": "Una experiencia inmersiva extendida: además de recorrer los murales y escaleras con el guía comunitario, participas en una sesión interactiva de breakdance y ritmo hip-hop con un crew local, seguido de una cata de café especial de montaña servido en una terraza mirador sobre la comuna.",
+            "includes": [
+              "Todo lo incluido en el Graffiti Tour Comunitario",
+              "Mini-taller interactivo de baile urbano y percusión con crew local",
+              "Degustación guiada de café especial de origen antioqueño en terraza panorámica",
+              "Paseo incluido en el Metrocable Línea J para vistas aéreas de la ladera"
+            ],
+            "excludes": [
+              "Propinas",
+              "Compras de arte o café en grano para llevar"
+            ],
+            "itinerary": [
+              {
+                "time": "09:30 AM",
+                "desc": "Encuentro en Metro San Javier y vuelo inicial en Metrocable Línea J."
+              },
+              {
+                "time": "10:30 AM",
+                "desc": "Recorrido de murales y escaleras eléctricas con guía barrial."
+              },
+              {
+                "time": "11:30 AM",
+                "desc": "Mini-clase práctica de pasos básicos de breakdance y ritmo urbano."
+              },
+              {
+                "time": "12:15 PM",
+                "desc": "Cata de café especial y charla comunitaria en terraza mirador."
+              },
+              {
+                "time": "01:30 PM",
+                "desc": "Finalización con recomendaciones gastronómicas en la zona."
+              }
+            ],
+            "recommendedFor": "Colivers que quieren una experiencia activa, interactuar con los jóvenes locales y disfrutar buen café."
           }
         ]
       },
@@ -5136,7 +6052,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$450,000 - $580,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$25,000 - $35,000 COP (Bus to San Antonio de Prado / Fredonia)",
         "heroImage": "./assets/images/coffee_finca_medellin.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Finca Cafetera Tradicional",
         "description": "Skip generic tourist gift shops and step into a real multi-generational coffee finca nestled in the lush green hills of Fredonia or San Antonio de Prado. Put on a traditional canvas poncho and basket (canasto) to pick ripe red cherries. Walk through wet pulping mills, drying raised beds, and micro-roasting facilities before a guided sensory cupping session led by certified Q-graders explaining acidity, body, and notes.",
         "itinerary": [
@@ -5193,7 +6109,10 @@ window.CO404_LOCATIONS = {
           "paisa-tours-medellin",
           "medellin-day-trips"
         ],
-        "popularityScore": 93
+        "popularityScore": 93,
+        "exclusiveAgencyId": "finca-la-sierra",
+        "exclusiveAgencyName": "Finca Cafetera Tradicional La Sierra",
+        "exclusiveBadge": "Tour Exclusivo Finca Cafetera Semilla a Taza"
       },
       {
         "id": "paragliding-san-felix",
@@ -5220,7 +6139,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$420,000 - $550,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$30,000 - $40,000 COP (Bello bus + San Félix local colectivo)",
         "heroImage": "./assets/images/paragliding_san_felix.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Vuelo Tándem Panorámico",
         "description": "San Félix is one of the world's most dependable tandem paragliding launch ridges thanks to steady thermal updrafts rising from the valley floor. Clip into a comfortable harness with a certified national flight instructor and take three jogging steps off the green ridge to float 1,500 meters above the entire metropolitan expanse of Medellín and northern Antioquia.",
         "itinerary": [
@@ -5288,7 +6207,10 @@ window.CO404_LOCATIONS = {
             "url": "https://tour-medellin.com/tour-parapente"
           }
         ],
-        "popularityScore": 95
+        "popularityScore": 95,
+        "exclusiveAgencyId": "san-felix-parapente",
+        "exclusiveAgencyName": "San Félix Parapente / Fly Colombia",
+        "exclusiveBadge": "Vuelo Tándem Exclusivo con Pilotos Certificados FAI"
       },
       {
         "id": "salto-del-buey-abejorral",
@@ -5315,7 +6237,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$720,000 - $920,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$50,000 - $65,000 COP (Buses to La Ceja / Abejorral from Terminal del Sur)",
         "heroImage": "./assets/images/salto_del_buey.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Cascada 80m & Ferrata",
         "description": "Hidden in the dramatic river gorge dividing La Ceja and Abejorral, Salto del Buey is an imposing 80-meter waterfall plummeting into a roaring natural amphitheater. Experience one of South America's most daring extreme parks: soar on twin 1,000-meter ziplines directly across the open abyss 300 meters above the waterfall spray, and climb the via ferrata anchored into the sheer vertical cliff.",
         "itinerary": [
@@ -5373,7 +6295,10 @@ window.CO404_LOCATIONS = {
           "tours-medallo",
           "ecotours-colombia"
         ],
-        "popularityScore": 88
+        "popularityScore": 88,
+        "exclusiveAgencyId": "ecoparque-los-saltos",
+        "exclusiveAgencyName": "Ecoparque Los Saltos",
+        "exclusiveBadge": "Exclusivo: Vía Ferrata Más Alta de Colombia & Tirolesa"
       },
       {
         "id": "carmen-de-viboral-ceramica",
@@ -5397,7 +6322,7 @@ window.CO404_LOCATIONS = {
         "pricePrivateRange": "$750,000 - $950,000 COP",
         "colectivoCost": "$18,000 - $24,000 COP (Direct bus from Terminal del Norte)",
         "heroImage": "./assets/images/carmen_de_viboral_ceramica.jpg",
-        "isExclusive": false,
+        "isExclusive": true,
         "specializedBadge": "Cerámica Artesanal",
         "description": "Journey into the charming eastern highlands of Antioquia to El Carmen de Viboral, globally renowned for its century-old tradition of hand-painted ceramics. Stroll down the famous 'Calle de las Arcillas', visit active master pottery studios to watch artisans delicately paint traditional floral motifs, and savor traditional Antioquian gastronomy in tranquil mountain squares.",
         "itinerary": [
@@ -5466,7 +6391,10 @@ window.CO404_LOCATIONS = {
             "url": "https://turibuscolombia.com/tour/tour-el-carmen-de-viboral/"
           }
         ],
-        "popularityScore": 86
+        "popularityScore": 86,
+        "exclusiveAgencyId": "ceramicas-el-dorado",
+        "exclusiveAgencyName": "Taller Artesanal Cerámicas El Dorado",
+        "exclusiveBadge": "Taller y Decoración Artesanal de Cerámica Exclusivo"
       },
       {
         "id": "hacienda-napoles-safari",

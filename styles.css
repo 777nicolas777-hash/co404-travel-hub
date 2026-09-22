@@ -2395,4 +2395,321 @@ body {
   color: #B45309;
 }
 
+/* ==========================================================================
+   TOP MODAL VARIANT SELECTOR TABS & DYNAMIC STYLES
+   ========================================================================== */
+.modal-variant-selector-wrap {
+  background: var(--co-sand);
+  border: 1.5px solid var(--co-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+
+.modal-variant-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.variant-selector-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--co-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.variant-count-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--co-wine-light);
+  color: var(--co-wine);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.modal-variant-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.modal-variant-tab {
+  background: var(--co-white);
+  border: 1.5px solid var(--co-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  outline: none;
+}
+
+.modal-variant-tab:hover {
+  border-color: var(--co-terracotta);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.modal-variant-tab.active {
+  border: 2px solid var(--co-wine);
+  background: #FFF5F7;
+  box-shadow: 0 4px 14px rgba(139, 30, 63, 0.12);
+}
+
+.tab-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--co-wine);
+  background: var(--co-wine-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tab-price {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--co-charcoal);
+}
+
+.tab-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--co-charcoal);
+  line-height: 1.25;
+}
+
+.tab-operator {
+  font-size: 0.74rem;
+  color: var(--co-terracotta);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Variant Operator Banner */
+.variant-operator-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #FFF9F5 0%, #FDF2EB 100%);
+  border: 1.5px solid #F3D2C1;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.operator-banner-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.operator-banner-badge {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--co-terracotta);
+  margin-bottom: 3px;
+}
+
+.operator-banner-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--co-charcoal);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.operator-banner-sub {
+  font-size: 0.82rem;
+  color: var(--co-charcoal-sub);
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}
+
+.variant-price-highlight {
+  text-align: right;
+}
+
+.variant-price-highlight .price-val {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--co-wine);
+  line-height: 1.1;
+}
+
+.variant-price-highlight .price-label {
+  font-size: 0.72rem;
+  color: var(--co-charcoal-sub);
+  display: block;
+  margin-top: 2px;
+}
+
+.variant-price-highlight .price-private-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  background: var(--co-sand-alt);
+  border: 1px solid var(--co-border);
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: var(--co-charcoal);
+}
+
+/* ==========================================================================
+   DESTINATION CARD VARIANTS BAR & CHIPS
+   ========================================================================== */
+.card-variants-bar {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--co-border);
+}
+
+.card-variants-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--co-charcoal-sub);
+  display: block;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.card-variants-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.variant-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 0.74rem;
+  border-radius: var(--radius-full);
+  background: var(--co-sand);
+  border: 1px solid var(--co-border);
+  color: var(--co-charcoal);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.variant-chip-btn:hover {
+  background: var(--co-wine-light);
+  border-color: var(--co-wine);
+  color: var(--co-wine);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(139, 30, 63, 0.12);
+}
+
+.chip-variant-name {
+  font-weight: 700;
+}
+
+.chip-operator-tag {
+  font-size: 0.68rem;
+  background: rgba(200, 90, 50, 0.12);
+  color: var(--co-terracotta);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Exclusive single-company tour badges & banners */
+.card-exclusive-banner {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border: 1px solid #F59E0B;
+  color: #92400E;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.74rem;
+  font-weight: 700;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   AGENCY LOCKED VIEW IN WHATSAPP MODAL
+   ========================================================================== */
+.wa-agency-locked-card {
+  background: #F8FAFC;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wa-agency-locked-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.wa-agency-locked-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--co-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wa-agency-locked-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #DCFCE7;
+  color: #166534;
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.wa-agency-locked-address {
+  font-size: 0.78rem;
+  color: var(--co-charcoal-sub);
+}
+
+.wa-agency-locked-note {
+  font-size: 0.72rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+
 

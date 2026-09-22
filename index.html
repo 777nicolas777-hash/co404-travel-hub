@@ -265,16 +265,22 @@
         <button class="btn-close-modal" data-close="modal-whatsapp-dispatcher">&times;</button>
       </div>
       <div class="modal-body">
-        <div class="form-group">
-          <label class="form-label" for="wa-destination-name">Selected Tour / Destination:</label>
+        <div class="form-group" id="wa-tour-field-group">
+          <label class="form-label" for="wa-destination-name" id="wa-tour-field-label">Selected Tour / Destination:</label>
           <input type="text" id="wa-destination-name" class="form-control" readonly>
+          <select id="wa-tour-select" class="form-control" style="display: none;">
+            <!-- Populated dynamically in agency mode -->
+          </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="wa-agency-field-group">
           <label class="form-label" for="wa-agency-select" id="wa-agency-select-label">Select Tour Agency:</label>
           <select id="wa-agency-select" class="form-control">
             <!-- Injected dynamically -->
           </select>
+          <div id="wa-agency-locked-info" class="wa-agency-locked-card" style="display: none;">
+            <!-- Injected dynamically in agency mode -->
+          </div>
           <div id="wa-agency-links-preview" class="agency-links-row" style="margin-top: 8px; padding-top: 0; border: none;"></div>
         </div>
 
