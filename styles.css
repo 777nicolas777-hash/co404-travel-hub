@@ -936,6 +936,118 @@ body {
   color: var(--co-green);
 }
 
+/* Group Trip Management & Actions */
+.trip-header-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.trip-mgmt-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-trip-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  font-size: 0.74rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  color: var(--co-charcoal-sub);
+  background-color: var(--co-sand-alt);
+  border: 1px solid var(--co-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-trip-action:hover {
+  background-color: var(--co-sand);
+  border-color: var(--co-terracotta);
+  color: var(--co-terracotta);
+}
+
+.btn-trip-action.btn-trip-danger:hover {
+  background-color: #FEE2E2;
+  border-color: #FCA5A5;
+  color: #DC2626;
+}
+
+.trip-card-footer-buttons {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-outline {
+  background-color: var(--co-white);
+  color: var(--co-charcoal);
+  border: 1.5px solid var(--co-border);
+}
+
+.btn-outline:hover {
+  background-color: var(--co-sand-alt);
+  border-color: var(--co-wine);
+  color: var(--co-wine);
+}
+
+.invite-summary-card {
+  background: #F8FAF6;
+  border: 1px solid #DCE6D8;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.invite-preview-box {
+  background-color: var(--co-sand);
+  border: 1px solid var(--co-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--co-charcoal);
+  white-space: pre-wrap;
+  max-height: 150px;
+  overflow-y: auto;
+  font-family: var(--font-sans);
+}
+
+.btn-copy-preview-btn {
+  background: none;
+  border: none;
+  color: var(--co-terracotta);
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  transition: background 0.2s ease;
+}
+
+.btn-copy-preview-btn:hover {
+  background-color: var(--co-terracotta-light);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .trip-card-footer-buttons {
+    grid-template-columns: 1fr;
+  }
+  .trip-header-side {
+    align-items: flex-start;
+    margin-top: 6px;
+  }
+}
+
 /* Agencies Directory View */
 .agencies-grid {
   display: grid;

@@ -1835,9 +1835,21 @@ document.addEventListener('DOMContentLoaded', () => {
       container.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: var(--co-white); border-radius: var(--radius-lg); border: 1px solid var(--co-border);">
           <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--co-wine); margin-bottom: 8px;">No open group trips in ${locationData.name}</h3>
-          <p style="color: var(--co-charcoal-sub); font-size: 0.9rem;">Be the first to propose a van split outing for fellow colivers!</p>
+          <p style="color: var(--co-charcoal-sub); font-size: 0.9rem; margin-bottom: 18px;">All community van trips for this location have been completed or removed. Launch a new one or restore default suggestions!</p>
+          <div style="display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+            <button id="btn-empty-create-trip" class="btn btn-primary">
+              Launch New Group Trip
+            </button>
+            <button id="btn-empty-restore-trips" class="btn btn-secondary">
+              🔄 Restore Default Community Trips
+            </button>
+          </div>
         </div>
       `;
+      const btnEmptyCreate = document.getElementById('btn-empty-create-trip');
+      if (btnEmptyCreate) btnEmptyCreate.addEventListener('click', openCreateTripModal);
+      const btnEmptyRestore = document.getElementById('btn-empty-restore-trips');
+      if (btnEmptyRestore) btnEmptyRestore.addEventListener('click', restoreDefaultTrips);
       return;
     }
 
@@ -1854,12 +1866,24 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <div class="trip-card" data-trip-id="${trip.id}">
           <div class="trip-card-header">
-            <div>
+            <div style="flex: 1; min-width: 0;">
               <span class="trip-destination-pill">${destName}</span>
               <h3 class="trip-title">${trip.title}</h3>
               <div class="trip-creator">Proposed by: <strong>${trip.creator}</strong></div>
             </div>
-            <span class="trip-date-pill">📅 ${trip.date}</span>
+            <div class="trip-header-side">
+              <span class="trip-date-pill">📅 ${trip.date}</span>
+              <div class="trip-mgmt-actions">
+                <button class="btn-trip-action btn-edit-trip" data-trip-id="${trip.id}" title="Edit Trip Details">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                  <span>Edit</span>
+                </button>
+                <button class="btn-trip-action btn-trip-danger btn-delete-trip" data-trip-id="${trip.id}" title="Delete Trip from Board">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                  <span>Delete</span>
+                </button>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -1895,17 +1919,48 @@ document.addEventListener('DOMContentLoaded', () => {
             📍 ${trip.pickupNote || trip.notes || `Pick-up at ${locationData.name} entrance`}
           </div>
 
-          <button class="btn ${isFull ? 'btn-secondary' : 'btn-wine'} btn-join-trip" data-trip-id="${trip.id}" ${isFull ? 'disabled' : ''} style="width: 100%;">
-            ${isFull ? 'Trip Full' : 'Join this Group Trip'}
-          </button>
+          <div class="trip-card-footer-buttons">
+            <button class="btn ${isFull ? 'btn-secondary' : 'btn-wine'} btn-join-trip" data-trip-id="${trip.id}" ${isFull ? 'disabled' : ''}>
+              ${isFull ? 'Trip Full' : 'Join this Group Trip'}
+            </button>
+            <button class="btn btn-outline btn-invite-trip" data-trip-id="${trip.id}" title="Invite roomies via email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Invite via Email
+            </button>
+          </div>
         </div>
       `;
     }).join('');
 
+    // Attach join listeners
     container.querySelectorAll('.btn-join-trip').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const tripId = e.currentTarget.dataset.tripId;
         openJoinTripModal(tripId);
+      });
+    });
+
+    // Attach edit listeners
+    container.querySelectorAll('.btn-edit-trip').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const tripId = e.currentTarget.dataset.tripId;
+        openEditTripModal(tripId);
+      });
+    });
+
+    // Attach delete listeners
+    container.querySelectorAll('.btn-delete-trip').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const tripId = e.currentTarget.dataset.tripId;
+        openDeleteTripModal(tripId);
+      });
+    });
+
+    // Attach invite listeners
+    container.querySelectorAll('.btn-invite-trip').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const tripId = e.currentTarget.dataset.tripId;
+        openInviteTripModal(tripId);
       });
     });
   }
@@ -2006,6 +2061,257 @@ document.addEventListener('DOMContentLoaded', () => {
       renderGroupTrips();
       updateTabCounters();
       showToast('New group trip published on Co404 board!');
+    });
+  }
+
+  // =========================================================================
+  // EDIT GROUP TRIP LOGIC
+  // =========================================================================
+  function openEditTripModal(tripId) {
+    const trip = groupTrips.find(t => t.id === tripId);
+    if (!trip) return;
+
+    const destSelect = document.getElementById('edit-trip-dest-select');
+    if (destSelect) {
+      destSelect.innerHTML = destinations.map(d => `
+        <option value="${d.id}" ${d.id === trip.destinationId ? 'selected' : ''}>${d.name} (${d.distanceKm} km)</option>
+      `).join('');
+    }
+
+    document.getElementById('edit-trip-id').value = trip.id;
+    document.getElementById('edit-trip-title-input').value = trip.title || '';
+    document.getElementById('edit-trip-date-input').value = trip.date || '';
+    document.getElementById('edit-trip-pax-target').value = trip.targetPax || trip.maxSeats || 8;
+
+    // Parse creator name and room
+    let creatorName = 'Organizer';
+    let creatorRoom = 'Co404';
+    if (trip.currentMembers && trip.currentMembers.length > 0) {
+      creatorName = trip.currentMembers[0].name || '';
+      creatorRoom = trip.currentMembers[0].colivingRoom || '';
+    } else if (trip.creator) {
+      const match = trip.creator.match(/^(.*?)\s*\((.*?)\)$/);
+      if (match) {
+        creatorName = match[1].trim();
+        creatorRoom = match[2].trim();
+      } else {
+        creatorName = trip.creator.trim();
+      }
+    }
+    document.getElementById('edit-trip-creator-name').value = creatorName;
+    document.getElementById('edit-trip-creator-room').value = creatorRoom;
+
+    const costLabel = document.getElementById('edit-trip-cost-label');
+    if (costLabel) costLabel.textContent = `Estimated Total Van Cost (${locationData.currency}):`;
+    document.getElementById('edit-trip-cost-total').value = trip.estimatedCostTotal || trip.vanCostTotal || (locationData.currency === 'COP' ? 550000 : 3000);
+    document.getElementById('edit-trip-notes-input').value = trip.pickupNote || trip.notes || '';
+
+    openModal('modal-edit-trip');
+  }
+
+  const formEditTrip = document.getElementById('form-edit-trip');
+  if (formEditTrip) {
+    formEditTrip.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const tripId = document.getElementById('edit-trip-id').value;
+      const trip = groupTrips.find(t => t.id === tripId);
+      if (!trip) return;
+
+      const destId = document.getElementById('edit-trip-dest-select').value;
+      const title = document.getElementById('edit-trip-title-input').value.trim();
+      const date = document.getElementById('edit-trip-date-input').value.trim();
+      const pax = parseInt(document.getElementById('edit-trip-pax-target').value, 10) || 8;
+      const creatorName = document.getElementById('edit-trip-creator-name').value.trim();
+      const creatorRoom = document.getElementById('edit-trip-creator-room').value.trim();
+      const costTotal = parseInt(document.getElementById('edit-trip-cost-total').value, 10) || trip.estimatedCostTotal;
+      const notes = document.getElementById('edit-trip-notes-input').value.trim();
+
+      trip.destinationId = destId;
+      trip.title = title;
+      trip.date = date;
+      trip.targetPax = Math.max(pax, (trip.currentMembers || []).length);
+      trip.creator = `${creatorName} (${creatorRoom || 'Co404'})`;
+      trip.estimatedCostTotal = costTotal;
+      trip.pickupNote = notes;
+
+      if (trip.currentMembers && trip.currentMembers.length > 0) {
+        trip.currentMembers[0].name = creatorName;
+        trip.currentMembers[0].colivingRoom = creatorRoom || 'Co404';
+        trip.currentMembers[0].role = 'Organizer';
+      }
+
+      localStorage.setItem('co404_group_trips_' + currentLocationId, JSON.stringify(groupTrips));
+      closeModal('modal-edit-trip');
+      renderGroupTrips();
+      showToast('Group trip updated successfully!');
+    });
+  }
+
+  // =========================================================================
+  // DELETE GROUP TRIP LOGIC
+  // =========================================================================
+  let pendingDeleteTripId = null;
+
+  function openDeleteTripModal(tripId) {
+    const trip = groupTrips.find(t => t.id === tripId);
+    if (!trip) return;
+    pendingDeleteTripId = tripId;
+    const titleEl = document.getElementById('delete-trip-title');
+    if (titleEl) titleEl.textContent = `"${trip.title}"`;
+    openModal('modal-delete-trip');
+  }
+
+  const btnConfirmDeleteTrip = document.getElementById('btn-confirm-delete-trip');
+  if (btnConfirmDeleteTrip) {
+    btnConfirmDeleteTrip.addEventListener('click', () => {
+      if (!pendingDeleteTripId) return;
+      groupTrips = groupTrips.filter(t => t.id !== pendingDeleteTripId);
+      localStorage.setItem('co404_group_trips_' + currentLocationId, JSON.stringify(groupTrips));
+      pendingDeleteTripId = null;
+      closeModal('modal-delete-trip');
+      renderGroupTrips();
+      updateTabCounters();
+      showToast('Group trip removed from Co404 board.');
+    });
+  }
+
+  // Restore Default Trips
+  function restoreDefaultTrips() {
+    groupTrips = [...(locationData.groupTrips || locationData.defaultGroupTrips || [])];
+    localStorage.setItem('co404_group_trips_' + currentLocationId, JSON.stringify(groupTrips));
+    renderGroupTrips();
+    updateTabCounters();
+    showToast('Default group trips restored.');
+  }
+
+  // =========================================================================
+  // INVITE VIA EMAIL LOGIC
+  // =========================================================================
+  let activeInviteTrip = null;
+
+  function openInviteTripModal(tripId) {
+    const trip = groupTrips.find(t => t.id === tripId);
+    if (!trip) return;
+    activeInviteTrip = trip;
+
+    document.getElementById('invite-trip-id').value = tripId;
+    const dest = destinations.find(d => d.id === trip.destinationId);
+    const destName = dest ? dest.name : trip.destinationName || trip.title;
+    const count = (trip.currentMembers || []).length;
+    const target = trip.targetPax || trip.maxSeats || 8;
+    const costPerPerson = Math.round((trip.estimatedCostTotal || trip.vanCostTotal || 3000) / Math.max(1, count));
+    const spotsLeft = Math.max(0, target - count);
+
+    // Summary Card
+    const summaryCard = document.getElementById('invite-trip-summary-card');
+    if (summaryCard) {
+      summaryCard.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
+          <div>
+            <span class="trip-destination-pill" style="margin-bottom: 6px; display: inline-block;">${destName}</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--co-wine); margin: 2px 0;">${trip.title}</h4>
+            <div style="font-size: 0.82rem; color: var(--co-charcoal-sub);">📅 ${trip.date} &bull; 📍 ${trip.pickupNote || locationData.name}</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.74rem; color: var(--co-charcoal-sub); font-weight: 600;">Current Split Rate</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: var(--co-green);">${formatCurrencyValue(costPerPerson, locationData.currency)} <span style="font-size: 0.75rem; font-weight: 500;">/ person</span></div>
+            <div style="font-size: 0.76rem; color: var(--co-terracotta); font-weight: 700;">${spotsLeft > 0 ? `${spotsLeft} spots available` : 'Trip Full'}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Default sender name
+    const senderInput = document.getElementById('invite-sender-name');
+    if (senderInput && !senderInput.value) {
+      senderInput.value = 'Co404 Roomie';
+    }
+
+    updateInvitePreview();
+    openModal('modal-invite-trip');
+  }
+
+  function generateInviteContent() {
+    if (!activeInviteTrip) return { subject: '', body: '' };
+    const trip = activeInviteTrip;
+    const dest = destinations.find(d => d.id === trip.destinationId);
+    const destName = dest ? dest.name : trip.destinationName || trip.title;
+    const count = (trip.currentMembers || []).length;
+    const target = trip.targetPax || trip.maxSeats || 8;
+    const costPerPerson = Math.round((trip.estimatedCostTotal || trip.vanCostTotal || 3000) / Math.max(1, count));
+    const spotsLeft = Math.max(0, target - count);
+
+    const senderName = (document.getElementById('invite-sender-name')?.value || 'A Co404 Roomie').trim();
+    const senderRoom = (document.getElementById('invite-sender-room')?.value || '').trim();
+    const personalNote = (document.getElementById('invite-personal-note')?.value || '').trim();
+    const fromLine = senderRoom ? `${senderName} (${senderRoom})` : senderName;
+
+    const subject = `Join our Co404 van trip to ${destName}! 🚐`;
+    const body = `Hi there!
+
+I'd love to invite you to join our Co404 community group van trip:
+
+🚐 Trip: ${trip.title}
+📍 Destination: ${destName}
+📅 Departure: ${trip.date}
+👥 Group: ${count} of ${target} signed up (${spotsLeft > 0 ? `${spotsLeft} spots left` : 'trip full'})
+💵 Current Split Cost: ~${formatCurrencyValue(costPerPerson, locationData.currency)} per person (Total van: ${formatCurrencyValue(trip.estimatedCostTotal || trip.vanCostTotal || 3000, locationData.currency)})
+📍 Pick-up: ${trip.pickupNote || `Co404 ${locationData.city}`}
+${personalNote ? `\nNote from ${senderName}: "${personalNote}"\n` : ''}
+You can check out the details and sign up directly on our Co404 Travel Hub:
+https://co404travelhub.vercel.app
+
+Looking forward to traveling together!
+-${fromLine}`;
+
+    return { subject, body };
+  }
+
+  function updateInvitePreview() {
+    const previewBox = document.getElementById('invite-preview-box');
+    if (!previewBox) return;
+    const { subject, body } = generateInviteContent();
+    previewBox.textContent = `Subject: ${subject}\n\n${body}`;
+  }
+
+  // Attach dynamic preview listeners
+  ['invite-sender-name', 'invite-sender-room', 'invite-personal-note'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', updateInvitePreview);
+  });
+
+  // Form invite submit (Send via Email App mailto)
+  const formInviteTrip = document.getElementById('form-invite-trip');
+  if (formInviteTrip) {
+    formInviteTrip.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('invite-email-input').value.trim();
+      if (!email) return;
+
+      const { subject, body } = generateInviteContent();
+      const mailtoUri = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoUri;
+      showToast(`Opening your email app to invite ${email}...`);
+      closeModal('modal-invite-trip');
+    });
+  }
+
+  // Copy invite text button
+  const btnCopyInviteText = document.getElementById('btn-copy-invite-text');
+  if (btnCopyInviteText) {
+    btnCopyInviteText.addEventListener('click', () => {
+      const { subject, body } = generateInviteContent();
+      const fullText = `Subject: ${subject}\n\n${body}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullText).then(() => {
+          showToast('Invitation copied to clipboard! Ready to paste into email or chat.');
+        }).catch(() => {
+          showToast('Failed to copy. Please copy directly from preview.');
+        });
+      } else {
+        showToast('Clipboard not supported in this browser.');
+      }
     });
   }
 

@@ -569,6 +569,181 @@
     </div>
   </div>
 
+  <!-- MODAL: EDIT GROUP TRIP -->
+  <div id="modal-edit-trip" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3>Edit Co404 Group Trip</h3>
+            <span class="modal-header-sub">Update destination, departure, capacity or van costs</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" data-close="modal-edit-trip">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-trip">
+          <input type="hidden" id="edit-trip-id">
+
+          <div class="form-group">
+            <label class="form-label" for="edit-trip-dest-select">Destination:</label>
+            <select id="edit-trip-dest-select" class="form-control" required>
+              <!-- Injected dynamically -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-trip-title-input">Trip Title:</label>
+            <input type="text" id="edit-trip-title-input" class="form-control" placeholder="e.g. Private van to Sumidero Canyon" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="edit-trip-date-input">Departure Date / Time:</label>
+              <input type="text" id="edit-trip-date-input" class="form-control" placeholder="e.g. Saturday, 08:30 AM" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-trip-pax-target">Target Group Size (pax):</label>
+              <input type="number" id="edit-trip-pax-target" class="form-control" min="2" max="20" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="edit-trip-creator-name">Organizer Name:</label>
+              <input type="text" id="edit-trip-creator-name" class="form-control" placeholder="e.g. Sarah M." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-trip-creator-room">Co404 Room / Role:</label>
+              <input type="text" id="edit-trip-creator-room" class="form-control" placeholder="e.g. Room 12 / Volunteer" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-trip-cost-total" id="edit-trip-cost-label">Estimated Total Van Cost:</label>
+            <input type="number" id="edit-trip-cost-total" class="form-control" step="100" required>
+            <span style="font-size: 0.78rem; color: var(--co-charcoal-sub);">The cost per person automatically updates across all signed-up colivers.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-trip-notes-input">Departure Point &amp; Notes:</label>
+            <input type="text" id="edit-trip-notes-input" class="form-control" placeholder="e.g. Departing from Co404 courtyard">
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 14px;">
+            <button type="button" class="btn btn-secondary" data-close="modal-edit-trip">Cancel</button>
+            <button type="submit" class="btn btn-primary" style="flex: 2;">Save Trip Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: DELETE GROUP TRIP CONFIRMATION -->
+  <div id="modal-delete-trip" class="modal-overlay">
+    <div class="modal-container" style="max-width: 460px;">
+      <div class="modal-header">
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap" style="background-color: #FEE2E2; border-color: #FCA5A5;">
+            <span style="font-size: 1.2rem;">🗑️</span>
+          </div>
+          <div>
+            <h3>Delete Group Trip</h3>
+            <span class="modal-header-sub">Remove van split from board</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" data-close="modal-delete-trip">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.92rem; color: var(--co-charcoal); margin-bottom: 12px;">
+          Are you sure you want to remove <strong id="delete-trip-title" style="color: var(--co-wine);"></strong> from the Co404 board?
+        </p>
+        <div style="background-color: #FEF2F2; border: 1px solid #FEE2E2; border-radius: var(--radius-sm); padding: 12px 14px; font-size: 0.82rem; color: #991B1B; margin-bottom: 18px;">
+          ⚠️ <strong>Note:</strong> This action will delete the trip posting and all signed-up spots for this outing.
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" data-close="modal-delete-trip">Keep Trip</button>
+          <button type="button" id="btn-confirm-delete-trip" class="btn" style="background-color: #DC2626; color: #FFFFFF;">
+            🗑️ Yes, Delete Trip
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: INVITE VIA EMAIL -->
+  <div id="modal-invite-trip" class="modal-overlay">
+    <div class="modal-container" style="max-width: 540px;">
+      <div class="modal-header">
+        <div class="modal-header-brand">
+          <div class="modal-logo-wrap">
+            <img src="assets/co404_logo.webp" alt="Co404" class="modal-logo-img">
+          </div>
+          <div>
+            <h3>Invite to Group Trip</h3>
+            <span class="modal-header-sub">Send an email invite or share link with roomies</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" data-close="modal-invite-trip">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="invite-trip-id">
+
+        <!-- Trip Summary Card -->
+        <div id="invite-trip-summary-card" class="invite-summary-card">
+          <!-- Injected via app.js -->
+        </div>
+
+        <form id="form-invite-trip">
+          <div class="form-group">
+            <label class="form-label" for="invite-email-input">Recipient's Email Address:</label>
+            <input type="email" id="invite-email-input" class="form-control" placeholder="roomie@example.com" required>
+            <span style="font-size: 0.76rem; color: var(--co-charcoal-sub);">Enter the email address of the person you want to invite.</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="invite-sender-name">Your Name (From):</label>
+              <input type="text" id="invite-sender-name" class="form-control" placeholder="e.g. Alex" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="invite-sender-room">Your Room / Role:</label>
+              <input type="text" id="invite-sender-room" class="form-control" placeholder="e.g. Room 104">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="invite-personal-note">Personal Note (Optional):</label>
+            <textarea id="invite-personal-note" class="form-control" rows="2" placeholder="e.g. Hey! We have a couple seats open in our private van this weekend, come along!"></textarea>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label class="form-label" style="margin-bottom: 0;">Email Preview:</label>
+              <button type="button" id="btn-copy-invite-text" class="btn-copy-preview-btn">
+                📋 Copy Message &amp; Link
+              </button>
+            </div>
+            <div id="invite-preview-box" class="invite-preview-box">
+              <!-- Live preview injected via app.js -->
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 16px;">
+            <button type="button" class="btn btn-secondary" data-close="modal-invite-trip">Close</button>
+            <button type="submit" id="btn-send-email-mailto" class="btn btn-primary" style="flex: 2; background-color: var(--co-wine);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Send via Email App
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- Co404 Hospitality & Coliving Footer -->
   <footer class="app-footer">
     <div class="footer-container">
