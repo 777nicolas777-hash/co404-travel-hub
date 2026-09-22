@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/webp" href="assets/co404_logo.webp">
   <link rel="apple-touch-icon" href="assets/co404_logo.png">
-  <link rel="stylesheet" href="styles.css?v=20260921_v3">
+  <link rel="stylesheet" href="styles.css?v=20260921_v5">
 </head>
 <body>
 
@@ -133,8 +133,8 @@
             <input type="text" id="destination-search-input" class="search-input" placeholder="Search destinations, ruins, waterfalls, agencies, or tags (e.g. Sumidero, boat, textiles, canyon)..." aria-label="Search destinations, ruins, waterfalls, agencies">
           </div>
           <select id="sort-destinations-select" class="sort-select" aria-label="Sort destinations catalog">
-            <option value="recommended">Recommended for Co404</option>
-            <option value="distance-asc">Closest first (Lowest km)</option>
+            <option value="distance-asc" selected>Closest first (Lowest km)</option>
+            <option value="recommended">Popularity & Co404 Recommended</option>
             <option value="distance-desc">Furthest first (Expeditions)</option>
             <option value="price-asc">Lowest Price</option>
           </select>
@@ -196,6 +196,10 @@
           </button>
         </div>
 
+        <div id="van-benchmarks-container" style="margin-bottom: 24px;">
+          <!-- Injected via app.js -->
+        </div>
+
         <div id="trips-grid" class="trips-grid">
           <!-- Injected via app.js -->
         </div>
@@ -213,6 +217,9 @@
           <h2 id="colectivos-banner-title">Public Colectivo & DIY Transit Guide</h2>
           <p id="colectivos-banner-subtitle">Travel like a local for $1 - $2 USD ($15 - $40 MXN). Exact departure stations, windshield signs, schedules, and safety tips for nearby destinations.</p>
         </div>
+      </div>
+      <div id="taxi-directory-container" style="margin-bottom: 24px;">
+        <!-- Injected via app.js -->
       </div>
       <div id="colectivos-list">
         <!-- Injected via app.js -->
@@ -561,7 +568,7 @@
   <!-- Toast Notification Feedback -->
   <div id="toast-message" style="position: fixed; bottom: 24px; right: 24px; background: var(--co-charcoal); color: var(--co-white); padding: 12px 20px; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; box-shadow: var(--shadow-pop); transform: translateY(100px); opacity: 0; transition: all 0.3s ease; z-index: 2000;"></div>
 
-  <script src="js/tours_data.js?v=20260921_v3"></script>
-  <script src="js/app.js?v=20260921_v3"></script>
+  <script src="js/tours_data.js?v=20260921_v5"></script>
+  <script src="js/app.js?v=20260921_v5"></script>
 </body>
 </html>

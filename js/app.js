@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentTab = 'destinations';
   let currentCategory = 'all';
   let searchQuery = '';
-  let currentSort = 'recommended';
+  let currentSort = 'distance-asc';
   let currentCurrency = locationData.currency || 'MXN';
 
   // Currency select dropdown sync
@@ -100,6 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Location select dropdown sync
   const locationSelect = document.getElementById('location-select');
   if (locationSelect) locationSelect.value = currentLocationId;
+
+  // Sort select dropdown sync
+  const sortSelect = document.getElementById('sort-destinations-select');
+  if (sortSelect) sortSelect.value = currentSort;
 
   // =========================================================================
   // MULTI-CURRENCY CONVERSION ENGINE (MXN, COP, USD, EUR)
@@ -375,7 +379,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Sort
-    if (currentSort === 'distance-asc') {
+    if (currentSort === 'recommended') {
+      filtered.sort((a, b) => (b.popularityScore || 0) - (a.popularityScore || 0));
+    } else if (currentSort === 'distance-asc') {
       filtered.sort((a, b) => a.distanceKm - b.distanceKm);
     } else if (currentSort === 'distance-desc') {
       filtered.sort((a, b) => b.distanceKm - a.distanceKm);
@@ -405,6 +411,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const primaryTag = (d.tags && d.tags[0]) || locationData.city;
       const formattedPrice = formatPriceString(d.priceSharedRange, locationData.currency);
       const formattedColectivo = formatPriceString((d.colectivoCost || '').split('(')[0].trim(), locationData.currency);
+
+      // Split main price and secondary currency info
+      let mainPrice = formattedPrice;
+      let subPrice = '';
+      const parenIdx = formattedPrice.indexOf('(');
+      if (parenIdx > -1) {
+        mainPrice = formattedPrice.substring(0, parenIdx).trim();
+        subPrice = formattedPrice.substring(parenIdx).trim();
+      }
 
       // Exclusivity badge or specialty badge
       let badgeHtml = '';
@@ -452,11 +467,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-pricing-row">
               <div class="price-box">
                 <span class="price-title">Shared Tour</span>
-                <span class="price-amount">${formattedPrice}</span>
+                <div class="price-amount">${mainPrice}</div>
+                ${subPrice ? `<div class="price-sub">${subPrice}</div>` : ''}
               </div>
               <div class="price-box" style="text-align: right;">
                 <span class="price-title">Colectivo / DIY</span>
-                <span style="font-size: 0.88rem; font-weight: 700; color: var(--co-green);">${formattedColectivo}</span>
+                <div class="price-diy">${formattedColectivo}</div>
               </div>
             </div>
 
@@ -511,9 +527,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sort select
-  const sortSelect = document.getElementById('sort-destinations-select');
+  // Sort select listener
   if (sortSelect) {
+    sortSelect.value = currentSort;
     sortSelect.addEventListener('change', (e) => {
       currentSort = e.target.value;
       renderDestinations();
@@ -606,6 +622,38 @@ document.addEventListener('DOMContentLoaded', () => {
             <p style="font-size: 0.77rem; color: var(--co-charcoal-sub); margin: 8px 0 0 0; line-height: 1.35;">
               * Precios extraídos de las páginas web públicas de las agencias. Los miembros de Co404 pueden cotizar tarifas especiales por volumen o grupo vía WhatsApp.
             </p>
+          </div>
+        `;
+      })()}
+
+      ${(() => {
+        if (!dest.variants || dest.variants.length === 0) return '';
+        return `
+          <div class="tour-variants-section">
+            <div class="tour-variants-header">
+              <div class="tour-variants-title">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                Modalidades y Variantes hacia este Destino
+              </div>
+              <span class="variants-count-badge">${dest.variants.length} modalidades</span>
+            </div>
+            <div class="tour-variants-grid">
+              ${dest.variants.map((v, i) => `
+                <div class="tour-variant-card">
+                  <div class="tour-variant-top">
+                    <div class="tour-variant-name">
+                      <span class="variant-pill">Opción ${i + 1}</span>
+                      <strong>${v.name}</strong>
+                    </div>
+                    <span class="variant-cost-badge">${v.priceDiff}</span>
+                  </div>
+                  <p class="tour-variant-desc">${v.description}</p>
+                  <div class="tour-variant-fit">
+                    <span class="fit-label">Ideal para:</span> ${v.recommendedFor}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
           </div>
         `;
       })()}
@@ -748,12 +796,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('wa-destination-name').value = dest.name;
 
+    // Filter agencies: ONLY show agencies that actually operate this tour!
+    const validAgencyIds = new Set([
+      ...(dest.bestAgencies || []),
+      ...((dest.agencyPublishedPrices || []).map(p => p.agencyId)),
+      ...(dest.exclusiveAgencyId ? [dest.exclusiveAgencyId] : [])
+    ]);
+
+    let availableAgencies = agencies.filter(a => validAgencyIds.has(a.id) || a.isCustom);
+
+    // If preselected agency was specified, make sure it's present
+    if (preselectedAgencyId && !availableAgencies.some(a => a.id === preselectedAgencyId)) {
+      const preAgency = agencies.find(a => a.id === preselectedAgencyId);
+      if (preAgency) availableAgencies.unshift(preAgency);
+    }
+
+    // Safety fallback: if somehow no agencies match directly, match by specialties
+    if (availableAgencies.length === 0) {
+      availableAgencies = agencies.filter(a => {
+        return (a.specialties || []).some(s => 
+          dest.name.toLowerCase().includes(s.toLowerCase()) || 
+          s.toLowerCase().includes(dest.name.toLowerCase()) ||
+          (dest.category && s.toLowerCase().includes(dest.category.toLowerCase()))
+        );
+      });
+      if (availableAgencies.length === 0) {
+        availableAgencies = agencies;
+      }
+    }
+
     const agencyLabel = document.getElementById('wa-agency-select-label');
-    if (agencyLabel) agencyLabel.textContent = `Select Tour Agency in ${locationData.name}:`;
+    if (agencyLabel) {
+      agencyLabel.textContent = `Select Agency offering this tour (${availableAgencies.length} verified):`;
+    }
 
     // Populate agency dropdown
     const agencySelect = document.getElementById('wa-agency-select');
-    agencySelect.innerHTML = agencies.map(a => {
+    agencySelect.innerHTML = availableAgencies.map(a => {
       const isPreselected = preselectedAgencyId ? (a.id === preselectedAgencyId) : false;
       const customPrefix = a.isCustom ? '⭐ [Custom] ' : '';
       const locTag = a.address ? a.address.split(',')[0] : locationData.city;
@@ -1290,6 +1369,82 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('trips-grid');
     if (!container) return;
 
+    // Render verified van rental benchmarks
+    const vanContainer = document.getElementById('van-benchmarks-container');
+    if (vanContainer && locationData.vanRentalBenchmarks) {
+      const vb = locationData.vanRentalBenchmarks;
+      vanContainer.innerHTML = `
+        <div class="van-benchmarks-card">
+          <div class="van-benchmarks-header">
+            <div>
+              <span class="van-badge">🚐 Tarifas Reales Verificadas de Vans con Chofer (${locationData.city})</span>
+              <h3 class="van-title">Renta de Camionetas Privadas con Conductor para Grupos Co404</h3>
+              <p class="van-subtitle">Valores recopilados directamente de páginas web y agencias de vans con chofer certificado, gasolina, seguro de viajero y casetas:</p>
+            </div>
+          </div>
+          <div class="van-providers-grid">
+            ${vb.providers.map(p => {
+              const waText = encodeURIComponent(`¡Hola! 👋 Les escribo desde ${locationData.name} (${locationData.city}). Quisiéramos consultar disponibilidad y cotización de una van con chofer para un grupo de huéspedes/colivers de Co404.`);
+              return `
+                <div class="van-provider-item">
+                  <div class="van-provider-head">
+                    <div>
+                      <strong class="van-provider-name">${p.name}</strong>
+                      <div class="van-fleet-tag">Capacidad: <strong>${p.fleet}</strong></div>
+                    </div>
+                    ${p.website ? `<a href="${p.website}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.72rem; padding: 4px 8px;">Web Oficial ↗</a>` : ''}
+                  </div>
+                  
+                  <div class="van-rates-row">
+                    <div class="van-rate-box">
+                      <span class="van-rate-label">Ruta Corta / Local:</span>
+                      <span class="van-rate-val">${formatCurrencyValue(p.localDayRate, locationData.currency)}</span>
+                    </div>
+                    <div class="van-rate-box">
+                      <span class="van-rate-label">Día Completo (Circuito):</span>
+                      <span class="van-rate-val">${formatCurrencyValue(p.midDistanceRate, locationData.currency)}</span>
+                    </div>
+                    ${p.longDistanceRate ? `
+                      <div class="van-rate-box">
+                        <span class="van-rate-label">Larga Distancia:</span>
+                        <span class="van-rate-val">${formatCurrencyValue(p.longDistanceRate, locationData.currency)}</span>
+                      </div>
+                    ` : ''}
+                  </div>
+
+                  <div class="van-services-list">
+                    <span class="van-included-title">Servicios incluidos:</span>
+                    <div class="van-services-chips">
+                      ${p.servicesIncluded.map(s => `<span class="van-chip">✓ ${s}</span>`).join('')}
+                    </div>
+                  </div>
+
+                  <div class="van-contact-row">
+                    ${p.whatsapp ? `
+                      <a href="https://wa.me/${p.whatsapp}?text=${waText}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
+                        💬 Cotizar Van WhatsApp
+                      </a>
+                    ` : ''}
+                    ${p.phone ? `
+                      <a href="tel:${p.phone}" class="btn btn-sm btn-secondary">
+                        📞 ${p.phone}
+                      </a>
+                    ` : ''}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+          <div class="van-coliving-savings">
+            <span class="savings-icon">💡</span>
+            <div class="savings-text">
+              <strong>Impacto de Ahorro Co404:</strong> Al rentar una van completa de 10 a 14 pasajeros entre roomies de Co404, el costo promedio es de sólo <strong>${formatCurrencyValue(Math.round(locationData.currency === 'COP' ? 70000 : 320), locationData.currency)} por persona</strong> para un día entero con chofer privado, ahorrando hasta un 60% frente a tours comerciales masivos.
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     const countEl = document.getElementById('tab-trips-count');
     if (countEl) countEl.textContent = groupTrips.length;
 
@@ -1478,6 +1633,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('colectivos-list');
     if (!container) return;
 
+    // Render verified taxi directory if container exists
+    const taxiContainer = document.getElementById('taxi-directory-container');
+    if (taxiContainer && locationData.verifiedTaxiServices) {
+      const taxis = locationData.verifiedTaxiServices;
+      taxiContainer.innerHTML = `
+        <div class="taxi-directory-box">
+          <div class="taxi-directory-header">
+            <div>
+              <span class="taxi-badge">🚖 Directorio de Taxis Seguros & Radiotaxis Verificados</span>
+              <h3 class="taxi-heading">Centrales de Radio Taxi Recomendadas en ${locationData.city}</h3>
+              <p class="taxi-sub">Números directos y botones de WhatsApp para solicitar servicio seguro a la puerta de ${locationData.name}:</p>
+            </div>
+          </div>
+          <div class="taxi-cards-grid">
+            ${taxis.map(t => {
+              const waText = encodeURIComponent(`¡Hola! 👋 Les escribo desde ${locationData.name} (${locationData.address || locationData.city}). ¿Tienen una unidad disponible para recogernos aquí?`);
+              return `
+                <div class="taxi-card">
+                  <div class="taxi-card-top">
+                    <div>
+                      <strong class="taxi-name">${t.name}</strong>
+                      <div class="taxi-location-tag">📍 Base: ${t.baseLocation}</div>
+                    </div>
+                    <span class="taxi-hours">🕒 ${t.hours}</span>
+                  </div>
+                  <p class="taxi-desc">${t.description}</p>
+                  <div class="taxi-sample-fares">
+                    <span class="fare-label">Tarifas estimadas:</span>
+                    <p class="fare-text">${t.sampleRates}</p>
+                  </div>
+                  <div class="taxi-pickup-note">
+                    <em>✓ ${t.pickupAtCo404}</em>
+                  </div>
+                  <div class="taxi-action-buttons">
+                    ${t.whatsapp ? `
+                      <a href="https://wa.me/${t.whatsapp}?text=${waText}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
+                        💬 Pedir por WhatsApp
+                      </a>
+                    ` : ''}
+                    <a href="tel:${t.phone}" class="btn btn-sm btn-secondary">
+                      📞 Llamar: ${t.phone}
+                    </a>
+                    ${t.fastDial ? `<span class="fast-dial-badge">Marcación: <strong>${t.fastDial}</strong></span>` : ''}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
+
     container.innerHTML = colectivos.map(c => `
       <div class="colectivo-card">
         <div class="colectivo-header">
@@ -1489,6 +1696,16 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="colectivo-fare-badge">${c.costMxn}</div>
         </div>
+
+        ${c.taxiCost ? `
+          <div class="transit-taxi-comparison">
+            <div class="transit-taxi-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Alternativa en Taxi / InDriver (Auto Completo 1-4 pax):</span>
+            </div>
+            <div class="transit-taxi-amount">${c.taxiCost}</div>
+          </div>
+        ` : ''}
 
         <div style="margin-bottom: 8px;">
           <span style="font-size: 0.75rem; font-weight: 700; color: var(--co-charcoal-sub); text-transform: uppercase;">Window sign / Route code:</span>

@@ -719,15 +719,34 @@ body {
 }
 
 .price-title {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--co-charcoal-sub);
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
 }
 
 .price-amount {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--co-terracotta);
+  line-height: 1.25;
+}
+
+.price-sub {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--co-charcoal-sub);
+  opacity: 0.85;
+  margin-top: 1px;
+}
+
+.price-diy {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #15803d;
+  line-height: 1.25;
 }
 
 .card-actions {
@@ -1918,6 +1937,462 @@ body {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+/* ==========================================================================
+   TOUR VARIANTS & OPTIONS SECTION (MODAL)
+   ========================================================================== */
+.tour-variants-section {
+  background: #FFFDF9;
+  border: 1px solid #EAD8C7;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(120, 40, 31, 0.04);
+}
+
+.tour-variants-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #F2E4D6;
+  padding-bottom: 8px;
+}
+
+.tour-variants-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--co-wine);
+}
+
+.variants-count-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--co-sand-alt);
+  color: var(--co-wine);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--co-border);
+}
+
+.tour-variants-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tour-variant-card {
+  background: var(--co-white);
+  border: 1px solid var(--co-border-light);
+  border-left: 3px solid var(--co-terracotta);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.tour-variant-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.tour-variant-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--co-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.variant-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: var(--co-sand);
+  color: var(--co-terracotta);
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.variant-cost-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #BFDBFE;
+  white-space: nowrap;
+}
+
+.tour-variant-desc {
+  font-size: 0.85rem;
+  color: var(--co-charcoal);
+  line-height: 1.45;
+  margin: 0 0 6px 0;
+}
+
+.tour-variant-fit {
+  font-size: 0.8rem;
+  color: var(--co-charcoal-sub);
+  background: #F8FAFC;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.fit-label {
+  font-weight: 700;
+  color: var(--co-charcoal);
+}
+
+/* ==========================================================================
+   VAN RENTAL BENCHMARKS (GROUP TRIPS TAB)
+   ========================================================================== */
+.van-benchmarks-card {
+  background: linear-gradient(180deg, #FAF8F5 0%, #FFFFFF 100%);
+  border: 1px solid var(--co-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.van-benchmarks-header {
+  margin-bottom: 18px;
+}
+
+.van-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: #FDF2E9;
+  color: var(--co-terracotta);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+  border: 1px solid #FADBD8;
+}
+
+.van-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--co-wine);
+  margin: 0 0 6px 0;
+}
+
+.van-subtitle {
+  font-size: 0.88rem;
+  color: var(--co-charcoal-sub);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.van-providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.van-provider-item {
+  background: var(--co-white);
+  border: 1px solid var(--co-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.van-provider-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.van-provider-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.van-provider-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--co-wine);
+  display: block;
+}
+
+.van-fleet-tag {
+  font-size: 0.8rem;
+  color: var(--co-charcoal-sub);
+  margin-top: 2px;
+}
+
+.van-rates-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  background: var(--co-sand);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.van-rate-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.van-rate-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--co-charcoal-sub);
+}
+
+.van-rate-val {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--co-terracotta);
+}
+
+.van-services-list {
+  margin-bottom: 14px;
+}
+
+.van-included-title {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--co-charcoal-sub);
+  margin-bottom: 6px;
+}
+
+.van-services-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.van-chip {
+  font-size: 0.72rem;
+  background: #F1F5F9;
+  color: #334155;
+  padding: 2px 8px;
+  border-radius: 4px;
+  line-height: 1.3;
+}
+
+.van-contact-row {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.van-coliving-savings {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.savings-icon {
+  font-size: 1.4rem;
+}
+
+.savings-text {
+  font-size: 0.85rem;
+  color: #065F46;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   VERIFIED TAXI & SITIO DIRECTORY (COLECTIVOS & DIY TAB)
+   ========================================================================== */
+.taxi-directory-box {
+  background: #FFFDF9;
+  border: 1px solid #EAD8C7;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.taxi-directory-header {
+  margin-bottom: 18px;
+}
+
+.taxi-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+  border: 1px solid #FDE68A;
+}
+
+.taxi-heading {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--co-wine);
+  margin: 0 0 6px 0;
+}
+
+.taxi-sub {
+  font-size: 0.88rem;
+  color: var(--co-charcoal-sub);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.taxi-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.taxi-card {
+  background: var(--co-white);
+  border: 1px solid var(--co-border);
+  border-top: 3px solid #EAB308;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.taxi-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.taxi-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--co-charcoal);
+  display: block;
+}
+
+.taxi-location-tag {
+  font-size: 0.78rem;
+  color: var(--co-charcoal-sub);
+  margin-top: 2px;
+}
+
+.taxi-hours {
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: #F8FAFC;
+  color: #475569;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #E2E8F0;
+  white-space: nowrap;
+}
+
+.taxi-desc {
+  font-size: 0.84rem;
+  color: var(--co-charcoal);
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.taxi-sample-fares {
+  background: var(--co-sand);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.fare-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--co-charcoal-sub);
+  margin-bottom: 2px;
+}
+
+.fare-text {
+  font-size: 0.8rem;
+  color: var(--co-charcoal);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.taxi-pickup-note {
+  font-size: 0.78rem;
+  color: var(--co-terracotta);
+  margin-bottom: 12px;
+}
+
+.taxi-action-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fast-dial-badge {
+  font-size: 0.76rem;
+  color: var(--co-charcoal-sub);
+  background: #F1F5F9;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Transit Taxi Comparison in Colectivo Card */
+.transit-taxi-comparison {
+  background: #FFFBEB;
+  border: 1px dashed #F59E0B;
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.transit-taxi-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #92400E;
+}
+
+.transit-taxi-amount {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #B45309;
 }
 
 

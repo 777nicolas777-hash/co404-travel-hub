@@ -145,7 +145,7 @@ function requestHandler(req, res) {
     const ext = path.extname(foundPath).toLowerCase();
     res.writeHead(200, {
       'Content-Type': MIME_TYPES[ext] || 'application/octet-stream',
-      'Cache-Control': ext === '.html' ? 'public, max-age=0, must-revalidate' : 'public, max-age=31536000, immutable'
+      'Cache-Control': (ext === '.html' || ext === '.js' || ext === '.css' || ext === '.json') ? 'no-cache, no-store, must-revalidate' : 'public, max-age=86400'
     });
     fs.createReadStream(foundPath).pipe(res);
     return;

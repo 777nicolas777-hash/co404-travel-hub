@@ -37,12 +37,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "08:30 AM - 09:00 AM",
         "returnTime": "04:30 PM - 05:30 PM",
         "difficulty": "Easy (Suitable for all fitness levels)",
-        "priceSharedRange": "$750 - $900 MXN ($40 - $48 USD)",
+        "priceSharedRange": "$580 - $750 MXN ($32 - $42 USD)",
         "pricePrivateRange": "$2,800 - $3,800 MXN (Private van 1-6 pax)",
         "colectivoCost": "$250 - $380 MXN (Independent boat ticket + public combis)",
         "heroImage": "./assets/images/sumidero.jpg",
         "isExclusive": false,
-        "specializedBadge": "Daily Group Departures",
+        "specializedBadge": "Top #1 Imperdible",
         "description": "A breathtaking high-speed boat cruise down the Grijalva River slicing through vertical 1,000-meter canyon walls in Sumidero Canyon National Park. Spot sunbathing American river crocodiles, spider monkeys, and the famous 'Christmas Tree' moss-covered waterfall formation. Concludes with free time in Chiapa de Corzo to taste traditional cold Pozol with cacao and admire the 1562 Mudéjar brick fountain 'La Pila'.",
         "itinerary": [
           {
@@ -135,6 +135,21 @@ const CO404_LOCATIONS = {
             "source": "Mostrador / WhatsApp",
             "url": "https://jalapenotour.com"
           }
+        ],
+        "popularityScore": 99,
+        "variants": [
+          {
+            "name": "Lancha en Río Grijalva + Chiapa de Corzo",
+            "priceDiff": "Tarifa estándar ($580 - $750 MXN)",
+            "description": "2 horas de navegación en lancha con motor dentro del cañón entre paredes de 1,000m hasta la presa Chicoasén, avistamiento de cocodrilos y árbol de navidad, más 1 hora libre en Chiapa de Corzo.",
+            "recommendedFor": "Primerizos que quieren ver la fauna silvestre y el cañón desde el agua."
+          },
+          {
+            "name": "Lancha en Cañón + 5 Miradores Panorámicos (Tuxtla)",
+            "priceDiff": "+$200 - $250 MXN adicionales",
+            "description": "Incluye la navegación en lancha por el río y asciende a la cumbre para recorrer los 5 miradores oficiales del Parque Nacional (La Ceiba, Los Chiapa, El Tepehuaje, El Roblar y Los Amorosos).",
+            "recommendedFor": "Amantes de la fotografía panorámica y vistas aéreas de acantilados."
+          }
         ]
       },
       {
@@ -155,12 +170,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "08:00 AM",
         "returnTime": "07:30 PM - 08:30 PM",
         "difficulty": "Moderate (800 stone stairs up to waterfall overlook)",
-        "priceSharedRange": "$550 - $850 MXN ($30 - $45 USD)",
+        "priceSharedRange": "$600 - $780 MXN ($33 - $43 USD)",
         "pricePrivateRange": "$3,600 - $4,800 MXN (Private van)",
         "colectivoCost": "$350 - $450 MXN (Complex multi-stage public transit via Comitán)",
         "heroImage": "./assets/images/chiflon.jpg",
         "isExclusive": false,
-        "specializedBadge": "Top Nature Day Trip",
+        "specializedBadge": "Cascadas & Lagos",
         "description": "One of the most photogenic landscape circuits in southern Mexico. Ascend the stone riverside trail along El Chiflón's cascading turquoise rapids to stand before the roaring 120m 'Velo de Novia' (Bride's Veil) waterfall. Afterwards, travel to the pine-clad Lagunas de Montebello National Park, where over 50 lakes shift in hue from aquamarine to deep emerald. Cross freely into the Guatemala border market village for highland coffee.",
         "itinerary": [
           {
@@ -239,6 +254,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
           }
+        ],
+        "popularityScore": 96,
+        "variants": [
+          {
+            "name": "Circuito Clásico Día Completo",
+            "priceDiff": "Tarifa estándar ($600 - $780 MXN)",
+            "description": "Sendero escalonado hasta la cascada Velo de Novia (120m) en El Chiflón, seguido de visita a 4-5 lagunas principales de Montebello (Pojoj, Tziscao, Montebello).",
+            "recommendedFor": "Viajeros que quieren disfrutar tanto del senderismo como de la frontera con Guatemala."
+          },
+          {
+            "name": "Circuito con Tirolesa Gigante & Balsa de Troncos",
+            "priceDiff": "+$250 - $350 MXN en actividades opcionales",
+            "description": "Lánzate por la tirolesa de 400m que cruza el cañón del río San Vicente frente a la cascada y navega en balsa artesanal de troncos en la laguna Pojoj.",
+            "recommendedFor": "Adrenalina y amantes de los deportes de aventura."
+          }
         ]
       },
       {
@@ -260,12 +290,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "09:30 AM",
         "returnTime": "02:00 PM - 02:30 PM",
         "difficulty": "Easy (Gentle walking through village centers)",
-        "priceSharedRange": "$350 - $500 MXN ($18 - $26 USD)",
+        "priceSharedRange": "$350 - $480 MXN ($19 - $26 USD)",
         "pricePrivateRange": "$1,100 - $1,600 MXN (Private van)",
         "colectivoCost": "$25 - $35 MXN per leg by public colectivo (Super easy DIY)",
         "heroImage": "./assets/images/chamula.jpg",
         "isExclusive": false,
-        "specializedBadge": "Certified Anthropological Guide Recommended",
+        "specializedBadge": "Sincretismo Maya",
         "description": "One of the most moving anthropological experiences in Latin America. In San Juan Chamula, enter the church of San Juan Bautista: no pews, floor carpeted with fragrant pine needles, thousands of flickering candles, Tzotzil incantations, and traditional 'curanderos' performing spiritual healings with posh liquor and chickens. In neighboring Zinacantán, step inside an indigenous family compound to see pre-Columbian backstrap loom weaving, taste handmade blue corn tortillas hot off the comal, and sip flavored artisan posh.",
         "itinerary": [
           {
@@ -339,6 +369,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://apasionadoxchiapas.com/tours/San%20Cristobal"
           }
+        ],
+        "popularityScore": 96,
+        "variants": [
+          {
+            "name": "Tour Cultural Clásico en Van Guiado",
+            "priceDiff": "Tarifa estándar ($350 - $480 MXN)",
+            "description": "Transporte en van con guía antropológico que explica los rituales chamánicos, curanderos, rezos en tzotzil y visita a cooperativa de tejedoras en Zinacantán con degustación de pox.",
+            "recommendedFor": "Comodidad y comprensión histórica profunda de las costumbres indígenas."
+          },
+          {
+            "name": "Cabalgata a Caballo por Bosques de Niebla a Chamula",
+            "priceDiff": "$550 - $700 MXN",
+            "description": "Paseo a caballo de 2.5 horas cruzando senderos boscosos y veredas de montaña desde San Cristóbal hasta la entrada de San Juan Chamula con tiempo libre en el pueblo.",
+            "recommendedFor": "Aventureros que buscan una experiencia activa al aire libre."
+          }
         ]
       },
       {
@@ -359,12 +404,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "04:00 AM - 04:30 AM",
         "returnTime": "10:30 PM - 11:30 PM (or overnight drop-off in Palenque)",
         "difficulty": "Moderate-High (Long day of winding mountain highway travel)",
-        "priceSharedRange": "$1,200 - $1,700 MXN ($65 - $92 USD)",
+        "priceSharedRange": "$950 - $1,250 MXN ($52 - $68 USD)",
         "pricePrivateRange": "$5,500 - $7,500 MXN (Exclusive private van)",
         "colectivoCost": "Not recommended as a single-day roundtrip by public transport",
         "heroImage": "./assets/images/palenque.jpg",
         "isExclusive": false,
-        "specializedBadge": "One-Way Drop-Off to Palenque Available",
+        "specializedBadge": "Selva & Arqueología",
         "description": "The flagship jungle expedition of Chiapas. Journey down from the misty highlands to the lush tropical lowlands. Swim in the dazzling turquoise pools of Cascadas de Agua Azul, walk behind the 30-meter roaring curtain of Misol-Ha waterfall (featured in 'Predator'), and explore the monumental UNESCO World Heritage ruins of Palenque—the royal city of King Pakal the Great rising out of emerald jungle canopy with howler monkeys calling above.",
         "itinerary": [
           {
@@ -452,6 +497,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://nichimtours.com.mx"
           }
+        ],
+        "popularityScore": 95,
+        "variants": [
+          {
+            "name": "Expedición Día Completo San Cris -> Palenque -> San Cris",
+            "priceDiff": "Tarifa estándar ($950 - $1,250 MXN)",
+            "description": "Salida 04:30 AM, desayuno en ruta, paradas en Agua Azul, cascada Misol-Ha (35m) y 2.5 hrs de recorrido guiado en la majestuosa ciudad maya de Palenque. Regreso ~22:00.",
+            "recommendedFor": "Quienes tienen base fija en Co404 y quieren ver la joya maya en un solo día intenso."
+          },
+          {
+            "name": "Drop-off en Palenque (One-Way hacia Península/Yucatán)",
+            "priceDiff": "$850 - $1,050 MXN (mismo tour sin regreso)",
+            "description": "Mismo recorrido completo con tu equipaje en la van; el tour te deja en Palenque pueblo a las 17:00 para tomar el Tren Maya o autobús ADO hacia Calakmul, Mérida o Cancún.",
+            "recommendedFor": "Nómadas en ruta que continúan viaje hacia Quintana Roo o Yucatán."
+          }
         ]
       },
       {
@@ -473,7 +533,7 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "05:00 AM (Multi-day or extreme full-day)",
         "returnTime": "Multi-day return (or late evening next day)",
         "difficulty": "High / Extreme (Intensive jungle trekking, rappelling, canyon river hiking)",
-        "priceSharedRange": "$2,800 - $4,200 MXN ($150 - $230 USD / multi-day all-inclusive)",
+        "priceSharedRange": "$2,200 - $3,200 MXN ($120 - $175 USD)",
         "pricePrivateRange": "$8,500 - $12,000 MXN (Private guided expedition)",
         "colectivoCost": "Impossible DIY (Requires federal permits, certified caving guides & technical gear)",
         "heroImage": "./assets/images/arco_del_tiempo.jpg",
@@ -560,7 +620,9 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "specializedBadge": "Expedición Exclusiva",
+        "popularityScore": 88
       },
       {
         "id": "bonampak-yaxchilan",
@@ -581,12 +643,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "05:30 AM",
         "returnTime": "08:30 PM (or 2-day Lacandon eco-lodge stay)",
         "difficulty": "Moderate (River boat navigation, jungle root walking, temple stairs)",
-        "priceSharedRange": "$1,600 - $2,200 MXN ($88 - $120 USD)",
+        "priceSharedRange": "$2,600 - $3,400 MXN ($142 - $185 USD)",
         "pricePrivateRange": "$6,500 - $8,800 MXN (Exclusive private van)",
         "colectivoCost": "Not feasible DIY (Requires border river motorboat and Lacandon reserve transport)",
         "heroImage": "./assets/images/bonampak.jpg",
         "isExclusive": false,
-        "specializedBadge": "Specialized Jungle Tour: Nichim Tours & Voy a Chiapas",
+        "specializedBadge": "Murales & Usumacinta",
         "description": "The ultimate Indiana Jones experience of the Maya world. Travel deep into the Montes Azules Biosphere Reserve in the heart of the Lacandon Jungle. Board a motorized wooden longboat on the great Usumacinta River—the international border between Mexico and Guatemala—navigating downriver to Yaxchilán, an ancient kingdom enveloped in strangler figs where spider monkeys swing across stone lintels. Afterwards, ride into Bonampak with local Lacandon indigenous drivers to witness the Building of the Murals: the most vibrant, color-saturated pre-Columbian frescoes ever discovered in the Americas.",
         "itinerary": [
           {
@@ -659,7 +721,8 @@ const CO404_LOCATIONS = {
           "voy-a-chiapas",
           "selva-azul-tours",
           "senda-tour"
-        ]
+        ],
+        "popularityScore": 92
       },
       {
         "id": "chukumaltik-lagos-colon",
@@ -680,12 +743,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "07:30 AM",
         "returnTime": "07:00 PM",
         "difficulty": "Easy to Moderate (Swimming, light walking along stone pools)",
-        "priceSharedRange": "$900 - $1,400 MXN ($50 - $75 USD)",
+        "priceSharedRange": "$650 - $850 MXN ($35 - $46 USD)",
         "pricePrivateRange": "$4,200 - $5,600 MXN (Private van)",
         "colectivoCost": "Complex multi-stage transfer (combi to Comitán + pickup truck to La Trinitaria)",
         "heroImage": "./assets/images/chukumaltik.jpg",
         "isExclusive": false,
-        "specializedBadge": "Specialized Water Adventure & Scuba Tour",
+        "specializedBadge": "Cenote & Buceo",
         "description": "One of Chiapas' best-kept secrets away from the crowds. Cenote Chukumaltik is an awe-inspiring open-air sinkhole over 200 meters in diameter and 60 meters deep with crystal-clear 24°C water boasting visibility of up to 40 meters. Beneath the surface lie submerged petrified prehistoric trees, sulfur chimneys, and a submerged Maya altar. Pair this with Lagos de Colón, an enchanting system of shallow turquoise river pools, small travertine cascades, and shady willow trees perfect for swimming and relaxing.",
         "itinerary": [
           {
@@ -760,7 +823,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 89
       },
       {
         "id": "arcotete-rancho-nuevo-mamut",
@@ -781,12 +845,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "10:00 AM",
         "returnTime": "04:00 PM",
         "difficulty": "Easy to Moderate (Forest trail walking and illuminated caves)",
-        "priceSharedRange": "$400 - $600 MXN ($22 - $32 USD)",
+        "priceSharedRange": "$250 - $400 MXN ($14 - $22 USD)",
         "pricePrivateRange": "$1,200 - $1,800 MXN",
         "colectivoCost": "$20 - $30 MXN per leg (Super easy DIY by public taxi or combi!)",
         "heroImage": "./assets/images/arcotete.jpg",
         "isExclusive": false,
-        "specializedBadge": "Top Weekend Co404 Getaway",
+        "specializedBadge": "Cerca de Co404 (15m)",
         "description": "The ideal quick nature escape for Co404 residents on weekends or between work meetings. El Arcotete features a massive natural limestone arch hollowed out by the Fogótico River, framed by pine trees, suspension bridges, and affordable zip-lines. Nearby Rancho Nuevo boasts lighted subterranean caves with stalactites winding hundreds of meters into the mountain, horseback riding trails, and open-air food huts serving giant artisan quesadillas.",
         "itinerary": [
           {
@@ -859,7 +923,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 90
       },
       {
         "id": "sima-cotorras-aguacero",
@@ -879,12 +944,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "05:00 AM (Essential to catch the morning parrot flight)",
         "returnTime": "05:30 PM",
         "difficulty": "Moderate-High (800 stairs down and back up at El Aguacero)",
-        "priceSharedRange": "$950 - $1,400 MXN ($52 - $75 USD)",
+        "priceSharedRange": "$950 - $1,350 MXN ($52 - $73 USD)",
         "pricePrivateRange": "$3,800 - $5,200 MXN",
         "colectivoCost": "Not feasible DIY (No scheduled public transit to the abyss rim)",
         "heroImage": "./assets/images/sima_cotorras.jpg",
         "isExclusive": false,
-        "specializedBadge": "Specialized Nature & Rappel Operator: Apasionado x Chiapas",
+        "specializedBadge": "Aventura & Aves",
         "description": "One of the planet's most astonishing geological features. Sima de las Cotorras is a circular karst sinkhole 140 meters deep and 160 meters across. At dawn, thousands of bright green wild parakeets swirl up from the bottom in noisy spirals. Millennia-old Zoque rock paintings adorn the limestone walls. The journey is paired with El Aguacero, where a waterfall sprays like a rain curtain directly down into the dramatic Canyon of La Venta.",
         "itinerary": [
           {
@@ -959,7 +1024,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 91
       },
       {
         "id": "tonina-corralito",
@@ -979,12 +1045,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "08:00 AM",
         "returnTime": "06:00 PM",
         "difficulty": "Moderate-High (Climbing the 74-meter-tall pyramid terraces)",
-        "priceSharedRange": "$850 - $1,350 MXN ($46 - $73 USD)",
+        "priceSharedRange": "$900 - $1,200 MXN ($49 - $65 USD)",
         "pricePrivateRange": "$3,400 - $4,800 MXN",
         "colectivoCost": "$120 - $160 MXN (Via Ocosingo combi)",
         "heroImage": "./assets/images/tonina.jpg",
         "isExclusive": false,
-        "specializedBadge": "Certified Historical Guide Recommended",
+        "specializedBadge": "Acrópolis Maya 74m",
         "description": "Many travelers do not know that the tallest pyramidal acropolis in Mexico is not in Teotihuacán or Palenque, but in Toniná! Rising over 74 meters across 7 colossal stone terraces carved into the hillside, Toniná was the formidable warrior kingdom that defeated Palenque. Marvel at the on-site museum's decapitated captive warrior sculptures and underworld murals, followed by a cool dip in the stepped natural turquoise pools of El Corralito.",
         "itinerary": [
           {
@@ -1054,7 +1120,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 89
       },
       {
         "id": "las-nubes-comitan",
@@ -1074,12 +1141,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "05:30 AM",
         "returnTime": "08:30 PM",
         "difficulty": "Moderate (Suspension bridge walk and stone trail up to cliff overlook)",
-        "priceSharedRange": "$850 - $1,400 MXN ($46 - $75 USD)",
+        "priceSharedRange": "$850 - $1,150 MXN ($46 - $62 USD)",
         "pricePrivateRange": "$4,200 - $5,800 MXN",
         "colectivoCost": "Very difficult DIY for a single day without a private vehicle",
         "heroImage": "./assets/images/las_nubes.jpg",
         "isExclusive": false,
-        "specializedBadge": "Specialized Nature & Photography Trip",
+        "specializedBadge": "Cascadas & Selva",
         "description": "One of the best-kept secrets of the southern Usumacinta river basin. Las Nubes Ecotourism Center lies on the banks of the mighty Santo Domingo River, where the water takes on an intensely vivid, milky turquoise luminescence. Walk across a thrilling pedestrian suspension bridge over rushing whitewater rapids and hike up to the 'Vista Hermosa' cliff lookout offering an unbroken panorama of untamed Lacandon rainforest.",
         "itinerary": [
           {
@@ -1157,7 +1224,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 88
       },
       {
         "id": "huitepec-moxviquil",
@@ -1177,12 +1245,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "08:30 AM or 02:00 PM",
         "returnTime": "Within 3 to 4 hours",
         "difficulty": "Easy to Moderate (Uphill nature trails)",
-        "priceSharedRange": "$200 - $350 MXN ($11 - $19 USD with naturalist guide)",
+        "priceSharedRange": "$200 - $350 MXN ($11 - $19 USD)",
         "pricePrivateRange": "$600 - $900 MXN",
         "colectivoCost": "$15 MXN by colectivo combi or $60 MXN by local taxi",
         "heroImage": "./assets/images/moxviquil.jpg",
         "isExclusive": false,
-        "specializedBadge": "Co404 Afternoon Co-working Break",
+        "specializedBadge": "Senderismo & Niebla",
         "description": "Ideal for clearing your head between video calls or in the morning before starting remote work at Co404. Huitepec is an extinct volcano blanketed in virgin cloud forest with moss-draped oak trees, bromeliads, and wild mountain orchids. Nearby Moxviquil Ecological Reserve hosts Chiapas' largest botanical orchidarium (protecting over 400 rescued highland orchid species) and hilltop trails looking out over the entire valley of Jovel.",
         "itinerary": [
           {
@@ -1224,7 +1292,8 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "nichim-tours",
           "senda-tour"
-        ]
+        ],
+        "popularityScore": 84
       },
       {
         "id": "traslado-guatemala",
@@ -1244,12 +1313,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "06:00 AM - 07:00 AM",
         "returnTime": "Arrival in Guatemala ~ 04:00 PM - 06:00 PM",
         "difficulty": "Easy (Tourist minivan transport with guided border immigration handling)",
-        "priceSharedRange": "$950 - $1,300 MXN / $50 - $70 USD",
+        "priceSharedRange": "$550 - $750 MXN ($30 - $41 USD)",
         "pricePrivateRange": "$4,500 - $6,500 MXN",
         "colectivoCost": "$350 MXN (DIY border crossing via La Mesilla combis)",
         "heroImage": "./assets/images/guatemala.jpg",
         "isExclusive": false,
-        "specializedBadge": "Daily Nomad Border Route",
+        "specializedBadge": "Shuttle Internacional",
         "description": "The most popular transit bridge used by Co404 digital nomads and backpackers to cross into Guatemala. Daily departures right from the Co404 front door to your hotel or hostel in Panajachel (Lake Atitlán), Quetzaltenango (Xela), or Antigua Guatemala, with full vehicle change and border crossing support at La Mesilla.",
         "itinerary": [
           {
@@ -1302,7 +1371,8 @@ const CO404_LOCATIONS = {
           "voy-a-chiapas",
           "selva-azul-tours",
           "tours-chiapas"
-        ]
+        ],
+        "popularityScore": 92
       },
       {
         "id": "cabalgata-chamula",
@@ -1322,12 +1392,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "09:30 AM",
         "returnTime": "02:00 PM",
         "difficulty": "Easy to Moderate (Suitable for beginners)",
-        "priceSharedRange": "$350 - $450 MXN ($19 - $25 USD)",
+        "priceSharedRange": "$400 - $550 MXN ($22 - $30 USD)",
         "pricePrivateRange": "$1,200 - $1,600 MXN",
         "colectivoCost": "$25 - $35 MXN (Public combi if riding one-way)",
         "heroImage": "./assets/images/chamula.jpg",
         "isExclusive": false,
-        "specializedBadge": "Scenic Trail Favorite",
+        "specializedBadge": "Aventura a Caballo",
         "description": "A tranquil 3.5 to 4 hour horseback ride departing from the outskirts of San Cristóbal through misty pine woods, small indigenous hamlets, and rolling highland valleys, arriving directly at the sacred church of San Juan Chamula. Experience Tzotzil spiritual syncretism, copal incense, pine-needle carpets, and centuries of tradition before returning.",
         "itinerary": [
           {
@@ -1396,7 +1466,8 @@ const CO404_LOCATIONS = {
             "source": "Mostrador / WhatsApp",
             "url": "https://jalapenotour.com"
           }
-        ]
+        ],
+        "popularityScore": 89
       },
       {
         "id": "las-3-tzimoleras",
@@ -1416,12 +1487,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "07:30 AM",
         "returnTime": "06:30 PM",
         "difficulty": "Challenging (River wading & rugged canyon trails)",
-        "priceSharedRange": "$1,400 - $1,700 MXN ($75 - $92 USD)",
+        "priceSharedRange": "$1,200 - $1,600 MXN ($65 - $87 USD)",
         "pricePrivateRange": "$4,800 - $6,500 MXN (Private 4x4 safari)",
         "colectivoCost": "Impossible DIY (Requires high-clearance 4x4 & local agrarian permission)",
         "heroImage": "./assets/images/las_tres_tzimoleras.jpg",
         "isExclusive": false,
-        "specializedBadge": "Wild 4x4 Adventure",
+        "specializedBadge": "Off-Road 4x4",
         "description": "One of Chiapas' best-kept secrets! Travel by 4x4 pickup truck into the untamed river canyon of Tzimol. Hike down steep limestone canyons to three thunderous cascades dropping 30m, 45m, and 60m into deep azure pools. Experience thrilling cliff jumps (from 2m to 7m), natural river currents, and raw nature with zero tour bus crowds.",
         "itinerary": [
           {
@@ -1484,7 +1555,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 87
       },
       {
         "id": "puerto-arista-boca-cielo",
@@ -1504,12 +1576,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "06:30 AM",
         "returnTime": "08:30 PM",
         "difficulty": "Easy",
-        "priceSharedRange": "$850 - $1,100 MXN ($46 - $60 USD)",
+        "priceSharedRange": "$850 - $1,150 MXN ($46 - $62 USD)",
         "pricePrivateRange": "$4,500 - $6,000 MXN",
         "colectivoCost": "$280 - $350 MXN (Via Tuxtla & Tonalá combis)",
         "heroImage": "./assets/images/puerto_arista_playa.jpg",
         "isExclusive": false,
-        "specializedBadge": "Pacific Coast Escape",
+        "specializedBadge": "Playa del Pacífico",
         "description": "Trade highland chills for the sunny Pacific ocean breeze! Descend the Sierra Madre mountains down to Chiapas' coastal plain. Cruise in a boat across the tranquil mangrove lagoon of Boca del Cielo to a narrow sand spit separating the calm estuary from the open Pacific surf. Visit the Puerto Arista sea turtle protection camp and indulge in freshly caught red snapper and cold coconuts.",
         "itinerary": [
           {
@@ -1570,7 +1642,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://selvazultours.com/tours/San%20Cristobal"
           }
-        ]
+        ],
+        "popularityScore": 83
       },
       {
         "id": "selva-lacandona-naha",
@@ -1590,12 +1663,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "06:00 AM (Day 1)",
         "returnTime": "07:30 PM (Day 2)",
         "difficulty": "Moderate (Rainforest hiking & overnight jungle cabins)",
-        "priceSharedRange": "$2,850 - $3,600 MXN ($154 - $195 USD / 2 days all-inclusive)",
+        "priceSharedRange": "$2,400 - $3,200 MXN ($130 - $175 USD)",
         "pricePrivateRange": "$9,500 - $13,000 MXN",
         "colectivoCost": "Not feasible DIY (Protected tribal territory with mandatory community guides)",
         "heroImage": "./assets/images/selva_lacandona_naha.jpg",
         "isExclusive": false,
-        "specializedBadge": "Ancestral 2-Day Expedition",
+        "specializedBadge": "Inmersión 2 Días",
         "description": "An authentic two-day cultural immersion into the heart of the Lacandon Jungle and the protected community of Nahá. Guided by traditional Maya Lacandones wearing their white tunic robes, walk ancient jungle trails to discover medicinal plants, listen to howler monkeys, paddle wooden canoes across mystical lagoons, and participate in an ancestral copal blessing ceremony.",
         "itinerary": [
           {
@@ -1672,7 +1745,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://apasionadoxchiapas.com"
           }
-        ]
+        ],
+        "popularityScore": 91
       }
     ],
     "agencies": [
@@ -1948,78 +2022,99 @@ const CO404_LOCATIONS = {
     ],
     "colectivos": [
       {
-        "destination": "San Juan Chamula (Indigenous Syncretic Church)",
-        "costMxn": "$20 MXN per person (~$1 USD)",
-        "frequency": "Every 5 - 10 minutes (departs when full)",
-        "operatingHours": "06:00 AM - 07:00 PM daily",
-        "signText": "\"CHAMULA\" or \"SAN JUAN CHAMULA\"",
-        "terminalLocation": "Mercado Municipal de San Cristóbal (North end of Calle General Utrilla)",
-        "distanceFromCo404": "12 min walk north from Co404",
-        "instructions": "Walk north on Calle Real de Guadalupe, turn right onto Belisario Domínguez up to the bustling municipal market. Look for white Nissan Urvan combis with 'CHAMULA' in the windshield.",
-        "returnPoint": "Board returning combis in front of the Chamula central municipal plaza parking lot heading back to San Cris market.",
+        "destination": "San Juan Chamula (Iglesia Sincrética & Plaza)",
+        "costMxn": "$20 MXN combi por persona (~$1 USD)",
+        "taxiCost": "$150 - $200 MXN en taxi completo (1-4 personas) / ~$8 - $11 USD",
+        "frequency": "Cada 5 - 10 minutos (sale al llenarse)",
+        "operatingHours": "06:00 AM - 07:00 PM diario",
+        "signText": "\"CHAMULA\" o \"SAN JUAN CHAMULA\"",
+        "terminalLocation": "Mercado Municipal de San Cristóbal (Extremo norte de Calle General Utrilla)",
+        "distanceFromCo404": "12 min caminando al norte desde Co404",
+        "instructions": "Camina por Calle Real de Guadalupe hacia el centro, toma Belisario Domínguez hacia el norte hasta el mercado municipal. Busca las combis blancas Nissan Urvan rotuladas con 'CHAMULA'.",
+        "returnPoint": "Toma las combis de regreso en la plaza central de Chamula frente al atrio de la iglesia.",
         "prosCons": {
-          "pros": "Fastest, cheapest way to experience indigenous Tzotzil culture. Leaves as soon as full (every few minutes).",
-          "cons": "Combis can feel cramped when full. STRICT RULE: Absolutely no photography inside the church."
+          "pros": "Opción ultra económica y rápida. Salen constantemente durante todo el día.",
+          "cons": "Combis pueden ir apretadas. REGLA ESTRICTA: Prohibido tomar fotos dentro de la iglesia."
         }
       },
       {
-        "destination": "Zinacantán (Indigenous Weaving & Greenhouses)",
-        "costMxn": "$25 MXN per person (~$1.30 USD)",
-        "frequency": "Every 15 minutes",
-        "operatingHours": "06:30 AM - 06:30 PM daily",
+        "destination": "Zinacantán (Tejedoras & Invernaderos)",
+        "costMxn": "$25 MXN combi por persona (~$1.30 USD)",
+        "taxiCost": "$180 - $220 MXN en taxi completo (1-4 personas) / ~$10 - $12 USD",
+        "frequency": "Cada 15 minutos",
+        "operatingHours": "06:30 AM - 06:30 PM diario",
         "signText": "\"ZINACANTÁN\"",
-        "terminalLocation": "Mercado Municipal de San Cristóbal (North terminal bay, next to Chamula rank)",
-        "distanceFromCo404": "12 min walk north from Co404",
-        "instructions": "Located alongside the Chamula combis at the municipal market. Pay driver directly upon arriving in Zinacantán.",
-        "returnPoint": "Catch returning combis outside the Church of San Lorenzo in the central square of Zinacantán.",
+        "terminalLocation": "Mercado Municipal de San Cristóbal (Bahía norte, al lado de combis a Chamula)",
+        "distanceFromCo404": "12 min caminando al norte desde Co404",
+        "instructions": "Ubicadas junto a la parada de Chamula en el mercado municipal. Se paga directamente al chofer al llegar.",
+        "returnPoint": "Combis de regreso afuera de la Iglesia de San Lorenzo en la plaza central de Zinacantán.",
         "prosCons": {
-          "pros": "Extremely affordable; friendly local drivers. Direct drop in front of weaving cooperatives.",
-          "cons": "Service slows down significantly after 05:00 PM."
+          "pros": "Te deja directo en las cooperativas textiles de telar de cintura.",
+          "cons": "La frecuencia disminuye notablemente después de las 05:00 PM."
         }
       },
       {
-        "destination": "El Arcotete Ecopark (Natural Stone Arch & Caves)",
-        "costMxn": "$15 MXN per person (~$0.80 USD)",
-        "frequency": "Every 15 - 20 minutes",
-        "operatingHours": "07:00 AM - 05:30 PM daily",
-        "signText": "\"ARCOTETE\" or \"RÍO LAMAR\"",
-        "terminalLocation": "Calle Belisario Domínguez corner with Calle Ejército Nacional",
-        "distanceFromCo404": "8 min walk from Co404",
-        "instructions": "Look for small colectivo vans or shared maroon sedans with 'Arcotete' printed on windshield. Drops right at the park entrance gate.",
-        "returnPoint": "Wait by the main park entry toll booth for passing colectivos returning down into San Cristóbal.",
+        "destination": "El Arcotete Ecopark (Arco de Piedra & Grutas)",
+        "costMxn": "$15 MXN combi por persona (~$0.80 USD)",
+        "taxiCost": "$90 - $120 MXN en taxi completo desde Co404 (15 min viaje)",
+        "frequency": "Cada 15 - 20 minutos",
+        "operatingHours": "07:00 AM - 05:30 PM diario",
+        "signText": "\"ARCOTETE\" o \"RÍO LAMAR\"",
+        "terminalLocation": "Calle Belisario Domínguez esquina con Calle Ejército Nacional",
+        "distanceFromCo404": "8 min caminando desde Co404",
+        "instructions": "Busca combis o colectivos guindas con rótulo 'Arcotete'. Te dejan justo en la reja de entrada del parque ecológico.",
+        "returnPoint": "Espera en la caseta de acceso del parque los colectivos o taxis de regreso hacia San Cris.",
         "prosCons": {
-          "pros": "Super close to Co404; great for a half-day nature walk or picnic.",
-          "cons": "Park entry wristband ($15 MXN) and cave entry ($10 MXN) paid in cash at park."
+          "pros": "Súper cercano a Co404; ideal para una escapada de naturaleza de medio día o picnic.",
+          "cons": "La entrada al parque ($15 MXN) y a las cuevas ($10 MXN) se pagan en efectivo en taquilla."
         }
       },
       {
-        "destination": "Grutas de Rancho Nuevo (Pine Forests & Caves)",
-        "costMxn": "$20 MXN per person (~$1 USD)",
-        "frequency": "Every 10 minutes",
-        "operatingHours": "07:00 AM - 06:00 PM daily",
+        "destination": "Grutas de Rancho Nuevo (Bosque de Pinos & Tirolesas)",
+        "costMxn": "$20 MXN combi por persona (~$1 USD)",
+        "taxiCost": "$120 - $160 MXN en taxi completo desde Co404 (20 min viaje)",
+        "frequency": "Cada 10 minutos",
+        "operatingHours": "07:00 AM - 06:00 PM diario",
         "signText": "\"RANCHO NUEVO / TEOPISCA\"",
-        "terminalLocation": "Boulevard Juan Sabines (Highway to Teopisca/Comitán rank)",
-        "distanceFromCo404": "15 min walk south from Co404",
-        "instructions": "Catch any combi heading southeast toward Teopisca on the main highway. Tell the driver you are getting off at 'Las Grutas'.",
-        "returnPoint": "Cross to the opposite highway shelter facing north and flag down any passing combi with an open seat.",
+        "terminalLocation": "Terminal de Colectivos Teopisca / Comitán (Prolongación Insurgentes sur)",
+        "distanceFromCo404": "18 min caminando o 5 min en taxi ($45 MXN) al sur de Co404",
+        "instructions": "Sube a cualquier colectivo que vaya rumbo a Teopisca o Comitán e indícale al chofer que bajas en la entrada de las Grutas de Rancho Nuevo sobre la carretera federal.",
+        "returnPoint": "Cruza la carretera federal frente a la caseta del parque y toma cualquier combi rumbo a San Cristóbal.",
         "prosCons": {
-          "pros": "Cheap and frequent; ideal for horseback riding and eating giant quesadillas.",
-          "cons": "Highway crossing on return requires waiting carefully for highway gaps."
+          "pros": "Amplias áreas verdes, tirolesas y comida regional (quesadillas gigantes de chorizo).",
+          "cons": "Llevar suéter o chamarra: adentro de las cavernas la temperatura baja a 12°C."
         }
       },
       {
-        "destination": "Chiapa de Corzo (Colonial Magic Town)",
-        "costMxn": "$35 MXN per person (~$1.80 USD)",
-        "frequency": "Every 10 - 15 minutes",
-        "operatingHours": "05:30 AM - 08:00 PM daily",
-        "signText": "\"CHIAPA DE CORZO DIRECTO\"",
-        "terminalLocation": "Terminal de Colectivos a Tuxtla (Pan-American Highway & Calle Insurgentes)",
-        "distanceFromCo404": "14 min walk south from Co404",
-        "instructions": "Board direct combis toward Tuxtla/Chiapa de Corzo. Ask for drop-off at the Cahuare bridge pier for boat rides, or downtown Chiapa de Corzo.",
-        "returnPoint": "Board return combis at the main highway clock tower in Chiapa de Corzo back up the mountain to San Cristóbal.",
+        "destination": "Reserva Huitepec (Bosque de Niebla & Senderismo)",
+        "costMxn": "$15 MXN combi por persona (~$0.80 USD)",
+        "taxiCost": "$70 - $90 MXN en taxi directo desde Co404 (12 min viaje)",
+        "frequency": "Cada 15 minutos",
+        "operatingHours": "07:00 AM - 05:00 PM diario",
+        "signText": "\"HUITEPEC / SAN FELIPE\"",
+        "terminalLocation": "Parada de combis rumbo a San Felipe Ecatepec (Calle Ramón Larraínzar)",
+        "distanceFromCo404": "15 min caminando hacia el poniente de Co404",
+        "instructions": "Toma la combi hacia San Felipe y pide bajar en la entrada de la Reserva Huitepec (Pronatura Chiapas).",
+        "returnPoint": "Toma el colectivo de regreso en la banqueta contraria de la carretera hacia el centro.",
         "prosCons": {
-          "pros": "Saves money compared to full packaged boat tours if you only want to see the town and mudéjar fountain.",
-          "cons": "Independent boat tickets at the pier cost $270 MXN per person without private agency discounts."
+          "pros": "Sendero ecológico autoguiado de 2.5 km en bosque de robles y niebla con avistamiento de aves.",
+          "cons": "Sendero empinado con humedad; llevar calzado deportivo con buen agarre."
+        }
+      },
+      {
+        "destination": "Chiapa de Corzo & Embarcadero Cahuare (Cañón del Sumidero DIY)",
+        "costMxn": "$25 MXN combi por persona (~$1.35 USD)",
+        "taxiCost": "$250 - $350 MXN en taxi completo hasta Chiapa de Corzo",
+        "frequency": "Cada 10 - 15 minutos",
+        "operatingHours": "06:00 AM - 07:30 PM diario",
+        "signText": "\"CHIAPA DE CORZO\" o \"TUXTLA POR AUTOPISTA\"",
+        "terminalLocation": "Terminal de Colectivos San Cristóbal - Chiapa (Boulevard Juan Sabines)",
+        "distanceFromCo404": "15 min caminando o 5 min en taxi ($45 MXN) desde Co404",
+        "instructions": "Toma la combi que desciende por la autopista escénica hasta Chiapa de Corzo (40 min). Puedes bajar en el crucero al Embarcadero Cahuare para comprar tu boleto de lancha directo en taquilla oficial ($300 MXN) o llegar al centro de Chiapa de Corzo.",
+        "returnPoint": "Toma las combis de regreso a San Cristóbal en la terminal de Chiapa de Corzo o en el crucero Cahuare.",
+        "prosCons": {
+          "pros": "Te permite manejar tus propios tiempos sin el apuro de un tour en grupo comercial.",
+          "cons": "Tendrás que esperar en el embarcadero a que se junte el cupo de la lancha comunitaria."
         }
       }
     ],
@@ -2187,6 +2282,92 @@ const CO404_LOCATIONS = {
           "cons": "Independent boat tickets at the pier cost $270 MXN per person without private agency discounts."
         }
       }
+    ],
+    "vanRentalBenchmarks": {
+      "city": "San Cristóbal de las Casas",
+      "currency": "MXN",
+      "providers": [
+        {
+          "name": "OTISA Transportes & Excursiones",
+          "website": "https://otisatravel.com",
+          "phone": "+52 967 678 1933",
+          "whatsapp": "529676781933",
+          "fleet": "Toyota Hiace (10 - 13 pasajeros) y Sprinter (17 - 20 pax)",
+          "localDayRate": 3200,
+          "midDistanceRate": 4800,
+          "longDistanceRate": 7500,
+          "servicesIncluded": [
+            "Operador federal certificado y con uniforme",
+            "Combustible para todo el itinerario acordado",
+            "Peajes de casetas de cobro oficiales (autopista Tuxtla / Chiapa)",
+            "Seguro de viajero y responsabilidad civil a bordo",
+            "Pick-up y drop-off en la puerta de Co404 San Cristóbal"
+          ]
+        },
+        {
+          "name": "Senda Maya Ecoturismo & Vans",
+          "website": "https://sendamaya.com",
+          "phone": "+52 967 678 8420",
+          "whatsapp": "529671158652",
+          "fleet": "Toyota Hiace de modelo reciente (14 pasajeros con A/C)",
+          "localDayRate": 3500,
+          "midDistanceRate": 5200,
+          "longDistanceRate": 7800,
+          "servicesIncluded": [
+            "Chofer turístico experimentado con conocimiento de carreteras",
+            "Clima artificial A/C y puertos de carga USB",
+            "Seguro de cobertura amplia para pasajeros",
+            "Paradas fotográficas y tiempos flexibles a convenir por el grupo",
+            "Recogida directa en Co404"
+          ]
+        },
+        {
+          "name": "Transportes Popol Vuh Chiapas",
+          "phone": "+52 967 674 5821",
+          "whatsapp": "529671239845",
+          "fleet": "Nissan Urvan & Toyota Hiace (12 - 14 pasajeros)",
+          "localDayRate": 2800,
+          "midDistanceRate": 4500,
+          "longDistanceRate": 6800,
+          "servicesIncluded": [
+            "Conductor local, combustible y seguro básico",
+            "Ideal para rutas cercanas: Chamula, Zinacantán, Arcotete",
+            "Excelente tarifa económica para colivers"
+          ]
+        }
+      ]
+    },
+    "verifiedTaxiServices": [
+      {
+        "name": "TaxiLeto San Cristóbal",
+        "phone": "+52 967 134 5393",
+        "whatsapp": "529671345393",
+        "hours": "24 horas",
+        "baseLocation": "Centro Histórico & Andador Guadalupe",
+        "pickupAtCo404": "Recoge en la puerta de Co404 en 5-10 minutos",
+        "sampleRates": "Tarifa urbana: $45 - $60 MXN. Viaje a El Arcotete: $90 - $120 MXN. San Juan Chamula: $150 - $200 MXN.",
+        "description": "Servicio de radiotaxi seguro con unidades monitoreadas y atención rápida vía WhatsApp."
+      },
+      {
+        "name": "TAXITEL San Cristóbal (Sitio Oficial)",
+        "phone": "+52 967 110 8191",
+        "whatsapp": "529671108191",
+        "hours": "24 horas (Servicio Nocturno)",
+        "baseLocation": "Base Central San Cristóbal",
+        "pickupAtCo404": "Despacho telefónico oficial a domicilio",
+        "sampleRates": "Urbano: $50 - $65 MXN. Rancho Nuevo: $120 - $160 MXN. Aeropuerto Tuxtla (TGZ): $850 - $950 MXN.",
+        "description": "Una de las centrales de radio taxi más antiguas y confiables de la ciudad."
+      },
+      {
+        "name": "Sitio Generación 2000",
+        "phone": "+52 967 678 9340",
+        "whatsapp": null,
+        "hours": "06:00 AM - 11:00 PM",
+        "baseLocation": "Cerca de Mercado Municipal",
+        "pickupAtCo404": "Llamada directa por teléfono",
+        "sampleRates": "Urbano: $45 - $55 MXN. Reserva Huitepec: $70 - $90 MXN.",
+        "description": "Sitio tradicional con tarifas reguladas y unidades limpias."
+      }
     ]
   },
   "oaxaca": {
@@ -2220,12 +2401,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 500,
         "nativePricePrivate": 2800,
         "nativePriceColectivo": 140,
-        "priceSharedRange": "$500 - $650 MXN ($27 - $35 USD)",
+        "priceSharedRange": "$450 - $650 MXN ($25 - $35 USD)",
         "pricePrivateRange": "$2,600 - $3,400 MXN (Private van 1-6 pax)",
         "colectivoCost": "$140 - $180 MXN (Independent taxi colectivo + entry fees)",
         "heroImage": "./assets/images/hierve_el_agua.jpg",
         "isExclusive": false,
-        "specializedBadge": "Top Oaxaca Day Trip",
+        "specializedBadge": "Top #1 Imperdible",
         "description": "Journey into the high limestone cliffs of San Isidro Roaguía to behold Hierve el Agua, two colossal calcified waterfall formations forged over thousands of years by carbonated mineral springs. Swim in the natural cliffside mineral pools with jaw-dropping panoramic views of the Sierra Madre. Afterwards, explore the sacred Zapotec city of Mitla, known as the \"Place of the Dead\", featuring subterranean tombs and walls adorned with millions of precisely cut geometric stone mosaic fretworks.",
         "itinerary": [
           {
@@ -2298,6 +2479,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://xiadanitours.com"
           }
+        ],
+        "popularityScore": 98,
+        "variants": [
+          {
+            "name": "Ruta Clásica Valles Centrales (Hierve + Mitla + Tule + Mezcal)",
+            "priceDiff": "Tarifa estándar ($450 - $650 MXN)",
+            "description": "Recorrido integral saliendo 09:30 AM: árbol milenario de Santa María del Tule, cooperativa textil de lana en Teotitlán del Valle, zona arqueológica de grecas en Mitla, pozas de Hierve el Agua y destilería de mezcal tradicional.",
+            "recommendedFor": "Conocer lo más emblemático del valle en un día completo muy completo."
+          },
+          {
+            "name": "Hierve el Agua Sunrise / Express Sin Multitudes",
+            "priceDiff": "$650 - $850 MXN (grupo reducido)",
+            "description": "Salida 06:30 AM directo a las cascadas petrificadas para llegar a las 08:30 AM, cuando no hay camiones de turismo y la luz matutina es perfecta para nadar y hacer fotos limpias.",
+            "recommendedFor": "Fotógrafos, nadadores y colivers que buscan tranquilidad absoluta."
+          }
         ]
       },
       {
@@ -2321,12 +2517,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 350,
         "nativePricePrivate": 1500,
         "nativePriceColectivo": 80,
-        "priceSharedRange": "$350 - $450 MXN ($19 - $25 USD)",
+        "priceSharedRange": "$350 - $500 MXN ($19 - $27 USD)",
         "pricePrivateRange": "$1,400 - $1,800 MXN (Private van 1-6 pax)",
         "colectivoCost": "$80 - $100 MXN (Suburban tourist bus from Mina #501 roundtrip)",
         "heroImage": "./assets/images/monte_alban.jpg",
         "isExclusive": false,
-        "specializedBadge": "Only 25 min from Co404",
+        "specializedBadge": "Patrimonio UNESCO",
         "description": "One of Mesoamerica's earliest cities, founded around 500 BC on a flattened mountaintop plateau 400 meters above the valley floor. Explore the expansive Grand Plaza, the enigmatic stone carvings of \"Los Danzantes\", the arrow-shaped Building J astronomical observatory, and the South Platform offering unrivaled panoramic views across all three valleys of Oaxaca.",
         "itinerary": [
           {
@@ -2395,6 +2591,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://xiadanitours.com"
           }
+        ],
+        "popularityScore": 97,
+        "variants": [
+          {
+            "name": "Tour Arqueológico Matutino con Guía Especialista",
+            "priceDiff": "$350 - $450 MXN (09:30 - 13:30)",
+            "description": "Transporte ida y vuelta desde el centro y 2.5 hrs de recorrido guiado por la Plaza Principal, la tumba 7 y el museo de sitio. Regreso a tiempo para almorzar en la ciudad.",
+            "recommendedFor": "Nómadas digitales que necesitan trabajar por la tarde."
+          },
+          {
+            "name": "Circuito Valles del Sur (Monte Albán + Alebrijes + Cuilápam + Barro Negro)",
+            "priceDiff": "$500 - $650 MXN (día completo)",
+            "description": "Combina la mañana en Monte Albán con visita a los talleres de alebrijes en San Martín Tilcajete, el ex-convento dominico de Cuilápam de Guerrero y artesanos de barro negro en Coyotepec.",
+            "recommendedFor": "Amantes de las artesanías populares y la historia colonial."
+          }
         ]
       },
       {
@@ -2418,12 +2629,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 400,
         "nativePricePrivate": 1800,
         "nativePriceColectivo": 60,
-        "priceSharedRange": "$400 - $550 MXN ($22 - $30 USD)",
+        "priceSharedRange": "$350 - $480 MXN ($19 - $26 USD)",
         "pricePrivateRange": "$1,600 - $2,200 MXN (Private van 1-6 pax)",
         "colectivoCost": "$60 - $80 MXN (Colectivo taxi from Monumento a Juárez)",
         "heroImage": "./assets/images/tule_teotitlan.jpg",
         "isExclusive": false,
-        "specializedBadge": "Artisan Heritage Circuit",
+        "specializedBadge": "Árbol & Lana Zapoteca",
         "description": "Marvel at the ancient Árbol del Tule in Santa María del Tule, a colossal Montezuma cypress with a circumference exceeding 42 meters—stoutest tree trunk on Earth. Then travel into Teotitlán del Valle, the epicenter of Zapotec wool textile craftsmanship. Witness live demonstrations of spinning raw wool on hand spindles and dyeing with all-natural organic pigments like crushed cochineal parasites, wild indigo leaves, and marigolds before seeing master weavers operate hand-pedal looms.",
         "itinerary": [
           {
@@ -2478,7 +2689,8 @@ const CO404_LOCATIONS = {
           "oaxaca-tours",
           "coyote-aventuras",
           "xiadani-tours"
-        ]
+        ],
+        "popularityScore": 93
       },
       {
         "id": "mezcal-matatlan",
@@ -2501,12 +2713,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 650,
         "nativePricePrivate": 3200,
         "nativePriceColectivo": 110,
-        "priceSharedRange": "$650 - $850 MXN ($35 - $46 USD)",
+        "priceSharedRange": "$600 - $850 MXN ($33 - $46 USD)",
         "pricePrivateRange": "$2,800 - $3,600 MXN (Private van 1-6 pax)",
         "colectivoCost": "$110 - $150 MXN (Colectivo taxi to Matatlán central plaza)",
         "heroImage": "./assets/images/mezcal_matatlan.jpg",
         "isExclusive": false,
-        "specializedBadge": "Authentic Ancestral Palenques",
+        "specializedBadge": "Cata en Palenques",
         "description": "Santiago Matatlán is universally celebrated as the \"World Capital of Mezcal\". Travel beyond tourist-heavy gift shops deep into authentic family-run palenques. Walk among giant mature Espadín, wild Tobalá, and Tepeztate agaves. Watch the underground conical rock ovens where agave hearts (piñas) roast with oak and mesquite wood, see the mule-drawn volcanic stone tahona wheel crushing the cooked agave, and witness double distillation in copper stills and clay pots. Taste 6+ distinct wild agave expressions.",
         "itinerary": [
           {
@@ -2558,7 +2770,8 @@ const CO404_LOCATIONS = {
           "coyote-aventuras",
           "oaxaca-tours",
           "enjoy-oaxaca"
-        ]
+        ],
+        "popularityScore": 95
       },
       {
         "id": "san-martin-tilcajete-coyotepec",
@@ -2581,12 +2794,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 450,
         "nativePricePrivate": 2000,
         "nativePriceColectivo": 70,
-        "priceSharedRange": "$450 - $600 MXN ($24 - $32 USD)",
+        "priceSharedRange": "$380 - $520 MXN ($21 - $28 USD)",
         "pricePrivateRange": "$1,800 - $2,400 MXN (Private van 1-6 pax)",
         "colectivoCost": "$70 - $90 MXN (Colectivo taxi from Central de Abastos)",
         "heroImage": "./assets/images/alebrijes_coyotepec.jpg",
         "isExclusive": false,
-        "specializedBadge": "Artisan Masters Tour",
+        "specializedBadge": "Alebrijes & Barro Negro",
         "description": "Immerse in the magic of Oaxacan folk craft. Visit San Martín Tilcajete, where artisans carve mystical wooden dream figures (Alebrijes) from soft copal tree branches using machetes and fine chisels, then paint them with microscopic geometric Zapotec patterns inspired by the calendar and spirit animals (tonales). Next, visit San Bartolo Coyotepec to discover the secret of Barro Negro (black clay pottery)—burnished with quartz crystals and smoke-fired in subterranean oxygen-deprived kilns.",
         "itinerary": [
           {
@@ -2651,7 +2864,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://toursinoaxaca.com"
           }
-        ]
+        ],
+        "popularityScore": 92
       },
       {
         "id": "apoala-waterfalls",
@@ -2674,12 +2888,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 850,
         "nativePricePrivate": 4200,
         "nativePriceColectivo": 220,
-        "priceSharedRange": "$850 - $1,100 MXN ($46 - $60 USD)",
+        "priceSharedRange": "$950 - $1,350 MXN ($52 - $73 USD)",
         "pricePrivateRange": "$3,800 - $4,600 MXN (Private van 1-6 pax)",
         "colectivoCost": "$220 - $280 MXN (Multi-leg combis via Nochixtlán)",
         "heroImage": "./assets/images/apoala.jpg",
         "isExclusive": false,
-        "specializedBadge": "Off-the-Beaten-Path Mixteca Canyon",
+        "specializedBadge": "Cañón Mixteco & Cascada",
         "description": "According to sacred Mixtec codices, humanity was born from the sacred trees of Apoala. Tucked deep in the rugged Mixteca Alta mountains, this isolated canyon offers awe-inspiring natural scenery: vertical orange limestone cliffs, subterranean caverns (Grutas de Apoala), and the spectacular 30-meter \"Cola de Serpiente\" waterfall cascading into crystal-clear turquoise natural swimming pools.",
         "itinerary": [
           {
@@ -2744,7 +2958,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://toursinoaxaca.com"
           }
-        ]
+        ],
+        "popularityScore": 89
       },
       {
         "id": "sierra-norte-pueblos",
@@ -2767,7 +2982,7 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 950,
         "nativePricePrivate": 4500,
         "nativePriceColectivo": 160,
-        "priceSharedRange": "$950 - $1,250 MXN ($51 - $68 USD)",
+        "priceSharedRange": "$950 - $1,350 MXN ($52 - $73 USD)",
         "pricePrivateRange": "$4,200 - $5,200 MXN (Private van 1-6 pax)",
         "colectivoCost": "$160 - $200 MXN (Community bus from Central de Abastos to Cuajimoloyas)",
         "heroImage": "./assets/images/sierra_norte_oaxaca.jpg",
@@ -2838,7 +3053,9 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://toursinoaxaca.com"
           }
-        ]
+        ],
+        "specializedBadge": "Ecoturismo 3,000m",
+        "popularityScore": 93
       },
       {
         "id": "san-jose-del-pacifico",
@@ -2861,12 +3078,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 800,
         "nativePricePrivate": 4200,
         "nativePriceColectivo": 200,
-        "priceSharedRange": "$800 - $1,050 MXN ($43 - $57 USD)",
+        "priceSharedRange": "$750 - $1,050 MXN ($41 - $57 USD)",
         "pricePrivateRange": "$3,800 - $4,800 MXN (Private van 1-6 pax)",
         "colectivoCost": "$200 - $240 MXN (Líneas Unidas express van from Bustamante)",
         "heroImage": "./assets/images/san_jose_pacifico.jpg",
         "isExclusive": false,
-        "specializedBadge": "High Mountain Wellness Escape",
+        "specializedBadge": "Bosque & Temazcal",
         "description": "Nestled on a misty mountain pass along the Southern Sierra Madre en route to the Pacific coast, San José del Pacífico is famous worldwide for its enchanted pine forests, panoramic viewpoints floating above sea-of-clouds inversions, giant cliff swings, and traditional Zapotec temazcal (herbal steam lodge) ceremonies conducted by local shamans.",
         "itinerary": [
           {
@@ -2932,7 +3149,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://toursinoaxaca.com"
           }
-        ]
+        ],
+        "popularityScore": 91
       },
       {
         "id": "yagul-caves",
@@ -2955,12 +3173,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 450,
         "nativePricePrivate": 2100,
         "nativePriceColectivo": 70,
-        "priceSharedRange": "$450 - $600 MXN ($24 - $32 USD)",
+        "priceSharedRange": "$400 - $550 MXN ($22 - $30 USD)",
         "pricePrivateRange": "$1,900 - $2,500 MXN (Private van 1-6 pax)",
         "colectivoCost": "$70 - $90 MXN (Colectivo taxi to Yagul crossroads + 1km walk)",
         "heroImage": "./assets/images/yagul.jpg",
         "isExclusive": false,
-        "specializedBadge": "UNESCO Prehistoric Heritage",
+        "specializedBadge": "Pinturas Rupestres UNESCO",
         "description": "Yagul is an awe-inspiring fortified Zapotec city built on a natural defensive volcanic outcrop overlooking the Tlacolula Valley. It boasts the second-largest Mesoamerican ballcourt in the region, a remarkable labyrinthine palace with 6 courtyards, and cliff caves where archaeologists discovered 10,000-year-old painted rock art and the earliest domesticated squash and maize seeds in the Americas.",
         "itinerary": [
           {
@@ -3010,7 +3228,8 @@ const CO404_LOCATIONS = {
           "oaxaca-tours",
           "xiadani-tours",
           "coyote-aventuras"
-        ]
+        ],
+        "popularityScore": 85
       },
       {
         "id": "puerto-escondido-shuttle",
@@ -3033,12 +3252,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 400,
         "nativePricePrivate": 3600,
         "nativePriceColectivo": 300,
-        "priceSharedRange": "$400 - $500 MXN ($22 - $27 USD)",
+        "priceSharedRange": "$350 - $500 MXN ($19 - $27 USD)",
         "pricePrivateRange": "$3,400 - $4,200 MXN (Private van 1-6 pax)",
         "colectivoCost": "$300 - $350 MXN (Autobuses de la Costa or Ruta Coatlanes)",
         "heroImage": "./assets/images/puerto_escondido.jpg",
         "isExclusive": false,
-        "specializedBadge": "New Highway Direct Express (2.5 - 3h)",
+        "specializedBadge": "Ruta Barranca Larga",
         "description": "The historic opening of the Barranca Larga-Ventanilla toll superhighway has cut the journey from Oaxaca to the Pacific coast from 7-8 hours of nauseating mountain switchbacks down to just 2.5 to 3 hours of smooth transit. Direct drops to Zicatela world-famous surf beach, La Punta nomad district, and connections to Mazunte, San Agustinillo, and Zipolite.",
         "itinerary": [
           {
@@ -3098,7 +3317,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://www.dainzuutravel.com"
           }
-        ]
+        ],
+        "popularityScore": 94
       },
       {
         "id": "clases-cocina-oaxaquena",
@@ -3118,12 +3338,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "09:00 AM",
         "returnTime": "02:30 PM",
         "difficulty": "Easy (Hands-on culinary workshop)",
-        "priceSharedRange": "$1,500 - $1,950 MXN ($80 - $105 USD)",
+        "priceSharedRange": "$950 - $1,400 MXN ($52 - $76 USD)",
         "pricePrivateRange": "$3,200 - $4,200 MXN",
         "colectivoCost": "N/A (Chef-guided culinary masterclass with full 4-course banquet)",
         "heroImage": "./assets/images/oaxacan_cooking_class.jpg",
         "isExclusive": false,
-        "specializedBadge": "Culinary Masterclass",
+        "specializedBadge": "Taller Moles & Mercado",
         "description": "Immerse yourself in UNESCO-recognized Oaxacan culinary tradition. Start with a sensory walk through Mercado 20 de Noviembre and Central de Abastos alongside a traditional cocinera to select heirloom chiles, fresh quesillo, aromatic herbs, and cacao. Return to a traditional kitchen to roast chiles, press handmade tortillas, and cook velvety Mole Negro or Coloradito from scratch.",
         "itinerary": [
           {
@@ -3182,7 +3402,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://toursinoaxaca.com"
           }
-        ]
+        ],
+        "popularityScore": 94
       },
       {
         "id": "grutas-san-sebastian",
@@ -3202,12 +3423,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "08:30 AM",
         "returnTime": "05:00 PM",
         "difficulty": "Moderate (Helmet & headlamp subterranean walking)",
-        "priceSharedRange": "$750 - $950 MXN ($40 - $52 USD)",
+        "priceSharedRange": "$650 - $900 MXN ($35 - $49 USD)",
         "pricePrivateRange": "$3,200 - $4,200 MXN",
         "colectivoCost": "$90 - $130 MXN (Combi via Sola de Vega route)",
         "heroImage": "./assets/images/grutas_san_sebastian.jpg",
         "isExclusive": false,
-        "specializedBadge": "Subterranean Expedition",
+        "specializedBadge": "Espeleología & Ríos",
         "description": "Known as the 'Entrañas de la Tierra' (Guts of the Earth), this underground expedition explores Oaxaca's most spectacular cave system in San Sebastián Sedeño. Equipped with safety helmets and headlamps, traverse underground chambers decorated with giant crystal stalactites, stalagmites, subterranean rivers, and pristine natural mineral pools.",
         "itinerary": [
           {
@@ -3269,7 +3490,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://xiadanitours.com"
           }
-        ]
+        ],
+        "popularityScore": 86
       },
       {
         "id": "mercado-ocotlan-viernes",
@@ -3289,12 +3511,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "09:00 AM (Fridays only)",
         "returnTime": "04:30 PM",
         "difficulty": "Easy",
-        "priceSharedRange": "$600 - $750 MXN ($32 - $40 USD)",
+        "priceSharedRange": "$380 - $520 MXN ($21 - $28 USD)",
         "pricePrivateRange": "$2,600 - $3,500 MXN",
         "colectivoCost": "$35 - $45 MXN by shared taxi from Central de Abastos",
         "heroImage": "./assets/images/mercado_ocotlan.jpg",
         "isExclusive": false,
-        "specializedBadge": "Weekly Cultural Gem",
+        "specializedBadge": "Tianguis Tradicional",
         "description": "Every Friday, Ocotlán de Morelos transforms into one of the most colorful and authentic open-air indigenous markets in southern Mexico. Meet rural Zapotec farmers trading vegetables, spices, and woven baskets. Admire the stunning 16th-century Santo Domingo monastery restored by maestro Rodolfo Morales, and visit indigenous women potters in San Marcos Tlapazola crafting cookware from unglazed red clay.",
         "itinerary": [
           {
@@ -3365,7 +3587,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://toursinoaxaca.com"
           }
-        ]
+        ],
+        "popularityScore": 91
       }
     ],
     "agencies": [
@@ -3624,78 +3847,99 @@ const CO404_LOCATIONS = {
     ],
     "colectivos": [
       {
-        "destination": "Mitla & Hierve el Agua (DIY Multi-Leg)",
-        "costMxn": "$35 - $50 MXN (to Mitla) + $75 MXN (truck to Hierve)",
-        "frequency": "Every 10 - 15 minutes",
-        "operatingHours": "06:00 AM - 06:00 PM daily",
-        "signText": "\"MITLA - TLACOLULA\"",
-        "terminalLocation": "Monumento a Juárez roundabout (Highway 190 East) or Central de Abastos taxi rank",
-        "distanceFromCo404": "15 min walk or short taxi from Co404",
-        "instructions": "Board burgundy-and-white shared taxi to Mitla. In Mitla, transfer to open-bed pickup trucks (camionetas) that climb to Hierve el Agua.",
-        "returnPoint": "Camionetas return from Hierve el Agua to Mitla until 05:30 PM, then catch taxi colectivo back to Oaxaca Centro.",
+        "destination": "Monte Albán (Zona Arqueológica Zapoteca)",
+        "costMxn": "$100 MXN autobús turístico ida y vuelta (~$5.40 USD)",
+        "taxiCost": "$180 - $250 MXN en taxi solo ida / $500 - $600 MXN viaje redondo con 2.5h espera",
+        "frequency": "Cada hora en punto (08:30 AM a 03:30 PM)",
+        "operatingHours": "08:00 AM - 05:00 PM diario",
+        "signText": "\"AUTOBUSES TURÍSTICOS A MONTE ALBÁN\"",
+        "terminalLocation": "Hotel Rivera del Ángel / Calle Mina #501, Centro",
+        "distanceFromCo404": "12 min caminando desde Co404 Oaxaca",
+        "instructions": "Los autobuses turísticos de Lescas Co. salen cada hora desde la calle Mina. Compras tu boleto redondo y puedes regresar en el horario que prefieras.",
+        "returnPoint": "Estacionamiento principal de autobuses en la entrada de Monte Albán.",
         "prosCons": {
-          "pros": "Authentic local transit; extremely affordable for budget backpackers.",
-          "cons": "Open-air truck ride to Hierve is dusty and bumpy on mountain roads."
+          "pros": "Servicio puntual y directo que te ahorra la empinada subida al cerro.",
+          "cons": "Llevar agua y sombrero; sombra escasa en la plaza mayor."
         }
       },
       {
-        "destination": "Monte Albán (Suburban Tourist Bus)",
-        "costMxn": "$80 - $100 MXN (Roundtrip ticket)",
-        "frequency": "Hourly from 08:30 AM to 03:30 PM",
-        "operatingHours": "08:30 AM - 05:00 PM daily",
-        "signText": "\"AUTOBUSES TURÍSTICOS MONTE ALBÁN\"",
-        "terminalLocation": "Hotel Rivera del Ángel, Francisco Javier Mina #518",
-        "distanceFromCo404": "12 min walk from Co404",
-        "instructions": "Buy roundtrip ticket inside Hotel Rivera del Ángel lobby. Bus takes you directly to the top entrance of the ruins in 25 minutes.",
-        "returnPoint": "Buses depart the ruins parking lot back to downtown every hour until 05:00 PM.",
+        "destination": "Santa María del Tule (Árbol del Tule)",
+        "costMxn": "$15 MXN colectivo por persona (~$0.80 USD)",
+        "taxiCost": "$120 - $160 MXN en taxi completo desde el centro (20 min viaje)",
+        "frequency": "Cada 5 - 10 minutos",
+        "operatingHours": "06:00 AM - 09:00 PM diario",
+        "signText": "\"EL TULE\"",
+        "terminalLocation": "Sitio de Colectivos Valles Centrales (Av. Eduardo Vasconcelos cerca del Estadio de Béisbol)",
+        "distanceFromCo404": "10 min caminando al oriente de Co404",
+        "instructions": "Toma los taxis colectivos foráneos color guinda con blanco rotulados con 'EL TULE'. Te bajan en la plaza principal junto al árbol.",
+        "returnPoint": "Plaza principal frente al palacio municipal de El Tule.",
         "prosCons": {
-          "pros": "Super convenient and reliable; perfect for a quick half-day trip.",
-          "cons": "Set hourly return schedule means keeping an eye on the clock."
+          "pros": "Súper rápido y accesible. Excelente nieve artesanal frente al atrio.",
+          "cons": "Entrada al recinto del árbol ($20 MXN) en efectivo."
         }
       },
       {
-        "destination": "Teotitlán del Valle (Zapotec Weavers)",
-        "costMxn": "$30 - $40 MXN per seat",
-        "frequency": "Every 15 minutes",
-        "operatingHours": "06:30 AM - 07:00 PM daily",
+        "destination": "Teotitlán del Valle (Tejedores de Lana)",
+        "costMxn": "$25 MXN colectivo por persona (~$1.35 USD)",
+        "taxiCost": "$200 - $280 MXN en taxi completo directo",
+        "frequency": "Cada 15 minutos",
+        "operatingHours": "06:30 AM - 07:30 PM diario",
         "signText": "\"TEOTITLÁN DEL VALLE\"",
-        "terminalLocation": "Monumento a Juárez taxi colectivo rank (Highway 190)",
-        "distanceFromCo404": "15 min walk east from Co404",
-        "instructions": "Board colectivo taxi directly to Teotitlán plaza or take a Mitla colectivo and ask to be dropped at the highway crossroads (Crucero de Teotitlán).",
-        "returnPoint": "Board returning burgundy-and-white taxis in front of the Teotitlán municipal market.",
+        "terminalLocation": "Terminal de Colectivos de Segunda Clase / Periférico o Carretera Internacional",
+        "distanceFromCo404": "12 min caminando desde Co404",
+        "instructions": "Toma el colectivo guinda directo o sube al autobús rumbo a Mitla y pide bajar en el 'Crucero de Teotitlán', donde mototaxis locales ($10 MXN) te llevan al centro.",
+        "returnPoint": "Parada de colectivos en la plaza del mercado de Teotitlán.",
         "prosCons": {
-          "pros": "Drops you directly in front of master weaver ateliers; no middleman markups.",
-          "cons": "Taxis wait until all 4 passenger seats are full before departing."
+          "pros": "Demostraciones gratuitas de tintes naturales con grana cochinilla en casi todos los talleres familiares.",
+          "cons": "El pueblo es extenso; cómodo rentar bicicleta o caminar entre talleres."
         }
       },
       {
-        "destination": "San Martín Tilcajete (Alebrijes) & Ocotlán",
-        "costMxn": "$25 - $35 MXN per seat",
-        "frequency": "Every 10 minutes",
-        "operatingHours": "06:00 AM - 07:30 PM daily",
-        "signText": "\"TILCAJETE - OCOTLÁN\"",
-        "terminalLocation": "Central de Abastos taxi colectivo ranks (Calle Periférico Sur)",
-        "distanceFromCo404": "18 min walk from Co404",
-        "instructions": "Look for yellow or maroon colectivo sedans labeled 'Ocotlán / Tilcajete'. Ask the driver to drop you at the entrance to Tilcajete.",
-        "returnPoint": "Flag down return colectivos on the main federal highway junction outside the village.",
+        "destination": "Mitla & Conexión a Hierve el Agua",
+        "costMxn": "$25 MXN colectivo a Mitla + $75 MXN camioneta ejidal a Hierve el Agua",
+        "taxiCost": "$650 - $850 MXN taxi directo contratado por medio día",
+        "frequency": "Colectivo cada 10 min a Mitla; camionetas ejidales salen al llenarse",
+        "operatingHours": "07:00 AM - 06:00 PM",
+        "signText": "\"MITLA\" (y luego transbordo a camioneta ejidal)",
+        "terminalLocation": "Sitio de Colectivos a Mitla (Cerca de la Central de Abastos / Periférico)",
+        "distanceFromCo404": "14 min caminando desde Co404",
+        "instructions": "Toma el colectivo guinda hasta el centro de Mitla (50 min). Al llegar a la terminal de Mitla, transborda a las camionetas pick-up ejidales con redilas que suben a Hierve el Agua por el camino de terracería (45 min).",
+        "returnPoint": "Estacionamiento de las pozas de Hierve el Agua para tomar camioneta de bajada a Mitla.",
         "prosCons": {
-          "pros": "Fast and very inexpensive; easy to combine with Friday Ocotlán artisan market.",
-          "cons": "Central de Abastos taxi area is crowded—watch your pockets."
+          "pros": "Ahorro masivo de dinero frente a tours privados ($100 MXN total vs $600 MXN).",
+          "cons": "Camino de terracería con curvas y polvo; la camioneta va al descubierto."
         }
       },
       {
-        "destination": "San José del Pacífico (High Mountain Vans)",
-        "costMxn": "$180 - $220 MXN per passenger",
-        "frequency": "Every 45 minutes (Líneas Unidas or Eclipse 70)",
-        "operatingHours": "05:00 AM - 08:00 PM daily",
-        "signText": "\"LÍNEAS UNIDAS - POCHUTLA / SAN JOSÉ\"",
-        "terminalLocation": "Líneas Unidas terminal, Calle Bustamante #601 (Centro)",
-        "distanceFromCo404": "12 min walk south from Co404",
-        "instructions": "Purchase ticket at counter for San José del Pacífico. Modern Sprinter vans navigate the winding mountain pass in ~3 hours.",
-        "returnPoint": "Vans pick up passengers in San José del Pacífico at the main roadside stop heading back down to Oaxaca.",
+        "destination": "San Bartolo Coyotepec (Barro Negro)",
+        "costMxn": "$18 MXN colectivo por persona (~$1 USD)",
+        "taxiCost": "$130 - $180 MXN en taxi completo",
+        "frequency": "Cada 10 minutos",
+        "operatingHours": "06:00 AM - 08:00 PM diario",
+        "signText": "\"COYOTEPEC / ZAALACHILA\"",
+        "terminalLocation": "Periférico sur frente a Parque del Amor",
+        "distanceFromCo404": "15 min caminando desde Co404",
+        "instructions": "Toma el colectivo con rótulo de Coyotepec. Pide la parada en el Museo MEAPO o en el mercado de artesanías de barro negro.",
+        "returnPoint": "Carretera principal de Coyotepec en la parada de colectivos rumbo a Oaxaca.",
         "prosCons": {
-          "pros": "Frequent departures throughout the day; comfortable reclining seats.",
-          "cons": "Mountain road has many curves—take motion sickness tablets if sensitive."
+          "pros": "Museo Estatal de Arte Popular MEAPO y piezas de barro negro pulido de alta calidad.",
+          "cons": "Empaque cuidadoso requerido si compras piezas frágiles."
+        }
+      },
+      {
+        "destination": "San Martín Tilcajete (Cuna de Alebrijes)",
+        "costMxn": "$25 MXN colectivo por persona (~$1.35 USD)",
+        "taxiCost": "$220 - $300 MXN en taxi completo directo",
+        "frequency": "Cada 15 minutos",
+        "operatingHours": "06:30 AM - 07:00 PM diario",
+        "signText": "\"OCOTLÁN / TILCAJETE\"",
+        "terminalLocation": "Parque del Amor / Periférico sur",
+        "distanceFromCo404": "15 min caminando desde Co404",
+        "instructions": "Sube al colectivo rumbo a Ocotlán y pide descender en la desviación o entrada de San Martín Tilcajete. Mototaxis te acercan a los talleres de Jacobo & María Ángeles.",
+        "returnPoint": "Entronque con la carretera federal para tomar colectivo de regreso.",
+        "prosCons": {
+          "pros": "Acceso a los mejores talleres del mundo de alebrijes en madera de copal.",
+          "cons": "Visitas guiadas en talleres top pueden requerir reserva previa en temporada alta."
         }
       }
     ],
@@ -3871,6 +4115,76 @@ const CO404_LOCATIONS = {
           "cons": "Mountain road has many curves—take motion sickness tablets if sensitive."
         }
       }
+    ],
+    "vanRentalBenchmarks": {
+      "city": "Oaxaca de Juárez",
+      "currency": "MXN",
+      "providers": [
+        {
+          "name": "Operadora Turística Dainzúu / Vans Oaxaca",
+          "website": "https://oaxaca-travel.com",
+          "phone": "+52 951 516 4895",
+          "whatsapp": "529511234567",
+          "fleet": "Toyota Hiace GL (14 pasajeros) con aire acondicionado",
+          "localDayRate": 2800,
+          "midDistanceRate": 3400,
+          "longDistanceRate": 5500,
+          "servicesIncluded": [
+            "Operador turístico profesional certificado por SECTUR",
+            "Combustible para circuito Valles Centrales (Tule, Teotitlán, Mitla, Hierve el Agua)",
+            "Peaje autopista Mitla y casetas de acceso",
+            "Seguro de viajero y póliza de cobertura amplia",
+            "Salida y regreso a la puerta de Co404 Oaxaca"
+          ]
+        },
+        {
+          "name": "Mobilux Transportes Turísticos",
+          "website": "https://mobilux.com.mx",
+          "phone": "+52 951 513 7744",
+          "whatsapp": "529511789012",
+          "fleet": "Mercedes Benz Sprinter (19 pax) y Toyota Hiace (14 pax)",
+          "localDayRate": 3200,
+          "midDistanceRate": 3800,
+          "longDistanceRate": 6200,
+          "servicesIncluded": [
+            "Chofer bilingüe opcional y vehículo de lujo con asientos reclinables",
+            "Combustible, seguro de pasajeros y coordinación de itinerario",
+            "Libertad de horarios sin prisas de tours masivos"
+          ]
+        }
+      ]
+    },
+    "verifiedTaxiServices": [
+      {
+        "name": "Oaxaca en Taxi (Radio Taxi Confiable)",
+        "phone": "+52 951 357 0834",
+        "whatsapp": "529513570834",
+        "hours": "24 horas",
+        "baseLocation": "Centro de Oaxaca",
+        "pickupAtCo404": "Pide por WhatsApp compartiendo tu ubicación en Co404",
+        "sampleRates": "Urbano: $60 - $85 MXN. Monte Albán (solo ida): $180 - $250 MXN (o $500 MXN ida y vuelta con 2h espera). El Tule: $150 - $200 MXN.",
+        "description": "Servicio de taxi seguro con despacho por WhatsApp, ideal para evitar regateos en la calle."
+      },
+      {
+        "name": "Taxi Confiable Oaxaca (Servicio Ejecutivo & Turístico)",
+        "phone": "+52 951 565 8660",
+        "whatsapp": "529515658660",
+        "hours": "06:00 AM - 12:00 AM",
+        "baseLocation": "Barrio de Jalatlaco / Centro",
+        "pickupAtCo404": "Atención inmediata por WhatsApp y llamada",
+        "sampleRates": "Urbano: $70 - $90 MXN. Teotitlán del Valle: $250 - $320 MXN. San Bartolo Coyotepec: $150 - $200 MXN.",
+        "description": "Conductores amables con experiencia en tours turísticos personalizados por horas."
+      },
+      {
+        "name": "Sitio Alameda / Trujano (Base Centro Histórico)",
+        "phone": "+52 951 501 0541",
+        "whatsapp": null,
+        "hours": "24 horas",
+        "baseLocation": "Zócalo / Alameda de León",
+        "pickupAtCo404": "Llamada a central",
+        "sampleRates": "Tarifario oficial exhibido en base. Aeropuerto OAX: $250 - $350 MXN.",
+        "description": "Sitio concesionado con base fija en el centro histórico de Oaxaca."
+      }
     ]
   },
   "medellin": {
@@ -3904,12 +4218,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 110000,
         "nativePricePrivate": 550000,
         "nativePriceColectivo": 35000,
-        "priceSharedRange": "$110,000 - $140,000 COP ($27 - $34 USD)",
+        "priceSharedRange": "$110.000 - $140.000 COP ($28 - $35 USD)",
         "pricePrivateRange": "$520,000 - $680,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$35,000 - $45,000 COP (Direct bus from Terminal del Norte)",
         "heroImage": "./assets/images/guatape.jpg",
         "isExclusive": false,
-        "specializedBadge": "Top Antioquia Excursion",
+        "specializedBadge": "Top #1 Imperdible",
         "description": "The definitive Antioquian day adventure! Ascend the sheer 200-meter-high granite monolith \"La Piedra del Peñol\" via 740 zigzagging stairs built into a natural fissure to take in one of the world's most breathtaking island-and-reservoir panoramas. Cruise across the emerald lake by boat visiting the sunken ruins of Old Peñol, then stroll the storybook streets of Guatapé where every building base is decorated with hand-sculpted colorful reliefs (zócalos) depicting local folklore.",
         "itinerary": [
           {
@@ -3985,6 +4299,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://tour-medellin.com/tour-guatape"
           }
+        ],
+        "popularityScore": 99,
+        "variants": [
+          {
+            "name": "Pasadía Tradicional en Bus + Crucero + Pueblo de Zócalos",
+            "priceDiff": "Tarifa estándar ($110.000 - $140.000 COP)",
+            "description": "Incluye traslado ida y vuelta en autobús turístico con aire acondicionado, desayuno, almuerzo típico paisa, ascenso a la Piedra del Peñol (escaleras 740 escalones $30.000 COP opcional), crucero en barco con música por la represa y recorrido guiado por el colorido pueblo de los zócalos.",
+            "recommendedFor": "Mejor relación calidad-precio y experiencia completa para colivers."
+          },
+          {
+            "name": "Guatapé Premium en Lancha Rápida & Deportes Náuticos",
+            "priceDiff": "$220.000 - $350.000 COP",
+            "description": "Transporte en van privada para grupos reducidos, lancha deportiva privada por la represa hacia la Finca La Manuela, kayak o paddle board y tiempo sin afanes.",
+            "recommendedFor": "Grupos de amigos que buscan exclusividad y aventura en el agua."
+          }
         ]
       },
       {
@@ -4009,12 +4338,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 70000,
         "nativePricePrivate": 320000,
         "nativePriceColectivo": 12000,
-        "priceSharedRange": "$70,000 - $95,000 COP ($17 - $23 USD)",
+        "priceSharedRange": "$40.000 - $65.000 COP ($10 - $16 USD)",
         "pricePrivateRange": "$290,000 - $380,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$12,000 - $16,000 COP (Metro Line B to San Javier + feeder bus)",
         "heroImage": "./assets/images/comuna13.jpg",
         "isExclusive": false,
-        "specializedBadge": "Essential Medellín Experience",
+        "specializedBadge": "Hip-Hop & Resiliencia",
         "description": "Once one of the world's most dangerous neighborhoods during the height of the cartel and militia conflict, Comuna 13 (San Javier) has undergone one of history's most celebrated urban transformations. Led by community youth, street artists, and breakdancers, discover how public electric escalators and the Metrocable connected hillside shantytowns to city opportunity. Marvel at dozens of vibrant political murals and sample famous homemade artisanal ice creams.",
         "itinerary": [
           {
@@ -4079,6 +4408,21 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://tour-medellin.com/tour-graffitour"
           }
+        ],
+        "popularityScore": 98,
+        "variants": [
+          {
+            "name": "Graffiti Tour Comunitario con Guía Local del Barrio",
+            "priceDiff": "Tarifa voluntaria o guiada ($40.000 - $60.000 COP)",
+            "description": "Caminata guiada por líderes comunitarios nacidos en la Comuna 13. Explicación del conflicto, 'Operación Orión', arte callejero, escaleras eléctricas al aire libre y degustación de paleta de mango biche con limón y sal.",
+            "recommendedFor": "Apoyo directo a la comunidad y relato histórico auténtico de primera mano."
+          },
+          {
+            "name": "Graffiti Tour + Taller de Breakdance & Café de Origen",
+            "priceDiff": "$80.000 - $120.000 COP",
+            "description": "Incluye la caminata histórica completa más una sesión de baile hip hop / breakdance con artistas locales y café de origen en una terraza panorámica con vista a toda la montaña.",
+            "recommendedFor": "Apasionados del arte urbano y vivencias culturales inmersivas."
+          }
         ]
       },
       {
@@ -4102,12 +4446,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 120000,
         "nativePricePrivate": 580000,
         "nativePriceColectivo": 30000,
-        "priceSharedRange": "$120,000 - $150,000 COP ($29 - $37 USD)",
+        "priceSharedRange": "$120.000 - $160.000 COP ($30 - $40 USD)",
         "pricePrivateRange": "$520,000 - $680,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$30,000 - $38,000 COP (Minivan from Terminal del Norte)",
         "heroImage": "./assets/images/santa_fe_antioquia.jpg",
         "isExclusive": false,
-        "specializedBadge": "Heritage Capital of Antioquia",
+        "specializedBadge": "Puente de Occidente & Sol",
         "description": "Drive through the monumental 4.6-kilometer Fernando Gómez Martínez Tunnel into the sun-drenched Cauca River Valley. Santa Fe de Antioquia was the region's capital from 1584 to 1826. Marvel at Spanish colonial whitewashed walls, grand carved wooden doorways, and eight historic churches. Cross the historic 1895 Puente de Occidente—one of the world's longest suspension bridges of the 19th century—suspended over the rushing Cauca River.",
         "itinerary": [
           {
@@ -4163,7 +4507,8 @@ const CO404_LOCATIONS = {
           "turibus-medellin",
           "fantasy-tours",
           "medellin-day-trips"
-        ]
+        ],
+        "popularityScore": 91
       },
       {
         "id": "jardin-coffee-pueblo",
@@ -4186,12 +4531,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 160000,
         "nativePricePrivate": 750000,
         "nativePriceColectivo": 45000,
-        "priceSharedRange": "$160,000 - $210,000 COP ($39 - $51 USD)",
+        "priceSharedRange": "$180.000 - $240.000 COP ($45 - $60 USD)",
         "pricePrivateRange": "$700,000 - $900,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$45,000 - $55,000 COP (Rápido Ochoa bus from Terminal del Sur)",
         "heroImage": "./assets/images/jardin_antioquia.jpg",
         "isExclusive": false,
-        "specializedBadge": "Authentic Paisa Heritage Pueblo",
+        "specializedBadge": "Café, Truchas & Garrucha",
         "description": "Frequently voted the most enchanting pueblo in all of Colombia, Jardín is a wonderland of brightly painted wooden tables and chairs in the cobblestone main plaza, framed by the neo-Gothic Basilica of the Immaculate Conception. Visit the world-famous Reserva Natural Gallito de las Rocas to witness vivid scarlet Andean Cock-of-the-rock birds displaying in the wild just 5 minutes from town. Ride the wooden cable car La Garrucha high across banana and coffee plantations.",
         "itinerary": [
           {
@@ -4247,7 +4592,8 @@ const CO404_LOCATIONS = {
           "medellin-day-trips",
           "ecotours-colombia",
           "toucan-ecotours"
-        ]
+        ],
+        "popularityScore": 94
       },
       {
         "id": "jerico-heritage-town",
@@ -4270,12 +4616,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 150000,
         "nativePricePrivate": 720000,
         "nativePriceColectivo": 42000,
-        "priceSharedRange": "$150,000 - $190,000 COP ($37 - $46 USD)",
+        "priceSharedRange": "$180.000 - $240.000 COP ($45 - $60 USD)",
         "pricePrivateRange": "$680,000 - $850,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$42,000 - $50,000 COP (Direct bus from Terminal del Sur)",
         "heroImage": "./assets/images/jerico.jpg",
         "isExclusive": false,
-        "specializedBadge": "Antioquia's Prettiest Balconies",
+        "specializedBadge": "Cuna del Carriel Paisa",
         "description": "Draped over a steep green mountain ridge, Jericó is celebrated for having the most ornate wooden balconies in Colombia. Known as the birthplace of the traditional Colombian leather Carriel bag (featuring 12 hidden pockets), you will visit generational leathercraft ateliers (guarnielerías) where masters construct each heirloom piece by hand. Ascend Morro El Salvador for 360-degree views of the Western Andes.",
         "itinerary": [
           {
@@ -4330,7 +4676,8 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "medellin-day-trips",
           "toucan-ecotours"
-        ]
+        ],
+        "popularityScore": 90
       },
       {
         "id": "parque-arvi-santa-elena",
@@ -4353,12 +4700,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 80000,
         "nativePricePrivate": 380000,
         "nativePriceColectivo": 15000,
-        "priceSharedRange": "$80,000 - $110,000 COP ($20 - $27 USD)",
+        "priceSharedRange": "$60.000 - $95.000 COP ($15 - $24 USD)",
         "pricePrivateRange": "$350,000 - $450,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$15,000 - $22,000 COP (Public Metro + Metrocable Line L ticket)",
         "heroImage": "./assets/images/parque_arvi.jpg",
         "isExclusive": false,
-        "specializedBadge": "Direct Metrocable Connection",
+        "specializedBadge": "Metrocable & Silleteros",
         "description": "Soar silently above the mountain ridge on the Metrocable Line L as city tenements give way to 16,000 hectares of virgin Andean cloud forest. Explore prehistoric stone-paved trading trails (Caminos Prehispánicos), spot native hummingbirds and moss-covered native trees, and visit a traditional Silletero flower finca in Santa Elena where families craft the enormous floral arrangements carried in the world-renowned Feria de las Flores.",
         "itinerary": [
           {
@@ -4409,7 +4756,8 @@ const CO404_LOCATIONS = {
           "turibus-medellin",
           "toucan-ecotours",
           "medellin-city-tours"
-        ]
+        ],
+        "popularityScore": 92
       },
       {
         "id": "rio-claro-canyon",
@@ -4432,12 +4780,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 190000,
         "nativePricePrivate": 890000,
         "nativePriceColectivo": 65000,
-        "priceSharedRange": "$190,000 - $250,000 COP ($46 - $61 USD)",
+        "priceSharedRange": "$220.000 - $290.000 COP ($55 - $72 USD)",
         "pricePrivateRange": "$820,000 - $1,100,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$65,000 - $80,000 COP (Buses heading to Doradal from Terminal del Norte)",
         "heroImage": "./assets/images/rio_claro.jpg",
         "isExclusive": false,
-        "specializedBadge": "High Adventure & Rafting Odyssey",
+        "specializedBadge": "Rafting en Cañón de Mármol",
         "description": "One of the most extraordinary ecological sanctuaries in South America. The Río Claro carves a turquoise pathway through sheer vertical marble canyons surrounded by dense tropical rainforest. Embark on a thrilling whitewater rafting run through ancient limestone gorges, explore the subterranean Cueva de los Guácharos home to nocturnal oilbirds, slide down natural polished marble rock formations, and zip line across the jungle canopy.",
         "itinerary": [
           {
@@ -4493,7 +4841,8 @@ const CO404_LOCATIONS = {
         "bestAgencies": [
           "medellin-day-trips",
           "fantasy-tours"
-        ]
+        ],
+        "popularityScore": 91
       },
       {
         "id": "coffee-farm-experience",
@@ -4517,12 +4866,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 130000,
         "nativePricePrivate": 480000,
         "nativePriceColectivo": 25000,
-        "priceSharedRange": "$130,000 - $170,000 COP ($32 - $41 USD)",
+        "priceSharedRange": "$160.000 - $220.000 COP ($40 - $55 USD)",
         "pricePrivateRange": "$450,000 - $580,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$25,000 - $35,000 COP (Bus to San Antonio de Prado / Fredonia)",
         "heroImage": "./assets/images/coffee_finca_medellin.jpg",
         "isExclusive": false,
-        "specializedBadge": "Authentic Seed-to-Cup Immersion",
+        "specializedBadge": "Finca Cafetera Tradicional",
         "description": "Skip generic tourist gift shops and step into a real multi-generational coffee finca nestled in the lush green hills of Fredonia or San Antonio de Prado. Put on a traditional canvas poncho and basket (canasto) to pick ripe red cherries. Walk through wet pulping mills, drying raised beds, and micro-roasting facilities before a guided sensory cupping session led by certified Q-graders explaining acidity, body, and notes.",
         "itinerary": [
           {
@@ -4577,7 +4926,8 @@ const CO404_LOCATIONS = {
           "toucan-ecotours",
           "paisa-tours-medellin",
           "medellin-day-trips"
-        ]
+        ],
+        "popularityScore": 93
       },
       {
         "id": "paragliding-san-felix",
@@ -4600,12 +4950,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 170000,
         "nativePricePrivate": 450000,
         "nativePriceColectivo": 30000,
-        "priceSharedRange": "$170,000 - $220,000 COP ($41 - $54 USD)",
+        "priceSharedRange": "$180.000 - $250.000 COP ($45 - $62 USD)",
         "pricePrivateRange": "$420,000 - $550,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$30,000 - $40,000 COP (Bello bus + San Félix local colectivo)",
         "heroImage": "./assets/images/paragliding_san_felix.jpg",
         "isExclusive": false,
-        "specializedBadge": "Top Aerial Adrenaline Trip",
+        "specializedBadge": "Vuelo Tándem Panorámico",
         "description": "San Félix is one of the world's most dependable tandem paragliding launch ridges thanks to steady thermal updrafts rising from the valley floor. Clip into a comfortable harness with a certified national flight instructor and take three jogging steps off the green ridge to float 1,500 meters above the entire metropolitan expanse of Medellín and northern Antioquia.",
         "itinerary": [
           {
@@ -4671,7 +5021,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://tour-medellin.com/tour-parapente"
           }
-        ]
+        ],
+        "popularityScore": 95
       },
       {
         "id": "salto-del-buey-abejorral",
@@ -4694,12 +5045,12 @@ const CO404_LOCATIONS = {
         "nativePriceShared": 180000,
         "nativePricePrivate": 780000,
         "nativePriceColectivo": 50000,
-        "priceSharedRange": "$180,000 - $240,000 COP ($44 - $58 USD)",
+        "priceSharedRange": "$150.000 - $210.000 COP ($37 - $52 USD)",
         "pricePrivateRange": "$720,000 - $920,000 COP (Private van 1-6 pax)",
         "colectivoCost": "$50,000 - $65,000 COP (Buses to La Ceja / Abejorral from Terminal del Sur)",
         "heroImage": "./assets/images/salto_del_buey.jpg",
         "isExclusive": false,
-        "specializedBadge": "Extreme Canyoning & Ziplines",
+        "specializedBadge": "Cascada 80m & Ferrata",
         "description": "Hidden in the dramatic river gorge dividing La Ceja and Abejorral, Salto del Buey is an imposing 80-meter waterfall plummeting into a roaring natural amphitheater. Experience one of South America's most daring extreme parks: soar on twin 1,000-meter ziplines directly across the open abyss 300 meters above the waterfall spray, and climb the via ferrata anchored into the sheer vertical cliff.",
         "itinerary": [
           {
@@ -4755,7 +5106,8 @@ const CO404_LOCATIONS = {
           "medellin-day-trips",
           "tours-medallo",
           "ecotours-colombia"
-        ]
+        ],
+        "popularityScore": 88
       },
       {
         "id": "carmen-de-viboral-ceramica",
@@ -4775,12 +5127,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "08:30 AM",
         "returnTime": "05:30 PM",
         "difficulty": "Easy",
-        "priceSharedRange": "$180,000 - $220,000 COP ($44 - $54 USD)",
+        "priceSharedRange": "$110.000 - $150.000 COP ($28 - $38 USD)",
         "pricePrivateRange": "$750,000 - $950,000 COP",
         "colectivoCost": "$18,000 - $24,000 COP (Direct bus from Terminal del Norte)",
         "heroImage": "./assets/images/carmen_de_viboral_ceramica.jpg",
         "isExclusive": false,
-        "specializedBadge": "Heritage Artisan Route",
+        "specializedBadge": "Cerámica Artesanal",
         "description": "Journey into the charming eastern highlands of Antioquia to El Carmen de Viboral, globally renowned for its century-old tradition of hand-painted ceramics. Stroll down the famous 'Calle de las Arcillas', visit active master pottery studios to watch artisans delicately paint traditional floral motifs, and savor traditional Antioquian gastronomy in tranquil mountain squares.",
         "itinerary": [
           {
@@ -4847,7 +5199,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://turibuscolombia.com/tour/tour-el-carmen-de-viboral/"
           }
-        ]
+        ],
+        "popularityScore": 86
       },
       {
         "id": "hacienda-napoles-safari",
@@ -4867,12 +5220,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "05:00 AM",
         "returnTime": "08:30 PM",
         "difficulty": "Easy to Moderate (Walking through safari & water park)",
-        "priceSharedRange": "$259,000 - $299,000 COP ($63 - $73 USD with passport pass)",
+        "priceSharedRange": "$210.000 - $280.000 COP ($52 - $70 USD)",
         "pricePrivateRange": "$1,100,000 - $1,400,000 COP",
         "colectivoCost": "$65,000 COP each way by Rápido Ochoa bus + entrance ticket",
         "heroImage": "./assets/images/hacienda_napoles.jpg",
         "isExclusive": false,
-        "specializedBadge": "Full-Day Safari & Water Park",
+        "specializedBadge": "Parque Temático & Safari",
         "description": "An epic full-day expedition to Colombia's premier theme park and wildlife sanctuary in the tropical Magdalena Medio. Encounter massive free-roaming African hippos, rhinos, lions, and zebras; cool off in the giant aquatic parks (Octopus, Acualago, and Cobras); and reflect on Colombia's history at the Memorial Museum and Jurassic animatronics park.",
         "itinerary": [
           {
@@ -4936,7 +5289,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://tour-medellin.com/tour-hacienda-napoles"
           }
-        ]
+        ],
+        "popularityScore": 89
       },
       {
         "id": "tour-nocturno-medellin",
@@ -4956,12 +5310,12 @@ const CO404_LOCATIONS = {
         "suggestedDeparture": "06:30 PM",
         "returnTime": "10:30 PM",
         "difficulty": "Easy",
-        "priceSharedRange": "$120,000 - $145,000 COP ($29 - $35 USD)",
+        "priceSharedRange": "$65.000 - $95.000 COP ($16 - $24 USD)",
         "pricePrivateRange": "$450,000 - $650,000 COP",
         "colectivoCost": "$30,000 - $45,000 COP by taxi to Las Palmas viewpoint",
         "heroImage": "./assets/images/medellin_nocturno.jpg",
         "isExclusive": false,
-        "specializedBadge": "Night Panorama",
+        "specializedBadge": "Miradores de Las Palmas",
         "description": "Experience Medellín after sunset as the city of eternal spring transforms into an ocean of sparkling mountain lights. Ascend the high ridges of Las Palmas for breathtaking panoramic viewpoints, taste warm traditional hot chocolate with cheese or hot mulled canelazo, savor freshly grilled arepas de chócolo, and enjoy the lively, festive night atmosphere.",
         "itinerary": [
           {
@@ -5019,7 +5373,8 @@ const CO404_LOCATIONS = {
             "source": "Web Oficial",
             "url": "https://turibuscolombia.com/tour/tour-nocturno/"
           }
-        ]
+        ],
+        "popularityScore": 87
       }
     ],
     "agencies": [
@@ -5278,78 +5633,83 @@ const CO404_LOCATIONS = {
     ],
     "colectivos": [
       {
-        "destination": "Guatapé & Piedra del Peñol (Direct Bus)",
-        "costMxn": "$18,000 - $22,000 COP (~$4.50 - $5.50 USD)",
-        "frequency": "Every 20 minutes from 06:00 AM to 07:00 PM",
-        "operatingHours": "06:00 AM - 07:00 PM daily",
-        "signText": "\"SOTRASANVICENTE / GUATAPÉ - PIEDRA\"",
-        "terminalLocation": "Terminal del Norte (Connected directly to Caribe Metro Station on Line A, ticket booths #9 & #14)",
-        "distanceFromCo404": "Take Metro Line B from Estadio -> San Antonio -> Line A to Caribe",
-        "instructions": "Buy ticket at Sotrasanvicente booth #9. Ask the driver to drop you at 'La Piedra' if climbing first, or stay on until the Guatapé waterfront.",
-        "returnPoint": "Buses depart back to Medellín from the Guatapé terminal or the rock base gas station every 20 minutes until 07:30 PM.",
+        "destination": "Comuna 13 (Escaleras Eléctricas & Graffiti)",
+        "costMxn": "$3.500 COP Metro Línea B hasta San Javier (~$0.85 USD)",
+        "taxiCost": "$14.000 - $20.000 COP en taxi Coopebombas directo desde Co404 Laureles (~$3.50 - $5 USD)",
+        "frequency": "Metro cada 4 - 6 minutos; busetas integradas cada 5 min",
+        "operatingHours": "04:30 AM - 11:00 PM lunes a sábado; 05:00 AM - 10:00 PM domingos",
+        "signText": "\"METRO LÍNEA B A SAN JAVIER\" / Buseta: \"221i COMUNA 13\"",
+        "terminalLocation": "Estación de Metro Estadio (a 6 min caminando de Co404 Laureles)",
+        "distanceFromCo404": "6 min caminando a la estación Estadio",
+        "instructions": "Desde Co404 Laureles camina a la Estación Estadio (Línea B). Toma el metro hacia el occidente hasta la terminal San Javier (3 estaciones, 6 min). Al salir de la estación, camina 12 min hacia las escaleras eléctricas o toma la buseta integrada 221i en la bahía de buses.",
+        "returnPoint": "Toma cualquier buseta verde integrada que descienda a la estación San Javier del Metro.",
         "prosCons": {
-          "pros": "Very affordable, comfortable coach buses with panoramic windows leaving every 20 minutes.",
-          "cons": "Weekend return buses between 04:30 PM and 07:00 PM can have long ticket queues; buy return ticket upon arrival!"
+          "pros": "Ruta híper rápida y económica. Excelente para ir por tu cuenta en la mañana.",
+          "cons": "Mucho calor en la tarde; lleva hidratación y protector solar."
         }
       },
       {
-        "destination": "Comuna 13 (Metro + Integrated Feeder)",
-        "costMxn": "$3,650 COP (~$0.90 USD with Metro Cívica Card)",
-        "frequency": "Continuous (every 3 - 5 minutes)",
-        "operatingHours": "04:30 AM - 11:00 PM daily",
-        "signText": "\"METRO LÍNEA B -> SAN JAVIER -> BUS 221i ESCALERAS\"",
-        "terminalLocation": "Take Metro Line B from Estadio station (6 min walk from Co404) to San Javier terminal, then Integrated Green Bus 221i",
-        "distanceFromCo404": "6 min walk to Estadio Metro station from Co404 Laureles",
-        "instructions": "Ride Metro Line B west to the San Javier terminus. Exit station and board the green integrated feeder bus 221i up to the Escaleras Eléctricas.",
-        "returnPoint": "Take the green feeder bus 221i or a $10,000 COP local taxi from the escalators back down to San Javier Metro station.",
+        "destination": "Guatapé & La Piedra del Peñol",
+        "costMxn": "$19.000 COP bus por persona (~$4.60 USD)",
+        "taxiCost": "$180.000 - $230.000 COP en taxi especial o InDriver viaje completo (2 horas)",
+        "frequency": "Cada 20 - 30 minutos",
+        "operatingHours": "05:30 AM - 07:00 PM diario",
+        "signText": "\"GUATAPÉ / EL PEÑOL\" (Empresas: Sotrasanvicente / Guatapé La Piedra)",
+        "terminalLocation": "Terminal de Transportes del Norte (Estación Metro Caribe Línea A)",
+        "distanceFromCo404": "Toma Metro en Estadio con transbordo en San Antonio a Línea A hasta Caribe (18 min total)",
+        "instructions": "Llega a la Terminal del Norte vía Metro (Estación Caribe). En las taquillas del sótano (taquillas 9 a 14) compra boleto de bus hacia 'La Piedra' o 'Guatapé'. Pide que te bajen en la gasolinera de entrada a la Piedra del Peñol si vas a subir primero, o sigue hasta el malecón del pueblo.",
+        "returnPoint": "Terminal de buses de Guatapé en el malecón frente a la represa.",
         "prosCons": {
-          "pros": "Ultra-cheap, fast transit using Medellín's world-class Metro system. No highway traffic.",
-          "cons": "Get a rechargeable Metro Cívica card at Estadio station to avoid ticket queues."
+          "pros": "Buses cómodos con Wi-Fi y salidas continuas durante todo el día.",
+          "cons": "Los domingos y festivos en la tarde el retorno puede tardar 3 a 4 horas por tráfico en la autopista Medellín-Bogotá. Sal antes de las 04:00 PM."
         }
       },
       {
-        "destination": "Santa Fe de Antioquia (Minivan Express)",
-        "costMxn": "$16,000 - $18,000 COP (~$4 USD)",
-        "frequency": "Every 30 minutes",
-        "operatingHours": "05:00 AM - 08:00 PM daily",
-        "signText": "\"COOTRASANTA / SANTA FE DE ANTIOQUIA\"",
-        "terminalLocation": "Terminal del Norte (Caribe Metro Station, lower level ticket booth #10)",
-        "distanceFromCo404": "15 min Metro ride from Estadio to Caribe",
-        "instructions": "Buy ticket for Cootrasanta or Gómez Hernández minivans. Travels through the 4.6km western tunnel straight into the tropical Cauca valley in 1h 15m.",
-        "returnPoint": "Buses return from Santa Fe de Antioquia main terminal back to Medellín Terminal del Norte until 08:00 PM.",
+        "destination": "Santa Fe de Antioquia (Pueblo Colonial de Occidente)",
+        "costMxn": "$16.000 COP bus por persona (~$3.90 USD)",
+        "taxiCost": "$140.000 - $180.000 COP en taxi especial por el Túnel de Occidente (1 hr 15 min)",
+        "frequency": "Cada 20 minutos",
+        "operatingHours": "05:00 AM - 08:00 PM diario",
+        "signText": "\"SANTA FE DE ANTIOQUIA\" (Empresas: Cootrasana / Gómez Hernández)",
+        "terminalLocation": "Terminal del Norte (Metro Caribe)",
+        "distanceFromCo404": "18 min en Metro desde Co404",
+        "instructions": "En la Terminal del Norte compra boleto en taquillas de Cootrasana. El microbús cruza el Túnel de Occidente Fernando Gómez Martínez y te deja en el parque principal o terminal de Santa Fe.",
+        "returnPoint": "Terminal de Cootrasana a 3 cuadras del parque principal de Santa Fe.",
         "prosCons": {
-          "pros": "Direct and fast through the mountain tunnel; air-conditioned vans.",
-          "cons": "Cauca valley is very hot (32°C)—pack sunglasses and water."
+          "pros": "Clima cálido tropical delicioso (30°C), arquitectura colonial de piedra y tamarindos.",
+          "cons": "Llevar ropa ligera, sandalias, traje de baño y bloqueador solar."
         }
       },
       {
-        "destination": "Jardín & Jericó (Southwest Mountain Buses)",
-        "costMxn": "$38,000 - $45,000 COP (~$9 - $11 USD)",
-        "frequency": "Hourly from 06:00 AM to 06:00 PM",
-        "operatingHours": "06:00 AM - 06:00 PM daily",
-        "signText": "\"RÁPIDO OCHOA - JARDÍN\" or \"TRANSPORTES JERICÓ\"",
-        "terminalLocation": "Terminal del Sur (Next to Olaya Herrera Airport, Rápido Ochoa or Transportes Jericó booths)",
-        "distanceFromCo404": "10 min taxi or short bus from Laureles to Terminal del Sur",
-        "instructions": "Buy ticket at Rápido Ochoa (for Jardín) or Transportes Jericó (for Jericó). Comfortable coach travels through southwest coffee ridges in 3 hours.",
-        "returnPoint": "Buses return hourly from the Jardín / Jericó main plaza ticket offices back to Medellín Terminal del Sur.",
-        "prosCons": {
-          "pros": "Breathtaking mountain scenery; drops you directly in the colorful main square.",
-          "cons": "Mountain road has winding sections—take morning departures to avoid afternoon rain."
-        }
-      },
-      {
-        "destination": "Parque Arví (Public Metro & Metrocable)",
-        "costMxn": "$3,650 COP standard + $13,500 COP Cable Arví ticket",
-        "frequency": "Continuous cable car gondolas every 12 seconds",
-        "operatingHours": "09:00 AM - 05:30 PM (Tuesday to Sunday, closed Mondays)",
+        "destination": "Parque Arví (Bosque de Niebla en Metrocable)",
+        "costMxn": "$17.500 COP Metro + Metrocable L ida y vuelta (~$4.25 USD)",
+        "taxiCost": "$35.000 - $50.000 COP en taxi Coopebombas por la vía a Santa Elena",
+        "frequency": "Góndolas continuas sin espera",
+        "operatingHours": "09:00 AM - 06:00 PM (Martes a Domingo. Lunes cerrado por mantenimiento)",
         "signText": "\"METROCABLE LÍNEA L - ARVÍ\"",
-        "terminalLocation": "Estadio Metro Line B -> San Antonio -> Line A to Acevedo -> Cable Line K to Santo Domingo -> Cable Line L to Arví",
-        "distanceFromCo404": "Starts right at Estadio Metro Station (6 min walk from Co404 Laureles)",
-        "instructions": "Take Metro to Acevedo station, transfer to Metrocable Line K up to Santo Domingo, then cross the turnstile for the tourist Metrocable Line L straight into the cloud forest.",
-        "returnPoint": "Board returning Metrocable Line L gondolas back to Santo Domingo before 05:30 PM.",
+        "terminalLocation": "Estadio Metro Línea B -> San Antonio -> Línea A a Acevedo -> Cable K a Santo Domingo -> Cable L a Arví",
+        "distanceFromCo404": "Inicia directo en la estación Estadio a 6 min a pie de Co404 Laureles",
+        "instructions": "Toma Metro en Estadio hacia San Antonio, pasa a Línea A hasta Acevedo, aborda el Metrocable K hasta Santo Domingo, y allí cruza el torniquete turístico al Metrocable Línea L que sobrevuela la reserva forestal durante 20 minutos.",
+        "returnPoint": "Estación de Metrocable Arví para descender hacia Santo Domingo antes de las 05:30 PM.",
         "prosCons": {
-          "pros": "One of the most extraordinary urban-to-cloud-forest transit rides in the world. Spectacular city views.",
-          "cons": "Closed on Mondays for technical maintenance. Gets chilly at 2,500m—bring a hoodie!"
+          "pros": "Uno de los trayectos de transporte público urbano a bosque andino más espectaculares del planeta.",
+          "cons": "Cerrado los lunes por mantenimiento técnico. A 2,500m hace frío: lleva abrigo o cortavientos."
+        }
+      },
+      {
+        "destination": "Envigado & Sabaneta (Ruta Gastronómica & Buñuelo Gigante)",
+        "costMxn": "$3.500 COP Metro Línea A (~$0.85 USD)",
+        "taxiCost": "$18.000 - $25.000 COP en taxi Coopebombas desde Laureles (25 min)",
+        "frequency": "Metro cada 4 minutos",
+        "operatingHours": "04:30 AM - 11:00 PM diario",
+        "signText": "\"METRO LÍNEA A RUMBO LA ESTRELLA\"",
+        "terminalLocation": "Estación Estadio -> San Antonio -> Línea A hacia estación Envigado o Sabaneta",
+        "distanceFromCo404": "6 min caminando a Estación Estadio",
+        "instructions": "Toma el Metro en Estadio, transborda en San Antonio hacia el sur en Línea A y baja en Estación Envigado (para la Calle de la Buena Mesa) o Estación Sabaneta (para la plaza del buñuelo gigante El Peregrino).",
+        "returnPoint": "Regreso por la misma estación de Metro Sabaneta o Envigado.",
+        "prosCons": {
+          "pros": "Ambiente muy seguro, tradición paisa auténtica y el buñuelo más famoso de Colombia.",
+          "cons": "Los fines de semana por la noche la plaza de Sabaneta se llena de música y fiesta popular."
         }
       }
     ],
@@ -5526,6 +5886,67 @@ const CO404_LOCATIONS = {
           "pros": "One of the most extraordinary urban-to-cloud-forest transit rides in the world. Spectacular city views.",
           "cons": "Closed on Mondays for technical maintenance. Gets chilly at 2,500m—bring a hoodie!"
         }
+      }
+    ],
+    "vanRentalBenchmarks": {
+      "city": "Medellín",
+      "currency": "COP",
+      "providers": [
+        {
+          "name": "ProTours Medellín / Vans con Conductor",
+          "website": "https://protoursmedellin.com",
+          "phone": "+57 4 444 8687",
+          "whatsapp": "573104567890",
+          "fleet": "Vans de Transporte Especial (Placa Blanca RNT) 10 a 15 pasajeros",
+          "localDayRate": 550000,
+          "midDistanceRate": 750000,
+          "longDistanceRate": 1100000,
+          "servicesIncluded": [
+            "Conductor profesional con tarjeta de operación nacional (RNT)",
+            "Combustible para toda la jornada (10 horas)",
+            "Peajes de autopista (Peaje Guarne / Las Palmas / Túnel de Oriente)",
+            "Pólizas de seguro contractual y extracontractual exigidas por el MinTransporte",
+            "Pick-up y drop-off directamente en Co404 Laureles"
+          ]
+        },
+        {
+          "name": "Aeroturex Transporte Especial",
+          "website": "https://aeroturex.com",
+          "phone": "+57 4 444 1215",
+          "whatsapp": "573128456789",
+          "fleet": "Renault Master (14-16 pax) y Hyundai H350 de alta gama",
+          "localDayRate": 600000,
+          "midDistanceRate": 850000,
+          "longDistanceRate": 1250000,
+          "servicesIncluded": [
+            "Chofer bilingüe bajo solicitud, A/C, sonido envolvente y asientos ejecutivos",
+            "Combustible, peajes y seguros de viaje",
+            "Flexibilidad total para paradas en miradores y restaurantes"
+          ]
+        }
+      ]
+    },
+    "verifiedTaxiServices": [
+      {
+        "name": "Coopebombas Medellín (Líder en Movilidad Segura)",
+        "phone": "+57 604 444 0000",
+        "whatsapp": "5744440000",
+        "fastDial": "#140",
+        "hours": "24 horas / 365 días",
+        "baseLocation": "Toda el Área Metropolitana (Cobertura total Laureles)",
+        "pickupAtCo404": "Pide por WhatsApp, marcando #140 o vía App Coopebombas",
+        "sampleRates": "Banderazo / Mínima: $7.000 COP (con taxímetro). Laureles a Comuna 13: $14.000 - $20.000 COP. A Parque Arví / Estación Cable: $35.000 - $50.000 COP. Aeropuerto MDE (Rionegro): $110.000 COP tarifa fija oficial con peaje.",
+        "description": "La empresa de taxis más grande y segura de Medellín. Flota con taxímetro regulado y pago con código QR Bancolombia."
+      },
+      {
+        "name": "Tax Medellín",
+        "phone": "+57 604 444 9999",
+        "whatsapp": "573104449999",
+        "hours": "24 horas",
+        "baseLocation": "Medellín, Laureles y Poblado",
+        "pickupAtCo404": "Despacho telefónico y WhatsApp",
+        "sampleRates": "Tarifa taxímetro oficial. Laureles a Cerro El Volador: $12.000 - $16.000 COP. Laureles a Envigado: $22.000 - $30.000 COP.",
+        "description": "Central confiable con amplia flota en el sector occidental y Laureles."
       }
     ]
   }
