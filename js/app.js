@@ -482,7 +482,14 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="card-body">
             <h3 class="card-title">${d.name}</h3>
             <p class="card-tagline">${d.tagline}</p>
-            
+
+            ${d.isExclusive ? `
+              <div class="card-exclusive-banner">
+                <span class="exclusive-star">⭐</span>
+                <span class="exclusive-text">Exclusive Signature Tour &bull; Operated solely by <strong>${escapeHtml(d.exclusiveAgencyName)}</strong></span>
+              </div>
+            ` : ''}
+
             <div class="card-quick-specs">
               <div class="spec-item">
                 <span class="spec-label">Difficulty</span>
@@ -505,13 +512,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="price-diy">${formattedColectivo}</div>
               </div>
             </div>
-
-            ${d.isExclusive ? `
-              <div class="card-exclusive-banner">
-                <span>⭐</span>
-                <span>Exclusive Signature Tour operated solely by <strong>${escapeHtml(d.exclusiveAgencyName)}</strong></span>
-              </div>
-            ` : ''}
 
             ${d.variants && d.variants.length > 0 ? `
               <div class="card-variants-bar">
@@ -721,22 +721,44 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetAgencyId = currVariant ? currVariant.operatorAgencyId : (dest.exclusiveAgencyId || null);
       const targetAgencyName = currVariant ? currVariant.operatorAgencyName : (dest.exclusiveAgencyName || 'Verified Agency');
 
-      // Published official agency rates section
+      // Published official agency rates section: adapts dynamically to active variant
+      let activePublishedRates = [];
+      if (currVariant && currVariant.agencyPublishedPrices && currVariant.agencyPublishedPrices.length > 0) {
+        activePublishedRates = currVariant.agencyPublishedPrices;
+      } else if (currVariant) {
+        const agencyObj = agencies.find(a => a.id === currVariant.operatorAgencyId);
+        const numPrice = typeof currVariant.priceShared === 'number'
+          ? currVariant.priceShared
+          : (parseInt(String(currVariant.priceShared).replace(/[^0-9]/g, ''), 10) || 0);
+        activePublishedRates = [
+          {
+            agencyId: currVariant.operatorAgencyId || (agencyObj ? agencyObj.id : ''),
+            agencyName: currVariant.operatorAgencyName || (agencyObj ? agencyObj.name : 'Verified Operator'),
+            price: numPrice,
+            currency: currVariant.currency || locationData.currency,
+            source: agencyObj ? `Official Rate (${agencyObj.name})` : 'Official Verified Rate',
+            url: agencyObj ? (agencyObj.website || (agencyObj.whatsapp ? `https://wa.me/${agencyObj.whatsapp}` : '#')) : '#'
+          }
+        ];
+      } else if (dest.agencyPublishedPrices && dest.agencyPublishedPrices.length > 0) {
+        activePublishedRates = dest.agencyPublishedPrices;
+      }
+
       let publishedRatesHtml = '';
-      if (dest.agencyPublishedPrices && dest.agencyPublishedPrices.length > 0) {
+      if (activePublishedRates.length > 0) {
         publishedRatesHtml = `
           <div class="published-prices-section">
             <div class="published-prices-header">
               <div class="published-prices-title">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-                Official Published Agency Rates
+                ${currVariant ? `Official Published Rates for "${escapeHtml(currVariant.name)}"` : 'Official Published Agency Rates'}
               </div>
               <span class="live-verified-badge">
                 ✓ Verified on Official Website
               </span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              ${dest.agencyPublishedPrices.map(ap => `
+              ${activePublishedRates.map(ap => `
                 <div class="agency-published-card">
                   <div class="agency-published-info">
                     <strong>${ap.agencyName}</strong>
@@ -748,7 +770,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="agency-published-amount">
                       $${Number(ap.price).toLocaleString()} ${ap.currency}
                     </div>
-                    <button class="btn btn-sm btn-whatsapp btn-quote-agency-rate" data-dest-id="${dest.id}" data-agency-id="${ap.agencyId}" data-rate="${ap.price} ${ap.currency}" title="Quote on WhatsApp with this benchmark rate">
+                    <button class="btn btn-sm btn-whatsapp btn-quote-agency-rate" data-dest-id="${dest.id}" data-agency-id="${ap.agencyId}" data-rate="${ap.price} ${ap.currency}" data-variant-name="${currVariant ? escapeHtml(currVariant.name) : ''}" title="Quote on WhatsApp with this benchmark rate">
                       Quote ↗
                     </button>
                   </div>
@@ -852,7 +874,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (quoteBtn) {
         quoteBtn.onclick = () => {
           closeModal('modal-tour-detail');
-          openWhatsAppDispatcher(destId, targetAgencyId);
+          openWhatsAppDispatcher(destId, targetAgencyId, 'dest-mode', currVariant ? currVariant.name : null);
         };
       }
 
@@ -862,8 +884,9 @@ document.addEventListener('DOMContentLoaded', () => {
           e.stopPropagation();
           const dId = btn.dataset.destId;
           const aId = btn.dataset.agencyId;
+          const vName = btn.dataset.variantName || (currVariant ? currVariant.name : null);
           closeModal('modal-tour-detail');
-          openWhatsAppDispatcher(dId, aId);
+          openWhatsAppDispatcher(dId, aId, 'dest-mode', vName);
         };
       });
     }
@@ -894,6 +917,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentDispatcherDestId = null;
   let currentDispatcherAgencyId = null;
   let currentDispatcherMode = 'dest-mode'; // 'dest-mode' | 'agency-mode'
+  let currentDispatcherVariantName = null;
 
   function updateAgencyLinksPreview() {
     const linksContainer = document.getElementById('wa-agency-links-preview');
@@ -930,10 +954,11 @@ document.addEventListener('DOMContentLoaded', () => {
     linksContainer.innerHTML = html;
   }
 
-  function openWhatsAppDispatcher(destId, targetAgencyId = null, mode = 'dest-mode') {
+  function openWhatsAppDispatcher(destId, targetAgencyId = null, mode = 'dest-mode', preselectedVariantName = null) {
     currentDispatcherMode = mode;
     currentDispatcherDestId = destId;
     currentDispatcherAgencyId = targetAgencyId;
+    currentDispatcherVariantName = preselectedVariantName;
 
     const tourLabel = document.getElementById('wa-tour-field-label');
     const destInput = document.getElementById('wa-destination-name');
@@ -1020,7 +1045,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (tourLabel) tourLabel.textContent = 'Selected Tour / Destination:';
       if (destInput) {
         destInput.style.display = 'block';
-        destInput.value = dest.name;
+        destInput.value = currentDispatcherVariantName ? `${dest.name} (${currentDispatcherVariantName})` : dest.name;
       }
       if (tourSelect) tourSelect.style.display = 'none';
 
@@ -1102,8 +1127,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const locale = locationData.currency === 'COP' ? 'es-CO' : 'es-MX';
     const dateFormatted = date ? new Date(date + 'T12:00:00').toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : 'próximamente';
 
-    // Check if this destination has a specific variant operated by this agency
-    const variantForAgency = (dest.variants || []).find(v => v.operatorAgencyId === agency.id);
+    // Check if a specific variant was selected or if this agency operates a specific variant
+    let variantForAgency = null;
+    if (currentDispatcherVariantName && dest.variants) {
+      variantForAgency = dest.variants.find(v => v.name.toLowerCase() === currentDispatcherVariantName.toLowerCase());
+    }
+    if (!variantForAgency && agency) {
+      variantForAgency = (dest.variants || []).find(v => v.operatorAgencyId === agency.id);
+    }
 
     let msg = `¡Hola ${agency.name}! 👋\n\n`;
     if (variantForAgency) {
@@ -1117,8 +1148,13 @@ document.addEventListener('DOMContentLoaded', () => {
     msg += `🚐 *Modalidad:* ${serviceType === 'privado' ? 'Camioneta / Servicio Privado exclusivo' : 'Tour Compartido'}\n`;
 
     // Reference official published price or variant price
-    if (variantForAgency && variantForAgency.priceShared) {
-      msg += `🏷️ *Tarifa de referencia:* Vimos en su catálogo la tarifa de ${formatVariantPrice(variantForAgency.priceShared, variantForAgency.currency || locationData.currency)} por persona.\n`;
+    if (variantForAgency) {
+      const variantRate = (variantForAgency.agencyPublishedPrices || []).find(p => p.agencyId === agency.id || (agency.name && p.agencyName && agency.name.toLowerCase().includes(p.agencyName.toLowerCase())));
+      if (variantRate) {
+        msg += `🏷️ *Tarifa de referencia en su web:* Vimos publicado en su sitio web el precio de $${Number(variantRate.price).toLocaleString()} ${variantRate.currency} por persona para esta modalidad.\n`;
+      } else if (variantForAgency.priceShared) {
+        msg += `🏷️ *Tarifa de referencia:* Vimos en su catálogo la tarifa de ${formatVariantPrice(variantForAgency.priceShared, variantForAgency.currency || locationData.currency)} por persona.\n`;
+      }
     } else {
       const publishedRate = (dest.agencyPublishedPrices || []).find(p => p.agencyId === agency.id || (agency.name && p.agencyName && agency.name.toLowerCase().includes(p.agencyName.toLowerCase())));
       if (publishedRate) {

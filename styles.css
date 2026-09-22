@@ -2821,17 +2821,34 @@ body {
 
 /* Exclusive single-company tour badges & banners */
 .card-exclusive-banner {
-  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-  border: 1px solid #F59E0B;
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1.5px solid #FCD34D;
   color: #92400E;
-  padding: 5px 10px;
+  padding: 8px 12px;
   border-radius: var(--radius-sm);
-  font-size: 0.74rem;
-  font-weight: 700;
-  margin-top: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 14px 0;
   display: flex;
-  align-items: center;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 8px;
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.12);
+}
+
+.card-exclusive-banner .exclusive-star {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.card-exclusive-banner .exclusive-text {
+  flex: 1;
+}
+
+.card-exclusive-banner strong {
+  font-weight: 700;
+  color: #78350F;
 }
 
 /* ==========================================================================

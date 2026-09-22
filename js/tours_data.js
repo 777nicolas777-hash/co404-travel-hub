@@ -1,4 +1,3 @@
-// Co404 Tours Data Multi-Location Manifest
 window.CO404_LOCATIONS = {
   "san-cris": {
     "id": "san-cris",
@@ -178,7 +177,41 @@ window.CO404_LOCATIONS = {
                 "desc": "Return journey to San Cristóbal de las Casas (arrival ~03:30 PM)."
               }
             ],
-            "recommendedFor": "First-timers seeking the iconic water-level canyon view with relaxing time in colonial Chiapa de Corzo."
+            "recommendedFor": "First-timers seeking the iconic water-level canyon view with relaxing time in colonial Chiapa de Corzo.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "otisa-travel",
+                "agencyName": "OTISA Travel & Tours",
+                "price": 580,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Web OTISA",
+                "url": "https://otisa.biz"
+              },
+              {
+                "agencyId": "selva-azul-tours",
+                "agencyName": "Selva Azul Chiapas",
+                "price": 580,
+                "currency": "MXN",
+                "source": "Web Oficial Selva Azul",
+                "url": "https://selvazultours.com"
+              },
+              {
+                "agencyId": "jalapeno-tours",
+                "agencyName": "Jalapeño Tours",
+                "price": 450,
+                "currency": "MXN",
+                "source": "Tarifa Mostrador Jalapeño",
+                "url": "https://wa.me/529671420790"
+              },
+              {
+                "agencyId": "nichim-tours",
+                "agencyName": "Nichim Tours & Travel",
+                "price": 680,
+                "currency": "MXN",
+                "source": "Web Oficial Nichim",
+                "url": "https://nichimtours.com.mx"
+              }
+            ]
           },
           {
             "id": "sumidero-lancha-miradores",
@@ -228,7 +261,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Return trip to San Cristóbal de las Casas (arrival ~05:15 PM)."
               }
             ],
-            "recommendedFor": "Photographers and travelers who want both iconic perspectives: from the water below and from the 1,000m cliffs above."
+            "recommendedFor": "Photographers and travelers who want both iconic perspectives: from the water below and from the 1,000m cliffs above.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "apasionado-chiapas",
+                "agencyName": "Apasionado x Chiapas",
+                "price": 890,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Cumbre & Miradores Apasionado",
+                "url": "https://apasionadoxchiapas.com"
+              }
+            ]
           }
         ]
       },
@@ -387,7 +430,33 @@ window.CO404_LOCATIONS = {
                 "desc": "Drop-off back at Co404 San Cristóbal."
               }
             ],
-            "recommendedFor": "Travelers wanting a balanced, scenic day of hiking beside turquoise waterfalls and swimming in pristine mountain lakes."
+            "recommendedFor": "Travelers wanting a balanced, scenic day of hiking beside turquoise waterfalls and swimming in pristine mountain lakes.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "nichim-tours",
+                "agencyName": "Nichim Tours & Travel",
+                "price": 650,
+                "currency": "MXN",
+                "source": "Web Oficial Nichim",
+                "url": "https://nichimtours.com.mx"
+              },
+              {
+                "agencyId": "selva-azul-tours",
+                "agencyName": "Selva Azul Chiapas",
+                "price": 580,
+                "currency": "MXN",
+                "source": "Web Oficial Selva Azul",
+                "url": "https://selvazultours.com"
+              },
+              {
+                "agencyId": "voy-a-chiapas",
+                "agencyName": "Voy a Chiapas",
+                "price": 620,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Voy a Chiapas",
+                "url": "https://wa.me/529671234567"
+              }
+            ]
           },
           {
             "id": "chiflon-aventura-tirolesa",
@@ -442,7 +511,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Return to Co404 San Cristóbal."
               }
             ],
-            "recommendedFor": "Thrill-seekers, active backpackers, and nature lovers seeking aerial canyon views and hands-on rafting."
+            "recommendedFor": "Thrill-seekers, active backpackers, and nature lovers seeking aerial canyon views and hands-on rafting.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "apasionado-chiapas",
+                "agencyName": "Apasionado x Chiapas",
+                "price": 1150,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Aventura Extrema Apasionado",
+                "url": "https://apasionadoxchiapas.com"
+              }
+            ]
           }
         ]
       },
@@ -599,7 +678,33 @@ window.CO404_LOCATIONS = {
                 "desc": "Return transfer to Co404 San Cristóbal (arrival ~02:30 PM)."
               }
             ],
-            "recommendedFor": "Culture enthusiasts and travelers wanting deep historical explanations from licensed certified guides."
+            "recommendedFor": "Culture enthusiasts and travelers wanting deep historical explanations from licensed certified guides.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "nichim-tours",
+                "agencyName": "Nichim Tours & Travel",
+                "price": 350,
+                "currency": "MXN",
+                "source": "Web Oficial Nichim",
+                "url": "https://nichimtours.com.mx"
+              },
+              {
+                "agencyId": "selva-azul-tours",
+                "agencyName": "Selva Azul Chiapas",
+                "price": 350,
+                "currency": "MXN",
+                "source": "Web Oficial Selva Azul",
+                "url": "https://selvazultours.com"
+              },
+              {
+                "agencyId": "jalapeno-tours",
+                "agencyName": "Jalapeño Tours",
+                "price": 350,
+                "currency": "MXN",
+                "source": "Tarifa Jalapeño",
+                "url": "https://wa.me/529671420790"
+              }
+            ]
           },
           {
             "id": "chamula-cabalgata-montana",
@@ -650,7 +755,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Minivan transfer back to Co404 San Cristóbal (arrival ~02:15 PM)."
               }
             ],
-            "recommendedFor": "Adventurous travelers and horse lovers looking for a tranquil rural route through the Chiapas mountains."
+            "recommendedFor": "Adventurous travelers and horse lovers looking for a tranquil rural route through the Chiapas mountains.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "jalapeno-tours",
+                "agencyName": "Jalapeño Tours & Guías Locales",
+                "price": 550,
+                "currency": "MXN",
+                "source": "Tarifa Cabalgata Jalapeño / WhatsApp",
+                "url": "https://wa.me/529671420790"
+              }
+            ]
           }
         ]
       },
@@ -821,7 +936,33 @@ window.CO404_LOCATIONS = {
                 "desc": "Drop-off back at Co404 San Cristóbal."
               }
             ],
-            "recommendedFor": "Travelers with limited days in Chiapas who want to experience Palenque and waterfalls in a single ambitious day."
+            "recommendedFor": "Travelers with limited days in Chiapas who want to experience Palenque and waterfalls in a single ambitious day.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "selva-azul-tours",
+                "agencyName": "Selva Azul Chiapas",
+                "price": 1100,
+                "currency": "MXN",
+                "source": "Web Oficial Selva Azul",
+                "url": "https://selvazultours.com"
+              },
+              {
+                "agencyId": "otisa-travel",
+                "agencyName": "OTISA Travel & Tours",
+                "price": 1250,
+                "currency": "MXN",
+                "source": "Web Oficial OTISA",
+                "url": "https://otisa.biz"
+              },
+              {
+                "agencyId": "nichim-tours",
+                "agencyName": "Nichim Tours",
+                "price": 1350,
+                "currency": "MXN",
+                "source": "Web Oficial Nichim",
+                "url": "https://nichimtours.com.mx"
+              }
+            ]
           },
           {
             "id": "palenque-one-way-dropoff",
@@ -870,7 +1011,25 @@ window.CO404_LOCATIONS = {
                 "desc": "Direct drop-off at your hotel in Palenque or ADO First-Class Bus Station."
               }
             ],
-            "recommendedFor": "Colivers and travelers continuing onward toward Mérida, Bacalar, or Cancún without returning to San Cristóbal."
+            "recommendedFor": "Colivers and travelers continuing onward toward Mérida, Bacalar, or Cancún without returning to San Cristóbal.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "voy-a-chiapas",
+                "agencyName": "Voy a Chiapas",
+                "price": 890,
+                "currency": "MXN",
+                "source": "Tarifa Drop-off Palenque Voy a Chiapas",
+                "url": "https://wa.me/529671234567"
+              },
+              {
+                "agencyId": "selva-azul-tours",
+                "agencyName": "Selva Azul Chiapas",
+                "price": 950,
+                "currency": "MXN",
+                "source": "Tarifa Drop-off Selva Azul",
+                "url": "https://selvazultours.com"
+              }
+            ]
           }
         ]
       },
@@ -973,12 +1132,12 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
-            "agencyId": "selva-azul-tours",
-            "agencyName": "Selva Azul Chiapas",
+            "agencyId": "apasionado-chiapas",
+            "agencyName": "Apasionado x Chiapas",
             "price": 5200,
             "currency": "MXN",
-            "source": "Web Oficial",
-            "url": "https://selvazultours.com/tours/San%20Cristobal"
+            "source": "Tarifa Oficial Expedición 2D Apasionado",
+            "url": "https://apasionadoxchiapas.com"
           }
         ],
         "specializedBadge": "Exclusive Expedition",
@@ -1928,12 +2087,20 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
+            "agencyId": "apasionado-chiapas",
+            "agencyName": "Apasionado x Chiapas",
+            "price": 1600,
+            "currency": "MXN",
+            "source": "Tarifa Oficial Expedición 4x4 Apasionado",
+            "url": "https://apasionadoxchiapas.com"
+          },
+          {
             "agencyId": "selva-azul-tours",
             "agencyName": "Selva Azul Chiapas",
             "price": 1600,
             "currency": "MXN",
-            "source": "Web Oficial",
-            "url": "https://selvazultours.com/tours/San%20Cristobal"
+            "source": "Web Oficial Selva Azul",
+            "url": "https://selvazultours.com"
           }
         ],
         "popularityScore": 87,
@@ -2279,7 +2446,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Return to Co404 San Cristóbal."
               }
             ],
-            "recommendedFor": "Foodies, biology enthusiasts, and nature lovers who enjoy learning practical foraging skills."
+            "recommendedFor": "Foodies, biology enthusiasts, and nature lovers who enjoy learning practical foraging skills.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "popup-san-cris",
+                "agencyName": "Pop Up San Cris",
+                "price": 550,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Taller Micológico / WhatsApp",
+                "url": "https://www.facebook.com/popupsancris"
+              }
+            ]
           },
           {
             "id": "mico-bano-bosque-mindfulness",
@@ -2328,7 +2505,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Arrival back at Co404 feeling deeply grounded."
               }
             ],
-            "recommendedFor": "Digital nomads, remote workers, and colivers needing deep relaxation, screen detox, and peaceful forest therapy."
+            "recommendedFor": "Digital nomads, remote workers, and colivers needing deep relaxation, screen detox, and peaceful forest therapy.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "popup-san-cris",
+                "agencyName": "Pop Up San Cris",
+                "price": 700,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Baño de Bosque Shinrin-Yoku / WhatsApp",
+                "url": "https://www.facebook.com/popupsancris"
+              }
+            ]
           }
         ]
       },
@@ -2481,7 +2668,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Sunrise swim, pack up camp, return hike and drive back to Co404 (arrival ~07:30 PM)."
               }
             ],
-            "recommendedFor": "Active adventurers, wilderness campers, and backpackers looking for an authentic deep-nature experience."
+            "recommendedFor": "Active adventurers, wilderness campers, and backpackers looking for an authentic deep-nature experience.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "popup-san-cris",
+                "agencyName": "Pop Up San Cris",
+                "price": 4200,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Expedición Kayak 3D/2N Pop Up",
+                "url": "https://www.facebook.com/popupsancris"
+              }
+            ]
           },
           {
             "id": "miramar-arqueologia-comunidad",
@@ -2519,7 +2716,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Traditional breakfast, reflection circle, and return transport to Co404 San Cristóbal."
               }
             ],
-            "recommendedFor": "Cultural travelers, history buffs, and nature enthusiasts interested in indigenous Maya heritage."
+            "recommendedFor": "Cultural travelers, history buffs, and nature enthusiasts interested in indigenous Maya heritage.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "popup-san-cris",
+                "agencyName": "Pop Up San Cris",
+                "price": 4800,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Inmersión Guardianes Selva Pop Up",
+                "url": "https://www.facebook.com/popupsancris"
+              }
+            ]
           }
         ]
       }
@@ -3345,7 +3552,33 @@ window.CO404_LOCATIONS = {
                 "desc": "Drop-off back at Co404 Oaxaca."
               }
             ],
-            "recommendedFor": "First-time visitors wanting to discover all the major highlights east of Oaxaca City in a single rich day."
+            "recommendedFor": "First-time visitors wanting to discover all the major highlights east of Oaxaca City in a single rich day.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "oaxaca-viajes",
+                "agencyName": "Oaxaca Viajes & Tours",
+                "price": 480,
+                "currency": "MXN",
+                "source": "Web Oficial Oaxaca Viajes",
+                "url": "https://oaxacaviajes.com"
+              },
+              {
+                "agencyId": "lescas-co-tours",
+                "agencyName": "Lescas Co Tours Oaxaca",
+                "price": 550,
+                "currency": "MXN",
+                "source": "Web Oficial Lescas Co",
+                "url": "https://toursinoaxaca.com"
+              },
+              {
+                "agencyId": "xiadani-tours",
+                "agencyName": "Xiadani Tours Oaxaca",
+                "price": 600,
+                "currency": "MXN",
+                "source": "Web Oficial Xiadani",
+                "url": "https://xiadanitours.com"
+              }
+            ]
           },
           {
             "id": "hierve-sunrise-hiking",
@@ -3390,7 +3623,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Return to Co404 with the afternoon free to cowork."
               }
             ],
-            "recommendedFor": "Photographers, active hikers, and travelers who prefer quiet trails and golden-hour light."
+            "recommendedFor": "Photographers, active hikers, and travelers who prefer quiet trails and golden-hour light.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "dainzuu-tours",
+                "agencyName": "Operadora Turística Dainzúu",
+                "price": 750,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Amanecer & Cañón Dainzúu",
+                "url": "https://dainzuutours.com"
+              }
+            ]
           }
         ]
       },
@@ -3535,7 +3778,33 @@ window.CO404_LOCATIONS = {
                 "desc": "Return transfer to Co404 Oaxaca (arrival ~02:15 PM)."
               }
             ],
-            "recommendedFor": "History lovers and curious travelers seeking deep context without spending the whole day on the road."
+            "recommendedFor": "History lovers and curious travelers seeking deep context without spending the whole day on the road.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "oaxaca-viajes",
+                "agencyName": "Oaxaca Viajes & Tours",
+                "price": 380,
+                "currency": "MXN",
+                "source": "Web Oficial Oaxaca Viajes",
+                "url": "https://oaxacaviajes.com"
+              },
+              {
+                "agencyId": "lescas-co-tours",
+                "agencyName": "Lescas Co Tours Oaxaca",
+                "price": 380,
+                "currency": "MXN",
+                "source": "Web Oficial Lescas Co",
+                "url": "https://toursinoaxaca.com"
+              },
+              {
+                "agencyId": "xiadani-tours",
+                "agencyName": "Xiadani Tours Oaxaca",
+                "price": 450,
+                "currency": "MXN",
+                "source": "Web Oficial Xiadani",
+                "url": "https://xiadanitours.com"
+              }
+            ]
           },
           {
             "id": "monte-alban-artesanal-valles",
@@ -3590,7 +3859,25 @@ window.CO404_LOCATIONS = {
                 "desc": "Return to Co404 Oaxaca."
               }
             ],
-            "recommendedFor": "Art collectors, shoppers, and travelers wanting a rich combination of archaeological ruins and authentic artisan traditions."
+            "recommendedFor": "Art collectors, shoppers, and travelers wanting a rich combination of archaeological ruins and authentic artisan traditions.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "dainzuu-tours",
+                "agencyName": "Operadora Turística Dainzúu",
+                "price": 620,
+                "currency": "MXN",
+                "source": "Tarifa Oficial Circuito Valles del Sur Dainzúu",
+                "url": "https://dainzuutours.com"
+              },
+              {
+                "agencyId": "oaxaca-viajes",
+                "agencyName": "Oaxaca Viajes & Tours",
+                "price": 580,
+                "currency": "MXN",
+                "source": "Web Oficial Oaxaca Viajes",
+                "url": "https://oaxacaviajes.com"
+              }
+            ]
           }
         ]
       },
@@ -4032,12 +4319,12 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
-            "agencyId": "lescas-co-tours",
-            "agencyName": "Lescas Co Tours Oaxaca",
-            "price": 700,
+            "agencyId": "sierra-norte-expediciones",
+            "agencyName": "Expediciones Sierra Norte",
+            "price": 750,
             "currency": "MXN",
-            "source": "Web Oficial",
-            "url": "https://toursinoaxaca.com"
+            "source": "Tarifa Oficial Ecoturismo Pueblos Mancomunados",
+            "url": "https://sierranorte.org.mx"
           }
         ],
         "specializedBadge": "Ecotourism 3,000m",
@@ -4381,12 +4668,12 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
-            "agencyId": "lescas-co-tours",
-            "agencyName": "Lescas Co Tours Oaxaca",
-            "price": 1950,
+            "agencyId": "taller-dona-reyna",
+            "agencyName": "Taller Doña Reyna & Cocina Tradicional",
+            "price": 1850,
             "currency": "MXN",
-            "source": "Web Oficial",
-            "url": "https://toursinoaxaca.com"
+            "source": "Tarifa Oficial Taller Gastronómico Tradicional",
+            "url": "https://wa.me/529511234567"
           }
         ],
         "popularityScore": 94,
@@ -4472,12 +4759,12 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
-            "agencyId": "xiadani-tours",
-            "agencyName": "Xiadani Tours Oaxaca",
+            "agencyId": "guias-comunitarios-sedeno",
+            "agencyName": "Guías Comunitarios de Sedeño",
             "price": 850,
             "currency": "MXN",
-            "source": "Web Oficial",
-            "url": "https://xiadanitours.com"
+            "source": "Tarifa Oficial Comité Comunitario Sedeño",
+            "url": "https://wa.me/529519876543"
           }
         ],
         "popularityScore": 86,
@@ -5354,7 +5641,33 @@ window.CO404_LOCATIONS = {
                 "desc": "Return bus to Medellín (arrival in Laureles ~07:30 PM)."
               }
             ],
-            "recommendedFor": "First-timers looking for the classic, all-inclusive Guatapé experience with great food and lake navigation."
+            "recommendedFor": "First-timers looking for the classic, all-inclusive Guatapé experience with great food and lake navigation.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "protours-medellin",
+                "agencyName": "ProTours Medellín",
+                "price": 125000,
+                "currency": "COP",
+                "source": "Web Oficial ProTours",
+                "url": "https://protoursmedellin.com"
+              },
+              {
+                "agencyId": "turibus-medellin",
+                "agencyName": "Turibus Colombia",
+                "price": 135000,
+                "currency": "COP",
+                "source": "Web Oficial Turibus",
+                "url": "https://turibuscolombia.com"
+              },
+              {
+                "agencyId": "tours-medallo",
+                "agencyName": "Tours Medallo",
+                "price": 119000,
+                "currency": "COP",
+                "source": "Web Oficial Tours Medallo",
+                "url": "https://tour-medellin.com"
+              }
+            ]
           },
           {
             "id": "guatape-premium-lancha",
@@ -5409,7 +5722,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Return transfer to Co404 Laureles (arrival ~07:15 PM)."
               }
             ],
-            "recommendedFor": "Coliving groups and friends wanting privacy, adrenaline, watersports, and freedom to set their own rhythm."
+            "recommendedFor": "Coliving groups and friends wanting privacy, adrenaline, watersports, and freedom to set their own rhythm.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "aeroturex-medellin",
+                "agencyName": "Aeroturex Medellín",
+                "price": 240000,
+                "currency": "COP",
+                "source": "Tarifa Oficial Lancha Rápida Deportiva Aeroturex",
+                "url": "https://aeroturex.com"
+              }
+            ]
           }
         ]
       },
@@ -5556,7 +5879,25 @@ window.CO404_LOCATIONS = {
                 "desc": "Return to Co404 Laureles."
               }
             ],
-            "recommendedFor": "Anyone who wants real social history, intimate neighborhood connections, and inspiring street art."
+            "recommendedFor": "Anyone who wants real social history, intimate neighborhood connections, and inspiring street art.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "comuna13-raices",
+                "agencyName": "Comuna 13 Tours & Raíces",
+                "price": 50000,
+                "currency": "COP",
+                "source": "Tarifa Oficial Colectivo Comunitario Raíces C13",
+                "url": "https://comuna13tours.com"
+              },
+              {
+                "agencyId": "tours-medallo",
+                "agencyName": "Tours Medallo",
+                "price": 65000,
+                "currency": "COP",
+                "source": "Web Oficial Tours Medallo",
+                "url": "https://tour-medellin.com"
+              }
+            ]
           },
           {
             "id": "comuna13-breakdance-cafe",
@@ -5601,7 +5942,17 @@ window.CO404_LOCATIONS = {
                 "desc": "Return to Co404 Laureles."
               }
             ],
-            "recommendedFor": "Creative travelers, dancers, coffee lovers, and anyone who wants an active, unforgettable hands-on experience."
+            "recommendedFor": "Creative travelers, dancers, coffee lovers, and anyone who wants an active, unforgettable hands-on experience.",
+            "agencyPublishedPrices": [
+              {
+                "agencyId": "comuna13-raices",
+                "agencyName": "Comuna 13 Tours & Raíces",
+                "price": 85000,
+                "currency": "COP",
+                "source": "Tarifa Oficial Experiencia Hip-Hop & Café Raíces",
+                "url": "https://comuna13tours.com"
+              }
+            ]
           }
         ]
       },
@@ -6110,7 +6461,17 @@ window.CO404_LOCATIONS = {
         "popularityScore": 93,
         "exclusiveAgencyId": "finca-la-sierra",
         "exclusiveAgencyName": "Finca Cafetera Tradicional La Sierra",
-        "exclusiveBadge": "Exclusive Coffee Finca Seed-to-Cup Tour"
+        "exclusiveBadge": "Exclusive Coffee Finca Seed-to-Cup Tour",
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "finca-la-sierra",
+            "agencyName": "Finca Cafetera Tradicional La Sierra",
+            "price": 135000,
+            "currency": "COP",
+            "source": "Tarifa Oficial Tour Cafetero Finca La Sierra",
+            "url": "https://wa.me/573001234567"
+          }
+        ]
       },
       {
         "id": "paragliding-san-felix",
@@ -6197,12 +6558,12 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
-            "agencyId": "tours-medallo",
-            "agencyName": "Tours Medallo",
-            "price": 299000,
+            "agencyId": "san-felix-parapente",
+            "agencyName": "San Félix Parapente / Fly Colombia",
+            "price": 260000,
             "currency": "COP",
-            "source": "Web Oficial",
-            "url": "https://tour-medellin.com/tour-parapente"
+            "source": "Tarifa Oficial Vuelo Tándem Certificado FAI",
+            "url": "https://wa.me/573109876543"
           }
         ],
         "popularityScore": 95,
@@ -6296,7 +6657,17 @@ window.CO404_LOCATIONS = {
         "popularityScore": 88,
         "exclusiveAgencyId": "ecoparque-los-saltos",
         "exclusiveAgencyName": "Ecoparque Los Saltos",
-        "exclusiveBadge": "Exclusive: Colombia's Highest Via Ferrata & Zipline"
+        "exclusiveBadge": "Exclusive: Colombia's Highest Via Ferrata & Zipline",
+        "agencyPublishedPrices": [
+          {
+            "agencyId": "ecoparque-los-saltos",
+            "agencyName": "Ecoparque Los Saltos",
+            "price": 180000,
+            "currency": "COP",
+            "source": "Tarifa Oficial Pasadía & Vía Ferrata Los Saltos",
+            "url": "https://ecoparquelossaltos.com"
+          }
+        ]
       },
       {
         "id": "carmen-de-viboral-ceramica",
@@ -6381,12 +6752,12 @@ window.CO404_LOCATIONS = {
         ],
         "agencyPublishedPrices": [
           {
-            "agencyId": "turibus-medellin",
-            "agencyName": "Turibus Colombia",
-            "price": 195000,
+            "agencyId": "taller-dorado-ceramica",
+            "agencyName": "Taller Artesanal Cerámicas El Dorado",
+            "price": 165000,
             "currency": "COP",
-            "source": "Web Oficial",
-            "url": "https://turibuscolombia.com/tour/tour-el-carmen-de-viboral/"
+            "source": "Tarifa Oficial Taller de Pintura en Cerámica El Dorado",
+            "url": "https://wa.me/573155554321"
           }
         ],
         "popularityScore": 86,
