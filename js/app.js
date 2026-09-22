@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function formatVariantPrice(val, baseCurrency = (locationData ? locationData.currency : 'MXN')) {
-    if (val === null || val === undefined || val === '') return 'Consultar tarifa';
+    if (val === null || val === undefined || val === '') return 'Inquire for rate';
     if (typeof val === 'number') {
       return formatPriceString(`$${val.toLocaleString()}`, baseCurrency);
     }
@@ -509,16 +509,16 @@ document.addEventListener('DOMContentLoaded', () => {
             ${d.isExclusive ? `
               <div class="card-exclusive-banner">
                 <span>⭐</span>
-                <span>Tour Único operado exclusivamente por <strong>${escapeHtml(d.exclusiveAgencyName)}</strong></span>
+                <span>Exclusive Signature Tour operated solely by <strong>${escapeHtml(d.exclusiveAgencyName)}</strong></span>
               </div>
             ` : ''}
 
             ${d.variants && d.variants.length > 0 ? `
               <div class="card-variants-bar">
-                <span class="card-variants-label">Modalidades disponibles (${d.variants.length}):</span>
+                <span class="card-variants-label">Available tour options (${d.variants.length}):</span>
                 <div class="card-variants-chips">
                   ${d.variants.map((v, vIdx) => `
-                    <button class="variant-chip-btn" data-dest-id="${d.id}" data-variant-index="${vIdx}" title="${escapeHtml(v.name)} - Operado por ${escapeHtml(v.operatorShortName || v.operatorAgencyName)}">
+                    <button class="variant-chip-btn" data-dest-id="${d.id}" data-variant-index="${vIdx}" title="${escapeHtml(v.name)} - Operated by ${escapeHtml(v.operatorShortName || v.operatorAgencyName)}">
                       <span class="chip-variant-name">${escapeHtml(v.name)}</span>
                       <span class="chip-operator-tag">🏢 ${escapeHtml(v.operatorShortName || v.operatorAgencyName)}</span>
                     </button>
@@ -624,10 +624,10 @@ document.addEventListener('DOMContentLoaded', () => {
       exclusiveBannerHtml = `
         <div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1.5px solid #F59E0B; padding: 14px 18px; border-radius: var(--radius-md); margin-bottom: 16px; color: #92400E; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);">
           <div style="font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
-            ⭐ ${dest.exclusiveBadge || ('Tour Único con ' + dest.exclusiveAgencyName)}
+            ⭐ ${dest.exclusiveBadge || ('Exclusive Tour with ' + dest.exclusiveAgencyName)}
           </div>
           <p style="font-size: 0.86rem; margin: 0; line-height: 1.45;">
-            Esta expedición única cuenta con logística especializada y es operada de forma exclusiva por <strong>${escapeHtml(dest.exclusiveAgencyName)}</strong> en ${locationData.city}.
+            This unique expedition features specialized logistics and is operated exclusively by <strong>${escapeHtml(dest.exclusiveAgencyName)}</strong> in ${locationData.city}.
           </p>
         </div>
       `;
@@ -641,15 +641,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="modal-variant-header-row">
             <span class="variant-selector-title">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              Modalidades y Variantes hacia este Destino:
+              Tour Options &amp; Variants for this Destination:
             </span>
-            <span class="variant-count-pill">${dest.variants.length} opciones disponibles</span>
+            <span class="variant-count-pill">${dest.variants.length} options available</span>
           </div>
           <div class="modal-variant-tabs" id="modal-variant-tabs">
             ${dest.variants.map((v, i) => `
               <button type="button" class="modal-variant-tab ${i === activeVariantIndex ? 'active' : ''}" data-variant-index="${i}">
                 <div class="tab-top-row">
-                  <span class="tab-badge">${escapeHtml(v.badge || ('Opción ' + (i + 1)))}</span>
+                  <span class="tab-badge">${escapeHtml(v.badge || ('Option ' + (i + 1)))}</span>
                   <span class="tab-price">${formatVariantPrice(v.priceShared, v.currency || locationData.currency)}</span>
                 </div>
                 <div class="tab-name">${escapeHtml(v.name)}</div>
@@ -693,18 +693,18 @@ document.addEventListener('DOMContentLoaded', () => {
         operatorBannerHtml = `
           <div class="variant-operator-banner">
             <div class="operator-banner-left">
-              <div class="operator-banner-badge">🏢 Operador de esta modalidad</div>
+              <div class="operator-banner-badge">🏢 Tour Operator for this Option</div>
               <h4 class="operator-banner-name">
                 ${escapeHtml(currVariant.operatorAgencyName)}
-                <span style="font-size: 0.72rem; background: #DCFCE7; color: #166534; padding: 2px 8px; border-radius: 999px; font-weight: 700;">✓ Verificada</span>
+                <span style="font-size: 0.72rem; background: #DCFCE7; color: #166534; padding: 2px 8px; border-radius: 999px; font-weight: 700;">✓ Verified</span>
               </h4>
-              ${currVariant.recommendedFor ? `<p class="operator-banner-sub">💡 <strong>Recomendado para:</strong> ${escapeHtml(currVariant.recommendedFor)}</p>` : ''}
+              ${currVariant.recommendedFor ? `<p class="operator-banner-sub">💡 <strong>Recommended for:</strong> ${escapeHtml(currVariant.recommendedFor)}</p>` : ''}
             </div>
             <div class="operator-banner-right">
               <div class="variant-price-highlight">
                 <span class="price-val">${formatVariantPrice(currVariant.priceShared, currVariant.currency || locationData.currency)}</span>
-                <span class="price-label">por persona en compartido</span>
-                ${currVariant.pricePrivate ? `<span class="price-private-tag">🚐 Privado: ${formatVariantPrice(currVariant.pricePrivate, currVariant.currency || locationData.currency)}</span>` : ''}
+                <span class="price-label">per person (shared tour)</span>
+                ${currVariant.pricePrivate ? `<span class="price-private-tag">🚐 Private: ${formatVariantPrice(currVariant.pricePrivate, currVariant.currency || locationData.currency)}</span>` : ''}
               </div>
             </div>
           </div>
@@ -719,7 +719,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const sharedPriceText = currVariant ? formatVariantPrice(currVariant.priceShared, currVariant.currency || locationData.currency) : formatPriceString(dest.priceSharedRange, locationData.currency);
       const privatePriceText = currVariant && currVariant.pricePrivate ? formatVariantPrice(currVariant.pricePrivate, currVariant.currency || locationData.currency) : formatPriceString(dest.pricePrivateRange, locationData.currency);
       const targetAgencyId = currVariant ? currVariant.operatorAgencyId : (dest.exclusiveAgencyId || null);
-      const targetAgencyName = currVariant ? currVariant.operatorAgencyName : (dest.exclusiveAgencyName || 'Agencia Verificada');
+      const targetAgencyName = currVariant ? currVariant.operatorAgencyName : (dest.exclusiveAgencyName || 'Verified Agency');
 
       // Published official agency rates section
       let publishedRatesHtml = '';
@@ -729,10 +729,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="published-prices-header">
               <div class="published-prices-title">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-                Tarifas Oficiales Publicadas en Agencias
+                Official Published Agency Rates
               </div>
               <span class="live-verified-badge">
-                ✓ Comprobado en Web Oficial
+                ✓ Verified on Official Website
               </span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -741,22 +741,22 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="agency-published-info">
                     <strong>${ap.agencyName}</strong>
                     <div class="agency-source-link">
-                      Fuente: <a href="${ap.url}" target="_blank" rel="noopener noreferrer">${ap.source || 'Web Oficial'} ↗</a>
+                      Source: <a href="${ap.url}" target="_blank" rel="noopener noreferrer">${ap.source || 'Official Website'} ↗</a>
                     </div>
                   </div>
                   <div class="agency-published-pricing">
                     <div class="agency-published-amount">
                       $${Number(ap.price).toLocaleString()} ${ap.currency}
                     </div>
-                    <button class="btn btn-sm btn-whatsapp btn-quote-agency-rate" data-dest-id="${dest.id}" data-agency-id="${ap.agencyId}" data-rate="${ap.price} ${ap.currency}" title="Cotizar en WhatsApp con esta tarifa de referencia">
-                      Cotizar ↗
+                    <button class="btn btn-sm btn-whatsapp btn-quote-agency-rate" data-dest-id="${dest.id}" data-agency-id="${ap.agencyId}" data-rate="${ap.price} ${ap.currency}" title="Quote on WhatsApp with this benchmark rate">
+                      Quote ↗
                     </button>
                   </div>
                 </div>
               `).join('')}
             </div>
             <p style="font-size: 0.77rem; color: var(--co-charcoal-sub); margin: 8px 0 0 0; line-height: 1.35;">
-              * Precios extraídos de las páginas web públicas de las agencias. Los miembros de Co404 pueden cotizar tarifas especiales por volumen o grupo vía WhatsApp.
+              * Rates gathered from public agency websites. Co404 members can quote special group or volume rates via WhatsApp.
             </p>
           </div>
         `;
@@ -766,7 +766,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ${operatorBannerHtml}
 
         <div>
-          <h4 class="modal-section-title">${currVariant ? `Descripción de Modalidad: ${escapeHtml(currVariant.name)}` : 'Overview'}</h4>
+          <h4 class="modal-section-title">${currVariant ? `Option Overview: ${escapeHtml(currVariant.name)}` : 'Overview'}</h4>
           <p style="font-size: 0.92rem; color: var(--co-charcoal); line-height: 1.6;">${activeDesc}</p>
         </div>
 
@@ -842,7 +842,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div style="margin-top: 10px; display: flex; gap: 12px;">
           <button class="btn btn-whatsapp" id="btn-modal-quote-now" style="width: 100%; padding: 14px; font-size: 0.95rem;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            ${currVariant ? `Cotizar modalidad "${escapeHtml(currVariant.name)}" con ${escapeHtml(targetAgencyName)} via WhatsApp` : `Cotizar tour con ${escapeHtml(targetAgencyName)} via WhatsApp`}
+            ${currVariant ? `Quote Option "${escapeHtml(currVariant.name)}" with ${escapeHtml(targetAgencyName)} via WhatsApp` : `Quote Tour with ${escapeHtml(targetAgencyName)} via WhatsApp`}
           </button>
         </div>
       `;
@@ -913,7 +913,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let html = '';
     if (mapsUrl) {
       html += `
-        <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" style="font-size: 0.74rem; padding: 4px 10px;" title="Abrir perfil de negocio en Google Maps">
+        <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" style="font-size: 0.74rem; padding: 4px 10px;" title="Open business profile on Google Maps">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Google Maps 📍
         </a>
@@ -921,7 +921,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (agency.website && typeof agency.website === 'string' && agency.website.trim().startsWith('http')) {
       html += `
-        <a href="${agency.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.74rem; padding: 4px 10px;" title="Visitar web oficial">
+        <a href="${agency.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.74rem; padding: 4px 10px;" title="Visit official website">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           Official Website ↗
         </a>
@@ -950,26 +950,26 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!agency) return;
 
       // Lock agency field
-      if (agencyLabel) agencyLabel.textContent = 'Agencia Seleccionada (Contacto Directo Bloqueado):';
+      if (agencyLabel) agencyLabel.textContent = 'Selected Agency (Direct Contact Locked):';
       if (agencySelect) agencySelect.style.display = 'none';
       if (agencyLockedCard) {
         agencyLockedCard.style.display = 'flex';
         agencyLockedCard.innerHTML = `
           <div class="wa-agency-locked-header">
             <span class="wa-agency-locked-name">🏢 ${escapeHtml(agency.name)}</span>
-            <span class="wa-agency-locked-badge">✓ Contacto Directo</span>
+            <span class="wa-agency-locked-badge">✓ Direct Contact</span>
           </div>
           <div class="wa-agency-locked-address">
-            📍 ${escapeHtml(agency.address || locationData.city)} &bull; ${escapeHtml(agency.priceBenchmark || 'Tarifa Verificada')}
+            📍 ${escapeHtml(agency.address || locationData.city)} &bull; ${escapeHtml(agency.priceBenchmark || 'Verified Benchmark')}
           </div>
           <div class="wa-agency-locked-note">
-            🔒 El contacto está bloqueado a esta agencia. Selecciona abajo el tour que deseas cotizar con ellos.
+            🔒 Contact is locked to this agency. Select below which tour you want to quote with them.
           </div>
         `;
       }
 
       // Configure tour selection dropdown
-      if (tourLabel) tourLabel.textContent = `Selecciona el Tour / Expedición de ${agency.name}:`;
+      if (tourLabel) tourLabel.textContent = `Select Tour / Expedition from ${agency.name}:`;
       if (destInput) destInput.style.display = 'none';
       if (tourSelect) {
         tourSelect.style.display = 'block';
@@ -996,7 +996,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tourSelect.innerHTML = offeredTours.map((t, idx) => {
           const isExclusive = t.exclusiveAgencyId === agency.id;
-          const exclTag = isExclusive ? ' ⭐ [Exclusivo]' : '';
+          const exclTag = isExclusive ? ' ⭐ [Exclusive]' : '';
           const variantForAgency = (t.variants || []).find(v => v.operatorAgencyId === agency.id);
           let priceStr = variantForAgency ? formatVariantPrice(variantForAgency.priceShared, variantForAgency.currency || locationData.currency) : formatPriceString(t.priceSharedRange, locationData.currency);
           return `<option value="${t.id}" ${idx === 0 ? 'selected' : ''}>${escapeHtml(t.name)}${exclTag} &bull; (${priceStr})</option>`;
@@ -1365,7 +1365,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="agency-price-symbol">${priceMeta.symbol}</span>
               <span>${priceMeta.tierLabel}</span>
             </div>
-            <div class="agency-starting-price" title="Tarifa promedio de referencia para tours compartidos típicos">
+            <div class="agency-starting-price" title="Average benchmark rate for typical shared tours">
               <span>Tours from:</span>
               <span class="starting-amount">${priceMeta.formattedPrice}</span>
             </div>
@@ -1398,14 +1398,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const cleanMapsUrl = (url) => (url ? url.replace('?api=1&query=', '') : '');
             const mapsUrl = cleanMapsUrl(a.googleMapsUrl) || (a.address ? `https://www.google.com/maps/search/${encodeURIComponent(a.name + ' ' + a.address)}` : '');
             const mapsLink = mapsUrl ? `
-              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" title="Abrir perfil de negocio directo en Google Maps">
+              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-maps-btn" title="Open direct business profile on Google Maps">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 Google Maps 📍
               </a>
             ` : '';
 
             const webLink = (a.website && typeof a.website === 'string' && a.website.trim().startsWith('http')) ? `
-              <a href="${a.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" title="Visitar sitio web oficial">
+              <a href="${a.website.trim()}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" title="Visit official website">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 Website ↗
               </a>
@@ -1760,9 +1760,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="van-benchmarks-card">
           <div class="van-benchmarks-header">
             <div>
-              <span class="van-badge">🚐 Tarifas Reales Verificadas de Vans con Chofer (${locationData.city})</span>
-              <h3 class="van-title">Renta de Camionetas Privadas con Conductor para Grupos Co404</h3>
-              <p class="van-subtitle">Valores recopilados directamente de páginas web y agencias de vans con chofer certificado, gasolina, seguro de viajero y casetas:</p>
+              <span class="van-badge">🚐 Real Verified Private Van Rates with Driver (${locationData.city})</span>
+              <h3 class="van-title">Private Van Rentals with Certified Driver for Co404 Groups</h3>
+              <p class="van-subtitle">Market rates gathered directly from verified websites and local transport operators, including certified driver, fuel, traveler insurance, and highway tolls:</p>
             </div>
           </div>
           <div class="van-providers-grid">
@@ -1773,30 +1773,30 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="van-provider-head">
                     <div>
                       <strong class="van-provider-name">${p.name}</strong>
-                      <div class="van-fleet-tag">Capacidad: <strong>${p.fleet}</strong></div>
+                      <div class="van-fleet-tag">Capacity: <strong>${p.fleet}</strong></div>
                     </div>
-                    ${p.website ? `<a href="${p.website}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.72rem; padding: 4px 8px;">Web Oficial ↗</a>` : ''}
+                    ${p.website ? `<a href="${p.website}" target="_blank" rel="noopener noreferrer" class="agency-link-btn agency-web-btn" style="font-size: 0.72rem; padding: 4px 8px;">Official Website ↗</a>` : ''}
                   </div>
                   
                   <div class="van-rates-row">
                     <div class="van-rate-box">
-                      <span class="van-rate-label">Ruta Corta / Local:</span>
+                      <span class="van-rate-label">Short / Local Route:</span>
                       <span class="van-rate-val">${formatCurrencyValue(p.localDayRate, locationData.currency)}</span>
                     </div>
                     <div class="van-rate-box">
-                      <span class="van-rate-label">Día Completo (Circuito):</span>
+                      <span class="van-rate-label">Full Day (Circuit):</span>
                       <span class="van-rate-val">${formatCurrencyValue(p.midDistanceRate, locationData.currency)}</span>
                     </div>
                     ${p.longDistanceRate ? `
                       <div class="van-rate-box">
-                        <span class="van-rate-label">Larga Distancia:</span>
+                        <span class="van-rate-label">Long Distance:</span>
                         <span class="van-rate-val">${formatCurrencyValue(p.longDistanceRate, locationData.currency)}</span>
                       </div>
                     ` : ''}
                   </div>
 
                   <div class="van-services-list">
-                    <span class="van-included-title">Servicios incluidos:</span>
+                    <span class="van-included-title">Services included:</span>
                     <div class="van-services-chips">
                       ${p.servicesIncluded.map(s => `<span class="van-chip">✓ ${s}</span>`).join('')}
                     </div>
@@ -1805,7 +1805,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="van-contact-row">
                     ${p.whatsapp ? `
                       <a href="https://wa.me/${p.whatsapp}?text=${waText}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
-                        💬 Cotizar Van WhatsApp
+                        💬 Quote Van on WhatsApp
                       </a>
                     ` : ''}
                     ${p.phone ? `
@@ -1821,7 +1821,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="van-coliving-savings">
             <span class="savings-icon">💡</span>
             <div class="savings-text">
-              <strong>Impacto de Ahorro Co404:</strong> Al rentar una van completa de 10 a 14 pasajeros entre roomies de Co404, el costo promedio es de sólo <strong>${formatCurrencyValue(Math.round(locationData.currency === 'COP' ? 70000 : 320), locationData.currency)} por persona</strong> para un día entero con chofer privado, ahorrando hasta un 60% frente a tours comerciales masivos.
+              <strong>Co404 Savings Impact:</strong> When splitting a private 10 to 14-passenger van among Co404 roomies, the average cost drops to only <strong>${formatCurrencyValue(Math.round(locationData.currency === 'COP' ? 70000 : 320), locationData.currency)} per person</strong> for a full day with a dedicated driver, saving up to 60% compared to large commercial group tours.
             </div>
           </div>
         </div>
@@ -2024,9 +2024,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="taxi-directory-box">
           <div class="taxi-directory-header">
             <div>
-              <span class="taxi-badge">🚖 Directorio de Taxis Seguros & Radiotaxis Verificados</span>
-              <h3 class="taxi-heading">Centrales de Radio Taxi Recomendadas en ${locationData.city}</h3>
-              <p class="taxi-sub">Números directos y botones de WhatsApp para solicitar servicio seguro a la puerta de ${locationData.name}:</p>
+              <span class="taxi-badge">🚖 Safe Taxi Directory &amp; Verified Radio Taxis</span>
+              <h3 class="taxi-heading">Recommended Radio Taxi Dispatch Centers in ${locationData.city}</h3>
+              <p class="taxi-sub">Direct phone numbers and WhatsApp dispatchers for door-to-door pickup at ${locationData.name}:</p>
             </div>
           </div>
           <div class="taxi-cards-grid">
@@ -2043,7 +2043,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                   <p class="taxi-desc">${t.description}</p>
                   <div class="taxi-sample-fares">
-                    <span class="fare-label">Tarifas estimadas:</span>
+                    <span class="fare-label">Estimated Fares:</span>
                     <p class="fare-text">${t.sampleRates}</p>
                   </div>
                   <div class="taxi-pickup-note">
@@ -2052,13 +2052,13 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="taxi-action-buttons">
                     ${t.whatsapp ? `
                       <a href="https://wa.me/${t.whatsapp}?text=${waText}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
-                        💬 Pedir por WhatsApp
+                        💬 Request via WhatsApp
                       </a>
                     ` : ''}
                     <a href="tel:${t.phone}" class="btn btn-sm btn-secondary">
-                      📞 Llamar: ${t.phone}
+                      📞 Call: ${t.phone}
                     </a>
-                    ${t.fastDial ? `<span class="fast-dial-badge">Marcación: <strong>${t.fastDial}</strong></span>` : ''}
+                    ${t.fastDial ? `<span class="fast-dial-badge">Quick Dial: <strong>${t.fastDial}</strong></span>` : ''}
                   </div>
                 </div>
               `;
@@ -2084,7 +2084,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="transit-taxi-comparison">
             <div class="transit-taxi-header">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-              <span>Alternativa en Taxi / InDriver (Auto Completo 1-4 pax):</span>
+              <span>Taxi / InDriver Alternative (Full Vehicle 1-4 pax):</span>
             </div>
             <div class="transit-taxi-amount">${c.taxiCost}</div>
           </div>
@@ -2166,23 +2166,23 @@ document.addEventListener('DOMContentLoaded', () => {
         renderDestinations();
 
         if (statusBadge) {
-          statusBadge.textContent = 'En Vivo ✓';
+          statusBadge.textContent = 'Live ✓';
           statusBadge.style.background = '#E8F5E9';
           statusBadge.style.color = '#2E7D32';
-          statusBadge.title = `Precios verificados en vivo: ${manifest.verifiedDateHuman || 'Hoy'}`;
+          statusBadge.title = `Live verified prices: ${manifest.verifiedDateHuman || 'Today'}`;
         }
 
         if (!options.silent) {
           const checkedNotice = (manifest.liveCheckedSources && manifest.liveCheckedSources.length)
-            ? ` (${manifest.liveCheckedSources.length} webs de agencias verificadas en vivo)`
+            ? ` (${manifest.liveCheckedSources.length} official agency websites verified live)`
             : '';
-          showToast(`✅ Precios sincronizados con las webs oficiales${checkedNotice}!`);
+          showToast(`✅ Prices synchronized with official websites${checkedNotice}!`);
         }
       }
     } catch (err) {
       console.warn('Price sync notice:', err);
       if (!options.silent) {
-        showToast('⚠️ Usando tarifas base verificadas.');
+        showToast('⚠️ Using verified benchmark rates.');
       }
     } finally {
       if (syncBtn) {
