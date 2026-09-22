@@ -2722,20 +2722,18 @@ window.CO404_LOCATIONS = {
         "location": "Centro Histórico, San Cristóbal de las Casas",
         "whatsapp": "525534348480",
         "phone": "+52 55 3434 8480",
-        "badge": "Petit Futé • Turismo Regenerativo",
+        "badge": "Petit Futé • Regenerative Travel",
         "rating": 4.9,
         "reviewCount": 68,
         "specialties": [
-          "Senderismo Micológico (Hongos)",
-          "Baños de Bosque & Conexión",
-          "Expedición Laguna de Miramar",
-          "Aventura Consciente en El Arcotete",
-          "Selva Lacandona & Campamentos",
-          "Grupos Reducidos & Retiros"
+          "Mushroom Foraging Hikes",
+          "Forest Bathing & Shinrin-Yoku",
+          "Laguna de Miramar Expedition",
+          "Conscious Small-Group Retreats"
         ],
         "pickupAtCo404": true,
-        "priceBenchmark": "Boutique Ecoturismo Consciente",
-        "notes": "Colectivo y operadora boutique de turismo regenerativo y expediciones conscientes fundada por Marcela Gándara y Adrián Barquet. Recomendada por la guía internacional Petit Futé. Especialistas en senderismo micológico en bosques de niebla, campamentos en la Selva Lacandona (Laguna de Miramar) y conexión con la naturaleza para grupos reducidos.",
+        "priceBenchmark": "Boutique Conscious Ecotourism",
+        "notes": "Boutique regenerative collective recommended by Petit Futé. Specialists in cloud forest mushroom foraging, mindful forest bathing, and Lacandon Jungle expeditions.",
         "website": "https://www.facebook.com/popupsancris",
         "googleMapsUrl": "https://www.google.com/maps/search/Pop+Up+San+Cris+San+Cristobal+de+las+Casas",
         "address": "Centro Histórico, San Cristóbal de las Casas, Chiapas"
